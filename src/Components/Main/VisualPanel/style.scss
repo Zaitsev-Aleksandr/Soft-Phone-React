@@ -1,0 +1,41 @@
+.action-button {
+  width: 80px;
+  height: 38px;
+ border: none;
+  box-sizing: border-box;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.red-style {
+  color: #ffffff;
+  background-color: #FD8181;
+
+  &:hover {
+    color: #FD8181;
+    background-color: rgba(253, 129, 129, 0.22);
+    border: 1px solid #FD8181;
+  }
+}
+  .green-style {
+    background-color: #6DD453;
+    color: #ffffff;
+
+    &:hover {
+      background-color: rgba(109, 212, 83, 0.21);
+      color:  #6DD453;
+      border: 1px solid #6DD453;
+    }
+  }
+
+.loudly-style {
+  color: #213991;
+  border: 1px solid #213991;
+  background-color: rgba(33, 57, 145, 0.2);
+
+
+  &:hover {
+    background-color: #213991;
+    color: #ffffff;
+  }
+}
