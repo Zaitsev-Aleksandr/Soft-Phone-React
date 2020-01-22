@@ -1,4 +1,6 @@
-.action-button {
+.button-block {
+  padding: 10px 0;
+  .action-button {
   width: 80px;
   height: 38px;
  border: none;
@@ -38,4 +40,5 @@
     background-color: #213991;
     color: #ffffff;
   }
+}
 }

@@ -1,0 +1,35 @@
+.common-span {
+  width: 100%;
+ padding: 0 10px;
+  border: none;
+  background: transparent;
+}
+
+.call-info {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #213991;
+  font-weight: 600;
+
+  .client-number {
+    color: #000000;
+  }
+
+}
+
+.timer-input {
+  color: #7D7D7D;
+
+  .a-stopwatch {
+    color: #7D7D7D;
+  }
+}
+
+.local-time-value {
+  color: #7D7D7D;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+}

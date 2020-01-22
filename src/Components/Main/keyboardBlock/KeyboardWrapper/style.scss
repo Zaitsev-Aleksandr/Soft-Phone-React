@@ -1,3 +1,37 @@
-h1{
-  color: red;
+.keyboard-wrapper{
+   .common-keyboard-button{
+    width: 60px;
+    height: 60px;
+    color: #213991;
+     font-weight: 600;
+     font-size: 22px;
+    border: 1px solid #213991;
+    background-color: rgba(33, 57, 145, 0.2);
+    margin: 5px 20px;
+     cursor: pointer;
+
+    &:hover {
+      background-color: #213991;
+      color: #ffffff;
+    }
+     }
+  .navigation-button{
+    width: 100px;
+    height: 38px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #213991;
+    background-color: rgba(33, 57, 145, 0.2);
+    margin: 5px 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #213991;
+      color: #ffffff;
+    }
+  }
+
+
 }
