@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
-import Button from "../../../../VisualPanel/visualPanelComponents/ButtonBlock/Button";
+import Button from "../../../../../../CommonComponens/Button";
+
 
 const values = ["1", "2", "3", "4", '5', '6', '7', '8', '9', '*', '0', '#', '+', <i className="fas fa-phone"/>, <i className='fas fa-backspace'/>];
 

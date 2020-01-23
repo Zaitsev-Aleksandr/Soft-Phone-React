@@ -1,12 +1,18 @@
 .button-block {
   padding: 10px 0;
   .action-button {
-  width: 80px;
-  height: 38px;
- border: none;
-  box-sizing: border-box;
-  border-radius: 6px;
-  cursor: pointer;
+    width: 60px;
+    height: 27px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fas{
+      font-size: 12px;
+    }
 }
 
 .red-style {

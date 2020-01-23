@@ -5,8 +5,8 @@ import  React from "react"
 const  Callinfo = (props) =>{
     return(
         <div className="call-info text-nowrap">
-            <span className="client-number mr-3">{props.clientNumber}</span>
-            <span>{props.clientName}</span>
+            <p className="client-number m-0">{props.clientNumber}</p>
+            <p className="m-0">{props.clientName}</p>
         </div>
     )
 };

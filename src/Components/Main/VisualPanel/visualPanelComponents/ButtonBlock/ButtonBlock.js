@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button"
+import Button from "../../../../../CommonComponens/Button"
 import "./style.scss"
 
 function ButtonBlock() {
@@ -8,8 +8,6 @@ function ButtonBlock() {
             <Button className="action-button red-style" value={<i className="fas fa-phone-slash"/>}/>
             <Button className="action-button green-style" value={<i className="fas fa-phone"/>}/>
             <Button className="action-button loudly-style" value={<i className="fas fa-volume-mute"/>}/>
-
-
         </div>
     )
 }

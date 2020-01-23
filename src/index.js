@@ -4,7 +4,7 @@ import App from  "./App";
 
 
 import "@fortawesome/fontawesome-free/css/all.min.css"
-import "./all.scss"
+import "./resources/scss/all.scss"
 
 import "jquery";
 import "bootstrap/dist/js/bootstrap.js";

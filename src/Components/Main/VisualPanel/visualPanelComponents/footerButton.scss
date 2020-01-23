@@ -1,0 +1,20 @@
+.footer-button-grope {
+   top: 1px;
+   .footer-toggle-height-button {
+     border: 1px solid #213991;
+     background-color: transparent;
+     height: 30px;
+     padding: 4px 30px;
+     border-radius: 12px;
+     outline: none;
+     .fa-caret-square-down {
+       color: #213991;
+       font-size: 18px;
+     }
+     &.open{
+       .fa-caret-square-down{
+         transform: rotate(180deg);
+       }
+     }
+   }
+ }

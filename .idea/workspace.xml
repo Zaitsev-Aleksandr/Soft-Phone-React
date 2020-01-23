@@ -2,18 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e18bdb0-060f-41d4-87c6-d7060d72e85d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/VirtualMonitorBlock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/InputOutput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/test.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/virtualMonitorBlock.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/footerButton.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/footerButtongroup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/IncomingLineButtons/IncomingButtonBlock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/script/handlerButtonClick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/scss/animation.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/VisualPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/VisualPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommonComponens/Button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/ButtonBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/ButtonBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/VirtualMonitorBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/VirtualMonitorBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/Callinfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/Callinfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/inputOutput.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/inputOutput.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/virtualMonitorBlock.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/virtualMonitorBlock.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/MainButtons/MainButtonBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/MainButtons/MainButtonBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/NawBarButton/NawBarButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/NawBarButton/NawBarButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/style.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Main/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/all.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/scss/all.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,38 +39,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Main/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/NawBarButton/NawBarButton.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="90" selection-start-line="6" selection-start-column="90" selection-end-line="6" selection-end-column="90" />
+            <state relative-caret-position="476">
+              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/style.scss">
+        <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/VirtualMonitorBlock.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="119">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -69,22 +61,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/MainButtons/MainButtonBlock.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="80" lean-forward="true" selection-start-line="10" selection-start-column="80" selection-end-line="10" selection-end-column="80" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/ButtonBlock.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="104" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="104" />
+            <state relative-caret-position="68">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -93,10 +73,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/Button.js">
+        <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/IncomingLineButtons/IncomingButtonBlock.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="119">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,14 +89,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ButtonBlock</find>
+      <find>m-</find>
+      <find>incoming-button-block</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,28 +120,37 @@
         <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/style.scss" />
         <option value="$PROJECT_DIR$/package-lock.json" />
         <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/virtual-monitor-block.js" />
-        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/VisualPanel.js" />
         <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input.js" />
         <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/test.scss" />
         <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/test.scss" />
         <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/Marquee.js" />
-        <option value="$PROJECT_DIR$/src/Components/Main/main.scss" />
-        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/virtualMonitorBlock.scss" />
         <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/Marquee.js" />
         <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/InputOutput.js" />
-        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/Callinfo.js" />
         <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/CommonSpan.js" />
-        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/inputOutput.scss" />
-        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/VirtualMonitorBlock.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/MainButtons/MainButton.js" />
-        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/style.scss" />
         <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/ButtonBlock.js" />
-        <option value="$PROJECT_DIR$/src/Components/Main/Main.js" />
-        <option value="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/index.js" />
-        <option value="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/style.scss" />
-        <option value="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/NawBarButton/NawBarButton.js" />
         <option value="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/MainButtons/MainButtonBlock.js" />
+        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/Callinfo.js" />
+        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/inputOutput.scss" />
+        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/style.scss" />
+        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/virtualMonitorBlock.scss" />
+        <option value="$PROJECT_DIR$/src/resources/scss/all.scss" />
+        <option value="$PROJECT_DIR$/src/resources/scss/animation.scss" />
+        <option value="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/IncomingLineButtons/IncomingButtonBlock.js" />
+        <option value="$PROJECT_DIR$/src/CommonComponens/Button.js" />
+        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/footerduttongroup.js" />
+        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/footerButton.scss" />
+        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/footerButtongroup.js" />
+        <option value="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/NawBarButton/NawBarButton.js" />
+        <option value="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/style.scss" />
+        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/footerButton.scss" />
+        <option value="$PROJECT_DIR$/src/resources/script/handlerButtonClick.js" />
+        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/VisualPanel.js" />
+        <option value="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/VirtualMonitorBlock.js" />
+        <option value="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/index.js" />
+        <option value="$PROJECT_DIR$/src/Components/Main/main.scss" />
+        <option value="$PROJECT_DIR$/src/Components/Main/Main.js" />
       </list>
     </option>
   </component>
@@ -178,11 +172,6 @@
             <path>
               <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
               <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
@@ -235,47 +224,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="Main" type="462c0819:PsiDirectoryNode" />
-              <item name="VisualPanel" type="462c0819:PsiDirectoryNode" />
+              <item name="keyboardBlock" type="462c0819:PsiDirectoryNode" />
+              <item name="KeyboardWrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="keyboardWrapperBlocks" type="462c0819:PsiDirectoryNode" />
+              <item name="IncomingLineButtons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
               <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-              <item name="VisualPanel" type="462c0819:PsiDirectoryNode" />
-              <item name="visualPanelComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
               <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-              <item name="VisualPanel" type="462c0819:PsiDirectoryNode" />
-              <item name="visualPanelComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="ButtonBlock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-              <item name="VisualPanel" type="462c0819:PsiDirectoryNode" />
-              <item name="visualPanelComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="DisplayInfoBlock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-              <item name="VisualPanel" type="462c0819:PsiDirectoryNode" />
-              <item name="visualPanelComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="DisplayInfoBlock" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -286,7 +251,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mobitell/mobiltell/html_css" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -298,11 +263,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\soft-phone\src\Components\Main\VisualPanel\visualPanelComponents" />
+      <recent name="D:\soft-phone\src\resources\scss" />
+      <recent name="D:\soft-phone\src\Common" />
       <recent name="D:\soft-phone\src\Components\Main\VisualPanel\visualPanelComponents\DisplayInfoBlock\input" />
       <recent name="D:\soft-phone\src\Components\Main\VisualPanel\visualPanelComponents\DisplayInfoBlock" />
-      <recent name="D:\soft-phone\src\Components\Main" />
-      <recent name="D:\soft-phone\src\Components\Main\VisualPanel\visualPanelComponents\ButtonBlock" />
-      <recent name="D:\soft-phone\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -328,17 +293,19 @@
       <option name="presentableId" value="Default" />
       <updated>1579601044974</updated>
       <workItem from="1579601046169" duration="19745000" />
-      <workItem from="1579678831900" duration="23682000" />
+      <workItem from="1579678831900" duration="24161000" />
+      <workItem from="1579763838084" duration="24328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43427000" />
+    <option name="totallyTimeSpent" value="68234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15437302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21601686" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -350,16 +317,16 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15437302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21601686" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -371,10 +338,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -382,6 +349,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
@@ -410,40 +380,7 @@
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/VisualPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/Callinfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/InputOutput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/CommonSpan.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input.js" />
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -454,20 +391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/all.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -475,101 +398,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/VirtualMonitorBlock.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/MainButtons/MainButton.js" />
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/Callinfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="119">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/MainButtons/MainButtonBlock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="4" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/MainButtons/MainButton.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/CommonSpan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/virtualMonitorBlock.scss">
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/InputOutput.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/Button.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/ButtonBlock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="104" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="104" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="3" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="41" selection-end-column="3" />
+        <state relative-caret-position="170">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/inputOutput.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="17" />
+        <state relative-caret-position="340">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/style.scss">
+    <entry file="file://$PROJECT_DIR$/src/resources/scss/all.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        <state relative-caret-position="204">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/virtualMonitorBlock.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/scss/animation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CommonComponens/Button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/NawBarButton/NawBarButton.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="90" selection-start-line="6" selection-start-column="90" selection-end-line="6" selection-end-column="90" />
+          <caret line="6" column="93" selection-start-line="6" selection-start-column="93" selection-end-line="6" selection-end-column="93" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/MainButtons/MainButtonBlock.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/footerButtongroup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="80" lean-forward="true" selection-start-line="10" selection-start-column="80" selection-end-line="10" selection-end-column="80" />
+        <state relative-caret-position="153">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/footerButton.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/VisualPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/script/handlerButtonClick.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="59" lean-forward="true" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="14" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="16" selection-end-line="74" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="66" column="15" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
+          <folding>
+            <element signature="e#13#216#0" />
+            <element signature="e#1444#1934#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/VirtualMonitorBlock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/IncomingLineButtons/IncomingButtonBlock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/ButtonBlock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
