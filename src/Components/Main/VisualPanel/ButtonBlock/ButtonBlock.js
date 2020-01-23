@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../../../../CommonComponens/Button"
+import Button from "../../../../CommonComponens/Button"
 import "./style.scss"
 
 function ButtonBlock() {

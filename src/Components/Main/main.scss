@@ -8,10 +8,9 @@
   padding: 10px ;
   overflow: hidden;
   .keyboard-wrapper {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     transition: 0.3s;
-
 
     .main-button-block {
       width: 230px;
@@ -43,12 +42,12 @@
     }
 
     .navigation-button {
-      width: 60px;
+      width: 67px;
       height: 30px;
       box-sizing: border-box;
       border-radius: 6px;
       font-weight: 600;
-      font-size: 10px;
+      font-size: 9px;
       border: 1px solid #213991;
       background-color: rgba(33, 57, 145, 0.2);
       cursor: pointer;
@@ -59,7 +58,7 @@
       }
     }
     &.open{
-      height: 260px;
+      max-height: 260px;
       transition: 0.3s;
     }
   }
@@ -83,4 +82,12 @@
       animation: inLine-call 0.5s infinite ;
     }
   }
+}
+.virtual-monitor-block{
+  background-color:  #F0F1F8;
+  border: 2px solid #C9CFE3;
+  height: 110px;
+  border-radius: 6px;
+  padding: 10px 10px;
+  @import "VisualPanel/visualPanelComponents/DisplayInfoBlock/input/inputOutput";
 }
