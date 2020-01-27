@@ -1,0 +1,32 @@
+.keyboard-wrapper {
+  margin: 7px 0;
+  .navigation-call-info-button {
+    position: relative;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    &.active {
+      color: green;
+
+
+      &.active::after{
+        position: absolute;
+        content: "";
+        width: 80%;
+        height: 1px;
+        bottom: 5px;
+        color: green;
+        left: 5px;
+        border-bottom: 1px dotted green;
+      }}
+    &:hover{
+      background-color: rgba(33, 57, 145, .2);
+    }
+  }
+}

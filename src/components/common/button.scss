@@ -1,0 +1,13 @@
+button{
+  outline: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding:0 10px;
+}
+
+
+button:focus, button:active, button:active {
+  outline: none !important;
+  box-shadow: none;
+}

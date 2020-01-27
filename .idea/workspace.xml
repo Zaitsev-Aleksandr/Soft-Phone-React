@@ -2,26 +2,129 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e18bdb0-060f-41d4-87c6-d7060d72e85d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Content/actionValue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Content/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Content/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/sip/Emplouee.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/sip/Sip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/icon/BackSpase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/icon/CloseIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/icon/HangUpPhone.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/icon/HoldCall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/icon/Keyboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/icon/MakeCall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/icon/RedirectCall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/icon/SipStatus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/wrappers/Flexible.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/ActionButton/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/ActionButton/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/KeyBoard/Subvalue/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/KeyBoard/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/KeyBoard/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/KeyBoard/statics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/LineGroup/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/LineGroup/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/NavGrop/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/NavGrop/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/ScreenGroup/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wrapper/ScreenGroup/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/VisualPanel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/ButtonBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/ButtonBlock/ButtonBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/ButtonBlock/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/VisualPanel/ButtonBlock/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/VirtualMonitorBlock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Main/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommonComponens/Button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/Main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/ButtonBlock/ButtonBlock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/ButtonBlock/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/Callinfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/CommonSpan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/InputOutput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/inputOutput.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/virtualMonitorBlock.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/footerButton.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/VisualPanel/visualPanelComponents/footerButtongroup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/IncomingLineButtons/IncomingButtonBlock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/MainButtons/MainButtonBlock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/NawBarButton/NawBarButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/script/handlerButtonClick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/script/handlerButtonClick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/scss/animation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/scss/animation.scss" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/node_modules/" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/wrapper/ActionButton/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/wrapper/KeyBoard/index.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="3" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="22" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/wrapper/NavGrop/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/wrapper/NavGrop/index.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/wrapper/ActionButton/index.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -30,18 +133,176 @@
       <find>ButtonBlock</find>
       <find>m-</find>
       <find>incoming-button-block</find>
+      <find>virtual-monitor-block</find>
+      <find>scrin</find>
     </findStrings>
+    <replaceStrings>
+      <replace>screen</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/components/header/Header.js" />
+        <option value="$PROJECT_DIR$/src/components/header/sip/Emplouee.js" />
+        <option value="$PROJECT_DIR$/src/components/header/sip/Sip.js" />
+        <option value="$PROJECT_DIR$/src/components/header/header.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/ActionButton/style.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/KeyBoard/ыенду.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/LineGroup/штвуч.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/KeyBoard/style.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/LineGroup/style.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/NavGrop/style.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/wrapper.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/ScreenGroup/scrin.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/ScreenGroup/Scrin.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/ScreenGroup/screen.scss" />
+        <option value="$PROJECT_DIR$/src/common/Button.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/Wrapper.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/Main.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/ScreenGroup/screenGroup.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/ScreenGroup/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Main.scss" />
+        <option value="$PROJECT_DIR$/src/components/Header/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Content/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/LineGroup/index.scss" />
+        <option value="$PROJECT_DIR$/src/resources/scss/animation.scss" />
+        <option value="$PROJECT_DIR$/src/components/Header/sip/Sip.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/common/Button.scss" />
+        <option value="$PROJECT_DIR$/src/components/common/Button.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/ScreenGroup/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/LineGroup/index.js" />
+        <option value="$PROJECT_DIR$/src/components/common/button.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/KeyBoard/index.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/KeyBoard/Subvalue/index.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/KeyBoard/statics.js" />
+        <option value="$PROJECT_DIR$/src/components/common/icon/keyboard.js" />
+        <option value="$PROJECT_DIR$/src/components/common/icon/Keyboard.js" />
+        <option value="$PROJECT_DIR$/src/components/Content/actionValue.js" />
+        <option value="$PROJECT_DIR$/src/components/Content/index.js" />
+        <option value="$PROJECT_DIR$/src/components/common/icon/BakeSpease.js" />
+        <option value="$PROJECT_DIR$/src/components/common/icon/BackSpase.js" />
+        <option value="$PROJECT_DIR$/src/components/common/icon/HangUpPhone.js" />
+        <option value="$PROJECT_DIR$/src/components/common/icon/MakeCall.js" />
+        <option value="$PROJECT_DIR$/src/components/common/icon/RedirectCall.js" />
+        <option value="$PROJECT_DIR$/src/components/common/icon/HoldCall.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/NavGrop/index.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/NavGrop/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/ActionButton/index.js" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/KeyBoard/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/wrapper/ActionButton/index.scss" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="720" />
-    <option name="y" value="68" />
+    <option name="x" value="757" />
+    <option name="y" value="65" />
     <option name="width" value="1040" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectId" id="1WoSQtTG1SwM9QlzjTol7vGQp2k" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="wrapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="wrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="ActionButton" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="wrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="KeyBoard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="wrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="LineGroup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="wrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="NavGrop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -50,7 +311,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mobitell/mobiltell/html_css/src/scss/all.scss" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,12 +323,24 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\soft-phone\src\components\Content" />
+      <recent name="D:\soft-phone\src\components" />
+      <recent name="D:\soft-phone\src\components\header" />
+      <recent name="D:\soft-phone\src\common\containers" />
       <recent name="$PROJECT_DIR$/src/Components/Main/VisualPanel" />
-      <recent name="D:\soft-phone\src\Components\Main\VisualPanel\visualPanelComponents" />
-      <recent name="D:\soft-phone\src\resources\scss" />
-      <recent name="D:\soft-phone\src\Common" />
-      <recent name="D:\soft-phone\src\Components\Main\VisualPanel\visualPanelComponents\DisplayInfoBlock\input" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -95,8 +368,62 @@
       <workItem from="1579678831900" duration="24161000" />
       <workItem from="1579763838084" duration="24328000" />
       <workItem from="1579814443924" duration="1445000" />
+      <workItem from="1579858279253" duration="654000" />
+      <workItem from="1579860140755" duration="441000" />
+      <workItem from="1579862313709" duration="261000" />
+      <workItem from="1579862742852" duration="12382000" />
+      <workItem from="1580111846223" duration="20889000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="39100000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20231824" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22643554" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20231824" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -113,5 +440,302 @@
       <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state x="265" y="75" width="670" height="676" key="search.everywhere.popup/0.23.1280.728@0.23.1280.728" timestamp="1579815704232" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/NawBarButton/NawBarButton.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/Main/IncomingCall/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/Main/Main.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/Main/VisualPanel/visualPanelComponents/DisplayInfoBlock/input/Callinfo.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/common/Wrapper.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/Main/AcceptedCall/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/Main/VisualPanel/ButtonBlock/style.scss" />
+    <entry file="file://$PROJECT_DIR$/src/components/Main/main.scss" />
+    <entry file="file://$PROJECT_DIR$/src/components/Main/VisualPanel/ButtonBlock/ButtonBlock.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/common/Button.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/Main/keyboardBlock/KeyboardWrapper/keyboardWrapperBlocks/IncomingLineButtons/IncomingButtonBlock.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/Main/OutgoinCall/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/resources/script/handlerButtonClick.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/scss/all.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/wrappers/Flexible.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/icon/SipStatus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/LineGroup/штвуч.js" />
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/ScreenGroup/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Content/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/scss/animation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/icon/CloseIcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/sip/Emplouee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/sip/Sip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Mobitell/mobiltell/html_css/src/scss/all.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="80" column="3" lean-forward="true" selection-start-line="76" selection-end-line="80" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/ScreenGroup/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/Button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/KeyBoard/Subvalue/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/LineGroup/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="112" selection-start-line="15" selection-start-column="112" selection-end-line="15" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/KeyBoard/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/icon/Keyboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/KeyBoard/statics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Content/actionValue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/icon/BackSpase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/icon/HangUpPhone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/icon/MakeCall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/icon/RedirectCall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/icon/HoldCall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Content/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/LineGroup/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/NavGrop/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/ActionButton/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/KeyBoard/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="3" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="22" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/NavGrop/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wrapper/ActionButton/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
