@@ -1,10 +1,12 @@
 import React from 'react';
 
-const Subvalue = ({subValue}) => {
+import "./index.scss"
+
+const Subvalue = ({subValue, className}) => {
     return (
         <>
-             <span className="sub-value-keyboard-item d-flex flex-nowrap">
-                {subValue}
+             <span className={className}>
+                 {subValue}
              </span>
         </>
     );

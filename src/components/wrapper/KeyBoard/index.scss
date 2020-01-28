@@ -1,6 +1,8 @@
 .keyboard-button-group {
-  height: 195px;
+  height: 0;
   margin-top: 10px;
+  transition: 0.3s;
+  overflow: hidden;
   .common-keyboard-button {
     border: none;
     background-color: #ffffff;
@@ -13,12 +15,37 @@
     margin: 1px 19px;
 
     &:hover {
-      background-color: #c3c4cb;
+      background-color: #dfe0e7;
     }
-    .sub-value-keyboard-item{
-      font-size: 16px;
-      line-height: 19px;
-      text-align: center;
-    }
+
   }
 }
+.keyboard-button-group.active{
+  height: 195px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.common-call-keyboard-button{
+  border: none;
+  background-color: #ffffff;
+  color:#7D7D7D;
+  height: 70px;
+  width: 70px;
+  font-size: 35px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 50%;
+  margin-top: auto;
+  &:hover{
+    background-color: #dfe0e7;
+    color:#213991;
+  }
+  &.active {
+
+    color:#213991;
+  }
+  .fas, .far{
+    font-size: 20px;
+  }
+ }

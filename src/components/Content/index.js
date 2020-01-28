@@ -8,29 +8,65 @@ import ActionButtonGroup from "../wrapper/ActionButton";
 import NavGroup from "../wrapper/NavGrop";
 
 
-class Index extends Component {
+class Content extends Component {
     state = {
-        isActive: false
+        callStatus: false,
+        keyboardStatus: true,
+        holdLine:false,
+        transferCall: false
     };
 
-    makeCall = () => {
-        this.setState({ isActive: true });
+    toggleCallStatus = () => {
+        this.setState({
+            callStatus:!this.state.callStatus
+            }
+        )
     };
 
-    hangUp = () => {
-        this.setState({ isActive: false });
+    toggleKeyboard = () => {
+        this.setState({
+            keyboardStatus: !this.state.keyboardStatus
+        });
     };
+    toggleHoldLine = () => {
+             this.setState({
+            holdLine:!this.state.holdLine
+            }
+        )
+    };
+    toggleTransfer =()=>{
+        this.setState({
+            transferCall:!this.state.transferCall
+        })
+    };
+
+
 
     render() {
         return (
-            <div className="content-wrapper d-flex flex-column w-100 h-100">
+            <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
                 <ScreenGroup/>
-                <LineGroup/>
-                <Keyboard className="common-keyboard-button d-flex flex-column  align-items-center"/>
+                <LineGroup
+                    holdLine={this.state.holdLine}
+                />
+
+                <Keyboard
+                    toggleTransfer={this.toggleTransfer}
+                    transferCall ={this.state.transferCall}
+                    toggleHoldLine={this.toggleHoldLine}
+                    toggleCallStatus={this.toggleCallStatus}
+                    keyboardStatus={this.state.keyboardStatus}
+                    callStatus={this.state.callStatus}
+
+                />
+
                 <ActionButtonGroup
-                    isActive={this.state.isActive}
-                    makeCall={this.makeCall}
-                    hangUp={this.hangUp}
+                    toggleTransfer={this.toggleTransfer}
+                    transferCall ={this.state.transferCall}
+                    keyboardStatus={this.state.keyboardStatus}
+                    callStatus={this.state.callStatus}
+                    toggleCallStatus={this.toggleCallStatus}
+                    toggleKeyboard={this.toggleKeyboard}
                 />
                 <NavGroup/>
             </div>
@@ -38,4 +74,4 @@ class Index extends Component {
     }
 }
 
-export default Index;
+export default Content;

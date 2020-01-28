@@ -1,9 +1,9 @@
 import React from 'react';
 
-const RedirectCall = () => {
+const Transfer = () => {
     return (
         <i className="fas fa-share"/>
     );
 };
 
-export default RedirectCall;
+export default Transfer;

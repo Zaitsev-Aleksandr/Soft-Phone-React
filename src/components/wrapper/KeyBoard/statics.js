@@ -1,4 +1,8 @@
-export const keyValues = [
+import  React from "react"
+import Addvalue from "../../common/icon/AddValue";
+import Transfer from "../../common/icon/Transfer";
+import HoldCall from "../../common/icon/HoldCall";
+export const passKeyValues = [
     {
         defaultValue: "1",
         dropDownItems:[ ]
@@ -48,3 +52,19 @@ export const keyValues = [
         dropDownItems:[]
     }
 ];
+export const callKeyValues = [
+    {
+        defaultValue: <Addvalue/>,
+        dropDownItems:["Конференция"]
+
+    },
+    {
+        defaultValue: <Transfer/>,
+        dropDownItems:["Трансфер"]
+
+    },
+    {
+        defaultValue: <HoldCall />,
+        dropDownItems:["Удержать"," ", "вызов"]
+    }
+ ];
