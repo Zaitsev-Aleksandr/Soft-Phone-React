@@ -1,7 +1,7 @@
 import  React from "react"
-import Addvalue from "../../common/icon/AddValue";
-import Transfer from "../../common/icon/Transfer";
-import HoldCall from "../../common/icon/HoldCall";
+import Addvalue from "../../../common/icon/AddValue";
+import Transfer from "../../../common/icon/Transfer";
+import HoldCall from "../../../common/icon/HoldCall";
 export const passKeyValues = [
     {
         defaultValue: "1",

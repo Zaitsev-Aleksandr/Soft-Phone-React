@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 
 import "./index.scss"
-import ScreenGroup from "../wrapper/ScreenGroup";
-import LineGroup from "../wrapper/LineGroup";
-import Keyboard from "../wrapper/KeyBoard";
-import ActionButtonGroup from "../wrapper/ActionButton";
-import NavGroup from "../wrapper/NavGrop";
+import ScreenGroup from "./ScreenGroup";
+import LineGroup from "./LineGroup";
+import Keyboard from "./KeyBoard";
+import ActionButtonGroup from "./ActionButton";
+import NavGroup from "./NavGrop";
 
 
-class Content extends Component {
+class PhoneContent extends Component {
     state = {
         callStatus: false,
         keyboardStatus: true,
@@ -45,7 +45,7 @@ class Content extends Component {
     render() {
         return (
             <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
-                <ScreenGroup/>
+                <ScreenGroup addSearch={this.props.addSearch} />
                 <LineGroup
                     holdLine={this.state.holdLine}
                 />
@@ -74,4 +74,4 @@ class Content extends Component {
     }
 }
 
-export default Content;
+export default PhoneContent;

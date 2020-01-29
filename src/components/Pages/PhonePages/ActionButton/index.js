@@ -1,13 +1,13 @@
 import React from 'react';
-import Button from "../../common/Button";
+import Button from "../../../common/Button";
 import "./index.scss"
-import KeyboardIcon from "../../common/icon/Keyboard";
-import HangUpPhone from "../../common/icon/HangUpPhone";
-import MakeCall from "../../common/icon/MakeCall";
-import BackSpace from "../../common/icon/BackSpase";
+import KeyboardIcon from "../../../common/icon/Keyboard";
+import HangUpPhone from "../../../common/icon/HangUpPhone";
+import MakeCall from "../../../common/icon/MakeCall";
+import BackSpace from "../../../common/icon/BackSpase";
 import Subvalue from "../KeyBoard/Subvalue";
-import OffMicro from "../../common/icon/OffMic";
-import CloseIcon from "../../common/icon/CloseIcon";
+import OffMicro from "../../../common/icon/OffMic";
+import CloseIcon from "../../../common/icon/CloseIcon";
 
 
 const ActionButtonGroup = ({toggleCallStatus, toggleKeyboard, toggleTransfer, keyboardStatus, callStatus, transferCall}) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from "../../common/Button";
+import Button from "../../../common/Button";
 import "./index.scss"
 
 const  lineValueArr=[1,2,3,4];

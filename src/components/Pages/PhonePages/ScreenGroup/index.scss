@@ -1,0 +1,32 @@
+.phone-screen-block {
+  padding: 5px 10px;
+  height: 110px;
+
+  .screen-header-group {
+    .current-time-phone-screen {
+      font-size: 14px;
+      line-height: 18px;
+      color: #7D7D7D;;
+
+      .fa-clock {
+        margin-right: 5px;
+        height: 11px;
+      }
+    }
+
+    .action-screen-header-block {
+      font-size: 14px;
+      line-height: 18px;
+      color: #7D7D7D;
+
+      .fas, .far {
+        height: 11px;
+        cursor: pointer;
+        margin-left: 12px;
+        &:hover{
+          color:#213991;
+        }
+      }
+    }
+  }
+}

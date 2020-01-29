@@ -1,7 +1,7 @@
 import React from 'react';
 
-import  "./index.scss"
-import Button from "../../common/Button";
+import "./index.scss"
+import Button from "../../../common/Button";
 import "./index.scss"
 
 const NavGroup = () => {
