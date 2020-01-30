@@ -1,5 +1,6 @@
 .keyboard-wrapper {
   margin: 7px 0;
+
   .navigation-call-info-button {
     position: relative;
     height: 30px;
@@ -15,17 +16,19 @@
       color: green;
 
 
-      &.active::after{
+      &.active::after {
         position: absolute;
         content: "";
         width: 80%;
         height: 1px;
-        bottom: 5px;
+        bottom: 2px;
         color: green;
-        left: 5px;
+        left: 8px;
         border-bottom: 1px dotted green;
-      }}
-    &:hover{
+      }
+    }
+
+    &:hover {
       background-color: rgba(33, 57, 145, .2);
     }
   }

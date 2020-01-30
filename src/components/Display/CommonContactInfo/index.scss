@@ -1,0 +1,16 @@
+.contact-input-output-group {
+  height: 85px;
+  padding: 5px 15px;
+  .enter-phone-number, .enter-phone-name {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    &::placeholder{
+      font-size: 13px;
+      letter-spacing: 1px;
+      font-weight:400;
+    }
+  }
+}

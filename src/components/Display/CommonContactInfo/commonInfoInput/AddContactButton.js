@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from "../../../../../common/Button";
-import Addvalue from "../../../../../common/icon/AddValue";
+import Button from "../../../common/Button";
+import Addvalue from "../../../common/icon/AddValue";
 
 import "./index.scss"
 

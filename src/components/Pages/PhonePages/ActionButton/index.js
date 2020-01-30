@@ -10,7 +10,7 @@ import OffMicro from "../../../common/icon/OffMic";
 import CloseIcon from "../../../common/icon/CloseIcon";
 
 
-const ActionButtonGroup = ({toggleCallStatus, toggleKeyboard, toggleTransfer, keyboardStatus, callStatus, transferCall}) => {
+const ActionButtonGroup = ({updateEnterValue, toggleHoldLine, toggleCallStatus, toggleKeyboard, toggleTransfer, keyboardStatus, callStatus, transferCall, reloadState}) => {
     let element = () => {
         if (toggleTransfer) {
             return {
@@ -34,6 +34,8 @@ const ActionButtonGroup = ({toggleCallStatus, toggleKeyboard, toggleTransfer, ke
         }
     };
 
+    const valueComponent = callStatus ? <><OffMicro/><Subvalue className="sub-value-call-board-item d-flex flex-nowrap" subValue="выключить микрофо"/></> : <BackSpace/>;
+
     return (
 
         <div className="keyboard-wrapper d-flex flex-nowrap justify-content-between align-items-center">
@@ -51,21 +53,16 @@ const ActionButtonGroup = ({toggleCallStatus, toggleKeyboard, toggleTransfer, ke
 
             <Button
                 className={`keyboard-action-button ${callStatus ? "hangUp-phone-button" : "make-call-button"}`}
-                onClick={toggleCallStatus}
-                value={callStatus ? <HangUpPhone/> : <MakeCall/>}
+                onClick={()=>{toggleCallStatus(); toggleHoldLine()}}
+                onmouseup={callStatus ? reloadState: ()=>console.log(false)}
+                value={callStatus ? <HangUpPhone /> : <MakeCall  />}
             />
 
+
             <Button
-                className="common-call-keyboard-button d-flex flex-column align-items-center justify-content-center"
-                onClick={(e) => e.currentTarget.classList.toggle("active")}
-                value={
-                    callStatus ?
-                        <> <OffMicro/>
-                            <Subvalue
-                                className="sub-value-call-board-item d-flex flex-nowrap"
-                                subValue="выключить микрофо"
-                            />
-                        </> : <BackSpace/>}
+                className={`common-call-keyboard-button d-flex flex-column align-items-center justify-content-center ${!callStatus ? "backspace-button":""} `}
+                onClick={callStatus ? (e)=> e.currentTarget.classList.toggle("active"):updateEnterValue}
+                value={valueComponent }
             />
         </div>
     );

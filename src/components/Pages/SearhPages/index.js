@@ -8,12 +8,12 @@ import phoneBook from "./statics";
 
 class SearchPage extends Component {
     state = {
-        searchValue: null,
+        searchValue: "",
         lookingFor: false,
         searchArr: phoneBook
     };
 
-    togglelookingFor = () => {
+    toggleLookingFor = () => {
         this.setState({
                 lookingFor: true
             }
@@ -21,26 +21,32 @@ class SearchPage extends Component {
     };
 
     startSearch = (e) => {
-        console.log(e.currentTarget.value);
-        this.togglelookingFor();
+        this.toggleLookingFor();
         this.setState({
             searchValue: e.currentTarget.value,
-            searchArr: phoneBook.filter(elem => elem.name ? elem.name.toLowerCase().replace(/\s+/g, "").includes(e.currentTarget.value.toLowerCase().replace(/\s+/g, ""))|| elem.number.replace(/\s+/g, "").includes(e.currentTarget.value.replace(/\s+/g, "")): "")
-
+            searchArr: phoneBook.filter(elem => elem.name ? elem.name.toLowerCase().replace(/\s+/g, "").includes(e.currentTarget.value.toLowerCase().replace(/\s+/g, "")) || elem.number.replace(/\s+/g, "").includes(e.currentTarget.value.replace(/\s+/g, "")) : "")
         });
-
-
     };
 
+    clearSearchInput = () => {
+        this.setState({
+            searchValue: "",
+            searchArr: phoneBook
+        })
+
+    };
 
     render() {
         return (
             <div className="search-common-wrapper d-flex flex-column">
                 <InputSection
-                    startSearch={this.startSearch}
+                    value={this.state.searchValue}
                     addSearch={this.props.addSearch}
+                    startSearch={this.startSearch}
+                    clearSearchInput={this.clearSearchInput}
                 />
                 <PhoneBookSection
+                    updateContactValue={this.props.updateContactValue}
                     searchArr={this.state.searchArr}
                     lookingFor={this.state.lookingFor}
                 />

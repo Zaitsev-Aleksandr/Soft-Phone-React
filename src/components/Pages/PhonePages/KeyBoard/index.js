@@ -7,12 +7,12 @@ import {callKeyValues, passKeyValues} from "./statics"
 import SubValue from "./Subvalue";
 
 
-const Keyboard = ({toggleCallStatus, toggleHoldLine, toggleTransfer, keyboardStatus, callStatus}) => {
-    const onClick = (e, i) => {
+const Keyboard = ({updateEnterValue, toggleCallStatus, toggleHoldLine, toggleTransfer, keyboardStatus, callStatus}) => {
+    const changeButtonActive = (e, i) => {
         if (callStatus && i === 2) {
             e.currentTarget.classList.toggle("active");
             toggleHoldLine()
-        } else if (callStatus) {
+        } else if (callStatus && i!== 2) {
             toggleTransfer();
             toggleCallStatus();
                     }
@@ -20,7 +20,7 @@ const Keyboard = ({toggleCallStatus, toggleHoldLine, toggleTransfer, keyboardSta
 
     const item = (callStatus ? callKeyValues : passKeyValues).map((elem, i) => <Button
         className={` d-flex flex-column  align-items-center ${callStatus ? "common-call-keyboard-button" : "common-keyboard-button"}`}
-        onClick={(e) => onClick(e, i)}
+        onClick={callStatus ? changeButtonActive : updateEnterValue}
         value={(
             <>
                 {elem.defaultValue}

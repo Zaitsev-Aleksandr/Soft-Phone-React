@@ -1,8 +1,8 @@
 import React from 'react';
 
-const HangUpPhone = () => {
+const HangUpPhone = ({onClick}) => {
     return (
-        <i className="fas fa-phone-slash"/>
+        <i className="fas fa-phone-slash" onClick={onClick}/>
     );
 };
 

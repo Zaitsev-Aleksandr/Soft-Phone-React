@@ -1,11 +1,12 @@
 import React from 'react';
 import "./button.scss"
 
-const Button = ({className,onClick,value}) => {
+const Button = ({className,onClick,value,onmouseup}) => {
     return (
         <button
             className={className}
             onClick={onClick}
+            onMouseUp={onmouseup}
         >
             {value}
         </button>

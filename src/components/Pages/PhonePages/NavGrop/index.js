@@ -9,7 +9,7 @@ const NavGroup = () => {
 
         <div className="keyboard-wrapper d-flex flex-nowrap justify-content-between align-items-center">
             <Button
-                className="navigation-call-info-button"
+                className="navigation-call-info-button active"
                 onClick={()=>alert(true)}
                 value="Набор"
             />

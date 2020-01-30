@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import "./index.scss"
-import ScreenGroup from "./ScreenGroup";
+import DisplayGroup from "../../Display";
 import LineGroup from "./LineGroup";
 import Keyboard from "./KeyBoard";
 import ActionButtonGroup from "./ActionButton";
@@ -14,7 +14,7 @@ class PhoneContent extends Component {
         keyboardStatus: true,
         holdLine:false,
         transferCall: false
-    };
+              };
 
     toggleCallStatus = () => {
         this.setState({
@@ -45,12 +45,20 @@ class PhoneContent extends Component {
     render() {
         return (
             <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
-                <ScreenGroup addSearch={this.props.addSearch} />
+                <DisplayGroup
+                    callStatus={this.state.callStatus}
+                    contactValueName={this.props.contactValueName}
+                    contactValueNumber={this.props.contactValueNumber}
+                    enterValue={this.props.enterValue}
+                    updateEnterValue={this.props.updateEnterValue}
+                    addSearch={this.props.addSearch} />
                 <LineGroup
+                    callStatus={this.state.callStatus}
                     holdLine={this.state.holdLine}
                 />
 
                 <Keyboard
+                    updateEnterValue={this.props.updateEnterValue}
                     toggleTransfer={this.toggleTransfer}
                     transferCall ={this.state.transferCall}
                     toggleHoldLine={this.toggleHoldLine}
@@ -61,6 +69,9 @@ class PhoneContent extends Component {
                 />
 
                 <ActionButtonGroup
+                    reloadState={this.props.reloadState}
+                    updateEnterValue={this.props.updateEnterValue}
+                    toggleHoldLine={this.toggleHoldLine}
                     toggleTransfer={this.toggleTransfer}
                     transferCall ={this.state.transferCall}
                     keyboardStatus={this.state.keyboardStatus}

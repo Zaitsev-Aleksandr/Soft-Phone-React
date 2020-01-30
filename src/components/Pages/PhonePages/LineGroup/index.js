@@ -4,10 +4,10 @@ import "./index.scss"
 
 const  lineValueArr=[1,2,3,4];
 
-const LineGroup = ({holdLine}) => {
+const LineGroup = ({holdLine, callStatus}) => {
     const buttonGrope= lineValueArr.map((value, i)=>
         <Button
-            className={`incoming-line-button-item ${!holdLine && value===1 ? "active" :""} ${holdLine && value===1 ? "on-hold" :""} `}
+            className={`incoming-line-button-item ${callStatus &&!holdLine && value===1 ? "active" :""} ${callStatus && holdLine && value===1 ? "on-hold" :""} `}
             value={`Линия ${value}`}
             key={value}
         />

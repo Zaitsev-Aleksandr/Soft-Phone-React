@@ -1,10 +1,15 @@
 import React from 'react';
 
 import "./input.scss"
-const Input = ({onChange}) => {
+const Input = ({className,onChange, value, placeholder, autofocus}) => {
     return (
-        <input onChange={onChange} placeholder="Поиск" autoFocus= "autoFocus"/>
-    );
+        <input
+            className={className}
+              onChange={onChange}
+              value={value}
+              placeholder={placeholder}
+              autoFocus={autofocus}
+        />)
 };
 
 export default Input;
