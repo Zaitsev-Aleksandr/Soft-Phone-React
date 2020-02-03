@@ -4,7 +4,7 @@ import CloseIcon from "../common/icon/CloseIcon";
 
 import "./index.scss"
 
-const Header = ({addSearch}) => (
+const Header = () => (
     <div className="d-flex justify-content-between py-2 align-items-center ">
         <Sip />
         <CloseIcon  />

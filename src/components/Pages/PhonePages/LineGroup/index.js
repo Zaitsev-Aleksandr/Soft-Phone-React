@@ -7,7 +7,7 @@ const  lineValueArr=[1,2,3,4];
 const LineGroup = ({holdLine, callStatus}) => {
     const buttonGrope= lineValueArr.map((value, i)=>
         <Button
-            className={`incoming-line-button-item ${callStatus &&!holdLine && value===1 ? "active" :""} ${callStatus && holdLine && value===1 ? "on-hold" :""} `}
+            className={`incoming-line-button-item ${callStatus && value===1 ? "active" :""}  ${callStatus && !holdLine && value===1? "on-hold active":""}`}
             value={`Линия ${value}`}
             key={value}
         />

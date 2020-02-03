@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import Header from "./Header";
 import "./Main.scss"
 import PhoneContent from "./Pages/PhonePages";
-import SearchPage from "./Pages/SearhPages";
-
 
 class Main extends Component {
     state = {
@@ -43,27 +41,26 @@ class Main extends Component {
             contactValueName: e.currentTarget.querySelector(".phone-book-item-name").innerHTML,
             contactValueNumber: e.currentTarget.querySelector(".phone-book-item-number").innerHTML,
             enterValue: e.currentTarget.querySelector(".phone-book-item-number").innerHTML
-        });
+                 });
         this.addSearch();
-        };
+        console.log(this.state.contactValueName);
+    };
 
     render() {
         return (
             <div className="main d-flex flex-column">
                 <Header/>
-                {this.state.searchActive ?
-                    <SearchPage
-                        updateContactValue={this.updateContactValue}
-                        addSearch={this.addSearch}/> :
-                    <PhoneContent
-                        reloadState={this.reloadState}
-                        contactValueName={this.state.contactValueName}
-                        contactValueNumber={this.state.contactValueNumber}
-                        enterValue={this.state.enterValue}
-                        updateEnterValue={this.updateEnterValue}
-                        addSearch={this.addSearch}
+
+                   <PhoneContent
+                       reloadState={this.reloadState}
+                       contactValueName={this.state.contactValueName}
+                       contactValueNumber={this.state.contactValueNumber}
+                       enterValue={this.state.enterValue}
+                       updateEnterValue={this.updateEnterValue}
+                       addSearch={this.addSearch}
+                       updateContactValue={this.updateContactValue}
+
                     />
-                }
             </div>
         );
     }

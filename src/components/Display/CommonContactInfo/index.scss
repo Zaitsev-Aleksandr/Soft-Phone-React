@@ -1,7 +1,8 @@
 .contact-input-output-group {
-  height: 85px;
+  flex: 1 1 65px;
+  height: 65px;
   padding: 5px 15px;
-  .enter-phone-number, .enter-phone-name {
+  .enter-phone-number{
     border: none;
     background-color: transparent;
     font-size: 18px;
@@ -14,3 +15,13 @@
     }
   }
 }
+
+.enter-phone-name {
+  text-overflow: ellipsis;
+  max-width: 205px;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  }

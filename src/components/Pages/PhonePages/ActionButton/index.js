@@ -9,8 +9,7 @@ import Subvalue from "../KeyBoard/Subvalue";
 import OffMicro from "../../../common/icon/OffMic";
 import CloseIcon from "../../../common/icon/CloseIcon";
 
-
-const ActionButtonGroup = ({updateEnterValue, toggleHoldLine, toggleCallStatus, toggleKeyboard, toggleTransfer, keyboardStatus, callStatus, transferCall, reloadState}) => {
+const ActionButtonGroup = ({updateEnterValue,  reloadCallState, toggleHoldLine, toggleCallStatus, toggleKeyboard, toggleTransfer, keyboardStatus, callStatus, transferCall, reloadState}) => {
     let element = () => {
         if (toggleTransfer) {
             return {
@@ -38,7 +37,7 @@ const ActionButtonGroup = ({updateEnterValue, toggleHoldLine, toggleCallStatus, 
 
     return (
 
-        <div className="keyboard-wrapper d-flex flex-nowrap justify-content-between align-items-center">
+        <div className="keyboard-wrapper d-flex flex-nowrap justify-content-around align-items-center">
             <Button
                 className="common-call-keyboard-button d-flex flex-column align-items-center justify-content-center"
                 onClick={!transferCall? toggleTransfer: toggleKeyboard}
@@ -53,8 +52,8 @@ const ActionButtonGroup = ({updateEnterValue, toggleHoldLine, toggleCallStatus, 
 
             <Button
                 className={`keyboard-action-button ${callStatus ? "hangUp-phone-button" : "make-call-button"}`}
-                onClick={()=>{toggleCallStatus(); toggleHoldLine()}}
-                onmouseup={callStatus ? reloadState: ()=>console.log(false)}
+                onClick={()=>{toggleCallStatus();toggleHoldLine()}}
+                onmouseup={callStatus ?()=> {reloadState(); reloadCallState()} : ()=>console.log("")}
                 value={callStatus ? <HangUpPhone /> : <MakeCall  />}
             />
 

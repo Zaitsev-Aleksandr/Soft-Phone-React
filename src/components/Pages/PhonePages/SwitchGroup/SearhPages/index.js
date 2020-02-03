@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import InputSection from "./InputSection/InputSection";
 import PhoneBookSection from "./PhoneBookSection/PhoneBookSection";
-
+import InputSection from "./InputSection/InputSection";
 import "./index.scss"
 import phoneBook from "./statics";
 

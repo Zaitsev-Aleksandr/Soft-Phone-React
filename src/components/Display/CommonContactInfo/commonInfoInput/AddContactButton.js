@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from "../../../common/Button";
-import Addvalue from "../../../common/icon/AddValue";
+import AddValue from "../../../common/icon/AddValue";
 
 import "./index.scss"
 
@@ -9,7 +9,7 @@ const AddContact = () => {
        <Button
            className="add-contact-button d-flex flex-nowrap align-items-center justify-content-around"
            value={<>
-               <Addvalue/>
+               <AddValue/>
                <span className="text-nowrap">ДОБАВИТЬ КОНТАКТ</span>
                </>  }
        />

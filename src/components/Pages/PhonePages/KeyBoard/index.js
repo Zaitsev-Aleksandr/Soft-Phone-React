@@ -9,10 +9,10 @@ import SubValue from "./Subvalue";
 
 const Keyboard = ({updateEnterValue, toggleCallStatus, toggleHoldLine, toggleTransfer, keyboardStatus, callStatus}) => {
     const changeButtonActive = (e, i) => {
-        if (callStatus && i === 2) {
+        if (i === 2) {
             e.currentTarget.classList.toggle("active");
             toggleHoldLine()
-        } else if (callStatus && i!== 2) {
+        } else {
             toggleTransfer();
             toggleCallStatus();
                     }
@@ -20,7 +20,7 @@ const Keyboard = ({updateEnterValue, toggleCallStatus, toggleHoldLine, toggleTra
 
     const item = (callStatus ? callKeyValues : passKeyValues).map((elem, i) => <Button
         className={` d-flex flex-column  align-items-center ${callStatus ? "common-call-keyboard-button" : "common-keyboard-button"}`}
-        onClick={callStatus ? changeButtonActive : updateEnterValue}
+        onClick={callStatus ? (e)=>changeButtonActive(e,i) : updateEnterValue}
         value={(
             <>
                 {elem.defaultValue}
@@ -35,7 +35,7 @@ const Keyboard = ({updateEnterValue, toggleCallStatus, toggleHoldLine, toggleTra
 
     return (
         <div
-            className={`keyboard-button-group d-flex flex-wrap justify-content-between align-items-stretch ${keyboardStatus ? "active" : ""}`}>
+            className={`keyboard-button-group d-flex flex-wrap justify-content-center  align-items-stretch ${keyboardStatus ? "active" : ""}`}>
             {item}
         </div>
     );

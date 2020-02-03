@@ -1,33 +1,25 @@
 import React from 'react';
+import {Link} from  'react-router-dom'
 
 import "./index.scss"
-import Button from "../../../common/Button";
-import "./index.scss"
+
+
 
 const NavGroup = () => {
-    return (
 
-        <div className="keyboard-wrapper d-flex flex-nowrap justify-content-between align-items-center">
-            <Button
-                className="navigation-call-info-button active"
-                onClick={()=>alert(true)}
-                value="Набор"
-            />
+        return (
+               <ul className="navigation d-flex flex-nowrap justify-content-between align-items-center">
+                   <li className="navigation-item active d-flex flex-nowrap justify-content-between align-items-center">
+                       <Link className="navigation-call-info-link active" to='/'>Набор</Link>
+                   </li>
+                   <li className="navigation-item d-flex flex-nowrap justify-content-between align-items-center">
+                       <Link className="navigation-call-info-link" to='/LastCall'>Последние</Link>
+                   </li>
+                   <li className="navigation-item d-flex flex-nowrap justify-content-between align-items-center">
+                       <Link className="navigation-call-info-link" to='/ContactPage'>Контакты</Link>
+                   </li>
+                </ul>
+                   );
+        };
 
-            <Button
-                className="navigation-call-info-button"
-                onClick={()=>alert(true)}
-                value="Последние"
-            />
-
-
-            <Button
-                className="navigation-call-info-button"
-                onClick={()=>alert(true)}
-                value="Контакты"
-            />
-        </div>
-    );
-};
-
-export default NavGroup;
+        export default NavGroup;
