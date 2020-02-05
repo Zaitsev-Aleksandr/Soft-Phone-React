@@ -1,0 +1,68 @@
+.search-common-wrapper, .last-contact-wrapper {
+  overflow: hidden;
+  border-radius: 16px;
+   height: 455px;
+  background-color: #ebebeb;
+
+  .search-input-section {
+    background-color: #d4dbf2;
+    padding: 7px 15px;
+
+    .fas {
+      font-size: 15px;
+      cursor: pointer;
+      color: #7D7D7D;
+    }
+
+    input {
+      border: none;
+      width: 100%;
+      padding: 5px 15px;
+      background-color: transparent;
+    }
+
+  }
+}
+
+.phone-book-section {
+  padding-top: 20px;
+  .phone-book-headline {
+    font-size: 14px;
+    line-height: 19px;
+    padding:0 15px;
+    color: #213991;
+  }
+
+  .phone-book-item {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #c5c6cd;
+    &:hover {
+      background-color: #d4dbf2;
+
+    }
+
+    .phone-book-item-time {
+      font-size: 10px;
+      font-weight: 400;
+      .phone-book-item-name {
+        text-overflow: ellipsis;
+        max-width: 160px;
+      }
+    }
+
+    .phone-book-item-name {
+      text-overflow: ellipsis;
+      max-width: 170px;
+    }
+  }
+}
+.phone-image-status{
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: 74%;
+  background-repeat: no-repeat;}

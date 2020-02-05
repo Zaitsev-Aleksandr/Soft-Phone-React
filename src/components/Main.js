@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Header from "./Header";
 import "./Main.scss"
-import PhoneContent from "./Pages/PhonePages";
+import PhoneContent from "./Pages/PhonePagesComponents";
 
 class Main extends Component {
     state = {

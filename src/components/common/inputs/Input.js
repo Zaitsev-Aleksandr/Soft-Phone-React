@@ -1,14 +1,16 @@
 import React from 'react';
 
 import "./input.scss"
-const Input = ({className,onChange, value, placeholder, autofocus}) => {
+
+const Input = ({className, onChange, value, placeholder, autofocus, disabled}) => {
     return (
         <input
             className={className}
-              onChange={onChange}
-              value={value}
-              placeholder={placeholder}
-              autoFocus={autofocus}
+            onChange={onChange}
+            value={value}
+            placeholder={placeholder}
+            autoFocus={autofocus}
+            disabled={disabled}
         />)
 };
 

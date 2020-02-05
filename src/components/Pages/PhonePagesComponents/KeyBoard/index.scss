@@ -1,0 +1,51 @@
+.keyboard-button-group {
+  height: 0;
+  margin-top: 10px;
+  transition: 0.3s;
+  overflow: hidden;
+  .common-keyboard-button {
+    border: none;
+    background-color: #ffffff;
+    height: 44px;
+    width: 44px;
+    font-size: 23px;
+    line-height: 14px;
+    font-weight: 600;
+    border-radius: 50%;
+    margin: 0 20px;
+
+    &:hover {
+      background-color: #dfe0e7;
+    }
+
+  }
+}
+.keyboard-button-group.active{
+  height: 175px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.common-call-keyboard-button{
+  border: none;
+  background-color: #ffffff;
+  color:#7D7D7D;
+  height: 60px;
+  width: 60px;
+  font-weight: 600;
+  border-radius: 50%;
+  margin-top: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+  &:hover{
+    background-color: #dfe0e7;
+    color:#213991;
+  }
+  &.active {
+
+    color:#213991;
+  }
+  .fas, .far{
+    font-size: 17px;
+  }
+ }

@@ -1,0 +1,36 @@
+     .enter-phone-book-item {
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 16px;
+      padding: 2px 5px;
+      cursor: pointer;
+      border-bottom: 1px solid #c5c6cd;
+
+      &:hover {
+        background-color: #d4dbf2;
+
+      }
+
+      .phone-book-item-time {
+        font-size: 10px;
+        font-weight: 400;
+
+        .phone-book-item-name {
+          text-overflow: ellipsis;
+          max-width: 100px;
+        }
+      }
+
+      .phone-book-item-name {
+        text-overflow: ellipsis;
+        max-width: 1200px;
+      }
+       .phone-book-avatar {
+         width: 20px;
+         height: 20px;
+         border-radius: 50%;
+         font-size: 12px;
+         font-weight: 600;
+         color: #7D7D7D;
+       }
+  }
