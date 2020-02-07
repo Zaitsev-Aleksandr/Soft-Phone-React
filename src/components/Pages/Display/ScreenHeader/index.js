@@ -12,9 +12,8 @@ class DisplayHeader
 
     state = {
         currentTime: new Date(),
-        callTime: new Date().setMinutes(0,0)
-
     };
+
 
     updateTime = () => {
         this.setState({
@@ -22,11 +21,6 @@ class DisplayHeader
         })
     };
 
-    startTimer = () => {
-    this.setState({
-        callTime: "00:00"
-    })
-    };
 
     componentDidMount() {
         this.timerID = setInterval(this.updateTime, 1000)
@@ -47,7 +41,10 @@ class DisplayHeader
                 <ActionHeaderBlock
                     value={!this.props.callStatus ?
                         <SearchSettingButtonGroup/> :
-                        <CallStatusInfo className={"incoming-call"} value={"Вызов..."}/>}
+                        <CallStatusInfo
+                            className={"incoming-call"}
+                            value={"Вызов..."}
+                        />}
                 />
             </div>
         );

@@ -4,7 +4,7 @@ import DisplayHeader from "./ScreenHeader";
 import CommonContact from "./CommonContactInfo";
 import DisplayFooter from "./DisplayFooter";
 
-const ScreenGroup = ({enterValue, updateEnterValue, contactValueName, contactValueNumber, callStatus, updateContactValue}) => {
+const ScreenGroup = ({enterValue,microphoneStatus, updateEnterValue, contactValueName, contactValueNumber, callStatus, updateContactValue}) => {
     return (
         <div className="phone-screen-block d-flex flex-column">
            <DisplayHeader
@@ -18,7 +18,9 @@ const ScreenGroup = ({enterValue, updateEnterValue, contactValueName, contactVal
                 enterValue={enterValue}
                 updateEnterValue={updateEnterValue}
             />
-            <DisplayFooter/>
+            {callStatus? <DisplayFooter
+                microphoneStatus={microphoneStatus}
+            />:""}
         </div>
     );
 };

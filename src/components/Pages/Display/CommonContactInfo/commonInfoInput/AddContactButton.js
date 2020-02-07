@@ -7,7 +7,7 @@ import "./index.scss"
 const AddContact = () => {
     return (
        <Button
-           className="add-contact-button d-flex flex-nowrap align-items-center justify-content-around"
+           className="add-contact-button d-flex flex-nowrap align-items-center justify-content-center"
            value={<>
                <AddValue/>
                <span className="text-nowrap">ДОБАВИТЬ КОНТАКТ</span>

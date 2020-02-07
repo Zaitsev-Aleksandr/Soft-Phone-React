@@ -1,96 +1,73 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import DisplayGroup from "../../Display";
 import LineGroup from "../../PhonePagesComponents/LineGroup";
 import Keyboard from "../../PhonePagesComponents/KeyBoard";
 import ActionButtonGroup from "../../PhonePagesComponents/ActionButton";
 
-class EnterNumberPage extends Component {
-    state = {
-        callStatus: false,
-        keyboardStatus: true,
-        holdLine:false,
-        transferCall: false
-    };
 
-    reloadCallState = () =>{
-        this.setState({
-            callStatus: false,
-            keyboardStatus: true,
-            holdLine:false,
-            transferCall: false
-        })
-    };
+const EnterNumberPage = ({callStatus, keyboardStatus, transferCall, microphoneStatus, searchActive, enterValue, personName, personNumber, conferenceStatus, inComingLineArr, endCallSomeLine}) => {
+    return (
+        <>
 
-    toggleCallStatus = () => {
-        this.setState({
-                callStatus:!this.state.callStatus
-            }
-        )
-    };
+            <DisplayGroup
+                callStatus={callStatus}
+                keyboardStatus={keyboardStatus}
+                transferCall={transferCall}
+                microphoneStatus={microphoneStatus}
+                searchActive={searchActive}
+                enterValue={enterValue}
+                personName={personName}
+                personNumber={personNumber}
+                conferenceStatus={conferenceStatus}
+                inComingLineArr={inComingLineArr}
+                endCallSomeLine={endCallSomeLine}
+            />
+            <LineGroup
+                callStatus={callStatus}
+                keyboardStatus={keyboardStatus}
+                transferCall={transferCall}
+                microphoneStatus={microphoneStatus}
+                searchActive={searchActive}
+                enterValue={enterValue}
+                personName={personName}
+                personNumber={personNumber}
+                conferenceStatus={conferenceStatus}
+                inComingLineArr={inComingLineArr}
+                endCallSomeLine={endCallSomeLine}
+            />
 
-    toggleKeyboard = () => {
-        this.setState({
-            keyboardStatus: !this.state.keyboardStatus
-        });
-    };
-    toggleHoldLine = () => {
-        this.setState({
-                holdLine:!this.state.holdLine
-            }
-        );
-    };
-    toggleTransfer =()=>{
-        this.setState({
-            transferCall:!this.state.transferCall
-        })
-    };
+            <Keyboard
+                callStatus={callStatus}
+                keyboardStatus={keyboardStatus}
+                transferCall={transferCall}
+                microphoneStatus={microphoneStatus}
+                searchActive={searchActive}
+                enterValue={enterValue}
+                personName={personName}
+                personNumber={personNumber}
+                conferenceStatus={conferenceStatus}
+                inComingLineArr={inComingLineArr}
+                endCallSomeLine={endCallSomeLine}
+            />
 
+            <ActionButtonGroup
+                callStatus={callStatus}
+                keyboardStatus={keyboardStatus}
+                transferCall={transferCall}
+                microphoneStatus={microphoneStatus}
+                searchActive={searchActive}
+                enterValue={enterValue}
+                personName={personName}
+                personNumber={personNumber}
+                conferenceStatus={conferenceStatus}
+                inComingLineArr={inComingLineArr}
+                endCallSomeLine={endCallSomeLine}
+            />
 
-    render() {
-        return (
-            <>
+        </>
+    );
+};
 
-                <DisplayGroup
-                    callStatus={this.state.callStatus}
-                    contactValueName={this.props.contactValueName}
-                    contactValueNumber={this.props.contactValueNumber}
-                    enterValue={this.props.enterValue}
-                    updateEnterValue={this.props.updateEnterValue}
-                    updateContactValue={this.props.updateContactValue}
-                    addSearch={this.props.addSearch}
-                />
-                <LineGroup
-                    callStatus={this.state.callStatus}
-                    holdLine={this.state.holdLine}
-                />
-
-                <Keyboard
-                    updateEnterValue={this.props.updateEnterValue}
-                    toggleTransfer={this.toggleTransfer}
-                    transferCall ={this.state.transferCall}
-                    toggleHoldLine={this.toggleHoldLine}
-                    toggleCallStatus={this.toggleCallStatus}
-                    keyboardStatus={this.state.keyboardStatus}
-                    callStatus={this.state.callStatus}
-                />
-
-                <ActionButtonGroup
-                    reloadCallState={this.reloadCallState}
-                    reloadState={this.props.reloadState}
-                    updateEnterValue={this.props.updateEnterValue}
-                    toggleHoldLine={this.toggleHoldLine}
-                    toggleTransfer={this.toggleTransfer}
-                    transferCall ={this.state.transferCall}
-                    keyboardStatus={this.state.keyboardStatus}
-                    callStatus={this.state.callStatus}
-                    toggleCallStatus={this.toggleCallStatus}
-                    toggleKeyboard={this.toggleKeyboard}
-                />
-
-            </>
-        );
-    }
-}
 
 export default EnterNumberPage;

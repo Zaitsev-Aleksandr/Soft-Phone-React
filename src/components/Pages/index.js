@@ -3,11 +3,11 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 
 
 import "./index.scss"
-import NavGroup from "./NavGrop";
-import EnterNumberPage from "../SwitchGroup/EnterNumberPage";
-import LastCall from "../SwitchGroup/lastСall";
-import ContactPage from "../SwitchGroup/ContactsPage";
-import SearchPage from "../SwitchGroup/SearhPages";
+import NavGroup from "./PhonePagesComponents/NavGrop";
+import EnterNumberPage from "./SwitchGroup/EnterNumberPage";
+import LastCall from "./SwitchGroup/lastСall";
+import ContactPage from "./SwitchGroup/ContactsPage";
+import SearchPage from "./SwitchGroup/SearhPages";
 
 
 class PhoneContent extends Component {
@@ -18,17 +18,21 @@ class PhoneContent extends Component {
                 <Router>
                     <Switch>
                         <Route exact path="/softPhone" render={() => <EnterNumberPage
-                            reloadState={this.props.reloadState}
-                            contactValueName={this.props.contactValueName}
-                            contactValueNumber={this.props.contactValueNumber}
+                            callStatus={this.props.callStatus}
+                            keyboardStatus={this.props.keyboardStatus}
+                            transferCall={this.props.transferCall}
+                            microphoneStatus={this.props.microphoneStatus}
+                            searchActive={this.props.searchActive}
                             enterValue={this.props.enterValue}
-                            updateEnterValue={this.props.updateEnterValue}
-                            updateContactValue={this.props.updateContactValue}
-                            addSearch={this.props.addSearch}
+                            personName={this.props.personName}
+                            personNumber={this.props.personNumber}
+                            conferenceStatus={this.props.conferenceStatus}
+                            inComingLineArr={this.props.inComingLineArr}
+                            endCallSomeLine={this.props.endCallSomeLine}
+
                         />}
                         />
                         <Route exact path="/LastCall" render={() => <LastCall
-                            reloadState={this.props.reloadState}
                             contactValueName={this.props.contactValueName}
                             contactValueNumber={this.props.contactValueNumber}
                             enterValue={this.props.enterValue}
@@ -39,7 +43,6 @@ class PhoneContent extends Component {
                         />}
                         />
                         <Route exact path="/ContactPage" render={() => <ContactPage
-                            reloadState={this.props.reloadState}
                             contactValueName={this.props.contactValueName}
                             contactValueNumber={this.props.contactValueNumber}
                             enterValue={this.props.enterValue}
@@ -49,7 +52,6 @@ class PhoneContent extends Component {
                         />}
                         />
                         <Route exact path="/SearchPage" render={() => <SearchPage
-                            reloadState={this.props.reloadState}
                             contactValueName={this.props.contactValueName}
                             contactValueNumber={this.props.contactValueNumber}
                             enterValue={this.props.enterValue}

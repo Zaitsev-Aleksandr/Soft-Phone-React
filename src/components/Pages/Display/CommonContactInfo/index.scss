@@ -3,6 +3,7 @@
   height: 65px;
   padding: 5px 0;
   .enter-phone-number{
+    width: 100%;
     border: none;
     background-color: transparent;
     font-size: 18px;
@@ -17,8 +18,8 @@
 }
 
 .enter-phone-name {
-  text-overflow: ellipsis;
-  max-width: 205px;
+   text-overflow: ellipsis;
+
   overflow: hidden;
   border: none;
   background-color: transparent;

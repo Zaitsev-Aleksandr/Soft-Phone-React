@@ -1,3 +1,17 @@
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background:#eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+
 .search-common-wrapper, .last-contact-wrapper {
   overflow: hidden;
   border-radius: 16px;

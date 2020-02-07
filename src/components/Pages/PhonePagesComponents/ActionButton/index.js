@@ -9,7 +9,7 @@ import Subvalue from "../KeyBoard/Subvalue";
 import OffMicro from "../../../common/icon/OffMic";
 import CloseIcon from "../../../common/icon/CloseIcon";
 
-const ActionButtonGroup = ({updateEnterValue, reloadCallState, toggleHoldLine, toggleCallStatus, toggleKeyboard, toggleTransfer, keyboardStatus, callStatus, transferCall, reloadState}) => {
+const ActionButtonGroup = ({updateEnterValue,toggleMicrophoneStatus, reloadCallState, toggleHoldLine, toggleCallStatus, toggleKeyboard, toggleTransfer, keyboardStatus, callStatus, transferCall, reloadState}) => {
     let getElement = () => {
         if (toggleTransfer) {
             return {
@@ -51,6 +51,12 @@ const ActionButtonGroup = ({updateEnterValue, reloadCallState, toggleHoldLine, t
             reloadCallState()
         }
     };
+
+    const onMicButton=(e)=>{
+        e.currentTarget.classList.toggle("active");
+        toggleMicrophoneStatus();
+    };
+
     return (
 
         <div className="keyboard-wrapper d-flex flex-nowrap justify-content-around align-items-center">
@@ -75,7 +81,7 @@ const ActionButtonGroup = ({updateEnterValue, reloadCallState, toggleHoldLine, t
 
             <Button
                 className={`common-call-keyboard-button d-flex flex-column align-items-center justify-content-center ${!callStatus ? "backspace-button" : ""} `}
-                onClick={callStatus ? (e) => e.currentTarget.classList.toggle("active") : updateEnterValue}
+                onClick={callStatus ? (e) => onMicButton(e) : updateEnterValue}
                 value={valueComponent}
             />
         </div>

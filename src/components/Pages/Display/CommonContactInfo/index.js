@@ -37,7 +37,7 @@ reloadState=()=>{
         })
 
     })
-}
+};
 
     toggleLookingFor =()=>{
         this.setState({
@@ -56,7 +56,7 @@ reloadState=()=>{
 
         const nameElemValue = !this.props.contactValueName ? null : (
             <Input
-                disabled={this.props.callStatus ? "true" : false}
+                disabled={this.props.callStatus ? true : false}
                 className="enter-phone-name text-center"
                 onChange={this.props.updateEnterValue}
                 value={this.props.contactValueName}
@@ -64,7 +64,7 @@ reloadState=()=>{
         );
 
         const phoneElemValue = <Input
-            disabled={this.props.callStatus ? "true" : false}
+            disabled={this.props.callStatus ? true : false}
             className="enter-phone-number text-center"
             onChange={(e)=>{this.startSearch(e); this.props.updateEnterValue(e)}}
             placeholder="Введите контактные данные"

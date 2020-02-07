@@ -1,24 +1,80 @@
 import React, {Component} from 'react';
 import Header from "./Header";
 import "./Main.scss"
-import PhoneContent from "./Pages/PhonePagesComponents";
+import PhoneContent from "./Pages";
+
 
 class Main extends Component {
-    state = {
-        searchActive: false,
-        contactValueName: "",
-        contactValueNumber: "",
-        enterValue: ""
+
+    static LINE_QUANTITY = 4;
+    static createLineObj = () => {
+        let arr = [];
+        for (let i = 0; i < Main.LINE_QUANTITY; i++) {
+            arr.push({
+                line: i + 1,
+                displayValue: false,
+                contactValueName: "",
+                contactValueNumber: "",
+                callStatus: false,
+                holdLine: false,
+            })
+        }
+        return arr
+    };
+    static cloneStateArr=()=>{
+        return JSON.parse(JSON.stringify(Main.state.inComingLineArr));
+    };
+    static searchFreeLine = (arr) => {
+        return arr.filter(elem => !elem.status)
     };
 
-    reloadState = () => {
-        this.setState({
-            searchActive: false,
-            contactValueName: "",
-            contactValueNumber: "",
-            enterValue: ""
-        })
+    /*______________________this State____________________________________*/
+
+    state = {
+        keyboardStatus: true,
+        transferCall: false,
+        microphoneStatus: true,
+        searchActive: false,
+        enterValue: "",
+        personName: "",
+        personNumber: "",
+        conferenceStatus: false,
+        inComingLineArr: Main.createLineObj()
     };
+
+    /*_________________________________________________________________________*/
+
+   cloneStateArr=()=>{
+       return JSON.parse(JSON.stringify(this.state.inComingLineArr));
+   };
+    
+    endCallSomeLine = (line) => {
+        const cloneArr = this.cloneStateArr();
+        cloneArr[line - 1] = {
+            line: line,
+            displayValue: false,
+            personName: "",
+            personNumber: "",
+            callStatus: false,
+            holdLine: false,
+        };
+        this.setState({
+            inComingLineArr: cloneArr
+        });
+        console.log(cloneArr);
+    };
+
+        startCallSession=()=>{
+        const  cloneArr = this.cloneStateArr();
+        this.searchFreeLine(cloneArr)
+         /*___________________________________________________________________*/
+
+
+
+
+
+            /*_________________________________________________________________*/
+  };
 
     addSearch = () => {
         this.setState({
@@ -36,35 +92,83 @@ class Main extends Component {
         }
     };
 
+
+
+
     updateContactValue = (e) => {
         this.setState({
             contactValueName: e.currentTarget.querySelector(".phone-book-item-name").innerHTML,
             contactValueNumber: e.currentTarget.querySelector(".phone-book-item-number").innerHTML,
             enterValue: e.currentTarget.querySelector(".phone-book-item-number").innerHTML
-                 });
+        });
         this.addSearch();
-        console.log(this.state.contactValueName);
+
     };
+
+    reloadCallState = () => {
+        this.setState({
+            callStatus: false,
+            keyboardStatus: true,
+            holdLine: false,
+            transferCall: false,
+            microphoneStatus: true,
+        })
+    };
+
+    toggleMicrophoneStatus = () => {
+        this.setState({
+            microphoneStatus: !this.state.microphoneStatus
+        })
+    };
+
+    toggleCallStatus = () => {
+        this.setState({
+                callStatus: !this.state.callStatus
+            }
+        )
+    };
+
+    toggleKeyboard = () => {
+        this.setState({
+            keyboardStatus: !this.state.keyboardStatus
+        });
+    };
+    toggleHoldLine = () => {
+        this.setState({
+                holdLine: !this.state.holdLine
+            }
+        );
+    };
+    toggleTransfer = () => {
+        this.setState({
+            transferCall: !this.state.transferCall
+        })
+    };
+
 
     render() {
         return (
             <div className="main d-flex flex-column">
                 <Header/>
 
-                   <PhoneContent
-                       reloadState={this.reloadState}
-                       contactValueName={this.state.contactValueName}
-                       contactValueNumber={this.state.contactValueNumber}
-                       enterValue={this.state.enterValue}
-                       updateEnterValue={this.updateEnterValue}
-                       addSearch={this.addSearch}
-                       updateContactValue={this.updateContactValue}
-
-                    />
+                <PhoneContent
+                    callStatus={this.state.callStatus}
+                    keyboardStatus={this.state.keyboardStatus}
+                    transferCall={this.state.transferCall}
+                    microphoneStatus={this.state.microphoneStatus}
+                    searchActive={this.state.searchActive}
+                    enterValue={this.state.enterValue}
+                    personName={this.state.personName}
+                    personNumber={this.state.personNumber}
+                    conferenceStatus={this.state.conferenceStatus}
+                    inComingLineArr={this.state.inComingLineArr}
+                    endCallSomeLine={this.endCallSomeLine}
+                    addSearch={this.addSearch}
+                />
             </div>
         );
     }
 }
 
-export default Main;
 
+export default Main;
