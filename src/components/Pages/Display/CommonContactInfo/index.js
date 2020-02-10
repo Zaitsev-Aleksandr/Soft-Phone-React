@@ -7,9 +7,6 @@ import {contactBook} from "../../SwitchGroup/ContactsPage/statics";
 import PhoneBookSection from "../../SwitchGroup/EnterNumberPage/SearchBlock/PhoneBookSection";
 
 
-
-
-
 class  CommonContact extends Component {
     state = {
         searchValue: "",

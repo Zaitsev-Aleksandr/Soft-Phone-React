@@ -7,6 +7,7 @@ import PhoneContent from "./Pages";
 class Main extends Component {
 
     static LINE_QUANTITY = 4;
+
     static createLineObj = () => {
         let arr = [];
         for (let i = 0; i < Main.LINE_QUANTITY; i++) {
@@ -21,34 +22,32 @@ class Main extends Component {
         }
         return arr
     };
-    static cloneStateArr=()=>{
-        return JSON.parse(JSON.stringify(Main.state.inComingLineArr));
-    };
-    static searchFreeLine = (arr) => {
-        return arr.filter(elem => !elem.status)
-    };
 
     /*______________________this State____________________________________*/
 
     state = {
+        activeCall: false,
         keyboardStatus: true,
         transferCall: false,
         microphoneStatus: true,
         searchActive: false,
         enterValue: "",
-        personName: "",
-        personNumber: "",
+        contactValueName: "",
+        contactValueNumber: "",
         conferenceStatus: false,
         inComingLineArr: Main.createLineObj()
     };
 
     /*_________________________________________________________________________*/
 
-   cloneStateArr=()=>{
-       return JSON.parse(JSON.stringify(this.state.inComingLineArr));
-   };
-    
-    endCallSomeLine = (line) => {
+    searchFreeLine = (arr) => {
+        return arr.findIndex(elem => elem.callStatus === false)
+    };
+    cloneStateArr = () => {
+        return JSON.parse(JSON.stringify(this.state.inComingLineArr));
+    };
+
+    endCallSession = (line) => {
         const cloneArr = this.cloneStateArr();
         cloneArr[line - 1] = {
             line: line,
@@ -61,20 +60,32 @@ class Main extends Component {
         this.setState({
             inComingLineArr: cloneArr
         });
-        console.log(cloneArr);
     };
 
-        startCallSession=()=>{
-        const  cloneArr = this.cloneStateArr();
-        this.searchFreeLine(cloneArr)
-         /*___________________________________________________________________*/
+
+    startCallSession = () => {
+        const cloneArr = this.cloneStateArr();
+        const index = this.searchFreeLine(cloneArr);
+        if (index >= 0) {
+            cloneArr[index].callStatus = true;
+            cloneArr[index].personName = this.state.contactValueName;
+            cloneArr[index].contactValueNumber = this.state.contactValueNumber;
+            cloneArr[index].displayValue = true;
+            this.setState({
+                inComingLineArr: cloneArr
+            })
+        }
 
 
+        this.searchFreeLine(cloneArr);
+        this.setState({})
 
 
+        /*___________________________________________________________________*/
 
-            /*_________________________________________________________________*/
-  };
+
+        /*_________________________________________________________________*/
+    };
 
     addSearch = () => {
         this.setState({
@@ -90,10 +101,8 @@ class Main extends Component {
         } else {
             this.setState({enterValue: this.state.enterValue + e.currentTarget.innerText.slice(0, 1)})
         }
+        console.log(this.state.enterValue);
     };
-
-
-
 
     updateContactValue = (e) => {
         this.setState({
@@ -107,7 +116,7 @@ class Main extends Component {
 
     reloadCallState = () => {
         this.setState({
-            callStatus: false,
+            activeCall: false,
             keyboardStatus: true,
             holdLine: false,
             transferCall: false,
@@ -121,9 +130,9 @@ class Main extends Component {
         })
     };
 
-    toggleCallStatus = () => {
+    toggleActiveCall = () => {
         this.setState({
-                callStatus: !this.state.callStatus
+                activeCall: !this.state.activeCall
             }
         )
     };
@@ -145,6 +154,9 @@ class Main extends Component {
         })
     };
 
+    componentDidMount() {
+           }
+
 
     render() {
         return (
@@ -152,18 +164,14 @@ class Main extends Component {
                 <Header/>
 
                 <PhoneContent
-                    callStatus={this.state.callStatus}
+                    startCallSession={this.startCallSession}
                     keyboardStatus={this.state.keyboardStatus}
-                    transferCall={this.state.transferCall}
-                    microphoneStatus={this.state.microphoneStatus}
-                    searchActive={this.state.searchActive}
+                    updateContactValue={this.updateContactValue}
                     enterValue={this.state.enterValue}
-                    personName={this.state.personName}
-                    personNumber={this.state.personNumber}
-                    conferenceStatus={this.state.conferenceStatus}
                     inComingLineArr={this.state.inComingLineArr}
-                    endCallSomeLine={this.endCallSomeLine}
-                    addSearch={this.addSearch}
+                    updateEnterValue={this.updateEnterValue}
+                    toggleActiveCall={this.toggleActiveCall}
+                    activeCall={this.state.activeCall}
                 />
             </div>
         );

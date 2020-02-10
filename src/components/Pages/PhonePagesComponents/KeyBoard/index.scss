@@ -1,5 +1,5 @@
 .keyboard-button-group {
-  height: 0;
+  height:175px;
   margin-top: 10px;
   transition: 0.3s;
   overflow: hidden;
@@ -17,12 +17,11 @@
     &:hover {
       background-color: #dfe0e7;
     }
-
   }
 }
-.keyboard-button-group.active{
-  height: 175px;
-  margin-top: 10px;
+.keyboard-button-group.close{
+  height:0;
+  margin-top: 0;
   transition: 0.3s;
 }
 

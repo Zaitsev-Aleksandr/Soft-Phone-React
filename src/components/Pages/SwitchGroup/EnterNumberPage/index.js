@@ -6,64 +6,36 @@ import Keyboard from "../../PhonePagesComponents/KeyBoard";
 import ActionButtonGroup from "../../PhonePagesComponents/ActionButton";
 
 
-const EnterNumberPage = ({callStatus, keyboardStatus, transferCall, microphoneStatus, searchActive, enterValue, personName, personNumber, conferenceStatus, inComingLineArr, endCallSomeLine}) => {
+const EnterNumberPage = ({callStatus, startCallSession, toggleActiveCall,activeCall, keyboardStatus,  enterValue, toggleCallStatus, inComingLineArr, updateEnterValue, updateContactValue}) => {
     return (
         <>
-
             <DisplayGroup
-                callStatus={callStatus}
-                keyboardStatus={keyboardStatus}
-                transferCall={transferCall}
-                microphoneStatus={microphoneStatus}
-                searchActive={searchActive}
                 enterValue={enterValue}
-                personName={personName}
-                personNumber={personNumber}
-                conferenceStatus={conferenceStatus}
-                inComingLineArr={inComingLineArr}
-                endCallSomeLine={endCallSomeLine}
+                updateContactValue={updateContactValue}
+                updateEnterValue={updateEnterValue}
             />
             <LineGroup
-                callStatus={callStatus}
-                keyboardStatus={keyboardStatus}
-                transferCall={transferCall}
-                microphoneStatus={microphoneStatus}
-                searchActive={searchActive}
-                enterValue={enterValue}
-                personName={personName}
-                personNumber={personNumber}
-                conferenceStatus={conferenceStatus}
                 inComingLineArr={inComingLineArr}
-                endCallSomeLine={endCallSomeLine}
+
             />
 
             <Keyboard
-                callStatus={callStatus}
+                activeCall={activeCall}
                 keyboardStatus={keyboardStatus}
-                transferCall={transferCall}
-                microphoneStatus={microphoneStatus}
-                searchActive={searchActive}
-                enterValue={enterValue}
-                personName={personName}
-                personNumber={personNumber}
-                conferenceStatus={conferenceStatus}
-                inComingLineArr={inComingLineArr}
-                endCallSomeLine={endCallSomeLine}
+                updateEnterValue={updateEnterValue}
+                callStatus={callStatus}
+
             />
 
             <ActionButtonGroup
-                callStatus={callStatus}
+                startCallSession={startCallSession}
                 keyboardStatus={keyboardStatus}
-                transferCall={transferCall}
-                microphoneStatus={microphoneStatus}
-                searchActive={searchActive}
-                enterValue={enterValue}
-                personName={personName}
-                personNumber={personNumber}
-                conferenceStatus={conferenceStatus}
+                toggleActiveCall={toggleActiveCall}
+                activeCall={activeCall}
                 inComingLineArr={inComingLineArr}
-                endCallSomeLine={endCallSomeLine}
-            />
+                callStatus={callStatus}
+                toggleCallStatus={toggleCallStatus}
+                       />
 
         </>
     );
