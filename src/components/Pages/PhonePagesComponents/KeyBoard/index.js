@@ -6,11 +6,17 @@ import "./statics"
 import PassCallkeyboardGroup from "./PassCallkeyboardGroup";
 import ActiveCallKeyboardGroup from "./ActiveCallKeyboardGroup";
 
-const Keyboard = ({ updateEnterValue, activeCall }) => {
+const Keyboard = ({updateEnterValue, startCallSession, inComingLineArr, toggleHoldLine}) => {
     return (
         <div
             className={"keyboard-button-group d-flex flex-wrap justify-content-center  align-items-stretch"}>
-            {!activeCall? <PassCallkeyboardGroup updateEnterValue={updateEnterValue} /> : <ActiveCallKeyboardGroup updateEnterValue={updateEnterValue}/>}
+            {!inComingLineArr.find(elem => elem.callStatus === true) ?
+                <PassCallkeyboardGroup
+                    updateEnterValue={updateEnterValue}
+                /> : <ActiveCallKeyboardGroup
+                    toggleHoldLine={toggleHoldLine}
+                    updateEnterValue={updateEnterValue}
+                />}
         </div>
     );
 };

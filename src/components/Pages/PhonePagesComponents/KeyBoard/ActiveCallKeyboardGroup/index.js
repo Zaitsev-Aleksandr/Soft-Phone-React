@@ -3,15 +3,15 @@ import {callKeyValues} from "../statics";
 import Subvalue from "../Subvalue";
 import Button from "../../../../common/Button";
 
-const ActiveCallKeyboardGroup = ({ toggleActiveCall }) => {
+const ActiveCallKeyboardGroup = ({ toggleActiveCall, toggleHoldLine }) => {
    const changeButtonActive=(e)=>{
         e.currentTarget.classList.toggle("active")
 
-    }
+    };
 
     const item =callKeyValues.map((elem, i) => <Button
          className={"d-flex flex-column  align-items-center common-call-keyboard-button"}
-         onClick={(e)=>changeButtonActive(e)}
+         onClick={i===2 ?(e)=>{changeButtonActive(e);toggleHoldLine()} : e=>changeButtonActive(e)}
          value={(
              <>
                  {elem.defaultValue}

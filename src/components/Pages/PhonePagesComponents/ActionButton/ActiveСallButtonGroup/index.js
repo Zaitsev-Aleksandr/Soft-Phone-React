@@ -5,7 +5,7 @@ import OffMicro from "../../../../common/icon/OffMic";
 import Subvalue from "../../KeyBoard/Subvalue";
 import KeyboardIcon from "../../../../common/icon/Keyboard";
 
-const ActiveCallButtonGroup = ({ toggleActiveCall, keyboardStatus }) => {
+const ActiveCallButtonGroup = ({ endCallSession, toggleMicrophoneStatus, keyboardStatus }) => {
     return (
 
         <div className="keyboard-wrapper d-flex flex-nowrap justify-content-around align-items-center">
@@ -24,13 +24,14 @@ const ActiveCallButtonGroup = ({ toggleActiveCall, keyboardStatus }) => {
 
             <Button
                 className={"keyboard-action-button hangUp-phone-button"}
-                onClick={toggleActiveCall}
+                onClick={endCallSession}
                 value={<HangUpPhone/>}
             />
 
 
             <Button
                 className={"common-call-keyboard-button d-flex flex-column align-items-center justify-content-center "}
+                onClick={toggleMicrophoneStatus}
                 value={
                     <>
                         <OffMicro/>

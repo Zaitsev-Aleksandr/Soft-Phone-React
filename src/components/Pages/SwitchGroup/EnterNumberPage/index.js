@@ -6,36 +6,41 @@ import Keyboard from "../../PhonePagesComponents/KeyBoard";
 import ActionButtonGroup from "../../PhonePagesComponents/ActionButton";
 
 
-const EnterNumberPage = ({callStatus, startCallSession, toggleActiveCall,activeCall, keyboardStatus,  enterValue, toggleCallStatus, inComingLineArr, updateEnterValue, updateContactValue}) => {
+const EnterNumberPage = ({ endCallSession, toggleMicrophoneStatus, microphoneStatus, toggleHoldLine, startCallSession, keyboardStatus, inComingLineArr, updateEnterValue, updateContactValue, enterValue, contactValueName,contactValueNumber}) => {
     return (
         <>
             <DisplayGroup
                 enterValue={enterValue}
+                contactValueName ={contactValueName}
+                contactValueNumber={contactValueNumber}
+                microphoneStatus={microphoneStatus}
+                inComingLineArr={inComingLineArr}
                 updateContactValue={updateContactValue}
                 updateEnterValue={updateEnterValue}
             />
             <LineGroup
-                inComingLineArr={inComingLineArr}
+                 inComingLineArr={inComingLineArr}
 
             />
 
             <Keyboard
-                activeCall={activeCall}
+                toggleHoldLine={toggleHoldLine}
+                endCallSession={endCallSession}
+                startCallSession={startCallSession}
                 keyboardStatus={keyboardStatus}
                 updateEnterValue={updateEnterValue}
-                callStatus={callStatus}
+                 inComingLineArr={inComingLineArr}
+
 
             />
 
             <ActionButtonGroup
+                toggleMicrophoneStatus={toggleMicrophoneStatus}
+                endCallSession={endCallSession}
                 startCallSession={startCallSession}
                 keyboardStatus={keyboardStatus}
-                toggleActiveCall={toggleActiveCall}
-                activeCall={activeCall}
                 inComingLineArr={inComingLineArr}
-                callStatus={callStatus}
-                toggleCallStatus={toggleCallStatus}
-                       />
+                           />
 
         </>
     );

@@ -5,7 +5,7 @@ import BackSpace from "../../../../common/icon/BackSpase";
 import KeyboardIcon from "../../../../common/icon/Keyboard";
 import Subvalue from "../../KeyBoard/Subvalue";
 
-const PassCallButtonGroup = ({ toggleActiveCall,keyboardStatus  }) => {
+const PassCallButtonGroup = ({keyboardStatus ,startCallSession  }) => {
     return (
 
         <div className="keyboard-wrapper d-flex flex-nowrap justify-content-around align-items-center">
@@ -24,7 +24,7 @@ const PassCallButtonGroup = ({ toggleActiveCall,keyboardStatus  }) => {
 
             <Button
                 className={" keyboard-action-button  make-call-button"}
-                onClick={toggleActiveCall}
+                onClick={startCallSession}
                 value={<MakeCall/>}
             />
 

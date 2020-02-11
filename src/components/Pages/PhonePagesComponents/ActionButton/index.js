@@ -4,18 +4,21 @@ import "./index.scss"
 import PassCallButtonGroup from "./PassCallButtonGroup";
 import ActiveCallButtonGroup from "./ActiveСallButtonGroup";
 
-const ActionButtonGroup = ({ startCallSession, keyboardStatus, toggleActiveCall, activeCall, inComingLineArr, toggleCallStatus }) => {
-    const checkOpenCallSession = ()=>{
-      return inComingLineArr.findIndex(elem=>elem.callStatus === false)
-    };
-    console.log(checkOpenCallSession());
+const ActionButtonGroup = ({startCallSession, toggleMicrophoneStatus, endCallSession, keyboardStatus, inComingLineArr}) => {
 
     return (
 
         <div className="keyboard-wrapper d-flex flex-nowrap justify-content-around align-items-center">
-            {!activeCall ?
-                <PassCallButtonGroup toggleActiveCall={toggleActiveCall} keyboardStatus={keyboardStatus}/> :
-                <ActiveCallButtonGroup toggleActiveCall={toggleActiveCall} keyboardStatus={keyboardStatus}/>}
+            {!inComingLineArr.find(elem => elem.callStatus === true) ?
+                <PassCallButtonGroup
+                    keyboardStatus={keyboardStatus}
+                    startCallSession={startCallSession}
+                /> :
+                <ActiveCallButtonGroup
+                    toggleMicrophoneStatus={toggleMicrophoneStatus}
+                    keyboardStatus={keyboardStatus}
+                    endCallSession={endCallSession}
+                />}
         </div>
     );
 };

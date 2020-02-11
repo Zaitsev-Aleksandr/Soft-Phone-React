@@ -26,7 +26,6 @@ class Main extends Component {
     /*______________________this State____________________________________*/
 
     state = {
-        activeCall: false,
         keyboardStatus: true,
         transferCall: false,
         microphoneStatus: true,
@@ -40,17 +39,16 @@ class Main extends Component {
 
     /*_________________________________________________________________________*/
 
-    searchFreeLine = (arr) => {
-        return arr.findIndex(elem => elem.callStatus === false)
-    };
+
     cloneStateArr = () => {
         return JSON.parse(JSON.stringify(this.state.inComingLineArr));
     };
 
-    endCallSession = (line) => {
+    endCallSession = () => {
         const cloneArr = this.cloneStateArr();
-        cloneArr[line - 1] = {
-            line: line,
+        const index = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === true);
+        cloneArr[index] = {
+            line: index + 1,
             displayValue: false,
             personName: "",
             personNumber: "",
@@ -58,6 +56,7 @@ class Main extends Component {
             holdLine: false,
         };
         this.setState({
+            microphoneStatus: true,
             inComingLineArr: cloneArr
         });
     };
@@ -65,26 +64,28 @@ class Main extends Component {
 
     startCallSession = () => {
         const cloneArr = this.cloneStateArr();
-        const index = this.searchFreeLine(cloneArr);
+        const index = cloneArr.findIndex(elem => elem.callStatus === false);
         if (index >= 0) {
             cloneArr[index].callStatus = true;
             cloneArr[index].personName = this.state.contactValueName;
-            cloneArr[index].contactValueNumber = this.state.contactValueNumber;
+            cloneArr[index].personNumber = this.state.contactValueNumber;
             cloneArr[index].displayValue = true;
             this.setState({
                 inComingLineArr: cloneArr
-            })
+            });
         }
-
-
-        this.searchFreeLine(cloneArr);
-        this.setState({})
-
-
-        /*___________________________________________________________________*/
-
-
-        /*_________________________________________________________________*/
+        console.log(this.state);
+    };
+    toggleHoldLine = () => {
+        const cloneArr = this.cloneStateArr();
+        const index = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === true,);
+        if (index >= 0) {
+            cloneArr[index].holdLine = !cloneArr[index].holdLine;
+            this.setState({
+                inComingLineArr: cloneArr
+            });
+        }
+        console.log(this.state.inComingLineArr);
     };
 
     addSearch = () => {
@@ -101,7 +102,6 @@ class Main extends Component {
         } else {
             this.setState({enterValue: this.state.enterValue + e.currentTarget.innerText.slice(0, 1)})
         }
-        console.log(this.state.enterValue);
     };
 
     updateContactValue = (e) => {
@@ -116,7 +116,6 @@ class Main extends Component {
 
     reloadCallState = () => {
         this.setState({
-            activeCall: false,
             keyboardStatus: true,
             holdLine: false,
             transferCall: false,
@@ -127,14 +126,8 @@ class Main extends Component {
     toggleMicrophoneStatus = () => {
         this.setState({
             microphoneStatus: !this.state.microphoneStatus
-        })
-    };
-
-    toggleActiveCall = () => {
-        this.setState({
-                activeCall: !this.state.activeCall
-            }
-        )
+        });
+        console.log(this.state);
     };
 
     toggleKeyboard = () => {
@@ -142,20 +135,15 @@ class Main extends Component {
             keyboardStatus: !this.state.keyboardStatus
         });
     };
-    toggleHoldLine = () => {
-        this.setState({
-                holdLine: !this.state.holdLine
-            }
-        );
-    };
+
     toggleTransfer = () => {
         this.setState({
             transferCall: !this.state.transferCall
         })
     };
+ componentDidMount() {
 
-    componentDidMount() {
-           }
+ }
 
 
     render() {
@@ -164,14 +152,18 @@ class Main extends Component {
                 <Header/>
 
                 <PhoneContent
+                    toggleMicrophoneStatus={this.toggleMicrophoneStatus}
+                    toggleHoldLine={this.toggleHoldLine}
+                    endCallSession={this.endCallSession}
                     startCallSession={this.startCallSession}
                     keyboardStatus={this.state.keyboardStatus}
                     updateContactValue={this.updateContactValue}
-                    enterValue={this.state.enterValue}
                     inComingLineArr={this.state.inComingLineArr}
                     updateEnterValue={this.updateEnterValue}
-                    toggleActiveCall={this.toggleActiveCall}
-                    activeCall={this.state.activeCall}
+                    microphoneStatus={this.state.microphoneStatus}
+                    enterValue={this.state.enterValue}
+                    contactValueName={this.state.contactValueName}
+                    contactValueNumber={this.state.contactValueNumber}
                 />
             </div>
         );
