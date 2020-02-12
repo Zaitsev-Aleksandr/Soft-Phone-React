@@ -7,16 +7,15 @@ import MicrophoneOn from "../../../common/icon/microphone/MicOn";
 
 class DisplayFooter extends Component {
     state = {
-        startCallTime: Date.now(),
-        timeValue: {
+       timeValue: {
             seconds: "00",
-            minutes:  "00",
+            minutes: "00",
         }
 
     };
 
     updateStartTime = () => {
-        const subTotalTime = Date.now() - this.state.startCallTime;
+        const subTotalTime = Date.now() - this.props.inComingLineArr.find(elem=>elem.displayValue === true).startCallTime;
         const subTotalSecond = Math.floor(((subTotalTime / 1000) % 60));
         const subTotalMinutes = Math.floor((subTotalTime / 60000));
         this.setState({
@@ -31,6 +30,7 @@ class DisplayFooter extends Component {
     componentDidMount() {
         this.timerID = setInterval(this.updateStartTime, 1000)
     }
+
 
     componentWillUnmount() {
         clearInterval(this.timerID);
@@ -51,5 +51,3 @@ class DisplayFooter extends Component {
 }
 
 export default DisplayFooter;
-
-

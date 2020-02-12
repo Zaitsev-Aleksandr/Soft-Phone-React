@@ -18,6 +18,11 @@ class Main extends Component {
                 contactValueNumber: "",
                 callStatus: false,
                 holdLine: false,
+                startCallTime: "",
+                timeValue: {
+                    seconds: "00",
+                    minutes: "00"
+                }
             })
         }
         return arr
@@ -54,28 +59,63 @@ class Main extends Component {
             personNumber: "",
             callStatus: false,
             holdLine: false,
-        };
+            startCallTime: "",
+               };
         this.setState({
             microphoneStatus: true,
+            enterValue: "",
+            contactValueName: "",
+            contactValueNumber: "",
             inComingLineArr: cloneArr
         });
     };
 
+    runCallTimer = () => {
+        const subTotalTime = Date.now() - this.state.startCallTime;
+        const subTotalSecond = Math.floor(((subTotalTime / 1000) % 60));
+        const subTotalMinutes = Math.floor((subTotalTime / 60000));
+        const second = subTotalSecond.toString().length < 2 ? "0" + subTotalSecond : subTotalSecond;
+        const minute = subTotalMinutes.toString().length < 2 ? "0" + subTotalMinutes : subTotalMinutes;
 
+        const cloneArr = this.cloneStateArr().map(elem => {
+            if (elem.startCallTime) {
+                return elem.timeValue = {
+                    seconds: second,
+                    minutes: minute
+                }
+            } else return elem
+        });
+
+        this.setState({
+            inComingLineArr: cloneArr
+        })
+    };
     startCallSession = () => {
         const cloneArr = this.cloneStateArr();
         const index = cloneArr.findIndex(elem => elem.callStatus === false);
-        if (index >= 0) {
-            cloneArr[index].callStatus = true;
-            cloneArr[index].personName = this.state.contactValueName;
-            cloneArr[index].personNumber = this.state.contactValueNumber;
-            cloneArr[index].displayValue = true;
-            this.setState({
-                inComingLineArr: cloneArr
-            });
-        }
+
+        cloneArr.forEach((elem, i) => {
+            if (index >= 0 && index === i) {
+                elem.callStatus = true;
+                elem.personName = this.state.contactValueName;
+                elem.personNumber = this.state.contactValueNumber;
+                elem.displayValue = true;
+                elem.startCallTime = Date.now();
+            }
+            else if(elem.callStatus === true && index !== i ){
+                elem.holdLine =true;
+                elem.displayValue = false;
+            }
+
+        });
+        this.setState({
+            inComingLineArr: cloneArr,
+            conferenceStatus: false
+        });
         console.log(this.state);
     };
+
+
     toggleHoldLine = () => {
         const cloneArr = this.cloneStateArr();
         const index = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === true,);
@@ -117,10 +157,17 @@ class Main extends Component {
     reloadCallState = () => {
         this.setState({
             keyboardStatus: true,
-            holdLine: false,
-            transferCall: false,
             microphoneStatus: true,
+            enterValue: "",
+            contactValueName: "",
+            contactValueNumber: "",
         })
+    };
+    toggleConferenceStatus = () => {
+        this.setState({
+            conferenceStatus: !this.state.conferenceStatus
+        });
+        console.log(this.state.conferenceStatus);
     };
 
     toggleMicrophoneStatus = () => {
@@ -141,9 +188,10 @@ class Main extends Component {
             transferCall: !this.state.transferCall
         })
     };
- componentDidMount() {
 
- }
+    componentDidMount() {
+
+    }
 
 
     render() {
@@ -152,6 +200,9 @@ class Main extends Component {
                 <Header/>
 
                 <PhoneContent
+                    runCallTimer={this.runCallTimer}
+                    toggleConferenceStatus={this.toggleConferenceStatus}
+                    conferenceStatus={this.state.conferenceStatus}
                     toggleMicrophoneStatus={this.toggleMicrophoneStatus}
                     toggleHoldLine={this.toggleHoldLine}
                     endCallSession={this.endCallSession}
