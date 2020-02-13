@@ -13,6 +13,7 @@ import SearchPage from "./SwitchGroup/SearhPages";
 class PhoneContent extends Component {
 
     render() {
+        console.log( "pages", this.props.conferenceStatus);
         return (
             <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
                 <Router>

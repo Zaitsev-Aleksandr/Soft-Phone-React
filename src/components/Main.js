@@ -52,15 +52,24 @@ class Main extends Component {
     endCallSession = () => {
         const cloneArr = this.cloneStateArr();
         const index = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === true);
+        const activID = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === false);
         cloneArr[index] = {
-            line: index + 1,
             displayValue: false,
-            personName: "",
-            personNumber: "",
+            contactValueName: "",
+            contactValueNumber: "",
             callStatus: false,
             holdLine: false,
             startCallTime: "",
-               };
+            timeValue: {
+                seconds: "00",
+                minutes: "00"
+            }
+        };
+        if (activID >= 0) {
+            cloneArr[activID].displayValue = true;
+            cloneArr[activID].holdLine = false;
+        }
+
         this.setState({
             microphoneStatus: true,
             enterValue: "",
@@ -90,20 +99,21 @@ class Main extends Component {
             inComingLineArr: cloneArr
         })
     };
+
+
     startCallSession = () => {
         const cloneArr = this.cloneStateArr();
         const index = cloneArr.findIndex(elem => elem.callStatus === false);
-
+        const enterPhoneNumber = !this.state.contactValueNumber ? this.state.enterValue : this.state.contactValueNumber;
         cloneArr.forEach((elem, i) => {
             if (index >= 0 && index === i) {
                 elem.callStatus = true;
                 elem.personName = this.state.contactValueName;
-                elem.personNumber = this.state.contactValueNumber;
+                elem.personNumber = enterPhoneNumber;
                 elem.displayValue = true;
                 elem.startCallTime = Date.now();
-            }
-            else if(elem.callStatus === true && index !== i ){
-                elem.holdLine =true;
+            } else if (elem.callStatus === true && index !== i) {
+                elem.holdLine = true;
                 elem.displayValue = false;
             }
 
@@ -112,9 +122,23 @@ class Main extends Component {
             inComingLineArr: cloneArr,
             conferenceStatus: false
         });
-        console.log(this.state);
+        this.reloadCallState()
     };
 
+    chandgeCallLine = (index) => {
+        const cloneArr = this.cloneStateArr();
+        cloneArr.map( elem=>elem.displayValue===true? elem.displayValue = false : null);
+        if (cloneArr[index].callStatus = true) {
+            cloneArr[index].holdLine = false;
+            cloneArr[index].displayValue = true;
+
+            elem.displayValue = true;
+                    } else if (elem.callStatus === true && index !== i) {
+            elem.holdLine = true;
+            elem.displayValue = false;
+        }
+
+    }
 
     toggleHoldLine = () => {
         const cloneArr = this.cloneStateArr();
@@ -167,7 +191,6 @@ class Main extends Component {
         this.setState({
             conferenceStatus: !this.state.conferenceStatus
         });
-        console.log(this.state.conferenceStatus);
     };
 
     toggleMicrophoneStatus = () => {

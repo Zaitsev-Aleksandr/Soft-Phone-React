@@ -1,11 +1,11 @@
 import React from 'react';
 import DisplayFooter from "../DisplayFooter";
-import AbonentValue from "./AbonentValue";
+import SubscriberValue from "./SubscriberValue";
 
 const ActiveCallDisplay = ({ runCallTimer, inComingLineArr, microphoneStatus }) => {
     return (
         <>
-            <AbonentValue
+            <SubscriberValue
                 inComingLineArr={inComingLineArr}
             />
                 <DisplayFooter

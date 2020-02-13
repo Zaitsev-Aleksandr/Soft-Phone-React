@@ -39,7 +39,7 @@ class DisplayFooter extends Component {
 
     render() {
         return (
-            <div className="display-footer-group d-flex flex-nowrap justify-content-between">
+            <div className="display-footer-group d-flex flex-nowrap justify-content-between align-items-center">
                 <Timer
                     seconds={this.state.timeValue.seconds}
                     minutes={this.state.timeValue.minutes}

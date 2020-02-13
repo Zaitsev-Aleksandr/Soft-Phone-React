@@ -10,6 +10,7 @@ const EnterNumberPage = ({ endCallSession, toggleConferenceStatus, runCallTimer,
     return (
         <>
             <DisplayGroup
+                conferenceStatus={conferenceStatus}
                 runCallTimer={runCallTimer}
                 enterValue={enterValue}
                 contactValueName ={contactValueName}

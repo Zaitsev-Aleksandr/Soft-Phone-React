@@ -53,7 +53,7 @@ reloadState=()=>{
 
         const nameElemValue = !this.props.contactValueName ? null : (
             <Input
-                disabled={this.props.inComingLineArr.find(elem => elem.callStatus === true)  ? true : false}
+                disabled={this.props.inComingLineArr.find(elem => elem.callStatus ===true)  ? true : false}
                 className="enter-phone-name text-center"
                 onChange={this.props.updateEnterValue}
                 value={this.props.contactValueName}
@@ -61,7 +61,7 @@ reloadState=()=>{
         );
 
         const phoneElemValue = <Input
-            disabled={this.props.inComingLineArr.find(elem => elem.callStatus === true)  ? true : false}
+            disabled={this.props.inComingLineArr.find(elem => elem.callStatus === true) && this.props.conferenceStatus===false  ? true : false}
             className="enter-phone-number text-center"
             onChange={(e)=>{this.startSearch(e); this.props.updateEnterValue(e)}}
             placeholder="Введите контактные данные"
@@ -77,7 +77,7 @@ reloadState=()=>{
         };
 
         return (
-            <div className="contact-input-output-group d-flex flex-column justify-content-end">
+            <div className="contact-input-output-group d-flex flex-column  align-items-center justify-content-end">
               {!this.props.callStatus &&  this.state.lookingFor && this.state.searchValue? <PhoneBookSection
                   reloadState={this.reloadState}
                   toggleLookingFor={this.toggleLookingFor}
