@@ -2,7 +2,6 @@ import React from 'react';
 import "./index.scss"
 
 const SubscriberValue = ({inComingLineArr}) => {
-    console.log(inComingLineArr.find(elem => elem.displayValue === true).personName);
     const name = inComingLineArr.find(elem => elem.displayValue === true).personName;
     const number = inComingLineArr.find(elem => elem.displayValue === true).personNumber;
     return (

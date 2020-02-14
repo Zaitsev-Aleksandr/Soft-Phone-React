@@ -18,6 +18,7 @@ class Main extends Component {
                 contactValueNumber: "",
                 callStatus: false,
                 holdLine: false,
+                conferenceActive:false,
                 startCallTime: "",
                 timeValue: {
                     seconds: "00",
@@ -58,6 +59,7 @@ class Main extends Component {
             contactValueName: "",
             contactValueNumber: "",
             callStatus: false,
+            conferenceActive:false,
             holdLine: false,
             startCallTime: "",
             timeValue: {
@@ -122,24 +124,29 @@ class Main extends Component {
             inComingLineArr: cloneArr,
             conferenceStatus: false
         });
-        this.reloadCallState()
-    };
+        this.reloadCallState();
+            };
 
-    chandgeCallLine = (index) => {
+
+
+
+    changeCallLine = index => {
         const cloneArr = this.cloneStateArr();
-        cloneArr.map( elem=>elem.displayValue===true? elem.displayValue = false : null);
-        if (cloneArr[index].callStatus = true) {
+        cloneArr.map(elem => {
+            if (elem.displayValue) {
+                elem.displayValue = false;
+                elem.holdLine = true
+            }
+            return elem;
+        });
+        if (cloneArr[index].callStatus) {
             cloneArr[index].holdLine = false;
             cloneArr[index].displayValue = true;
-
-            elem.displayValue = true;
-                    } else if (elem.callStatus === true && index !== i) {
-            elem.holdLine = true;
-            elem.displayValue = false;
         }
-
-    }
-
+        this.setState({
+            inComingLineArr: cloneArr
+        })
+    };
     toggleHoldLine = () => {
         const cloneArr = this.cloneStateArr();
         const index = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === true,);
@@ -149,8 +156,7 @@ class Main extends Component {
                 inComingLineArr: cloneArr
             });
         }
-        console.log(this.state.inComingLineArr);
-    };
+           };
 
     addSearch = () => {
         this.setState({
@@ -172,7 +178,6 @@ class Main extends Component {
         this.setState({
             contactValueName: e.currentTarget.querySelector(".phone-book-item-name").innerHTML,
             contactValueNumber: e.currentTarget.querySelector(".phone-book-item-number").innerHTML,
-            enterValue: e.currentTarget.querySelector(".phone-book-item-number").innerHTML
         });
         this.addSearch();
 
@@ -187,6 +192,11 @@ class Main extends Component {
             contactValueNumber: "",
         })
     };
+    conferenceStart =()=>{
+        this.setState({
+            conferenceStatus: true
+        });
+    };
     toggleConferenceStatus = () => {
         this.setState({
             conferenceStatus: !this.state.conferenceStatus
@@ -197,8 +207,7 @@ class Main extends Component {
         this.setState({
             microphoneStatus: !this.state.microphoneStatus
         });
-        console.log(this.state);
-    };
+          };
 
     toggleKeyboard = () => {
         this.setState({
@@ -223,6 +232,7 @@ class Main extends Component {
                 <Header/>
 
                 <PhoneContent
+                    startConferenc={this.startConferenc}
                     runCallTimer={this.runCallTimer}
                     toggleConferenceStatus={this.toggleConferenceStatus}
                     conferenceStatus={this.state.conferenceStatus}
@@ -238,11 +248,11 @@ class Main extends Component {
                     enterValue={this.state.enterValue}
                     contactValueName={this.state.contactValueName}
                     contactValueNumber={this.state.contactValueNumber}
+                    changeCallLine={this.changeCallLine}
                 />
             </div>
         );
     }
 }
-
 
 export default Main;

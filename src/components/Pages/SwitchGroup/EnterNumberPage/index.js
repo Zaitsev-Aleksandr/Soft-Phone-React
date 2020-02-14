@@ -6,14 +6,32 @@ import Keyboard from "../../PhonePagesComponents/KeyBoard";
 import ActionButtonGroup from "../../PhonePagesComponents/ActionButton";
 
 
-const EnterNumberPage = ({ endCallSession, toggleConferenceStatus, runCallTimer,  conferenceStatus, toggleMicrophoneStatus, microphoneStatus, toggleHoldLine, startCallSession, keyboardStatus, inComingLineArr, updateEnterValue, updateContactValue, enterValue, contactValueName,contactValueNumber}) => {
+const EnterNumberPage = ({
+                             startConferens,
+                             changeCallLine,
+                             endCallSession,
+                             toggleConferenceStatus,
+                             runCallTimer,
+                             conferenceStatus,
+                             toggleMicrophoneStatus,
+                             microphoneStatus,
+                             toggleHoldLine,
+                             startCallSession,
+                             keyboardStatus,
+                             inComingLineArr,
+                             updateEnterValue,
+                             updateContactValue,
+                             enterValue,
+                             contactValueName,
+                             contactValueNumber
+                         }) => {
     return (
         <>
             <DisplayGroup
                 conferenceStatus={conferenceStatus}
                 runCallTimer={runCallTimer}
                 enterValue={enterValue}
-                contactValueName ={contactValueName}
+                contactValueName={contactValueName}
                 contactValueNumber={contactValueNumber}
                 microphoneStatus={microphoneStatus}
                 inComingLineArr={inComingLineArr}
@@ -21,10 +39,12 @@ const EnterNumberPage = ({ endCallSession, toggleConferenceStatus, runCallTimer,
                 updateEnterValue={updateEnterValue}
             />
             <LineGroup
-                 inComingLineArr={inComingLineArr}
+                inComingLineArr={inComingLineArr}
+                changeCallLine={changeCallLine}
             />
 
             <Keyboard
+                startConferen={startConferens}
                 toggleConferenceStatus={toggleConferenceStatus}
                 conferenceStatus={conferenceStatus}
                 toggleHoldLine={toggleHoldLine}
@@ -32,7 +52,7 @@ const EnterNumberPage = ({ endCallSession, toggleConferenceStatus, runCallTimer,
                 startCallSession={startCallSession}
                 keyboardStatus={keyboardStatus}
                 updateEnterValue={updateEnterValue}
-                 inComingLineArr={inComingLineArr}
+                inComingLineArr={inComingLineArr}
             />
 
             <ActionButtonGroup
@@ -42,7 +62,7 @@ const EnterNumberPage = ({ endCallSession, toggleConferenceStatus, runCallTimer,
                 startCallSession={startCallSession}
                 keyboardStatus={keyboardStatus}
                 inComingLineArr={inComingLineArr}
-                           />
+            />
 
         </>
     );

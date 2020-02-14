@@ -13,27 +13,28 @@ import SearchPage from "./SwitchGroup/SearhPages";
 class PhoneContent extends Component {
 
     render() {
-        console.log( "pages", this.props.conferenceStatus);
-        return (
+             return (
             <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
                 <Router>
                     <Switch>
                         <Route exact path="/softPhone" render={() => <EnterNumberPage
+                            startConferens={this.props.startConferens}
                             runCallTimer={this.props.runCallTimer}
                             toggleConferenceStatus={this.props.toggleConferenceStatus}
-                            conferenceStatus={this.props.conferenceStatus}
-                            toggleMicrophoneStatus={this.props.toggleMicrophoneStatus}
+                           toggleMicrophoneStatus={this.props.toggleMicrophoneStatus}
                             microphoneStatus={this.props.microphoneStatus}
                             toggleHoldLine={this.props.toggleHoldLine}
                             endCallSession={this.props.endCallSession}
                             startCallSession={this.props.startCallSession}
                             updateEnterValue={this.props.updateEnterValue}
                             updateContactValue={this.props.updateContactValue}
+                            conferenceStatus={this.props.conferenceStatus}
                             inComingLineArr={this.props.inComingLineArr}
                             keyboardStatus={this.props.keyboardStatus}
                             enterValue={this.props.enterValue}
                             contactValueName={this.props.contactValueName}
                             contactValueNumber={this.props.contactValueNumber}
+                            changeCallLine={this.props.changeCallLine}
 
                         />}
                         />
@@ -66,7 +67,10 @@ class PhoneContent extends Component {
                         />}
                         />
                     </Switch>
-                    <NavGroup/>
+                    <NavGroup
+                        conferenceStatus={this.props.conferenceStatus}
+                        inComingLineArr={this.props.inComingLineArr}
+                    />
                 </Router>
             </div>
         );
