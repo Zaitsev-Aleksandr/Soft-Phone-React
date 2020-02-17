@@ -129,43 +129,46 @@ class Main extends Component {
 
 
     changeCallLine = index => {
-        const cloneArr = this.cloneStateArr();
-        if (cloneArr.findIndex(elem=>elem.displayValue===true && elem.callStatus===false)===index){
-            cloneArr.find(elem=>elem.displayValue===true && elem.callStatus===false).displayValue=false;
-        }
-        cloneArr.map((elem, i) => {
-            if (elem.displayValue && elem.callStatus) {
-                elem.displayValue = false;
-                elem.holdLine = true
-            }else if(elem.displayValue && !elem.callStatus){
-                elem.displayValue = false;
-                elem.holdLine = false;
-                elem.callStatus = false;
+        if(this.state.inComingLineArr.find(elem=>elem.callStatus))
+        {
+            const cloneArr = this.cloneStateArr();
+            if (cloneArr.findIndex(elem => elem.displayValue && elem.callStatus) === index) {
+                cloneArr.find(elem => elem.displayValue && !elem.callStatus).displayValue = false;
             }
-            return elem;
-        });
-        if (cloneArr[index].callStatus) {
-            cloneArr[index].holdLine = false;
-            cloneArr[index].displayValue = true;
-        } else if (!cloneArr[index].callStatus && !cloneArr[index].displayValue) {
-            cloneArr[index].callStatus = false;
-            cloneArr[index].holdLine = false;
-            cloneArr[index].displayValue = true;
-        } else if (!cloneArr[index].callStatus && cloneArr[index].displayValue ) {
-            cloneArr[index].callStatus = false;
-            cloneArr[index].displayValue = false;
-            cloneArr[cloneArr.findIndex(elem => elem.callStatus)].holdLine = false;
-            cloneArr[cloneArr.findIndex(elem => elem.callStatus)].displayValue = true;
-        }
+            cloneArr.map((elem, i) => {
+                if (elem.displayValue && elem.callStatus) {
+                    elem.displayValue = false;
+                    elem.holdLine = true
+                } else if (elem.displayValue && !elem.callStatus) {
+                    elem.displayValue = false;
+                    elem.holdLine = false;
+                    elem.callStatus = false;
+                }
+                return elem;
+            });
+            if (cloneArr[index].callStatus) {
+                cloneArr[index].holdLine = false;
+                cloneArr[index].displayValue = true;
+            } else if (!cloneArr[index].callStatus && !cloneArr[index].displayValue) {
+                cloneArr[index].callStatus = false;
+                cloneArr[index].holdLine = false;
+                cloneArr[index].displayValue = true;
+            } else if (!cloneArr[index].callStatus && cloneArr[index].displayValue) {
+                cloneArr[index].callStatus = false;
+                cloneArr[index].displayValue = false;
+                cloneArr[cloneArr.findIndex(elem => elem.callStatus)].holdLine = false;
+                cloneArr[cloneArr.findIndex(elem => elem.callStatus)].displayValue = true;
+            }
 
             this.setState({
-            inComingLineArr: cloneArr
-        })
+                inComingLineArr: cloneArr
+            })
+        }
     };
 
     toggleHoldLine = () => {
         const cloneArr = this.cloneStateArr();
-        const index = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === true,);
+        const index = cloneArr.findIndex(elem => elem.callStatus && elem.displayValue );
         if (index >= 0) {
             cloneArr[index].holdLine = !cloneArr[index].holdLine;
             this.setState({
