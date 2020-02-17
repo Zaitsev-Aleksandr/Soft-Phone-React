@@ -3,6 +3,7 @@ import "./index.scss"
 import DisplayHeader from "./ScreenHeader";
 import ActiveCallDisplay from "./ActivCallDisplay";
 import CommonContact from "./CommonContactInfo";
+import DisplayFooter from "./DisplayFooter";
 
 
 const ScreenGroup = ({updateContactValue, updateEnterValue, inComingLineArr, runCallTimer, microphoneStatus, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
@@ -46,11 +47,18 @@ const ScreenGroup = ({updateContactValue, updateEnterValue, inComingLineArr, run
 
     return (
         <div className="phone-screen-block d-flex flex-column">
-            <DisplayHeader/>
+            <DisplayHeader
+                inComingLineArr={inComingLineArr}/>
 
 
             {renderIfComponent()}
 
+            {inComingLineArr.find(elem => elem.callStatus) ?
+                <DisplayFooter
+                    inComingLineArr={inComingLineArr}
+                    microphoneStatus={microphoneStatus}
+                /> :
+                null}
         </div>
     );
 };

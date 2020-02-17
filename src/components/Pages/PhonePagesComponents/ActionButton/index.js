@@ -9,7 +9,7 @@ const ActionButtonGroup = ({startCallSession, conferenceStatus, toggleMicrophone
     return (
 
         <div className="keyboard-wrapper d-flex flex-nowrap justify-content-around align-items-center">
-            {!inComingLineArr.find(elem => elem.callStatus === true)  || conferenceStatus === true?
+            {!inComingLineArr.find(elem => elem.callStatus) || conferenceStatus === true || (!inComingLineArr.find(elem => elem.callStatus && elem.displayValue) )?
                 <PassCallButtonGroup
                     keyboardStatus={keyboardStatus}
                     startCallSession={startCallSession}

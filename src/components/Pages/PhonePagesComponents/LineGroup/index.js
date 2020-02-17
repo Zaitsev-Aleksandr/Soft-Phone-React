@@ -10,7 +10,7 @@ const LineGroup = ({inComingLineArr, changeCallLine}) => {
 
     const buttonGrope= lineValueArr.map((value, i)=>
         <Button
-            className={`incoming-line-button-item ${inComingLineArr[i].callStatus ? "active" :""} ${inComingLineArr[i].holdLine? "on-hold":""}`}
+            className={`incoming-line-button-item ${inComingLineArr[i].callStatus ? "active" :""} ${inComingLineArr[i].holdLine? "on-hold":""} ${!inComingLineArr[i].callStatus && inComingLineArr[i].displayValue? "expectation-line": ""}`}
             value={`Линия ${value}`}
             key={value}
             onClick={() => changeCallLine(i)}

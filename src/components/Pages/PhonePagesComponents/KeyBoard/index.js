@@ -10,7 +10,7 @@ const Keyboard = ({updateEnterValue, toggleConferenceStatus, conferenceStatus, i
     return (
         <div
             className={"keyboard-button-group d-flex flex-wrap justify-content-center  align-items-stretch"}>
-            {!inComingLineArr.find(elem => elem.callStatus === true) || conferenceStatus === true ?
+            {!inComingLineArr.find(elem => elem.callStatus) || conferenceStatus || (!inComingLineArr.find(elem => elem.callStatus && elem.displayValue) )?
                 <PassCallkeyboardGroup
                     updateEnterValue={updateEnterValue}
                 /> : <ActiveCallKeyboardGroup

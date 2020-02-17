@@ -3,6 +3,7 @@
 
   .screen-header-group {
     padding: 3px 10px 5px;
+
     .current-time-phone-screen {
       font-size: 14px;
       line-height: 18px;
@@ -15,6 +16,7 @@
     }
 
     .action-screen-header-block {
+      width: 100%;
       font-size: 14px;
       line-height: 18px;
       color: #7D7D7D;
@@ -24,10 +26,21 @@
         cursor: pointer;
         margin-left: 12px;
         color: #7D7D7D;
-        &:hover{
-          color:#213991;
+
+        &:hover {
+          color: #213991;
         }
       }
     }
+  }
+}
+
+.call-timer {
+  font-size: 14px;
+  line-height: 18px;
+  color: #008000;
+
+  .fa-stopwatch {
+    height: 11px;
   }
 }

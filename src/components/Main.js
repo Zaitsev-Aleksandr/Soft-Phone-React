@@ -18,7 +18,7 @@ class Main extends Component {
                 contactValueNumber: "",
                 callStatus: false,
                 holdLine: false,
-                conferenceActive:false,
+                conferenceActive: false,
                 startCallTime: "",
                 timeValue: {
                     seconds: "00",
@@ -27,6 +27,10 @@ class Main extends Component {
             })
         }
         return arr
+    };
+
+    cloneStateArr = () => {
+        return JSON.parse(JSON.stringify(this.state.inComingLineArr));
     };
 
     /*______________________this State____________________________________*/
@@ -46,10 +50,6 @@ class Main extends Component {
     /*_________________________________________________________________________*/
 
 
-    cloneStateArr = () => {
-        return JSON.parse(JSON.stringify(this.state.inComingLineArr));
-    };
-
     endCallSession = () => {
         const cloneArr = this.cloneStateArr();
         const index = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === true);
@@ -59,7 +59,7 @@ class Main extends Component {
             contactValueName: "",
             contactValueNumber: "",
             callStatus: false,
-            conferenceActive:false,
+            conferenceActive: false,
             holdLine: false,
             startCallTime: "",
             timeValue: {
@@ -125,28 +125,44 @@ class Main extends Component {
             conferenceStatus: false
         });
         this.reloadCallState();
-            };
-
-
+    };
 
 
     changeCallLine = index => {
         const cloneArr = this.cloneStateArr();
-        cloneArr.map(elem => {
-            if (elem.displayValue) {
+        if (cloneArr.findIndex(elem=>elem.displayValue===true && elem.callStatus===false)===index){
+            cloneArr.find(elem=>elem.displayValue===true && elem.callStatus===false).displayValue=false;
+        }
+        cloneArr.map((elem, i) => {
+            if (elem.displayValue && elem.callStatus) {
                 elem.displayValue = false;
                 elem.holdLine = true
+            }else if(elem.displayValue && !elem.callStatus){
+                elem.displayValue = false;
+                elem.holdLine = false;
+                elem.callStatus = false;
             }
             return elem;
         });
         if (cloneArr[index].callStatus) {
             cloneArr[index].holdLine = false;
             cloneArr[index].displayValue = true;
+        } else if (!cloneArr[index].callStatus && !cloneArr[index].displayValue) {
+            cloneArr[index].callStatus = false;
+            cloneArr[index].holdLine = false;
+            cloneArr[index].displayValue = true;
+        } else if (!cloneArr[index].callStatus && cloneArr[index].displayValue ) {
+            cloneArr[index].callStatus = false;
+            cloneArr[index].displayValue = false;
+            cloneArr[cloneArr.findIndex(elem => elem.callStatus)].holdLine = false;
+            cloneArr[cloneArr.findIndex(elem => elem.callStatus)].displayValue = true;
         }
-        this.setState({
+
+            this.setState({
             inComingLineArr: cloneArr
         })
     };
+
     toggleHoldLine = () => {
         const cloneArr = this.cloneStateArr();
         const index = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === true,);
@@ -156,7 +172,7 @@ class Main extends Component {
                 inComingLineArr: cloneArr
             });
         }
-           };
+    };
 
     addSearch = () => {
         this.setState({
@@ -180,7 +196,6 @@ class Main extends Component {
             contactValueNumber: e.currentTarget.querySelector(".phone-book-item-number").innerHTML,
         });
         this.addSearch();
-
     };
 
     reloadCallState = () => {
@@ -192,7 +207,8 @@ class Main extends Component {
             contactValueNumber: "",
         })
     };
-    conferenceStart =()=>{
+
+    conferenceStart = () => {
         this.setState({
             conferenceStatus: true
         });
@@ -207,7 +223,7 @@ class Main extends Component {
         this.setState({
             microphoneStatus: !this.state.microphoneStatus
         });
-          };
+    };
 
     toggleKeyboard = () => {
         this.setState({
@@ -221,10 +237,6 @@ class Main extends Component {
         })
     };
 
-    componentDidMount() {
-
-    }
-
 
     render() {
         return (
@@ -232,7 +244,6 @@ class Main extends Component {
                 <Header/>
 
                 <PhoneContent
-                    startConferenc={this.startConferenc}
                     runCallTimer={this.runCallTimer}
                     toggleConferenceStatus={this.toggleConferenceStatus}
                     conferenceStatus={this.state.conferenceStatus}

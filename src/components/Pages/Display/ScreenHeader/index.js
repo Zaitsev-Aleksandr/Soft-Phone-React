@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
-
-
-import CurrentTime from "./TimeValue/CurrentTime";
 import ActionHeaderBlock from "./ActionHeaderBlock/ActionHeaderBlock";
-import CallStatusInfo from "./CallStatusInfo";
-import SearchSettingButtonGroup from "./SearchSettingButtonGroup";
+import CurrentTime from "./TimeValue/CurrentTime";
 
 
 class DisplayHeader
     extends Component {
+
 
     state = {
         currentTime: new Date(),
@@ -32,22 +29,20 @@ class DisplayHeader
 
     render() {
 
+
         return (
             <div className="screen-header-group d-flex flex-nowrap justify-content-between align-items-center w-100">
                 <CurrentTime
                     currentTime={this.state.currentTime.toLocaleTimeString()}
                     updateTime={this.updateTime}
                 />
+
                 <ActionHeaderBlock
-                    value={!this.props.callStatus ?
-                        <SearchSettingButtonGroup/> :
-                        <CallStatusInfo
-                            className={"incoming-call"}
-                            value={"Вызов..."}
-                        />}
+                    inComingLineArr={this.props.inComingLineArr}
                 />
+
             </div>
-        );
+        )
     }
 }
 

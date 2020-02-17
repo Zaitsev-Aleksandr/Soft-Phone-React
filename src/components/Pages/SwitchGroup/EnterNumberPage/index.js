@@ -7,7 +7,6 @@ import ActionButtonGroup from "../../PhonePagesComponents/ActionButton";
 
 
 const EnterNumberPage = ({
-                             startConferens,
                              changeCallLine,
                              endCallSession,
                              toggleConferenceStatus,
@@ -44,7 +43,6 @@ const EnterNumberPage = ({
             />
 
             <Keyboard
-                startConferen={startConferens}
                 toggleConferenceStatus={toggleConferenceStatus}
                 conferenceStatus={conferenceStatus}
                 toggleHoldLine={toggleHoldLine}
