@@ -18,6 +18,7 @@ class PhoneContent extends Component {
                 <Router>
                     <Switch>
                         <Route exact path="/softPhone" render={() => <EnterNumberPage
+                            toggleKeyboard={this.props.toggleKeyboard}
                             runCallTimer={this.props.runCallTimer}
                             toggleConferenceStatus={this.props.toggleConferenceStatus}
                             toggleMicrophoneStatus={this.props.toggleMicrophoneStatus}

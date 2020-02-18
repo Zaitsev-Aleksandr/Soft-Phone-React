@@ -1,38 +1,48 @@
-.fa-circle{
-font-size: 16px;
-}
+.soft-phone-header {
+  .fa-circle {
+    font-size: 16px;
+  }
 
-.sip-active{
-  color:green;
-}
-.sip-pass{
-  color:red;
-}
+  .sip-active {
+    color: green;
+  }
 
-.employee-full-name{
-  font-size: 14px;
-  line-height: 25px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  display: block;
-  text-overflow: ellipsis;
-  max-width: 200px;
-  overflow: hidden;
+  .sip-pass {
+    color: red;
+  }
+
+  .employee-full-name {
+    font-size: 14px;
+    line-height: 25px;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    display: block;
+    text-overflow: ellipsis;
+    max-width: 175px;
+    overflow: hidden;
 
 
-}
+  }
 
-.employee-sip{
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 25px;
-  margin-right: 3px;
+  .employee-sip {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 25px;
+    margin-right: 5px;
+      }
 
-}
+  .fas, .far {
+    font-size: 14px;
+    cursor: pointer;
+  }
 
 .fa-times{
-font-size: 14px;
+  margin-left: 10px;
+}
+  .fa-caret-square-up.active{
+    transform: rotate(180deg);
+  }
 }

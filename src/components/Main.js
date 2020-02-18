@@ -36,7 +36,11 @@ class Main extends Component {
     /*______________________this State____________________________________*/
 
     state = {
-        keyboardStatus: true,
+        keyboardStatus:
+            {
+                open: true,
+                active: true
+            },
         transferCall: false,
         microphoneStatus: true,
         searchActive: false,
@@ -129,11 +133,10 @@ class Main extends Component {
 
 
     changeCallLine = index => {
-        if(this.state.inComingLineArr.find(elem=>elem.callStatus))
-        {
+        if (this.state.inComingLineArr.find(elem => elem.callStatus)) {
             const cloneArr = this.cloneStateArr();
             if (cloneArr.findIndex(elem => elem.displayValue && elem.callStatus) === index) {
-                cloneArr.find(elem => elem.displayValue && !elem.callStatus).displayValue = false;
+                cloneArr.find(elem => elem.displayValue && elem.callStatus).displayValue = false;
             }
             cloneArr.map((elem, i) => {
                 if (elem.displayValue && elem.callStatus) {
@@ -168,13 +171,14 @@ class Main extends Component {
 
     toggleHoldLine = () => {
         const cloneArr = this.cloneStateArr();
-        const index = cloneArr.findIndex(elem => elem.callStatus && elem.displayValue );
+        const index = cloneArr.findIndex(elem => elem.callStatus && elem.displayValue);
         if (index >= 0) {
-            cloneArr[index].holdLine = !cloneArr[index].holdLine;
+                      cloneArr[index].holdLine = !cloneArr[index].holdLine;
             this.setState({
                 inComingLineArr: cloneArr
             });
         }
+
     };
 
     addSearch = () => {
@@ -203,7 +207,11 @@ class Main extends Component {
 
     reloadCallState = () => {
         this.setState({
-            keyboardStatus: true,
+            keyboardStatus:
+                {
+                    open: true,
+                    active: true
+                },
             microphoneStatus: true,
             enterValue: "",
             contactValueName: "",
@@ -228,23 +236,38 @@ class Main extends Component {
         });
     };
 
-    toggleKeyboard = () => {
+    toggleKeyboard = (e) => {
+        const cloneKeyboardStatus = {...this.state.keyboardStatus};
+        cloneKeyboardStatus.active=!cloneKeyboardStatus.active;
         this.setState({
-            keyboardStatus: !this.state.keyboardStatus
+            keyboardStatus:cloneKeyboardStatus
+        });
+        if(!this.state.keyboardStatus.open){
+            this.openKeyboard()
+        }
+
+            };
+    openKeyboard = () => {
+         const cloneKeyboardStatus = {...this.state.keyboardStatus};
+        cloneKeyboardStatus.open=!cloneKeyboardStatus.open;
+        this.setState({
+            keyboardStatus:cloneKeyboardStatus
         });
     };
 
     toggleTransfer = () => {
-        this.setState({
+               this.setState({
             transferCall: !this.state.transferCall
         })
     };
 
 
     render() {
+
+
         return (
             <div className="main d-flex flex-column">
-                <Header/>
+                <Header openKeyboard={this.openKeyboard}/>
 
                 <PhoneContent
                     runCallTimer={this.runCallTimer}
@@ -263,6 +286,7 @@ class Main extends Component {
                     contactValueName={this.state.contactValueName}
                     contactValueNumber={this.state.contactValueNumber}
                     changeCallLine={this.changeCallLine}
+                    toggleKeyboard={this.toggleKeyboard}
                 />
             </div>
         );

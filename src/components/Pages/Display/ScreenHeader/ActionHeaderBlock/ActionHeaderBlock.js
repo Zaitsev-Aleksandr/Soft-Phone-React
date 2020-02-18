@@ -6,7 +6,7 @@ import Timer from "../TimerCallSeshion";
 const ActionHeaderBlock = ({inComingLineArr}) => {
 
     const actionElem = () => {
-        if (inComingLineArr.find(elem => elem.callStatus)) {
+        if (inComingLineArr.find(elem => elem.callStatus&& elem.displayValue)) {
             return (
                 <>
                     <CallStatusInfo

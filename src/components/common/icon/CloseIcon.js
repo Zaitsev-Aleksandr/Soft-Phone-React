@@ -1,8 +1,8 @@
 import React from 'react';
 
-const CloseIcon = ({className, onClick}) => {
+const CloseIcon = () => {
     return (
-        <i className={`fas fa-times  ${className}`} onClick={onClick}/>
+        <i className="fas fa-times" />
     );
 };
 

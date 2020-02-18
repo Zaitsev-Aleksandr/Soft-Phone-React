@@ -5,18 +5,19 @@ import OffMicro from "../../../../common/icon/OffMic";
 import Subvalue from "../../KeyBoard/Subvalue";
 import KeyboardIcon from "../../../../common/icon/Keyboard";
 
-const ActiveCallButtonGroup = ({ endCallSession, toggleMicrophoneStatus, keyboardStatus }) => {
+const ActiveCallButtonGroup = ({ endCallSession, toggleMicrophoneStatus, toggleKeyboard, keyboardStatus }) => {
     return (
 
         <div className="keyboard-wrapper d-flex flex-nowrap justify-content-around align-items-center">
             <Button
                 className="common-call-keyboard-button d-flex flex-column align-items-center justify-content-center"
+                onClick={toggleKeyboard}
                 value={
                     <>
                         <KeyboardIcon/>
                         <Subvalue
                             className="sub-value-call-board-item d-flex flex-nowrap"
-                            subValue={keyboardStatus ? "Скрыть" : "Клавиатура"}
+                            subValue={!keyboardStatus.active ? "Скрыть" : "Клавиатура"}
                         />
                     </>
                 }
