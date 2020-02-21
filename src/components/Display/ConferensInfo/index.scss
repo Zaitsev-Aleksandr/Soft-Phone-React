@@ -1,0 +1,32 @@
+.conference-item {
+  width: 100%;
+  height: 45px;
+   background: #F0F1F8;
+  border-radius: 6px;
+  &-number__value{
+    font-size:13px;
+    font-weight: 600;
+    width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: auto;
+  }
+  .phone-book-avatar{
+    width: 25px;
+    height:25px;
+    border-radius: 50%;
+    font-size: 15px;
+  }
+  .fa-stopwatch{display: none}
+  &.hold{
+    background-color: rgba(0,0,0,0.2);
+       .conference-item__title{ color:#000000;}
+  }
+}
+.conference-item__title{
+   font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #BDBDBD;
+}

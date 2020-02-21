@@ -29,35 +29,43 @@ class Main extends Component {
         return arr
     };
 
-    cloneStateArr = () => {
-        return JSON.parse(JSON.stringify(this.state.inComingLineArr));
+    cloneStateArr = (arr) => {
+        return JSON.parse(JSON.stringify(arr));
     };
+
 
     /*______________________this State____________________________________*/
 
     state = {
         keyboardStatus:
             {
-                open: true,
-                active: true
+                open: true,        //keyboard status open or close by button in header soft phone
+                active: true       //keyboard variant during a call when you need a enter number in soft phone
             },
         transferCall: false,
-        microphoneStatus: true,
+        microphoneStatus: true,   // microphone status on or off
         searchActive: false,
         enterValue: "",
         contactValueName: "",
         contactValueNumber: "",
         conferenceStatus: false,
-        inComingLineArr: Main.createLineObj()
+        commonConferenceArr: [],
+        inComingLineArr: Main.createLineObj()  //array of call line status
     };
 
     /*_________________________________________________________________________*/
 
 
+    addConferencePerson = ({status, name, timeValue, connected}) => {
+        this.setState({
+            commonConferenceArr: [...this.state.commonConferenceArr, {status, name, timeValue, connected}]
+        });
+    };
+
     endCallSession = () => {
-        const cloneArr = this.cloneStateArr();
+        const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
         const index = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === true);
-        const activID = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === false);
+        const activeID = cloneArr.findIndex(elem => elem.callStatus === true && elem.displayValue === false);
         cloneArr[index] = {
             displayValue: false,
             contactValueName: "",
@@ -71,9 +79,11 @@ class Main extends Component {
                 minutes: "00"
             }
         };
-        if (activID >= 0) {
-            cloneArr[activID].displayValue = true;
-            cloneArr[activID].holdLine = false;
+        if (activeID >= 0) {
+            cloneArr[activeID].displayValue = true;
+            cloneArr[activeID].holdLine = false;
+            cloneArr[activeID].conferenceActive = false;
+            this.setState({commonConferenceArr: []})
         }
 
         this.setState({
@@ -92,7 +102,7 @@ class Main extends Component {
         const second = subTotalSecond.toString().length < 2 ? "0" + subTotalSecond : subTotalSecond;
         const minute = subTotalMinutes.toString().length < 2 ? "0" + subTotalMinutes : subTotalMinutes;
 
-        const cloneArr = this.cloneStateArr().map(elem => {
+        const cloneArr = this.cloneStateArr(this.state.inComingLineArr).map(elem => {
             if (elem.startCallTime) {
                 return elem.timeValue = {
                     seconds: second,
@@ -108,14 +118,14 @@ class Main extends Component {
 
 
     startCallSession = () => {
-        const cloneArr = this.cloneStateArr();
+        const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
         const index = cloneArr.findIndex(elem => elem.callStatus === false);
         const enterPhoneNumber = !this.state.contactValueNumber ? this.state.enterValue : this.state.contactValueNumber;
         cloneArr.forEach((elem, i) => {
             if (index >= 0 && index === i) {
                 elem.callStatus = true;
-                elem.personName = this.state.contactValueName;
-                elem.personNumber = enterPhoneNumber;
+                elem.contactValueName = this.state.contactValueName;
+                elem.contactValueNumber = enterPhoneNumber;
                 elem.displayValue = true;
                 elem.startCallTime = Date.now();
             } else if (elem.callStatus === true && index !== i) {
@@ -124,9 +134,13 @@ class Main extends Component {
             }
 
         });
+        if (cloneArr.find(elem => elem.conferenceActive)) {
+            cloneArr[index].conferenceActive = true
+        }
+
         this.setState({
             inComingLineArr: cloneArr,
-            conferenceStatus: false
+
         });
         this.reloadCallState();
     };
@@ -134,7 +148,7 @@ class Main extends Component {
 
     changeCallLine = index => {
         if (this.state.inComingLineArr.find(elem => elem.callStatus)) {
-            const cloneArr = this.cloneStateArr();
+            const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
             if (cloneArr.findIndex(elem => elem.displayValue && elem.callStatus) === index) {
                 cloneArr.find(elem => elem.displayValue && elem.callStatus).displayValue = false;
             }
@@ -170,10 +184,10 @@ class Main extends Component {
     };
 
     toggleHoldLine = () => {
-        const cloneArr = this.cloneStateArr();
+        const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
         const index = cloneArr.findIndex(elem => elem.callStatus && elem.displayValue);
         if (index >= 0) {
-                      cloneArr[index].holdLine = !cloneArr[index].holdLine;
+            cloneArr[index].holdLine = !cloneArr[index].holdLine;
             this.setState({
                 inComingLineArr: cloneArr
             });
@@ -216,19 +230,22 @@ class Main extends Component {
             enterValue: "",
             contactValueName: "",
             contactValueNumber: "",
+            conferenceStatus: false,
         })
     };
+//__________ Conference Function________
 
-    conferenceStart = () => {
-        this.setState({
-            conferenceStatus: true
-        });
-    };
     toggleConferenceStatus = () => {
+        const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
+        cloneArr.find(elem => elem.displayValue).conferenceActive = true;
+        this.toggleHoldLine();
         this.setState({
+            inComingLineArr: cloneArr,
             conferenceStatus: !this.state.conferenceStatus
         });
     };
+
+    //  ___________  On Off Microphone Function____
 
     toggleMicrophoneStatus = () => {
         this.setState({
@@ -236,40 +253,47 @@ class Main extends Component {
         });
     };
 
-    toggleKeyboard = (e) => {
+
+    //________________ function for change keyboard pass active
+    toggleKeyboard = () => {
         const cloneKeyboardStatus = {...this.state.keyboardStatus};
-        cloneKeyboardStatus.active=!cloneKeyboardStatus.active;
+        cloneKeyboardStatus.active = !cloneKeyboardStatus.active;
         this.setState({
-            keyboardStatus:cloneKeyboardStatus
+            keyboardStatus: cloneKeyboardStatus
         });
-        if(!this.state.keyboardStatus.open){
+        if (!this.state.keyboardStatus.open) {
             this.openKeyboard()
         }
 
-            };
+    };
     openKeyboard = () => {
-         const cloneKeyboardStatus = {...this.state.keyboardStatus};
-        cloneKeyboardStatus.open=!cloneKeyboardStatus.open;
+        const cloneKeyboardStatus = {...this.state.keyboardStatus};
+        cloneKeyboardStatus.open = !cloneKeyboardStatus.open;
         this.setState({
-            keyboardStatus:cloneKeyboardStatus
+            keyboardStatus: cloneKeyboardStatus
         });
+
     };
 
     toggleTransfer = () => {
-               this.setState({
+        this.setState({
             transferCall: !this.state.transferCall
         })
     };
 
+    componentWillUnmount() {
+
+    }
 
     render() {
-
-
+        console.log(this.state.commonConferenceArr);
         return (
             <div className="main d-flex flex-column">
                 <Header openKeyboard={this.openKeyboard}/>
 
                 <PhoneContent
+                    commonConferenceArr={this.state.commonConferenceArr}
+                    addConferencePerson={this.addConferencePerson}
                     runCallTimer={this.runCallTimer}
                     toggleConferenceStatus={this.toggleConferenceStatus}
                     conferenceStatus={this.state.conferenceStatus}

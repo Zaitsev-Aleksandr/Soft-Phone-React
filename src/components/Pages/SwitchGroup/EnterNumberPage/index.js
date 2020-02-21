@@ -1,16 +1,16 @@
 import React from 'react';
 
-import DisplayGroup from "../../Display";
-import LineGroup from "../../PhonePagesComponents/LineGroup";
-import Keyboard from "../../PhonePagesComponents/KeyBoard";
-import ActionButtonGroup from "../../PhonePagesComponents/ActionButton";
+import DisplayGroup from "../../../Display";
+import LineGroup from "../../../PhonePagesComponents/LineGroup";
+import Keyboard from "../../../PhonePagesComponents/KeyBoard";
+import ActionButtonGroup from "../../../PhonePagesComponents/ActionButton";
 
 
-const EnterNumberPage = ({ toggleKeyboard,
+const EnterNumberPage = ({
+                             toggleKeyboard,
                              changeCallLine,
                              endCallSession,
                              toggleConferenceStatus,
-                             runCallTimer,
                              conferenceStatus,
                              toggleMicrophoneStatus,
                              microphoneStatus,
@@ -22,13 +22,17 @@ const EnterNumberPage = ({ toggleKeyboard,
                              updateContactValue,
                              enterValue,
                              contactValueName,
-                             contactValueNumber
+                             contactValueNumber,
+                             addConferencePerson,
+                             commonConferenceArr
                          }) => {
     return (
         <>
             <DisplayGroup
+                addConferencePerson={addConferencePerson}
+                commonConferenceArr={commonConferenceArr}
+                toggleHoldLine={toggleHoldLine}
                 conferenceStatus={conferenceStatus}
-                runCallTimer={runCallTimer}
                 enterValue={enterValue}
                 contactValueName={contactValueName}
                 contactValueNumber={contactValueNumber}
@@ -43,6 +47,7 @@ const EnterNumberPage = ({ toggleKeyboard,
             />
 
             <Keyboard
+                addConferencePerson={addConferencePerson}
                 toggleConferenceStatus={toggleConferenceStatus}
                 conferenceStatus={conferenceStatus}
                 toggleHoldLine={toggleHoldLine}

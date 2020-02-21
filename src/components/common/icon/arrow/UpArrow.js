@@ -1,8 +1,8 @@
 import React from 'react';
 
-const UpArrow = ( { openKeyboard } ) => {
+const UpArrow = ({ onClick } ) => {
     return (
-        <i className="far fa-caret-square-up" onClick={(e)=>{openKeyboard(); e.currentTarget.classList.toggle("active")}}/>
+        <i className="fas fa-chevron-up" onClick={onClick}/>
     );
 };
 
