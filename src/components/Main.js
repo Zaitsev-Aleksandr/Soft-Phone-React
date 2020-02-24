@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import {BrowserRouter as Router} from "react-router-dom"
 import Header from "./Header";
 import "./Main.scss"
 import PhoneContent from "./Pages";
+import NavGroup from "./PhonePagesComponents/NavGrop";
 
 
 class Main extends Component {
@@ -37,6 +39,7 @@ class Main extends Component {
     /*______________________this State____________________________________*/
 
     state = {
+        activeStyle: true,
         keyboardStatus:
             {
                 open: true,        //keyboard status open or close by button in header soft phone
@@ -54,7 +57,11 @@ class Main extends Component {
     };
 
     /*_________________________________________________________________________*/
-
+    toggleStyleSoftPhone = () => {
+        this.setState({
+            activeStyle: !this.state.activeStyle
+        })
+    };
 
     addConferencePerson = ({status, name, timeValue, connected}) => {
         this.setState({
@@ -286,32 +293,41 @@ class Main extends Component {
     }
 
     render() {
-        console.log(this.state.commonConferenceArr);
-        return (
-            <div className="main d-flex flex-column">
-                <Header openKeyboard={this.openKeyboard}/>
 
-                <PhoneContent
-                    commonConferenceArr={this.state.commonConferenceArr}
-                    addConferencePerson={this.addConferencePerson}
-                    runCallTimer={this.runCallTimer}
-                    toggleConferenceStatus={this.toggleConferenceStatus}
-                    conferenceStatus={this.state.conferenceStatus}
-                    toggleMicrophoneStatus={this.toggleMicrophoneStatus}
-                    toggleHoldLine={this.toggleHoldLine}
-                    endCallSession={this.endCallSession}
-                    startCallSession={this.startCallSession}
-                    keyboardStatus={this.state.keyboardStatus}
-                    updateContactValue={this.updateContactValue}
-                    inComingLineArr={this.state.inComingLineArr}
-                    updateEnterValue={this.updateEnterValue}
-                    microphoneStatus={this.state.microphoneStatus}
-                    enterValue={this.state.enterValue}
-                    contactValueName={this.state.contactValueName}
-                    contactValueNumber={this.state.contactValueNumber}
-                    changeCallLine={this.changeCallLine}
-                    toggleKeyboard={this.toggleKeyboard}
-                />
+        return (
+            <div className={`main d-flex flex-column ${this.state.activeStyle?"dark-time":""}`}>
+                <Header openKeyboard={this.openKeyboard}/>
+                <Router>
+                    <PhoneContent
+                        activeStyle={this.state.activeStyle}
+                        toggleStyleSoftPhone={this.toggleStyleSoftPhone}
+                        commonConferenceArr={this.state.commonConferenceArr}
+                        addConferencePerson={this.addConferencePerson}
+                        runCallTimer={this.runCallTimer}
+                        toggleConferenceStatus={this.toggleConferenceStatus}
+                        conferenceStatus={this.state.conferenceStatus}
+                        toggleMicrophoneStatus={this.toggleMicrophoneStatus}
+                        toggleHoldLine={this.toggleHoldLine}
+                        endCallSession={this.endCallSession}
+                        startCallSession={this.startCallSession}
+                        keyboardStatus={this.state.keyboardStatus}
+                        updateContactValue={this.updateContactValue}
+                        inComingLineArr={this.state.inComingLineArr}
+                        updateEnterValue={this.updateEnterValue}
+                        microphoneStatus={this.state.microphoneStatus}
+                        enterValue={this.state.enterValue}
+                        contactValueName={this.state.contactValueName}
+                        contactValueNumber={this.state.contactValueNumber}
+                        changeCallLine={this.changeCallLine}
+                        toggleKeyboard={this.toggleKeyboard}
+                    />
+
+                    <NavGroup
+                        conferenceStatus={this.state.conferenceStatus}
+                        inComingLineArr={this.state.inComingLineArr}
+                    />
+
+                </Router>
             </div>
         );
     }

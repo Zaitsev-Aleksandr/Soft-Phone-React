@@ -1,46 +1,59 @@
 .phone-screen-block {
   height: 180px;
+  padding: 5px 25px;
 
   .screen-header-group {
-    padding: 3px 10px 5px;
+    padding: 7px 0;
 
     .current-time-phone-screen {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 18px;
       color: #7D7D7D;
 
       .fa-clock {
         margin-right: 5px;
-        height: 11px;
       }
     }
 
     .action-screen-header-block {
       width: 100%;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 18px;
-      color: #7D7D7D;
 
-      .fas, .far {
-        height: 11px;
-        cursor: pointer;
+      .fa-search, .fa-ellipsis-v {
+        color: #213991;
         margin-left: 12px;
-        color: #7D7D7D;
+        cursor: pointer;
 
         &:hover {
-          color: #213991;
+          color: #7D7D7D;
         }
+      }
+
+      .fa-stopwatch {
+
+        margin-left: 12px;
+        color: #6DD453;
+
+
       }
     }
   }
 }
 
 .call-timer {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
-  color: #008000;
+  color: #6DD453;;
 
   .fa-stopwatch {
-    height: 11px;
+  }
+}
+
+/* _________________dark Style___________________*/
+
+.dark-time {
+  .phone-screen-block {
+    padding: 5px 10px;
   }
 }

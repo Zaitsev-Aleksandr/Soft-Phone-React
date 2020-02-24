@@ -3,7 +3,7 @@ import CallStatusInfo from "../CallStatusInfo";
 import SearchSettingButtonGroup from "../SearchSettingButtonGroup";
 import Timer from "../TimerCallSeshion";
 
-const ActionHeaderBlock = ({inComingLineArr}) => {
+const ActionHeaderBlock = ({inComingLineArr, toggleStyleSoftPhone}) => {
 
     const actionElem = () => {
         if (inComingLineArr.find(elem => elem.callStatus&& elem.displayValue)) {
@@ -17,7 +17,7 @@ const ActionHeaderBlock = ({inComingLineArr}) => {
                 </>
             )
         } else {
-            return <SearchSettingButtonGroup/>
+            return <SearchSettingButtonGroup toggleStyleSoftPhone={toggleStyleSoftPhone}/>
         }
     };
 

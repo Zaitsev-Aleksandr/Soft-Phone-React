@@ -1,50 +1,82 @@
 .keyboard-button-group {
-  height:175px;
+  height: 170px;
   margin-top: 10px;
   transition: 0.3s;
   overflow: hidden;
+  padding: 0 25px;
+
   .common-keyboard-button {
     border: none;
-    background-color: #ffffff;
-    height: 44px;
-    width: 44px;
-    font-size: 23px;
-    line-height: 14px;
-    font-weight: 600;
-    border-radius: 50%;
-    margin: 0 20px;
+    width: 70px;
+    height: 35px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #7D7D7D;
+    background: #F0F1F8;
+    border-radius: 8px;
 
     &:hover {
-      background-color: #dfe0e7;
+      color: #213991;
+      background-color: #e9eaf1;
     }
   }
 }
-.keyboard-button-group.close{
-  height:0;
+
+.keyboard-button-group.close {
+  height: 0;
   margin-top: 0;
   transition: 0.3s;
 }
 
-.common-call-keyboard-button{
+.common-call-keyboard-button {
   border: none;
-  background-color: #ffffff;
-  color:#7D7D7D;
-  height: 60px;
-  width: 60px;
-  font-weight: 600;
-  border-radius: 50%;
+  width: 75px;
+  height: 45px;
+  color: #7D7D7D;
+  background: #F0F1F8;
+  border-radius: 8px;
+  padding: 5px;
   margin-top: auto;
-  margin-right: 10px;
-  margin-left: 10px;
-  &:hover{
+  margin-bottom: 5px;
+
+  &:hover {
     background-color: #dfe0e7;
-    color:#213991;
+    color: #213991;
   }
+
   &.active {
 
-    color:#213991;
+    color: #213991;
   }
-  .fas, .far{
+
+  .fas, .far {
     font-size: 17px;
   }
- }
+}
+
+/*________________________dark style_____________________*/
+
+.dark-time {
+  .keyboard-button-group {
+    padding: 0 10px;
+
+    .common-keyboard-button {
+      &:hover {
+        color: black;
+        background-color: #e9eaf1;
+      }
+    }
+  }
+
+  .common-call-keyboard-button {
+    &:hover {
+      background-color: #dfe0e7;
+      color: #213991;
+    }
+    &.active {
+      color: #213991;
+    }
+   }
+
+}

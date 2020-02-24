@@ -1,11 +1,24 @@
 .main {
-  padding: 5px 12px 15px;
+  padding: 5px 0;
   width: 295px;
-  border-radius: 15px;
-  border: 1px solid black;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.2);
   z-index: 2000;
-  }
-.navigation-call-info-link{
+}
+
+.navigation-call-info-link {
   color: black;
-  text-decoration: none;
+  text-decoration: none!important;
+}
+
+
+/*____________dark Style_____________________*/
+
+
+.dark-time.main {
+  padding: 5px 15px;
+  background: #213991;
+  border-radius: 12px;
+
 }

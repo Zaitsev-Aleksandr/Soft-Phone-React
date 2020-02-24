@@ -2,59 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e18bdb0-060f-41d4-87c6-d7060d72e85d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Display/ConferensInfo/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Display/ConferensInfo/static.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/icon/arrow/Combine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/icon/arrow/UnCombine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayFooter/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayFooter/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayHeader/ActionHeaderBlock/ActionHeaderBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/ActionHeaderBlock/ActionHeaderBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayHeader/SearchSettingButtonGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/SearchSettingButtonGroup/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ActivCallDisplay/SubscriberValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/ActivCallDisplay/SubscriberValue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ActivCallDisplay/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/ActivCallDisplay/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ActivCallDisplay/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/ActivCallDisplay/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/CommonContactInfo/ConferenceDisplay/AbonentElem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/ConferenceDisplay/AbonentElem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/CommonContactInfo/ConferenceDisplay/ConferenceHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/ConferenceDisplay/ConferenceHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/CommonContactInfo/ConferenceDisplay/index..js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/ConferenceDisplay/index..js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/CommonContactInfo/commonInfoInput/AddContactButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/commonInfoInput/AddContactButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/CommonContactInfo/commonInfoInput/SearchGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/commonInfoInput/SearchGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/CommonContactInfo/commonInfoInput/SearchGroup/searchItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/commonInfoInput/SearchGroup/searchItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/CommonContactInfo/commonInfoInput/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/commonInfoInput/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/CommonContactInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/CommonContactInfo/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ConferensInfo/ConferensCallItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferenceCallItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ConferensInfo/ConferensDisplayBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferenceDisplayBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/DisplayFooter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayFooter/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/DisplayFooter/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayFooter/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/ActionHeaderBlock/ActionHeaderBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/ActionHeaderBlock/ActionHeaderBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/ActionHeaderBlock/SwithCallStatusArr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/ActionHeaderBlock/SwithCallStatusArr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/CallStatusInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/CallStatusInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/SearchSettingButtonGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/SearchSettingButtonGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/TimeValue/CurrentTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/TimeValue/CurrentTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/TimerCallSeshion/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/TimerCallSeshion/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/callStatusValue.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/callStatusValue.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Display/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/ActionButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/ActionButton/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/KeyBoard/ActiveCallKeyboardGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/ActiveCallKeyboardGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/KeyBoard/PassCallkeyboardGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/PassCallkeyboardGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/KeyBoard/Subvalue/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/Subvalue/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/KeyBoard/Subvalue/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/Subvalue/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/KeyBoard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/KeyBoard/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/KeyBoard/statics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/statics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/LineGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/LineGroup/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/NavGrop/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/NavGrop/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/SwitchGroup/EnterNumberPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/SwitchGroup/EnterNumberPage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/SwitchGroup/SearhPages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/SwitchGroup/SearhPages/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/icon/arrow/UpArrow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/arrow/UpArrow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/Subvalue/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/Subvalue/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/icon/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/Menu.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -69,48 +44,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Main.js">
+        <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="85" column="52" selection-start-line="85" selection-start-column="52" selection-end-line="85" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Display/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="71" />
+            <state relative-caret-position="204">
+              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Display/ActivCallDisplay/SubscriberValue.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="86" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="5" selection-end-column="86" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Pages/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,17 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ondragstart</find>
-      <find>on-hold</find>
-      <find>keyboar</find>
-      <find>Keyboard</find>
-      <find>toggleKeyboard</find>
-      <find>keyboardStatus</find>
-      <find>keyboard-button-group</find>
-      <find>conferenceActive:</find>
-      <find>openK</find>
-      <find>conferenc</find>
-      <find>personName</find>
       <find>fa-caret-square-up</find>
       <find>personNumber</find>
       <find>reloadCallState</find>
@@ -154,10 +82,21 @@
       <find>inComingLineArr</find>
       <find>consol</find>
       <find>contactValueNumber</find>
-      <find>commonConferenceArr</find>
       <find>toggleHoldLine</find>
       <find>conferenceActive</find>
       <find>addConferencePerson</find>
+      <find>ConferenceStatus</find>
+      <find>commonConferenceArr</find>
+      <find>sud</find>
+      <find>common-keyboard-button</find>
+      <find>.sub-value-call-board-item</find>
+      <find>screen-header-group</find>
+      <find>common-call-keyboard-button</find>
+      <find>incoming-line-button-item</find>
+      <find>keyboard-button-group</find>
+      <find>search-common-wrapper</find>
+      <find>navigation-call-info-link</find>
+      <find>last-contact-wrapper</find>
     </findStrings>
     <replaceStrings>
       <replace>screen</replace>
@@ -180,21 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Pages/Display/DisplayFooter/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/Timer/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/CallStatusInfo.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/Display/ActivCallDisplay/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/Display/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/callStatusValue.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/Display/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/NavGrop/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/TimerCallSeshion/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/Display/ScreenHeader/ActionHeaderBlock/ActionHeaderBlock.js" />
-        <option value="$PROJECT_DIR$/src/components/Main.scss" />
-        <option value="$PROJECT_DIR$/src/components/common/icon/microphone/Collapse.js" />
-        <option value="$PROJECT_DIR$/src/components/common/icon/CloseIcon.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js" />
         <option value="$PROJECT_DIR$/src/components/common/icon/arrow/toparrow.js" />
         <option value="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/ActionButton/index.js" />
         <option value="$PROJECT_DIR$/src/components/Pages/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js" />
@@ -206,31 +130,46 @@
         <option value="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.js" />
         <option value="$PROJECT_DIR$/src/components/Header/index.js" />
         <option value="$PROJECT_DIR$/src/components/common/icon/arrow/UpArrow.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/index.scss" />
         <option value="$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferensDisplayBlock.js" />
         <option value="$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferenceDisplayBlock.js" />
         <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/ContactsPage/PhoneBookItem.js" />
-        <option value="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" />
         <option value="$PROJECT_DIR$/src/components/Display/CommonContactInfo/ConferenceDisplay/index..js" />
         <option value="$PROJECT_DIR$/src/components/Display/ConferensInfo/static.js" />
         <option value="$PROJECT_DIR$/src/components/Display/DisplayHeader/TimerCallSeshion/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Display/DisplayFooter/index.scss" />
         <option value="$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferenceCallItem.js" />
         <option value="$PROJECT_DIR$/src/components/Display/ConferensInfo/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js" />
-        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js" />
-        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.js" />
         <option value="$PROJECT_DIR$/src/components/common/icon/arrow/UnCombine.js" />
-        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js" />
-        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/index.js" />
         <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/ActiveCallKeyboardGroup/index.js" />
         <option value="$PROJECT_DIR$/src/components/Display/ActivCallDisplay/index.js" />
         <option value="$PROJECT_DIR$/src/components/Display/ActivCallDisplay/SubscriberValue.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/EnterNumberPage/index.js" />
         <option value="$PROJECT_DIR$/src/components/common/icon/arrow/Combine.js" />
+        <option value="$PROJECT_DIR$/src/components/Display/DisplayFooter/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js" />
+        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js" />
+        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js" />
+        <option value="$PROJECT_DIR$/src/components/common/button.scss" />
+        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/Subvalue/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Pages/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/EnterNumberPage/index.js" />
         <option value="$PROJECT_DIR$/src/components/Display/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Display/DisplayHeader/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Display/DisplayHeader/ActionHeaderBlock/ActionHeaderBlock.js" />
+        <option value="$PROJECT_DIR$/src/components/common/icon/Menu.js" />
+        <option value="$PROJECT_DIR$/src/components/Display/DisplayHeader/SearchSettingButtonGroup/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/Pages/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/Header/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/Display/index.scss" />
         <option value="$PROJECT_DIR$/src/components/Main.js" />
+        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.js" />
+        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/Main.scss" />
+        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/SearhPages/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js" />
       </list>
     </option>
   </component>
@@ -269,14 +208,23 @@
               <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="PhonePagesComponents" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
               <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Display" type="462c0819:PsiDirectoryNode" />
+              <item name="PhonePagesComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="LineGroup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="PhonePagesComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="NavGrop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
@@ -390,18 +338,18 @@
       <workItem from="1581930461568" duration="13115000" />
       <workItem from="1582010600920" duration="19038000" />
       <workItem from="1582181146321" duration="23460000" />
-      <workItem from="1582268245770" duration="26672000" />
+      <workItem from="1582268245770" duration="26807000" />
+      <workItem from="1582529026445" duration="22478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="380388000" />
+    <option name="totallyTimeSpent" value="403001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24762908" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28714436" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -415,8 +363,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50105375" side_tool="true" weight="0.3531961" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49894625" visible="true" weight="0.3531961" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021075" side_tool="true" weight="0.27193934" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49789253" visible="true" weight="0.27193934" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -456,133 +404,6 @@
     <state x="265" y="75" width="670" height="676" key="search.everywhere.popup/0.23.1280.728@0.23.1280.728" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/common/icon/CloseIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/DisplayHeader/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/DisplayHeader/ActionHeaderBlock/ActionHeaderBlock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/DisplayHeader/SearchSettingButtonGroup/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/static/css/main.8120358c.chunk.css" />
-    <entry file="file://$PROJECT_DIR$/src/resources/scss/animation.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/DisplayFooter/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferenceDisplayBlock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/static/js/main.72c4125c.chunk.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/common/icon/arrow/UpArrow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/common/inputs/Input.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/SwitchGroup/SearhPages/InputSection/InputSection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Pages/SwitchGroup/lastСall/InputSection/InputSection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -594,13 +415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/SwitchGroup/ContactsPage/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -645,37 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/ActivCallDisplay/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/DisplayFooter/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Display/ConferensInfo/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -700,16 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/common/Button.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -721,23 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="204" selection-start-line="9" selection-start-column="204" selection-end-line="9" selection-end-column="204" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -771,23 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/ActivCallDisplay/SubscriberValue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="86" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="5" selection-end-column="86" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/ActiveCallKeyboardGroup/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -798,59 +537,281 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Display/ActivCallDisplay/SubscriberValue.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="85">
+          <caret line="5" column="86" selection-start-line="4" selection-start-column="3" selection-end-line="5" selection-end-column="86" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/SwitchGroup/EnterNumberPage/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Display/DisplayFooter/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="476">
+          <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/PassCallkeyboardGroup/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/Subvalue/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Pages/SwitchGroup/ContactsPage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/common/icon/arrow/Combine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="25" />
+        <state relative-caret-position="187">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/Subvalue/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Display/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="71" />
+        <state relative-caret-position="425">
+          <caret line="109" column="24" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Main.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Display/DisplayHeader/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/icon/Menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Display/DisplayHeader/ActionHeaderBlock/ActionHeaderBlock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="85" column="52" selection-start-line="85" selection-start-column="52" selection-end-line="85" selection-end-column="52" />
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Display/DisplayHeader/SearchSettingButtonGroup/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/css/main.0e677bb6.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="51" lean-forward="true" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Display/ActivCallDisplay/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Pages/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="62" column="11" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Display/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+          <folding>
+            <element signature="e#20#644#0" />
+            <element signature="e#658#743#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="37" column="26" selection-start-line="32" selection-start-column="5" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="300" column="26" selection-start-line="300" selection-start-column="26" selection-end-line="300" selection-end-column="26" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Pages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Pages/SwitchGroup/EnterNumberPage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="28" column="11" selection-start-line="28" selection-end-line="28" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#406#459#0" />
+            <element signature="e#490#809#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Pages/SwitchGroup/SearhPages/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

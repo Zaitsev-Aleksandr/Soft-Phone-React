@@ -1,9 +1,9 @@
-.content-wrapper{
-  padding: 5px 7px;
-  border-radius: 16px;
-  border: 1px solid black;
+.content-wrapper {
+  border-top: 1px solid #C9CFE3;
+  border-bottom: 1px solid #C9CFE3;
 }
-.phone-book-avatar{
+
+.phone-book-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -11,4 +11,25 @@
   font-weight: 600;
   color: #7D7D7D;
 
+}
+
+
+.dark-time {
+
+  .content-wrapper {
+    border: none;
+    border-radius: 12px;
+    background-color: white;
+
+  }
+
+  .phone-book-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 600;
+    color: #7D7D7D;
+
+  }
 }

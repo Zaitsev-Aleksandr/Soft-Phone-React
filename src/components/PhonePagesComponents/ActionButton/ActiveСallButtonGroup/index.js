@@ -8,7 +8,7 @@ import KeyboardIcon from "../../../common/icon/Keyboard";
 const ActiveCallButtonGroup = ({ endCallSession, toggleMicrophoneStatus, toggleKeyboard, keyboardStatus }) => {
     return (
 
-        <div className="keyboard-wrapper d-flex flex-nowrap justify-content-around align-items-center">
+        <>
             <Button
                 className="common-call-keyboard-button d-flex flex-column align-items-center justify-content-center"
                 onClick={toggleKeyboard}
@@ -43,7 +43,7 @@ const ActiveCallButtonGroup = ({ endCallSession, toggleMicrophoneStatus, toggleK
                     </>
                 }
             />
-        </div>
+        </>
     );
 };
 

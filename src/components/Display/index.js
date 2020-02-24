@@ -8,7 +8,8 @@ import SubscriberValue from "./ActivCallDisplay/SubscriberValue";
 import Combine from "../common/icon/arrow/Combine";
 
 
-const ScreenGroup = ({updateContactValue, addConferencePerson, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName, commonConferenceArr, contactValueNumber, conferenceStatus}) => {
+const ScreenGroup = ({updateContactValue, activeStyle,
+                         toggleStyleSoftPhone, addConferencePerson, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName, commonConferenceArr, contactValueNumber, conferenceStatus}) => {
 
 
     const slaveClientValue = () => {
@@ -107,6 +108,7 @@ const ScreenGroup = ({updateContactValue, addConferencePerson, updateEnterValue,
     return (
         <div className="phone-screen-block d-flex flex-column">
             <DisplayHeader
+                toggleStyleSoftPhone={toggleStyleSoftPhone}
                 inComingLineArr={inComingLineArr}/>
 
 

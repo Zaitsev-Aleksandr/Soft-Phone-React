@@ -7,6 +7,8 @@ import ActionButtonGroup from "../../../PhonePagesComponents/ActionButton";
 
 
 const EnterNumberPage = ({
+                             activeStyle,
+                             toggleStyleSoftPhone,
                              toggleKeyboard,
                              changeCallLine,
                              endCallSession,
@@ -29,6 +31,8 @@ const EnterNumberPage = ({
     return (
         <>
             <DisplayGroup
+                activeStyle={activeStyle}
+            toggleStyleSoftPhone={toggleStyleSoftPhone}
                 addConferencePerson={addConferencePerson}
                 commonConferenceArr={commonConferenceArr}
                 toggleHoldLine={toggleHoldLine}

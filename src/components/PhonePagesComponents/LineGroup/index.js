@@ -5,6 +5,14 @@ import "./index.scss"
 const lineValueArr = [1, 2, 3, 4];
 
 const LineGroup = ({inComingLineArr, changeCallLine}) => {
+    requestAnimationFrame(() => {
+        const onHold = document.querySelectorAll(".on-hold");
+        onHold.forEach(elem => elem.classList.remove("on-hold"));
+
+        requestAnimationFrame(() => {
+            onHold.forEach(elem => elem.classList.add("on-hold"))
+        });
+    });
 
     const buttonGroup = () => (
         lineValueArr.map((value, i) => (
@@ -16,11 +24,13 @@ const LineGroup = ({inComingLineArr, changeCallLine}) => {
             />
         ))
     );
-    document.querySelectorAll(".on-hold").forEach(elem=>elem.style.animationPlayState="running");
+
     return (
-        <div className="incoming-button-block d-flex flex-nowrap justify-content-between align-items-center py-1">
-            {buttonGroup()}
-        </div>
+        <>
+            <div className="incoming-button-block d-flex flex-nowrap justify-content-between align-items-center py-1">
+                {buttonGroup()}
+            </div>
+        </>
     );
 };
 

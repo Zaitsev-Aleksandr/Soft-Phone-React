@@ -9,7 +9,7 @@ import ActiveCallKeyboardGroup from "./ActiveCallKeyboardGroup";
 const Keyboard = ({updateEnterValue, toggleConferenceStatus, conferenceStatus, inComingLineArr, keyboardStatus, toggleHoldLine, addConferencePerson}) => {
     return (
         <div
-            className={`keyboard-button-group d-flex flex-wrap justify-content-center  align-items-stretch ${!keyboardStatus.open ? "close" : ""}`}>
+            className={`keyboard-button-group d-flex flex-wrap justify-content-between  align-items-center ${!keyboardStatus.open ? "close" : ""}`}>
 
             {!inComingLineArr.find(elem => elem.callStatus) || conferenceStatus || !keyboardStatus.active || (!inComingLineArr.find(elem => elem.callStatus && elem.displayValue)) ?
 

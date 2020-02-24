@@ -1,4 +1,5 @@
 .soft-phone-header {
+  padding: 15px 25px;
   .fa-circle {
     font-size: 16px;
   }
@@ -12,14 +13,14 @@
   }
 
   .employee-full-name {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 25px;
-    font-family: Roboto, sans-serif;
+   font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: normal;
     display: block;
     text-overflow: ellipsis;
-    max-width: 175px;
+    max-width: 150px;
     overflow: hidden;
 
 
@@ -37,12 +38,33 @@
   .fas, .far {
     font-size: 14px;
     cursor: pointer;
+
   }
 
 .fa-times{
   margin-left: 10px;
+  color: #C9CFE3;
 }
+  .fa-chevron-up{
+    transform: rotate(180deg);
+    color: #C9CFE3;
+  }
   .fa-chevron-up.active{
     transform: rotate(180deg);
-  }
+      }
 }
+
+
+
+/*___________________Dark style__________________*/
+
+.dark-time{
+.soft-phone-header {
+  padding:0;
+    .employee-full-name {
+   color: #FFFFFF;
+  }
+  .employee-sip {
+    color: #FFFFFF;
+      }
+ }}

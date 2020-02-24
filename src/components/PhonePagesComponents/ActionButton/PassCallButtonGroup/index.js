@@ -8,7 +8,7 @@ import Subvalue from "../../KeyBoard/Subvalue";
 const PassCallButtonGroup = ({keyboardStatus ,startCallSession  }) => {
     return (
 
-        <div className="keyboard-wrapper d-flex flex-nowrap justify-content-around align-items-center">
+        <>
             <Button
                 className="common-call-keyboard-button d-flex flex-column align-items-center justify-content-center"
                 value={
@@ -33,7 +33,7 @@ const PassCallButtonGroup = ({keyboardStatus ,startCallSession  }) => {
                 className={"common-call-keyboard-button d-flex flex-column align-items-center justify-content-center"}
                 value={<BackSpace/>}
             />
-        </div>
+        </>
     );
 };
 

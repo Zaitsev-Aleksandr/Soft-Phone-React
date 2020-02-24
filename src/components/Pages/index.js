@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import { Route, Switch} from "react-router-dom"
 
 
 import "./index.scss"
-import NavGroup from "../PhonePagesComponents/NavGrop";
 import EnterNumberPage from "./SwitchGroup/EnterNumberPage";
 import LastCall from "./SwitchGroup/lastСall";
 import ContactPage from "./SwitchGroup/ContactsPage";
@@ -15,11 +14,13 @@ class PhoneContent extends Component {
     render() {
         return (
             <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
-                <Router>
+
                     <Switch>
                         <Route exact path="/softPhone" render={() =>
                             (
                                 <EnterNumberPage
+                                    activeStyle={this.props.activeStyle}
+                                    toggleStyleSoftPhone={this.props.toggleStyleSoftPhone}
                                     commonConferenceArr={this.props.commonConferenceArr}
                                     addConferencePerson={this.props.addConferencePerson}
                                     toggleKeyboard={this.props.toggleKeyboard}
@@ -84,12 +85,7 @@ class PhoneContent extends Component {
                         }
                         />
                     </Switch>
-                    <NavGroup
-                        conferenceStatus={this.props.conferenceStatus}
-                        inComingLineArr={this.props.inComingLineArr}
-                    />
-                </Router>
-            </div>
+                           </div>
         );
     }
 }

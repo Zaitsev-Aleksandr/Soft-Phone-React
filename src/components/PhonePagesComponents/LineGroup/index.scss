@@ -1,14 +1,16 @@
 .incoming-button-block {
+  padding: 10px 25px;
 
   .incoming-line-button-item {
+    line-height: 14px;
     font-size: 11px;
-    padding: 0 7px;
-    border: none;
-    background-color: #ffffff;
+    background: #F0F1F8;
     font-weight: 500;
-    height: 22px;
-    border-radius: 8px;
     color: #7D7D7D;
+    padding: 0 5px;
+    border: none;
+    height: 28px;
+    border-radius: 6px;
   }
 
   .incoming-line-button-item.active {
@@ -18,5 +20,23 @@
 
   .on-hold {
     animation: inLine-call 0.8s infinite;
+  }
+}
+
+
+/*__________________dark style________________*/
+
+.dark-time {
+  .incoming-button-block {
+    padding: 10px 10px;
+
+    .incoming-line-button-item {
+      color: #213991;
+    }
+
+    .incoming-line-button-item.active {
+      background-color: #213991;
+      color: #ffffff;
+    }
   }
 }

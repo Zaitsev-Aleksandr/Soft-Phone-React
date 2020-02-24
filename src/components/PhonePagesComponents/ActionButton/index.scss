@@ -1,43 +1,53 @@
-.keyboard-wrapper{
-  .keyboard-action-button{
+.keyboard-wrapper {
+  padding: 5px 25px 10px;
+
+  .keyboard-action-button {
     border: none;
     background-color: #ffffff;
-    height: 46px;
-    width: 46px;
+    width: 75px;
+    height: 45px;
     font-size: 16px;
-    border-radius: 50%;
-    margin: 1px 19px;
+    border-radius: 10px;
   }
-  .hangUp-phone-button{
+
+  .hangUp-phone-button {
     color: #ffffff;
-    background-color: #f52c0b;;
+    background-color: #FD8181;
 
   }
-  .make-call-button{
+
+  .make-call-button {
     color: #ffffff;
-    background-color: #1c7430;
+    background-color: #6DD453;
 
   }
-  .common-keyboard-button {
-    border: none;
-    background-color: #ffffff;
-    height: 46px;
-    width: 46px;
-    font-size:24px;
-    line-height: 20px;
-   border-radius: 50%;
-    margin: 1px 19px;
-    color: #7D7D7D;
+}
 
-    &:hover {
-      background-color: #c3c4cb;
-      color:#213991;
-    }
-    .sub-value-keyboard-item{
+/*____________dark style_________________*/
+
+.dark-time {
+  .keyboard-wrapper {
+    padding: 5px 10px 10px;
+
+    .keyboard-action-button {
+      border: none;
+      background-color: #ffffff;
+      width: 75px;
+      height: 45px;
       font-size: 16px;
-      line-height: 19px;
-      text-align: center;
+      border-radius: 10px;
+    }
+
+    .hangUp-phone-button {
+      color: #ffffff;
+      background-color: #FD8181;
+
+    }
+
+    .make-call-button {
+      color: #ffffff;
+      background-color: #6DD453;
+
     }
   }
-
 }

@@ -20,8 +20,8 @@ const NavGroup = ( { conferenceStatus, inComingLineArr } ) => {
         </>;
 
     return (
-        <ul className="navigation d-flex flex-nowrap justify-content-between align-items-center">
-            {!inComingLineArr.find(elem => elem.callStatus) || conferenceStatus === true || (!inComingLineArr.find(elem => elem.callStatus && elem.displayValue) )? navigationButton: null }
+        <ul className={`navigation d-flex flex-nowrap justify-content-between align-items-center ${!inComingLineArr.find(elem => elem.callStatus && elem.displayValue)?"":"disabled"}`}>
+            { navigationButton}
         </ul>
     );
 };
