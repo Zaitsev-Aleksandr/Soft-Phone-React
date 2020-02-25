@@ -1,17 +1,14 @@
 
 ::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track-piece {
-  background: #eee;
-}
-
+  width: 5px;
+   }
 ::-webkit-scrollbar-thumb {
-  background: #888;
-}
+  border-radius: 3px;
+  background: rgba(33, 57, 145, 0.31);
+  }
 
 .search-common-wrapper, .last-contact-wrapper {
+  padding-right: 7px;
   overflow: hidden;
   height: 461px;
   background-color: #F0F1F8;

@@ -3,20 +3,7 @@ import {callKeyValues} from "../statics";
 import Subvalue from "../Subvalue";
 import Button from "../../../common/Button";
 
-const ActiveCallKeyboardGroup = ({toggleConferenceStatus, toggleHoldLine, inComingLineArr, addConferencePerson}) => {
-       const valueName = () => {
-        if (inComingLineArr.find(element => element.displayValue).contactValueName) {
-            return inComingLineArr.find(element => element.displayValue).contactValueName
-        }
-        else return   inComingLineArr.find(element => element.displayValue).contactValueNumber
-    };
-
-    const conferenceProps = {
-        status:true,
-        name: valueName(),
-        timeValue: inComingLineArr.find(element => element.displayValue).timeValue,
-        connected: false
-    };
+const ActiveCallKeyboardGroup = ({toggleConferenceStatus, toggleHoldLine, inComingLineArr}) => {
 
     const changeButtonActive = (e) => {
         e.currentTarget.classList.toggle("active")
@@ -26,7 +13,6 @@ const ActiveCallKeyboardGroup = ({toggleConferenceStatus, toggleHoldLine, inComi
            if (i === 0) {
             toggleConferenceStatus();
             changeButtonActive(e);
-            addConferencePerson({...conferenceProps});
 
         } else if (i === 2) {
             changeButtonActive(e);

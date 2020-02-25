@@ -7,7 +7,8 @@
     background-color: transparent;
     font-size: 18px;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    min-height: 30px;
     &::placeholder{
       font-size: 13px;
       letter-spacing: 1px;
@@ -16,11 +17,12 @@
   }
 }
 
-.enter-phone-name {
+.enter-phone-number {
    text-overflow: ellipsis;
   overflow: hidden;
   border: none;
   background-color: transparent;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
+  letter-spacing: 3px;
   }

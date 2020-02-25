@@ -51,9 +51,9 @@ class Main extends Component {
         enterValue: "",
         contactValueName: "",
         contactValueNumber: "",
+        inComingLineArr: Main.createLineObj(),  //array of call line status
         conferenceStatus: false,
-        commonConferenceArr: [],
-        inComingLineArr: Main.createLineObj()  //array of call line status
+        commonConferenceArr: []
     };
 
     /*_________________________________________________________________________*/
@@ -63,11 +63,6 @@ class Main extends Component {
         })
     };
 
-    addConferencePerson = ({status, name, timeValue, connected}) => {
-        this.setState({
-            commonConferenceArr: [...this.state.commonConferenceArr, {status, name, timeValue, connected}]
-        });
-    };
 
     endCallSession = () => {
         const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
@@ -141,9 +136,6 @@ class Main extends Component {
             }
 
         });
-        if (cloneArr.find(elem => elem.conferenceActive)) {
-            cloneArr[index].conferenceActive = true
-        }
 
         this.setState({
             inComingLineArr: cloneArr,
@@ -289,12 +281,10 @@ class Main extends Component {
     };
 
     componentWillUnmount() {
-
     }
 
     render() {
-
-        return (
+              return (
             <div className={`main d-flex flex-column ${this.state.activeStyle?"dark-time":""}`}>
                 <Header openKeyboard={this.openKeyboard}/>
                 <Router>
@@ -302,7 +292,6 @@ class Main extends Component {
                         activeStyle={this.state.activeStyle}
                         toggleStyleSoftPhone={this.toggleStyleSoftPhone}
                         commonConferenceArr={this.state.commonConferenceArr}
-                        addConferencePerson={this.addConferencePerson}
                         runCallTimer={this.runCallTimer}
                         toggleConferenceStatus={this.toggleConferenceStatus}
                         conferenceStatus={this.state.conferenceStatus}

@@ -4,13 +4,17 @@
   overflow: hidden;
   border: none;
   background-color: transparent;
-  font-size: 14px;
-  font-weight: 600;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 19px;
+  color: #7D7D7D;
 }
-.contact-input-output-group .enter-phone-number {
+ .enter-phone-number {
   border: none;
   background-color: transparent;
   font-size: 18px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }

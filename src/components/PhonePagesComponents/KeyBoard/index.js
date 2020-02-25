@@ -6,7 +6,7 @@ import "./statics"
 import PassCallkeyboardGroup from "./PassCallkeyboardGroup";
 import ActiveCallKeyboardGroup from "./ActiveCallKeyboardGroup";
 
-const Keyboard = ({updateEnterValue, toggleConferenceStatus, conferenceStatus, inComingLineArr, keyboardStatus, toggleHoldLine, addConferencePerson}) => {
+const Keyboard = ({updateEnterValue, toggleConferenceStatus, conferenceStatus, inComingLineArr, keyboardStatus, toggleHoldLine}) => {
     return (
         <div
             className={`keyboard-button-group d-flex flex-wrap justify-content-between  align-items-center ${!keyboardStatus.open ? "close" : ""}`}>
@@ -18,8 +18,7 @@ const Keyboard = ({updateEnterValue, toggleConferenceStatus, conferenceStatus, i
                 /> :
                 <ActiveCallKeyboardGroup
                     inComingLineArr={inComingLineArr}
-                    addConferencePerson={addConferencePerson}
-                    toggleConferenceStatus={toggleConferenceStatus}
+                   toggleConferenceStatus={toggleConferenceStatus}
                     toggleHoldLine={toggleHoldLine}
 
                 />}

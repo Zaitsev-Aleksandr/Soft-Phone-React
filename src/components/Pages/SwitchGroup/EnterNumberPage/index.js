@@ -25,15 +25,13 @@ const EnterNumberPage = ({
                              enterValue,
                              contactValueName,
                              contactValueNumber,
-                             addConferencePerson,
                              commonConferenceArr
                          }) => {
     return (
         <>
             <DisplayGroup
                 activeStyle={activeStyle}
-            toggleStyleSoftPhone={toggleStyleSoftPhone}
-                addConferencePerson={addConferencePerson}
+                toggleStyleSoftPhone={toggleStyleSoftPhone}
                 commonConferenceArr={commonConferenceArr}
                 toggleHoldLine={toggleHoldLine}
                 conferenceStatus={conferenceStatus}
@@ -51,7 +49,6 @@ const EnterNumberPage = ({
             />
 
             <Keyboard
-                addConferencePerson={addConferencePerson}
                 toggleConferenceStatus={toggleConferenceStatus}
                 conferenceStatus={conferenceStatus}
                 toggleHoldLine={toggleHoldLine}
