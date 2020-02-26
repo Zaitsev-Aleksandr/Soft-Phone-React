@@ -4,9 +4,13 @@ import {Link} from "react-router-dom";
 import {addColorAvatar, colorArr} from "./statics";
 
 
-const PhoneBookSection = ({lookingFor, searchArr, updateContactValue}) => {
+const PhoneBookSection = ({lookingFor, searchArr, updateContactValue, setActiveElem}) => {
       const items = searchArr.map((elem, i) =>
-        <Link className="navigation-call-info-link " to='/softPhone' key={i}>
+          <Link className="navigation-call-info-link "
+                to='/softPhone'
+                key={i}
+                onClick={ ()=>setActiveElem(0)}
+          >
             <PhoneBookItem
                 style={{backgroundColor : addColorAvatar(colorArr)}}
                 updateContactValue={updateContactValue} name={elem.name ? `${elem.name}` : ""}

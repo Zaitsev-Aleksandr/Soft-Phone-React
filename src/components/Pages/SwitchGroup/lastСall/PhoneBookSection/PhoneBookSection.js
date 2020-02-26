@@ -2,9 +2,13 @@ import React from 'react';
 import PhoneBookItem from "./PhoneBookItem";
 import {Link} from "react-router-dom";
 
-const PhoneBookSection = ({searchArr, updateContactValue}) => {
+const PhoneBookSection = ({searchArr, updateContactValue,setActiveElem}) => {
       const items = searchArr.map((elem, i) =>
-        <Link className="navigation-call-info-link " to='/softPhone' key={i}>
+          <Link className="navigation-call-info-link "
+                to='/softPhone'
+                key={i}
+                onClick={ ()=>setActiveElem(0)}
+          >
             <PhoneBookItem
                 updateContactValue={updateContactValue} name={elem.name ? `${elem.name}` : ""}
                 number={elem.number ? `${elem.number}` : ""}

@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Route, Switch} from "react-router-dom"
-
 
 import "./index.scss"
 import EnterNumberPage from "./SwitchGroup/EnterNumberPage";
@@ -9,84 +8,109 @@ import ContactPage from "./SwitchGroup/ContactsPage";
 import SearchPage from "./SwitchGroup/SearhPages";
 
 
-class PhoneContent extends Component {
+const PhoneContent = ({
+                          setActiveElem,
+                          activeStyle,
+                          toggleStyleSoftPhone,
+                          commonConferenceArr,
+                          runCallTimer,
+                          toggleConferenceStatus,
+                          conferenceStatus,
+                          toggleMicrophoneStatus,
+                          toggleHoldLine,
+                          endCallSession,
+                          startCallSession,
+                          keyboardStatus,
+                          updateContactValue,
+                          inComingLineArr,
+                          updateEnterValue,
+                          microphoneStatus,
+                          enterValue,
+                          contactValueName,
+                          contactValueNumber,
+                          changeCallLine,
+                          toggleKeyboard,
+                          addSearch
+                      }) => {
 
-    render() {
-        return (
-            <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
 
-                <Switch>
-                    <Route exact path="/softPhone" render={() =>
-                        (
-                            <EnterNumberPage
-                                activeStyle={this.props.activeStyle}
-                                toggleStyleSoftPhone={this.props.toggleStyleSoftPhone}
-                                commonConferenceArr={this.props.commonConferenceArr}
-                                toggleKeyboard={this.props.toggleKeyboard}
-                                runCallTimer={this.props.runCallTimer}
-                                toggleConferenceStatus={this.props.toggleConferenceStatus}
-                                toggleMicrophoneStatus={this.props.toggleMicrophoneStatus}
-                                microphoneStatus={this.props.microphoneStatus}
-                                toggleHoldLine={this.props.toggleHoldLine}
-                                endCallSession={this.props.endCallSession}
-                                startCallSession={this.props.startCallSession}
-                                updateEnterValue={this.props.updateEnterValue}
-                                updateContactValue={this.props.updateContactValue}
-                                conferenceStatus={this.props.conferenceStatus}
-                                inComingLineArr={this.props.inComingLineArr}
-                                keyboardStatus={this.props.keyboardStatus}
-                                enterValue={this.props.enterValue}
-                                contactValueName={this.props.contactValueName}
-                                contactValueNumber={this.props.contactValueNumber}
-                                changeCallLine={this.props.changeCallLine}
+    return (
+        <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
 
-                            />
-                        )
-                    }
-                    />
-                    <Route exact path="/LastCall" render={() =>
-                        (
-                            <LastCall
-                                contactValueName={this.props.contactValueName}
-                                contactValueNumber={this.props.contactValueNumber}
-                                enterValue={this.props.enterValue}
-                                updateEnterValue={this.props.updateEnterValue}
-                                updateContactValue={this.props.updateContactValue}
-                                addSearch={this.props.addSearch}
+            <Switch>
+                <Route exact path="/softPhone" render={() =>
+                    (
+                        <EnterNumberPage
+                            activeStyle={activeStyle}
+                            toggleStyleSoftPhone={toggleStyleSoftPhone}
+                            commonConferenceArr={commonConferenceArr}
+                            toggleKeyboard={toggleKeyboard}
+                            runCallTimer={runCallTimer}
+                            toggleConferenceStatus={toggleConferenceStatus}
+                            toggleMicrophoneStatus={toggleMicrophoneStatus}
+                            microphoneStatus={microphoneStatus}
+                            toggleHoldLine={toggleHoldLine}
+                            endCallSession={endCallSession}
+                            startCallSession={startCallSession}
+                            updateEnterValue={updateEnterValue}
+                            updateContactValue={updateContactValue}
+                            conferenceStatus={conferenceStatus}
+                            inComingLineArr={inComingLineArr}
+                            keyboardStatus={keyboardStatus}
+                            enterValue={enterValue}
+                            contactValueName={contactValueName}
+                            contactValueNumber={contactValueNumber}
+                            changeCallLine={changeCallLine}
 
-                            />
-                        )
-                    }
-                    />
-                    <Route exact path="/ContactPage" render={() =>
-                        (
-                            <ContactPage
-                                contactValueName={this.props.contactValueName}
-                                contactValueNumber={this.props.contactValueNumber}
-                                enterValue={this.props.enterValue}
-                                updateEnterValue={this.props.updateEnterValue}
-                                updateContactValue={this.props.updateContactValue}
-                                addSearch={this.props.addSearch}
-                            />
-                        )
-                    }
-                    />
-                    <Route exact path="/SearchPage" render={() =>
-                        (<SearchPage
-                                contactValueName={this.props.contactValueName}
-                                contactValueNumber={this.props.contactValueNumber}
-                                enterValue={this.props.enterValue}
-                                updateEnterValue={this.props.updateEnterValue}
-                                updateContactValue={this.props.updateContactValue}
-                                addSearch={this.props.addSearch}
-                            />
-                        )
-                    }
-                    />
-                </Switch>
-            </div>
-        );
-    }
+                        />
+                    )
+                }
+                />
+                <Route exact path="/LastCall" render={() =>
+                    (
+                        <LastCall
+                            setActiveElem={setActiveElem}
+                            contactValueName={contactValueName}
+                            contactValueNumber={contactValueNumber}
+                            enterValue={enterValue}
+                            updateEnterValue={updateEnterValue}
+                            updateContactValue={updateContactValue}
+                            addSearch={addSearch}
+
+                        />
+                    )
+                }
+                />
+                <Route exact path="/ContactPage" render={() =>
+                    (
+                        <ContactPage
+                            setActiveElem={setActiveElem}
+                            contactValueName={contactValueName}
+                            contactValueNumber={contactValueNumber}
+                            enterValue={enterValue}
+                            updateEnterValue={updateEnterValue}
+                            updateContactValue={updateContactValue}
+                            addSearch={addSearch}
+                        />
+                    )
+                }
+                />
+                <Route exact path="/SearchPage" render={() =>
+                    (<SearchPage
+                            setActiveElem={setActiveElem}
+                            contactValueName={contactValueName}
+                            contactValueNumber={contactValueNumber}
+                            enterValue={enterValue}
+                            updateEnterValue={updateEnterValue}
+                            updateContactValue={updateContactValue}
+                            addSearch={addSearch}
+                        />
+                    )
+                }
+                />
+            </Switch>
+        </div>
+    )
 }
 
 export default PhoneContent;

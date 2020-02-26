@@ -39,6 +39,7 @@ class Main extends Component {
     /*______________________this State____________________________________*/
 
     state = {
+        activeElem: 0,
         activeStyle: true,
         keyboardStatus:
             {
@@ -57,6 +58,13 @@ class Main extends Component {
     };
 
     /*_________________________________________________________________________*/
+
+    setActiveElem = (i) => {
+        this.setState({
+            activeElem: i
+        })
+    }
+
     toggleStyleSoftPhone = () => {
         this.setState({
             activeStyle: !this.state.activeStyle
@@ -284,11 +292,13 @@ class Main extends Component {
     }
 
     render() {
-              return (
-            <div className={`main d-flex flex-column ${this.state.activeStyle?"dark-time":""}`}>
+        return (
+            <div className={`main d-flex flex-column ${this.state.activeStyle ? "dark-time" : ""}`}>
                 <Header openKeyboard={this.openKeyboard}/>
                 <Router>
                     <PhoneContent
+                        setActiveElem={this.setActiveElem}
+                        addSearch={this.addSearch}
                         activeStyle={this.state.activeStyle}
                         toggleStyleSoftPhone={this.toggleStyleSoftPhone}
                         commonConferenceArr={this.state.commonConferenceArr}
@@ -312,6 +322,8 @@ class Main extends Component {
                     />
 
                     <NavGroup
+                        setActiveElem={this.setActiveElem}
+                        activeElem={this.state.activeElem}
                         conferenceStatus={this.state.conferenceStatus}
                         inComingLineArr={this.state.inComingLineArr}
                     />
