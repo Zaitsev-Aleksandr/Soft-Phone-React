@@ -3,8 +3,8 @@ import Input from "../../common/inputs/Input";
 
 import "./index.scss"
 import AddContact from "./commonInfoInput/AddContactButton";
-import PhoneBookSection from "../../Pages/SwitchGroup/EnterNumberPage/SearchBlock/PhoneBookSection";
-import {contactBook} from "../../Pages/SwitchGroup/ContactsPage/statics";
+import PhoneBookSection from "../../Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookSection";
+import {contactBook} from "../../Pages/commonSwitchGroup/ContactsPage/statics";
 
 
 

@@ -1,0 +1,165 @@
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgba(33, 57, 145, 0.31);
+}
+
+.head-line-phone-book {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+
+  padding: 10px 12px;
+  color: #000000;
+}
+
+.search-common-wrapper, .last-contact-wrapper {
+  overflow: hidden;
+  height: 362px;
+
+
+  .search-input-section {
+    min-height: 40px;
+    background: #F0F1F8;
+    padding: 0 12px;
+    position: relative;
+
+    .fa-times {
+      position: absolute;
+      font-size: 10px;
+      cursor: pointer;
+      color: #BDBDBD;
+      right: 25px;
+    }
+    .fa-chevron-left{
+      font-size: 10px;
+      cursor: pointer;
+      color: #BDBDBD;
+    }
+
+    input {
+      font-size: 12px;
+      border: none;
+      width: 100%;
+      padding: 0 15px 0 30px;
+      height: 28px;
+      background: #FFFFFF;
+      border-radius: 50px;
+
+      &::placeholder {
+        font-size: 12px;
+        color: #C9CFE3;
+      }
+    }
+  }
+}
+
+.phone-book-section {
+  width: 100%;
+  padding: 0 12px;
+
+  .phone-book-headline {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+    color: #213991;
+    border-bottom: 1px solid #C9CFE3;
+  }
+
+  .phone-book-item {
+    background: rgb(245, 246, 250);
+    border-radius: 5px;
+    height: 42px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    .fa-star{
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      color: #C9CFE3;
+      font-size: 12px;
+      cursor: pointer;
+
+    }
+    &:hover {
+     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.14);
+
+    }
+
+    .phone-book-item-time {
+      font-size: 10px;
+      font-weight: 400;
+      position: relative;
+
+    }
+    .call-time-date{
+      font-family: Roboto,sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 12px;
+      color: #7D7D7D;
+    }
+
+    .phone-book-item-name {
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 11px;
+      line-height: 13px;
+      color: #7D7D7D;
+      text-overflow: ellipsis;
+      max-width: 115px;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+          }
+
+    .phone-book-item-number {
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 18px;
+      color: #000000;
+
+    }
+  }
+}
+.call-time-duration{
+  font-family: Roboto,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  &.incoming{
+   color:  #6DD453;
+  }
+  &.out{
+    color: #213991;
+  }
+ }
+.phone-image-status {
+  min-width: 22px;
+  min-height: 22px;
+  background-position: center;
+  background-size: 74%;
+  background-repeat: no-repeat;
+  &.missed{
+    background-image: url("./../../../../resources/img/missed.png");
+  }
+  &.incoming{
+    background-image: url("./../../../../resources/img/incoming.png");
+  }
+  &.out{
+    background-image: url("./../../../../resources/img/out.png");
+  }
+}
+
+

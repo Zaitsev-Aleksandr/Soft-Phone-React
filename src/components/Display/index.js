@@ -9,7 +9,7 @@ import Combine from "../common/icon/arrow/Combine";
 import ConferenceBlock from "./ConferensInfo/ConferenceDisplayBlock";
 
 
-const ScreenGroup = ({updateContactValue, toggleStyleSoftPhone, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName,  contactValueNumber, conferenceStatus}) => {
+const ScreenGroup = ({updateContactValue, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName,  contactValueNumber, conferenceStatus}) => {
 
     const [conference, setConference] = useState([]);
 
@@ -88,8 +88,7 @@ const ScreenGroup = ({updateContactValue, toggleStyleSoftPhone, updateEnterValue
     return (
         <div className="phone-screen-block d-flex flex-column">
             <DisplayHeader
-                toggleStyleSoftPhone={toggleStyleSoftPhone}
-                inComingLineArr={inComingLineArr}/>
+                             inComingLineArr={inComingLineArr}/>
             <div className="d-flex flex-column justify-content-between h-100">
 
                 {renderIfComponent()}

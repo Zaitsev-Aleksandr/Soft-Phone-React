@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Menu = ({onClick}) => {
+const Menu = () => {
     return (
-        <i className="fas fa-ellipsis-v" onClick={onClick}/>
+        <i className="fas fa-ellipsis-v" />
     );
 };
 

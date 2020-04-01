@@ -1,6 +1,6 @@
 import React from 'react';
 import "./index.scss"
-import {addColorAvatar, colorArr} from "../../Pages/SwitchGroup/ContactsPage/statics";
+import {addColorAvatar, colorArr} from "../../Pages/commonSwitchGroup/ContactsPage/statics";
 
 
 

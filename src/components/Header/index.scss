@@ -1,70 +1,56 @@
 .soft-phone-header {
-  padding: 15px 25px;
+  padding: 0 16px 0 12px;
+  height: 36px;
+  min-height: 36px;
+  width: 100%;
+
+
   .fa-circle {
-    font-size: 16px;
-  }
+    font-size: 8px;
+   }
 
   .sip-active {
-    color: green;
+    color: #6DD453;
   }
 
   .sip-pass {
     color: red;
   }
 
-  .employee-full-name {
-    font-size: 12px;
-    line-height: 25px;
-   font-family: Roboto, sans-serif;
+  .employee-common-info {
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     display: block;
     text-overflow: ellipsis;
-    max-width: 150px;
+    max-width: 180px;
     overflow: hidden;
+    margin: 0 5px;
+    padding-bottom: 2px;
+  }
 
-
+  .employee-full-name {
+    font-size: 12px;
   }
 
   .employee-sip {
-    font-family: Roboto, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 25px;
-    margin-right: 5px;
-      }
-
-  .fas, .far {
-    font-size: 14px;
-    cursor: pointer;
-
+    font-size: 12px;
+    line-height: 12px;
+    margin-right: 3px;
   }
 
-.fa-times{
-  margin-left: 10px;
-  color: #C9CFE3;
-}
-  .fa-chevron-up{
-    transform: rotate(180deg);
+  .fa-times {
+    margin-left: 10px;
     color: #C9CFE3;
-  }
-  .fa-chevron-up.active{
+    font-size: 10px;
+   }
+
+  .fa-chevron-up {
+    font-size: 10px;
+    color: #C9CFE3;
+     }
+
+  .fa-chevron-up.active {
     transform: rotate(180deg);
-      }
-}
-
-
-
-/*___________________Dark style__________________*/
-
-.dark-time{
-.soft-phone-header {
-  padding:0;
-    .employee-full-name {
-   color: #FFFFFF;
   }
-  .employee-sip {
-    color: #FFFFFF;
-      }
- }}
+}

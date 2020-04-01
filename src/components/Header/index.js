@@ -6,7 +6,7 @@ import "./index.scss"
 import UpArrow from "../common/icon/arrow/UpArrow";
 
 const Header = ( {openKeyboard}) => (
-    <div className="soft-phone-header d-flex justify-content-between py-2 align-items-center w-100 ">
+    <div className="soft-phone-header d-flex justify-content-between align-items-center">
         <Sip />
 
         <UpArrow  onClick={(e)=>{openKeyboard(); e.currentTarget.classList.toggle("active")}}/>

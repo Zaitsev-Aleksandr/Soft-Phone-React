@@ -1,17 +1,16 @@
 .phone-screen-block {
-  height: 180px;
-  padding: 5px 25px;
+  height: 165px;
+  padding: 0 12px;
 
   .screen-header-group {
-    padding: 7px 0;
+    height: 40px;
 
     .current-time-phone-screen {
       font-size: 12px;
-      line-height: 14px;
       color: #7D7D7D;
 
       .fa-clock {
-        margin-right: 5px;
+        margin-right: 3px;
       }
     }
 
@@ -22,8 +21,9 @@
 
       .fa-search, .fa-ellipsis-v {
         color: #213991;
-        margin-left: 12px;
         cursor: pointer;
+        width: 20px;
+        text-align: center;
 
         &:hover {
           color: #7D7D7D;
@@ -49,10 +49,3 @@
   }
 }
 
-/* _________________dark Style___________________*/
-
-.dark-time {
-  .phone-screen-block {
-    padding: 5px 10px;
-  }
-}

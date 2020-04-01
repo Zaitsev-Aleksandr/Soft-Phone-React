@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
-import InputSection from "./InputSection/InputSection";
-import PhoneBookSection from "./PhoneBookSection/PhoneBookSection";
+import InputSection from "../InputSection/InputSection";
+import PhoneBookSection from "./PhoneBookSection";
 
-import phoneBook from "./statics";
-
+import {contactBook} from "./statics";
 
 class LastCall extends Component {
     state = {
         searchValue: "",
-        lookingFor: false,
-        searchArr: phoneBook
+        searchArr: contactBook.sort(function (a, b) {
+            let nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase();
+            if (nameA < nameB)
+                return -1;
+            if (nameA > nameB)
+                return 1;
+            return 0
+        })
     };
 
     toggleLookingFor = () => {
@@ -23,14 +28,14 @@ class LastCall extends Component {
         this.toggleLookingFor();
         this.setState({
             searchValue: e.currentTarget.value,
-            searchArr: phoneBook.filter(elem => elem.name ? elem.name.toLowerCase().replace(/\s+/g, "").includes(e.currentTarget.value.toLowerCase().replace(/\s+/g, "")) || elem.number.replace(/\s+/g, "").includes(e.currentTarget.value.replace(/\s+/g, "")) : "")
+            searchArr: contactBook.filter(elem => elem.name ? elem.name.toLowerCase().replace(/\s+/g, "").includes(e.currentTarget.value.toLowerCase().replace(/\s+/g, "")) || elem.number.replace(/\s+/g, "").includes(e.currentTarget.value.replace(/\s+/g, "")) : "")
         });
     };
 
     clearSearchInput = () => {
-              this.setState({
+        this.setState({
             searchValue: "",
-            searchArr: phoneBook
+            searchArr: contactBook
         })
 
     };

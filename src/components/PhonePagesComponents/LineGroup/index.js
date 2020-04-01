@@ -18,7 +18,7 @@ const LineGroup = ({inComingLineArr, changeCallLine}) => {
         lineValueArr.map((value, i) => (
             <Button
                 className={`incoming-line-button-item ${inComingLineArr[i].callStatus && !inComingLineArr[i].holdLine ? "active" : ""} ${inComingLineArr[i].holdLine ? "on-hold" : ""} `}
-                value={`Линия ${value}`}
+                value={`${value} Линия`}
                 key={value}
                 onClick={() => changeCallLine(i)}
             />
@@ -27,7 +27,7 @@ const LineGroup = ({inComingLineArr, changeCallLine}) => {
 
     return (
         <>
-            <div className="incoming-button-block d-flex flex-nowrap justify-content-between align-items-center py-1">
+            <div className="incoming-button-block d-flex flex-nowrap justify-content-between align-items-center">
                 {buttonGroup()}
             </div>
         </>

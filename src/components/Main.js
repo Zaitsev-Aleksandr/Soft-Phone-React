@@ -40,7 +40,6 @@ class Main extends Component {
 
     state = {
         activeElem: 0,
-        activeStyle: true,
         keyboardStatus:
             {
                 open: true,        //keyboard status open or close by button in header soft phone
@@ -62,12 +61,6 @@ class Main extends Component {
     setActiveElem = (i) => {
         this.setState({
             activeElem: i
-        })
-    }
-
-    toggleStyleSoftPhone = () => {
-        this.setState({
-            activeStyle: !this.state.activeStyle
         })
     };
 
@@ -293,13 +286,12 @@ class Main extends Component {
 
     render() {
         return (
-            <div className={`main d-flex flex-column ${this.state.activeStyle ? "dark-time" : ""}`}>
+            <div className="main d-flex flex-column">
                 <Header openKeyboard={this.openKeyboard}/>
                 <Router>
                     <PhoneContent
                         setActiveElem={this.setActiveElem}
                         addSearch={this.addSearch}
-                        activeStyle={this.state.activeStyle}
                         toggleStyleSoftPhone={this.toggleStyleSoftPhone}
                         commonConferenceArr={this.state.commonConferenceArr}
                         runCallTimer={this.runCallTimer}
@@ -328,7 +320,9 @@ class Main extends Component {
                         inComingLineArr={this.state.inComingLineArr}
                     />
 
+
                 </Router>
+                <div className="logo-info"><a href="www.red-point.com.ua" target="_blank">www.red-point.com.ua</a></div>
             </div>
         );
     }

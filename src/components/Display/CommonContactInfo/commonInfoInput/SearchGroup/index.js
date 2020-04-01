@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {contactBook} from "../../../../Pages/SwitchGroup/ContactsPage/statics";
+import {contactBook} from "../../../../Pages/commonSwitchGroup/ContactsPage/statics";
 
 class SearchGroup extends Component {
     state={

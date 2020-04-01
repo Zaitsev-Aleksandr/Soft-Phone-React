@@ -116,7 +116,7 @@ export  const contactBook = [
 
 
 
-export  const colorArr = ["#F7DC6F", "#76D7C4", "#D2B4DE", "#F5B7B1", "#A9DFBF", "#D6DBDF"];
+export  const colorArr = [["#FFE1E1","#FD8181"],["#D7F7C8", "#6DD453"],["#FFF2C9", "#FFCA27"], ["#D9EAFE", "#213991"], ["#e4d5f6", "#9B51E0"]];
 
 
 export const addColorAvatar=(arr)=>arr[Math.floor(Math.random()*5)];

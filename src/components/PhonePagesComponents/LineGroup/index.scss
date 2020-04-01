@@ -1,16 +1,21 @@
 .incoming-button-block {
-  padding: 10px 25px;
+  padding: 0 12px;
 
   .incoming-line-button-item {
-    line-height: 14px;
+    height: 24px;
+    width: 52px;
+    background: rgba(240, 241, 248, 0.71);
+    border-radius: 3px;
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
     font-size: 11px;
-    background: #F0F1F8;
-    font-weight: 500;
+    line-height: 12px;
     color: #7D7D7D;
-    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
-    height: 28px;
-    border-radius: 6px;
+    padding: 0;
   }
 
   .incoming-line-button-item.active {
@@ -23,20 +28,3 @@
   }
 }
 
-
-/*__________________dark style________________*/
-
-.dark-time {
-  .incoming-button-block {
-    padding: 10px 10px;
-
-    .incoming-line-button-item {
-      color: #213991;
-    }
-
-    .incoming-line-button-item.active {
-      background-color: #213991;
-      color: #ffffff;
-    }
-  }
-}

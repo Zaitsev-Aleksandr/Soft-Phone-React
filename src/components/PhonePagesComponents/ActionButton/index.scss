@@ -1,13 +1,13 @@
 .keyboard-wrapper {
-  padding: 5px 25px 10px;
+  padding: 5px 10px;
 
   .keyboard-action-button {
     border: none;
     background-color: #ffffff;
     width: 75px;
-    height: 45px;
-    font-size: 16px;
-    border-radius: 10px;
+    height: 30px;
+    font-size:22px;
+    border-radius: 5px;
   }
 
   .hangUp-phone-button {
@@ -20,34 +20,5 @@
     color: #ffffff;
     background-color: #6DD453;
 
-  }
-}
-
-/*____________dark style_________________*/
-
-.dark-time {
-  .keyboard-wrapper {
-    padding: 5px 10px 10px;
-
-    .keyboard-action-button {
-      border: none;
-      background-color: #ffffff;
-      width: 75px;
-      height: 45px;
-      font-size: 16px;
-      border-radius: 10px;
-    }
-
-    .hangUp-phone-button {
-      color: #ffffff;
-      background-color: #FD8181;
-
-    }
-
-    .make-call-button {
-      color: #ffffff;
-      background-color: #6DD453;
-
-    }
   }
 }

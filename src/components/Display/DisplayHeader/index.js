@@ -38,8 +38,7 @@ class DisplayHeader
                 />
 
                 <ActionHeaderBlock
-                    toggleStyleSoftPhone={this.props.toggleStyleSoftPhone}
-                    inComingLineArr={this.props.inComingLineArr}
+                                       inComingLineArr={this.props.inComingLineArr}
                 />
 
             </div>

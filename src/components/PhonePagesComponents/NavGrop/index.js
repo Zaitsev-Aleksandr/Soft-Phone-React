@@ -12,12 +12,9 @@ const NavGroup = ({conferenceStatus, inComingLineArr, activeElem,setActiveElem})
 
        const navigationButton = () => (
         textNodeArr.map((elem, i) => (
-            <li
-               className="navigation-item d-flex flex-nowrap justify-content-between align-items-center"
-                key={i}
-            >
+            <li className="navigation-item d-flex flex-nowrap justify-content-center align-items-center"  key={i} >
                 <Link
-                     className={`navigation-call-info-link  ${i === activeElem ? "active":""}`}
+                    className={`navigation-call-info-link  ${i === activeElem ? "active":""}`}
                     onClick={() => setActiveElem(i)}
                     to={elem.link}>{elem.value}
                 </Link>

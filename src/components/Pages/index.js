@@ -2,16 +2,15 @@ import React from 'react';
 import {Route, Switch} from "react-router-dom"
 
 import "./index.scss"
-import EnterNumberPage from "./SwitchGroup/EnterNumberPage";
-import LastCall from "./SwitchGroup/lastСall";
-import ContactPage from "./SwitchGroup/ContactsPage";
-import SearchPage from "./SwitchGroup/SearhPages";
+import EnterNumberPage from "./commonSwitchGroup/EnterNumberPage";
+import LastCall from "./commonSwitchGroup/lastСall";
+import ContactPage from "./commonSwitchGroup/ContactsPage";
+import SearchPage from "./commonSwitchGroup/SearhPages";
 
 
 const PhoneContent = ({
                           setActiveElem,
-                          activeStyle,
-                          toggleStyleSoftPhone,
+                                              toggleStyleSoftPhone,
                           commonConferenceArr,
                           runCallTimer,
                           toggleConferenceStatus,
@@ -41,7 +40,6 @@ const PhoneContent = ({
                 <Route exact path="/softPhone" render={() =>
                     (
                         <EnterNumberPage
-                            activeStyle={activeStyle}
                             toggleStyleSoftPhone={toggleStyleSoftPhone}
                             commonConferenceArr={commonConferenceArr}
                             toggleKeyboard={toggleKeyboard}

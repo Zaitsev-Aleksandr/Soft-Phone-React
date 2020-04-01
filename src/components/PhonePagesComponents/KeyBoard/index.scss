@@ -1,20 +1,25 @@
 .keyboard-button-group {
-  height: 170px;
-  margin-top: 10px;
+  height: 120px;
+  margin-top: 13px;
   transition: 0.3s;
   overflow: hidden;
-  padding: 0 25px;
+  padding: 0 20px;
 
   .common-keyboard-button {
     border: none;
-    width: 70px;
-    height: 35px;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 22px;
-    color: #7D7D7D;
+    width: 60px;
+    height:24px;
+    font-family: Robotoб, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
     background: #F0F1F8;
-    border-radius: 8px;
+    border-radius: 5px;
+    color: #7D7D7D;
 
     &:hover {
       color: #213991;
@@ -32,13 +37,11 @@
 .common-call-keyboard-button {
   border: none;
   width: 75px;
-  height: 45px;
+  height: 30px;
   color: #7D7D7D;
-  background: #F0F1F8;
-  border-radius: 8px;
-  padding: 5px;
+  background:transparent;
+  border-radius: 5px;
   margin-top: auto;
-  margin-bottom: 5px;
 
   &:hover {
     background-color: #dfe0e7;
@@ -51,32 +54,6 @@
   }
 
   .fas, .far {
-    font-size: 17px;
+    font-size: 15px;
   }
-}
-
-/*________________________dark style_____________________*/
-
-.dark-time {
-  .keyboard-button-group {
-    padding: 0 10px;
-
-    .common-keyboard-button {
-      &:hover {
-        color: black;
-        background-color: #e9eaf1;
-      }
-    }
-  }
-
-  .common-call-keyboard-button {
-    &:hover {
-      background-color: #dfe0e7;
-      color: #213991;
-    }
-    &.active {
-      color: #213991;
-    }
-   }
-
 }

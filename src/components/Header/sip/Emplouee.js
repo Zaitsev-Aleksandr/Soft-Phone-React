@@ -2,7 +2,7 @@ import React from 'react';
 
 const Employee = ({sip, fullName}) => {
     return (
-        <div className="d-flex flex-nowrap w-100 px-2">
+        <div className="employee-common-info w-100 ">
              <span className="employee-sip">
                 {sip}
             </span>
