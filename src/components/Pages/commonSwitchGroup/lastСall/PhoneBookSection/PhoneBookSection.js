@@ -12,10 +12,8 @@ const PhoneBookSection = ({searchArr, updateContactValue,setActiveElem}) => {
             <PhoneBookItem
                 updateContactValue={updateContactValue} name={elem.name ? `${elem.name}` : ""}
                 elem={elem}
-
             />
         </Link>);
-
 
     return (
         <>

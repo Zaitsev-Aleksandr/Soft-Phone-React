@@ -1,17 +1,15 @@
-import React,  { useState }  from 'react';
-import  "./index.scss"
+import React from 'react';
+import "./index.scss"
 
 const navBarTitle = ["Контакты", "Группы", " Избранные"];
-const NavigationContact = () => {
 
-    const[activeElem, changeActive] =useState(0);
-
-    const navBarblock = navBarTitle.map((elem, i) =>(
-            <li className={`navigation-contact-info-item d-flex justify-content-center align-items-center ${ activeElem===i? "active":""}`}
+const NavigationContact = ({changeNavActiveElem, navActiveElem}) => {
+  const navBarblock = navBarTitle.map((elem, i) => (
+            <li className={`navigation-contact-info-item d-flex justify-content-center align-items-center ${navActiveElem === i ? "active" : ""}`}
                 key={i}
-                onClick={()=>changeActive(i)}
+                onClick={() => changeNavActiveElem(i)}
             >
-                                  {elem}
+                {elem}
             </li>
         )
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 
-const GroupePhoneBook = () => {
+
+const GroupPhoneBook = () => {
     return (
         <div>
             
@@ -8,4 +9,4 @@ const GroupePhoneBook = () => {
     );
 };
 
-export default GroupePhoneBook;
+export default GroupPhoneBook;

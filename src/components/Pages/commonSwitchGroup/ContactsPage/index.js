@@ -6,6 +6,7 @@ import {contactBook} from "./statics";
 
 class LastCall extends Component {
     state = {
+        navActiveElem: 0,
         searchValue: "",
         searchArr: contactBook.sort(function (a, b) {
             let nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase();
@@ -15,6 +16,13 @@ class LastCall extends Component {
                 return 1;
             return 0
         })
+    };
+
+    changeNavActiveElem = (i) => {
+           this.setState({
+                navActiveElem: i
+            }
+        )
     };
 
     toggleLookingFor = () => {
@@ -51,6 +59,8 @@ class LastCall extends Component {
                     clearSearchInput={this.clearSearchInput}
                 />
                 <PhoneBookSection
+                    navActiveElem={this.state.navActiveElem}
+                    changeNavActiveElem={this.changeNavActiveElem}
                     setActiveElem={this.props.setActiveElem}
                     updateContactValue={this.props.updateContactValue}
                     searchArr={this.state.searchArr}

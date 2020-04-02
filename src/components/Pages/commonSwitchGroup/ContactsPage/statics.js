@@ -1,4 +1,9 @@
-export  const contactBook = [
+import React from "react"
+import CommonPhoneBook from "./contactSwitchGroup/CommonPhoneBook";
+import FavoritesPhoneBook from "./contactSwitchGroup/FavoritesPhoneBook";
+import GroupPhoneBook from "./contactSwitchGroup/GroupPhoneBook";
+
+export const contactBook = [
     {
         name: "Салтыков Юрий",
         number: "+38 097 567 43 55",
@@ -114,9 +119,17 @@ export  const contactBook = [
     }
 ];
 
+export const componentActive = (valueProps, index) => {
+    switch (true) {
+        case index === 0:
+            return <CommonPhoneBook {...valueProps}/>;
+        case index === 1:
+            return <GroupPhoneBook {...valueProps}/>;
+        case index === 2:
+            return <FavoritesPhoneBook {...valueProps}/>;
+    }
+};
 
 
-export  const colorArr = [["#FFE1E1","#FD8181"],["#D7F7C8", "#6DD453"],["#FFF2C9", "#FFCA27"], ["#D9EAFE", "#213991"], ["#e4d5f6", "#9B51E0"]];
-
-
-export const addColorAvatar=(arr)=>arr[Math.floor(Math.random()*5)];
+export const  deerGroup = [1,3,5,6,8,0,11,13];
+export const  beavers = [4,7,9,10,14,15,17,21];

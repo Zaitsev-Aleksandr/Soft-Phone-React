@@ -1,19 +1,22 @@
 import React from 'react';
 import PhoneBookItem from "../PhoneBookItem";
-import {addColorAvatar, colorArr} from "../statics";
 
 
-const CommonPhoneBook = ({searchArr, updateContactValue, setActiveElem}) => {
-
-    const items = searchArr.map((elem, i) =>
-        <PhoneBookItem
-            setActiveElem={setActiveElem}
-            i={i}
-            color={addColorAvatar(colorArr)}
-            updateContactValue={updateContactValue} name={elem.name ? `${elem.name}` : ""}
-            number={elem.number ? `${elem.number}` : ""}
-        />
-    );
+const CommonPhoneBook = ({favoriteItem, toggleFavorite, searchArr, setActiveElem, navActiveElem, updateContactValue}) => {
+    const items = searchArr.map((elem, i) => {
+        return (
+            <PhoneBookItem
+                navActiveElem={navActiveElem}
+                key={i}
+                i={i}
+                setActiveElem={setActiveElem}
+                updateContactValue={updateContactValue} name={elem.name ? `${elem.name}` : ""}
+                number={elem.number ? `${elem.number}` : ""}
+                favoriteItem={favoriteItem}
+                toggleFavorite={toggleFavorite}
+            />
+        );
+    });
 
     return (
         <div className="phone-book-section d-flex flex-column overflow-auto">
