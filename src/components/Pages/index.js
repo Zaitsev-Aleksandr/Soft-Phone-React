@@ -6,11 +6,13 @@ import EnterNumberPage from "./commonSwitchGroup/EnterNumberPage";
 import LastCall from "./commonSwitchGroup/lastСall";
 import ContactPage from "./commonSwitchGroup/ContactsPage";
 import SearchPage from "./commonSwitchGroup/SearhPages";
+import CommonSettings from "./commonSwitchGroup/Settings";
 
 
 const PhoneContent = ({
-                          setActiveElem,
-                                              toggleStyleSoftPhone,
+                          changeSipStatus,
+                          setConference,
+                          toggleStyleSoftPhone,
                           commonConferenceArr,
                           runCallTimer,
                           toggleConferenceStatus,
@@ -40,6 +42,7 @@ const PhoneContent = ({
                 <Route exact path="/softPhone" render={() =>
                     (
                         <EnterNumberPage
+                            setConference={ setConference}
                             toggleStyleSoftPhone={toggleStyleSoftPhone}
                             commonConferenceArr={commonConferenceArr}
                             toggleKeyboard={toggleKeyboard}
@@ -67,7 +70,6 @@ const PhoneContent = ({
                 <Route exact path="/LastCall" render={() =>
                     (
                         <LastCall
-                            setActiveElem={setActiveElem}
                             contactValueName={contactValueName}
                             contactValueNumber={contactValueNumber}
                             enterValue={enterValue}
@@ -82,7 +84,6 @@ const PhoneContent = ({
                 <Route exact path="/ContactPage" render={() =>
                     (
                         <ContactPage
-                            setActiveElem={setActiveElem}
                             contactValueName={contactValueName}
                             contactValueNumber={contactValueNumber}
                             enterValue={enterValue}
@@ -95,7 +96,6 @@ const PhoneContent = ({
                 />
                 <Route exact path="/SearchPage" render={() =>
                     (<SearchPage
-                            setActiveElem={setActiveElem}
                             contactValueName={contactValueName}
                             contactValueNumber={contactValueNumber}
                             enterValue={enterValue}
@@ -106,9 +106,14 @@ const PhoneContent = ({
                     )
                 }
                 />
+                <Route
+                    exact
+                    path="/Settings"
+                    render={() => <CommonSettings changeSipStatus={changeSipStatus}/>}
+                />
             </Switch>
         </div>
     )
-}
+};
 
 export default PhoneContent;

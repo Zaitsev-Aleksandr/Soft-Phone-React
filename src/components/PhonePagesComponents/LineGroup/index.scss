@@ -14,17 +14,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
+    border: 3px solid transparent;
     padding: 0;
+    &:hover{
+      color: #213991;
+      background:rgba(240, 241, 248, 1);
+    }
   }
 
   .incoming-line-button-item.active {
-    background-color: #213991;
+    background-color: #6DD453;
     color: #ffffff;
   }
 
   .on-hold {
-    animation: inLine-call 0.8s infinite;
+    color:#7D7D7D;
+    opacity: 1;
+    border-bottom-color: #FFCA27;
   }
 }
 

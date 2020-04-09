@@ -22,10 +22,6 @@ class Main extends Component {
                 holdLine: false,
                 conferenceActive: false,
                 startCallTime: "",
-                timeValue: {
-                    seconds: "00",
-                    minutes: "00"
-                }
             })
         }
         return arr
@@ -39,7 +35,7 @@ class Main extends Component {
     /*______________________this State____________________________________*/
 
     state = {
-        activeElem: 0,
+        sipStatus: "active",
         keyboardStatus:
             {
                 open: true,        //keyboard status open or close by button in header soft phone
@@ -47,7 +43,6 @@ class Main extends Component {
             },
         transferCall: false,
         microphoneStatus: true,   // microphone status on or off
-        searchActive: false,
         enterValue: "",
         contactValueName: "",
         contactValueNumber: "",
@@ -58,12 +53,12 @@ class Main extends Component {
 
     /*_________________________________________________________________________*/
 
-    setActiveElem = (i) => {
+
+    changeSipStatus = (status) => {
         this.setState({
-            activeElem: i
+            sipStatus: status
         })
     };
-
 
     endCallSession = () => {
         const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
@@ -77,10 +72,7 @@ class Main extends Component {
             conferenceActive: false,
             holdLine: false,
             startCallTime: "",
-            timeValue: {
-                seconds: "00",
-                minutes: "00"
-            }
+
         };
         if (activeID >= 0) {
             cloneArr[activeID].displayValue = true;
@@ -96,27 +88,6 @@ class Main extends Component {
             contactValueNumber: "",
             inComingLineArr: cloneArr
         });
-    };
-
-    runCallTimer = () => {
-        const subTotalTime = Date.now() - this.state.startCallTime;
-        const subTotalSecond = Math.floor(((subTotalTime / 1000) % 60));
-        const subTotalMinutes = Math.floor((subTotalTime / 60000));
-        const second = subTotalSecond.toString().length < 2 ? "0" + subTotalSecond : subTotalSecond;
-        const minute = subTotalMinutes.toString().length < 2 ? "0" + subTotalMinutes : subTotalMinutes;
-
-        const cloneArr = this.cloneStateArr(this.state.inComingLineArr).map(elem => {
-            if (elem.startCallTime) {
-                return elem.timeValue = {
-                    seconds: second,
-                    minutes: minute
-                }
-            } else return elem
-        });
-
-        this.setState({
-            inComingLineArr: cloneArr
-        })
     };
 
 
@@ -195,12 +166,6 @@ class Main extends Component {
 
     };
 
-    addSearch = () => {
-        this.setState({
-            searchActive: !this.state.searchActive
-        })
-    };
-
     updateEnterValue = (e) => {
         if (e.currentTarget.tagName.toLowerCase() === "input") {
             this.setState({enterValue: e.currentTarget.value})
@@ -216,7 +181,7 @@ class Main extends Component {
             contactValueName: e.currentTarget.querySelector(".phone-book-item-name").innerHTML,
             contactValueNumber: e.currentTarget.querySelector(".phone-book-item-number").innerHTML,
         });
-        this.addSearch();
+
     };
 
     reloadCallState = () => {
@@ -234,6 +199,11 @@ class Main extends Component {
         })
     };
 //__________ Conference Function________
+    setConference=(arr)=>{
+        this.setState({
+            commonConferenceArr:arr
+        })
+    }
 
     toggleConferenceStatus = () => {
         const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
@@ -287,13 +257,18 @@ class Main extends Component {
     render() {
         return (
             <div className="main d-flex flex-column">
-                <Header openKeyboard={this.openKeyboard}/>
+                <Header
+                    sipStatus={this.state.sipStatus}
+                    openKeyboard={this.openKeyboard}
+
+                />
                 <Router>
                     <PhoneContent
-                        setActiveElem={this.setActiveElem}
+                        changeSipStatus={this.changeSipStatus}
                         addSearch={this.addSearch}
                         toggleStyleSoftPhone={this.toggleStyleSoftPhone}
                         commonConferenceArr={this.state.commonConferenceArr}
+                        setConference={this.setConference}
                         runCallTimer={this.runCallTimer}
                         toggleConferenceStatus={this.toggleConferenceStatus}
                         conferenceStatus={this.state.conferenceStatus}
@@ -314,15 +289,13 @@ class Main extends Component {
                     />
 
                     <NavGroup
-                        setActiveElem={this.setActiveElem}
-                        activeElem={this.state.activeElem}
                         conferenceStatus={this.state.conferenceStatus}
                         inComingLineArr={this.state.inComingLineArr}
                     />
 
 
                 </Router>
-                <div className="logo-info"><a href="www.red-point.com.ua" target="_blank">www.red-point.com.ua</a></div>
+                <div className="logo-info">www.red-point.com.ua</div>
             </div>
         );
     }

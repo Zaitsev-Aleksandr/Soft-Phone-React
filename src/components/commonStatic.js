@@ -15,7 +15,7 @@ const phoneBook = [
         duration: "01:33",
         status:"out"
     },
-       {
+    {
         name: "Smorodinov Taras",
         number: "044 765 43 32",
         date:"Суббота",
@@ -109,7 +109,7 @@ const phoneBook = [
         status:"out"
     },
     {
-        name: "Smorodinov Taras",
+        name: "Сидоров Тарас",
         number: "044 765 43 32",
         date:"02.05.2019",
         time:"14:09",
@@ -133,7 +133,7 @@ const phoneBook = [
         status:"missed"
     },
     {
-        name: "Taras Inturist",
+        name: "Dmitriy Kovalenko",
         number: "+38 099 756 44 32",
         date:"31.10.2019",
         time:"11:42",
@@ -157,7 +157,7 @@ const phoneBook = [
         status:"out"
     },
     {
-        name: "Кирил Смирнрв",
+        name: "Semen Dollarov",
         number: "+3 098 574 66 45",
         date:"15.01.2020",
         time:"12:34",
@@ -165,7 +165,7 @@ const phoneBook = [
         status:"missed"
     },
     {
-        name: "Иванов",
+        name: "Иванов Флександк",
         number: "+38 093 647 88 65 ",
         date:"15.01.2020",
         time:"16:43",
@@ -181,7 +181,7 @@ const phoneBook = [
         status:"missed"
     },
     {
-        name: "Petrov",
+        name: "Аджихималов Реза",
         number: "+467 987 02 11",
         date:"16.02.2019",
         time:"12:34",
@@ -209,8 +209,8 @@ const phoneBook = [
         number: "+7 934 567 84 55",
         date:"03.03.2020",
         time:"19:25",
-        duration: "",
-        status:"missed"
+        duration: "00:45",
+        status:"incoming"
     },
     {
         name: "Taras Inturist",
@@ -237,7 +237,7 @@ const phoneBook = [
         status:"missed"
     },
     {
-        name: "Smirnova Natalia",
+        name: "Ivanova Natalia",
         number: "+38 073 576 66 58",
         date:"27.03.2020",
         time:"18:44",
@@ -253,5 +253,4 @@ const phoneBook = [
         status:"incoming"
     }
 ];
-
-export default phoneBook
+export  default  phoneBook

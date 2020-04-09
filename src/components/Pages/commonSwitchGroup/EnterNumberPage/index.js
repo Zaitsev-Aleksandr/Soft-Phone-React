@@ -7,7 +7,9 @@ import ActionButtonGroup from "../../../PhonePagesComponents/ActionButton";
 
 
 const EnterNumberPage = ({
-                                    toggleKeyboard,
+                             runCallTimer,
+                             setConference,
+                             toggleKeyboard,
                              changeCallLine,
                              endCallSession,
                              toggleConferenceStatus,
@@ -23,12 +25,14 @@ const EnterNumberPage = ({
                              enterValue,
                              contactValueName,
                              contactValueNumber,
-                             commonConferenceArr
+                             commonConferenceArr,
+
                          }) => {
     return (
         <>
             <DisplayGroup
-                                            commonConferenceArr={commonConferenceArr}
+                setConference={setConference}
+                commonConferenceArr={commonConferenceArr}
                 toggleHoldLine={toggleHoldLine}
                 conferenceStatus={conferenceStatus}
                 enterValue={enterValue}
@@ -40,6 +44,7 @@ const EnterNumberPage = ({
                 updateEnterValue={updateEnterValue}
             />
             <LineGroup
+                runCallTimer={runCallTimer}
                 inComingLineArr={inComingLineArr}
                 changeCallLine={changeCallLine}
             />

@@ -7,18 +7,27 @@
 
   .fa-circle {
     font-size: 8px;
+    &.active {
+      color: #6DD453;
+    }
+
+    &.out {
+      color: #FFCA27;
+    }
+
+    &.invisibility {
+      color: #7D7D7D;
+    }
+
+    &.relaxation {
+      color: #FD8181;
+    }
    }
 
-  .sip-active {
-    color: #6DD453;
-  }
 
-  .sip-pass {
-    color: red;
-  }
 
   .employee-common-info {
-    font-family: Roboto;
+    font-family: Roboto,sans-serif;
     font-style: normal;
     font-weight: normal;
     display: block;

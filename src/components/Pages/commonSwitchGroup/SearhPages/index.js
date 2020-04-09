@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import PhoneBookSection from "./PhoneBookSection/PhoneBookSection";
-import InputSection from "./InputSection/InputSection";
+import InputSection from "./../InputSection/InputSection";
 import "./index.scss"
-import phoneBook from "./statics";
+import phoneBook from "./../../../commonStatic";
 
 
 class SearchPage extends Component {

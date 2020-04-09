@@ -7,7 +7,7 @@ const PhoneBookItem = ({name, number, updateContactValue, toggleLookingFor,reloa
     return (
         <div
            onClick={(e)=>{updateContactValue(e); toggleLookingFor(e); reloadState()}}
-            className="enter-phone-book-item d-flex flex-nowrap justify-content-start align-items-center">
+            className="phone-book-item d-flex flex-nowrap justify-content-start align-items-center">
             <div
                 className="phone-book-avatar d-flex justify-content-center align-items-center mr-2"
                 style={{backgroundColor: color[0], color: color[1]}}

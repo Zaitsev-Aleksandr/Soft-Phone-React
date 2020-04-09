@@ -38,7 +38,7 @@ const ActiveCallButtonGroup = ({ endCallSession, toggleMicrophoneStatus, toggleK
                         <OffMicro/>
                         <Subvalue
                             className="sub-value-call-board-item d-flex flex-nowrap"
-                            subValue="выключить микрофо"
+                            subValue="Выкл. мик"
                         />
                     </>
                 }

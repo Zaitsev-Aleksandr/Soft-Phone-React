@@ -1,16 +1,23 @@
 import React from 'react';
-import PhoneBookTime from "./PhoneBookTime";
 
-const PhoneBookItem = ({name, number,updateContactValue}) => {
+const PhoneBookItem = ({updateContactValue, elem}) => {
+    const {name, number, date, time } = elem;
     return (
         <div
             onClick={updateContactValue}
-            className="phone-book-item d-flex flex-nowrap justify-content-between align-items-center">
-            <div className="d-flex flex-column">
-            <span className="phone-book-item-name text-nowrap overflow-hidden">{name}</span>
-            <span className="phone-book-item-number text-nowrap overflow-hidden">{number}</span>
+            className="phone-book-item d-flex flex-nowrap justify-content-start align-items-center w-100">
+            <div className="d-flex flex-column w-100">
+                <div className="d-flex flex-nowrap flex-nowrap justify-content-between align-items-center w-100">
+                    <span className="phone-book-item-name">{name}</span>
+                </div>
+                <div className="d-flex flex-nowrap flex-nowrap justify-content-between align-items-center w-100">
+                    <span className="phone-book-item-number text-nowrap">{number}</span>
+                </div>
             </div>
-            <PhoneBookTime/>
+            <div className="d-flex flex-column ml-auto align-items-end">
+                <span className="call-time-date text-right ">{date}</span>
+                <span className="call-time-date text-right">{time}</span>
+            </div>
         </div>
     );
 };

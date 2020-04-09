@@ -6,7 +6,6 @@ import CurrentTime from "./TimeValue/CurrentTime";
 class DisplayHeader
     extends Component {
 
-
     state = {
         currentTime: new Date(),
     };
@@ -37,9 +36,7 @@ class DisplayHeader
                     updateTime={this.updateTime}
                 />
 
-                <ActionHeaderBlock
-                                       inComingLineArr={this.props.inComingLineArr}
-                />
+                <ActionHeaderBlock inComingLineArr={this.props.inComingLineArr} />
 
             </div>
         )

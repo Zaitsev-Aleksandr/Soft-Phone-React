@@ -65,6 +65,6 @@ export const callKeyValues = [
     },
     {
         defaultValue: <HoldCall />,
-        dropDownItems:["Удержать"," ", "вызов"]
+        dropDownItems:["Удержантие"]
     }
  ];

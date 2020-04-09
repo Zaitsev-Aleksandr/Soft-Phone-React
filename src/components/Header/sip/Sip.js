@@ -6,7 +6,7 @@ class Sip extends Component {
     render() {
         return (
             <>
-            <SipStatus className="sip-active"/>
+            <SipStatus className={this.props.sipStatus}/>
             <Employee sip={"901"} fullName={"Салтыков Юрий Петрович"}/>
             </>
         );

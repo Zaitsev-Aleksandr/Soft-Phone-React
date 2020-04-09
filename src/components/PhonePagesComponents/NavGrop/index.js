@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import "./index.scss"
 
 const textNodeArr = [
@@ -8,16 +8,18 @@ const textNodeArr = [
     {value: "Контакты", link: "/ContactPage"}
 ];
 
-const NavGroup = ({conferenceStatus, inComingLineArr, activeElem,setActiveElem}) => {
+const NavGroup = ({conferenceStatus, inComingLineArr}) => {
 
-       const navigationButton = () => (
+    const navigationButton = () => (
         textNodeArr.map((elem, i) => (
-            <li className="navigation-item d-flex flex-nowrap justify-content-center align-items-center"  key={i} >
-                <Link
-                    className={`navigation-call-info-link  ${i === activeElem ? "active":""}`}
-                    onClick={() => setActiveElem(i)}
-                    to={elem.link}>{elem.value}
-                </Link>
+            <li className="navigation-item d-flex flex-nowrap justify-content-center align-items-center" key={i}>
+                <NavLink
+                    className="navigation-item-link"
+                    to={elem.link}
+                    activeClassName="active"
+                >
+                    {elem.value}
+                </NavLink>
             </li>
         )));
 

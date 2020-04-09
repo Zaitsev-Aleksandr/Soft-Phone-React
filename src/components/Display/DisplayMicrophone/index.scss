@@ -1,10 +1,12 @@
-.display-footer-group {
-  min-height: 28px;
-  width: 100%;
+.display-microphone-block {
+  width: 17px;
+ position: absolute;
+  bottom: 15px;
+  left: 15px;
 
 
   .fa-microphone-alt, .fa-microphone-alt-slash {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 18px;
 
   }

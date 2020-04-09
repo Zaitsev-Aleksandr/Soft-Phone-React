@@ -1,9 +1,7 @@
 import React from 'react';
 import CallStatusInfo from "../CallStatusInfo";
 import SearchSettingButtonGroup from "../SearchSettingButtonGroup";
-import Timer from "../TimerCallSeshion";
-
-const ActionHeaderBlock = ({inComingLineArr}) => {
+const ActionHeaderBlock = ({inComingLineArr, }) => {
 
     const actionElem = () => {
         if (inComingLineArr.find(elem => elem.callStatus&& elem.displayValue)) {
@@ -11,19 +9,20 @@ const ActionHeaderBlock = ({inComingLineArr}) => {
                 <>
                     <CallStatusInfo
                         className="incoming-call"
-                        value="Вызов..."
+                        value="Разговор..."
                     />
-                    <Timer inComingLineArr={inComingLineArr}/>
+
                 </>
             )
         } else {
-            return <SearchSettingButtonGroup />
+
         }
     };
 
     return (
         <div className="action-screen-header-block d-flex justify-content-end align-items-center flex-nowrap">
             {actionElem()}
+             <SearchSettingButtonGroup />
         </div>
     );
 };

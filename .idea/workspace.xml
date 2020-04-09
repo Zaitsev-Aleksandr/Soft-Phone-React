@@ -2,37 +2,79 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e18bdb0-060f-41d4-87c6-d7060d72e85d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/groupPhoneComponent/GroupPhoneBlock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/groupPhoneComponent/GroupPhoneItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/icon/stars/StarActive.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useRandomColor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/Settings/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/Settings/srttingsElem/Profile/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/Settings/srttingsElem/Profile/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/Settings/srttingsElem/SipStatusBlock/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/Settings/srttingsElem/UiTheme/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/icon/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/commonStatic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/ActivCallDisplay/SubscriberValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/ActivCallDisplay/SubscriberValue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/commonInfoInput/AddContactButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/commonInfoInput/AddContactButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/commonInfoInput/SearchGroup/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/commonInfoInput/SearchGroup/searchItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/commonInfoInput/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/commonInfoInput/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferenceCallItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferenceCallItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/NavigationContactPages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/NavigationContactPages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferenceDisplayBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferenceDisplayBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/ConferensInfo/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/ConferensInfo/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/ConferensInfo/static.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/Settings/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayFooter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayMicrophone/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayFooter/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayMicrophone/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayHeader/ActionHeaderBlock/ActionHeaderBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/ActionHeaderBlock/ActionHeaderBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayHeader/SearchSettingButtonGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/SearchSettingButtonGroup/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayHeader/TimerCallSeshion/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/TimerCallSeshion/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/sip/Sip.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/sip/Sip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/PhoneBookItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/PhoneBookItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/PhoneBookSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/PhoneBookSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/CommonPhoneBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/CommonPhoneBook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/FavoritesPhoneBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/FavoritesPhoneBook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/GroupePhoneBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/GroupPhoneBook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/statics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/statics.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/InputSection/InputSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/InputSection/InputSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/InputSection/InputSection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/PhoneBookSection/PhoneBookSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/PhoneBookSection/PhoneBookSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/PhoneBookSection/phoneBookItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/PhoneBookSection/phoneBookItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/statics.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/PhoneBookSection/PhoneBookItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/PhoneBookSection/PhoneBookItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/PhoneBookSection/PhoneBookSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/PhoneBookSection/PhoneBookSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/icon/StarsPass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/stars/StarsPass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/statics.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/Subvalue/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/Subvalue/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/statics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/statics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/icon/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/icon/arrow/Combine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/arrow/Combine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/icon/arrow/UnCombine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/arrow/UnCombine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/icon/arrow/UpArrow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/arrow/UpArrow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/icon/stars/StarActive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/stars/StarActive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/icon/stars/StarsPass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/stars/StarsPass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/scss/animation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/scss/animation.scss" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/node_modules/" />
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,211 +84,18 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>addC</find>
-      <find>addConferenceSession,</find>
-      <find>addConferenceSession</find>
-      <find>o</find>
-      <find>renderConferenceComponent</find>
-      <find>conference</find>
-      <find>.conference-item</find>
-      <find>commo</find>
-      <find>clearSearchInput</find>
-      <find>navigation-item</find>
-      <find>addSearch</find>
-      <find>activeStyle</find>
-      <find>toggleStyleSoftPhon</find>
-      <find>console</find>
-      <find>soft-phone-header</find>
-      <find>incoming-line-button-item</find>
-      <find>fa-ellipsis-v</find>
-      <find>navigation-call-info-link</find>
-      <find>in</find>
-      <find>phone-book-avatar</find>
-      <find>setAct</find>
-      <find>phone-book-item</find>
-      <find>phone-book-item-time</find>
-      <find>console</find>
-      <find>changeNavActiveElem</find>
-      <find>consol</find>
-      <find>navActiveElem</find>
-      <find>conso</find>
-      <find>favoritesItemAction</find>
-      <find>toggleStart</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>screen</replace>
-      <replace>/common</replace>
-      <replace>color</replace>
-      <replace>CallList</replace>
-      <replace>contactBook</replace>
-      <replace>endCallSomeLine</replace>
-      <replace>cloneArr</replace>
-      <replace>endCallSession</replace>
-      <replace>const</replace>
-      <replace>conferenceActive</replace>
-      <replace>activeID</replace>
-      <replace>addConferencePerson</replace>
-      <replace>navigation-call-info-link</replace>
-      <replace>incoming</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/components/Display/DisplayHeader/SearchSettingButtonGroup/index.js" />
-        <option value="$PROJECT_DIR$/src/components/common/icon/Menu.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/sip/Emplouee.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/index.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/components/Header/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/index.js" />
-        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.js" />
-        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Main.js" />
-        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Display/ActivCallDisplay/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Display/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/lastСall/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/lastСall/InputSection/InputSection.js" />
-        <option value="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Main.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/InputSection/InputSection.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/lastСall/PhoneBookSection/PhoneBookSection.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/SearhPages/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/lastСall/PhoneBookSection/PhoneBookItem.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/lastСall/statics.js" />
-        <option value="$PROJECT_DIR$/src/components/Display/ConferensInfo/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/EnterNumberPage/SearchBlock/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/ContactsPage/statics.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/SwitchGroup/ContactsPage/PhoneBookSection.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/GroupePhoneBook.js" />
-        <option value="$PROJECT_DIR$/src/components/common/icon/microphone/StarsPass.js" />
-        <option value="$PROJECT_DIR$/src/components/common/icon/StarsPass.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/index.scss" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/PhoneBookSection/PhoneBookSection.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookSection.js" />
-        <option value="$PROJECT_DIR$/src/hooks/useRandomColor.js" />
-        <option value="$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferenceCallItem.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookItem.js" />
-        <option value="$PROJECT_DIR$/src/components/common/icon/stars/StarActive.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/NavigationContactPages.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/CommonPhoneBook.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/PhoneBookItem.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/FavoritesPhoneBook.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/PhoneBookSection.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/GroupPhoneBook.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/statics.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/groupPhoneComponent/GroupPhoneBlock.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/groupPhoneComponent/GroupPhoneItem.js" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="157" />
-    <option name="width" value="1040" />
-    <option name="height" value="744" />
-  </component>
   <component name="ProjectId" id="1WoSQtTG1SwM9QlzjTol7vGQp2k" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
-              <item name="commonSwitchGroup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
-              <item name="commonSwitchGroup" type="462c0819:PsiDirectoryNode" />
-              <item name="ContactsPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
-              <item name="commonSwitchGroup" type="462c0819:PsiDirectoryNode" />
-              <item name="ContactsPage" type="462c0819:PsiDirectoryNode" />
-              <item name="contactSwitchGroup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="soft-phone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soft-phone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
-              <item name="commonSwitchGroup" type="462c0819:PsiDirectoryNode" />
-              <item name="ContactsPage" type="462c0819:PsiDirectoryNode" />
-              <item name="contactSwitchGroup" type="462c0819:PsiDirectoryNode" />
-              <item name="groupPhoneComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -255,49 +104,25 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/components/Pages/PhonePages/SwitchGroup/lastСall/PhoneBookSection/phoneBookItem.js" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/components/common/icon/Users.js" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\soft-phone\src\components\Pages\commonSwitchGroup\Settings\srttingsElem\Profile" />
+      <recent name="D:\soft-phone\src\components\Pages\commonSwitchGroup\Settings\srttingsElem\UiTheme" />
       <recent name="D:\soft-phone\src\resources\img" />
       <recent name="D:\soft-phone\src\components\Pages\SwitchGroup\EnterNumberPage\SearchBlock" />
       <recent name="D:\soft-phone\src\components\Pages\PhonePages\SwitchGroup\SearhPages" />
-      <recent name="D:\soft-phone\src\components\Pages\PhonePages\SwitchGroup\ContactsPage" />
-      <recent name="D:\soft-phone\src\components\Pages\PhonePages\SwitchGroup\lastСall" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\soft-phone\src\components\common\icon\stars" />
+      <recent name="D:\soft-phone\src\components\PhonePagesComponents\LineGroup" />
       <recent name="D:\soft-phone\src\components\common\icon" />
+      <recent name="D:\soft-phone\src\components\Pages\commonSwitchGroup\ContactsPage\contactSwitchGroup" />
+      <recent name="D:\soft-phone\src\components\common\icon\stars" />
       <recent name="D:\soft-phone\src\components\Pages\SwitchGroup" />
-      <recent name="D:\soft-phone\src\components" />
-      <recent name="D:\soft-phone\src\components\Pages\Display\ScreenHeader" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -349,431 +174,53 @@
       <workItem from="1585639227517" duration="18803000" />
       <workItem from="1585671151281" duration="60000" />
       <workItem from="1585722451832" duration="24320000" />
-      <workItem from="1585808423849" duration="31098000" />
+      <workItem from="1585808423849" duration="31356000" />
+      <workItem from="1585898981975" duration="22870000" />
+      <workItem from="1586075697642" duration="632000" />
+      <workItem from="1586155848948" duration="7898000" />
+      <workItem from="1586168113238" duration="10570000" />
+      <workItem from="1586242203194" duration="12695000" />
+      <workItem from="1586262904848" duration="8514000" />
+      <workItem from="1586328146630" duration="2836000" />
+      <workItem from="1586331875576" duration="13000" />
+      <workItem from="1586331987012" duration="1731000" />
+      <workItem from="1586333806560" duration="855000" />
+      <workItem from="1586335744843" duration="612000" />
+      <workItem from="1586337652767" duration="1729000" />
+      <workItem from="1586344773264" duration="1821000" />
+      <workItem from="1586346728078" duration="1610000" />
+      <workItem from="1586353687150" duration="1847000" />
+      <workItem from="1586355575476" duration="2086000" />
+      <workItem from="1586357690654" duration="1845000" />
+      <workItem from="1586360492144" duration="1840000" />
+      <workItem from="1586420331410" duration="1783000" />
+      <workItem from="1586424765750" duration="352000" />
+      <workItem from="1586426558997" duration="84000" />
+      <workItem from="1586427243810" duration="3592000" />
+      <workItem from="1586430874259" duration="110000" />
+      <workItem from="1586431127534" duration="348000" />
+      <workItem from="1586431494767" duration="4204000" />
+      <workItem from="1586435951155" duration="14239000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="542858000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21601686" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
-      <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021075" side_tool="true" weight="0.27193934" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49789253" visible="true" weight="0.27193934" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="338" y="141" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
-    <state x="338" y="141" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.728@0.23.1280.728" />
-    <state x="265" y="75" width="670" height="676" key="search.everywhere.popup" />
-    <state x="265" y="75" width="670" height="676" key="search.everywhere.popup/0.23.1280.728@0.23.1280.728" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/DisplayHeader/callStatusValue.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/ActivCallDisplay/index.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-router-dom/esm/react-router-dom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="171" column="4" selection-start-line="171" selection-start-column="4" selection-end-line="171" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/img/incoming.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/img/out.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/img/missed.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/InputSection/InputSection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="73" lean-forward="true" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/SwitchGroup/lastСall/PhoneBookSection/PhoneBookTime.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="48" lean-forward="true" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/PhoneBookSection/PhoneBookItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/statics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="472" column="8" selection-start-line="472" selection-start-column="8" selection-end-line="472" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1309">
-          <caret line="60" column="10" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-685">
-          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/common/icon/BackSpase.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/static/css/main.5325b56b.chunk.css" />
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/ConferensInfo/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/lastСall/PhoneBookSection/PhoneBookSection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Display/ConferensInfo/ConferenceCallItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hooks/useRandomColor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookSection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/common/icon/stars/StarActive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/common/icon/stars/StarsPass.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="80" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/NavigationContactPages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="62" lean-forward="true" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/PhoneBookItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/PhoneBookSection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/CommonPhoneBook.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="15" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/FavoritesPhoneBook.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/GroupPhoneBook.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/statics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="134" column="47" selection-start-line="134" selection-start-column="47" selection-end-line="134" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#262#2198#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/groupPhoneComponent/GroupPhoneBlock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/ContactsPage/contactSwitchGroup/groupPhoneComponent/GroupPhoneItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <state x="338" y="141" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586427570897" />
+    <state x="338" y="141" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.728@0.23.1280.728" timestamp="1586427570897" />
+    <state x="366" y="164" key="SettingsEditor" timestamp="1586427611525">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="366" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586427611525" />
+    <state x="265" y="75" width="672" height="676" key="search.everywhere.popup" timestamp="1586450934014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="265" y="75" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586450934014" />
+    <state x="265" y="75" width="670" height="676" key="search.everywhere.popup/0.23.1280.728@0.23.1280.728" timestamp="1586427570897" />
   </component>
 </project>

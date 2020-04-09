@@ -2,25 +2,27 @@ import React from 'react';
 import PhoneBookItem from "./phoneBookItem";
 import {Link} from 'react-router-dom'
 
-const PhoneBookSection = ({lookingFor, searchArr, updateContactValue, setActiveElem}) => {
+
+const PhoneBookSection = ({searchArr, updateContactValue}) => {
     const items = searchArr.map((elem, i) =>
         <Link className="navigation-call-info-link "
               to='/softPhone'
               key={i}
-              onClick={ ()=>setActiveElem(0)}
-        >
+                    >
             <PhoneBookItem
+                elem={elem}
                 updateContactValue={updateContactValue} name={elem.name ? `${elem.name}` : ""}
-                number={elem.number ? `${elem.number}` : ""}
-
-            />
+                           />
         </Link>);
 
     return (
-        <div className="phone-book-section d-flex flex-column overflow-auto">
-            {!lookingFor ? <h6 className="phone-book-headline">Последние контакты</h6> : null}
-            {items}
-        </div>
+        <>
+            <span className="head-line-phone-book">Последние поиск. запросы</span>
+            <div className="phone-book-section d-flex flex-column overflow-auto">
+                {items}
+            </div>
+        </>
+
     );
 };
 

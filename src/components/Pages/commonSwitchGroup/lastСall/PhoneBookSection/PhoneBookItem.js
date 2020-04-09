@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PhoneBookItem = ({elem, updateContactValue}) => {
-    const {name, number, date, time, duration, status} = elem;
+    const {name, number, date, time, status} = elem;
     return (
         <div
             onClick={updateContactValue}

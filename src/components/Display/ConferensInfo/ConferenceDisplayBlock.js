@@ -1,28 +1,45 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ConferenceItem from "./ConferenceCallItem";
 import UpArrow from "../../common/icon/arrow/UpArrow";
+import HangUpPhone from "../../common/icon/HangUpPhone";
+import UnCombine from "../../common/icon/arrow/UnCombine";
 
-const ConferenceBlock = ({conference, inComingLineArr,}) => {
-
-    const firsSubscriber = conference[0].contactValueName ? conference[0].contactValueName : conference[0].contactValueNumber
-    const secondSubscriber = conference[1].contactValueName ? conference[1].contactValueName : conference[1].contactValueNumber
-
-
+const ConferenceBlock = ({commonConferenceArr, inComingLineArr, unCombineConference}) => {
+    const [activeStatus, toggleStatus] = useState(false)
+     const childrenDiv = (
+        <div className="d-flex flex-nowrap">
+            <HangUpPhone/>
+            <UnCombine onClick={unCombineConference}/>
+        </div>)
+    const openOreCloseConferenceBlock = () => {
+        toggleStatus(!activeStatus)
+    }
+    const activeClassName = (e) => {
+        if (activeStatus) {
+            return "active"
+        } else {
+            return ""
+        }
+    }
+    const conferencePersonItem = commonConferenceArr.map((elem, i) => {
+        return <ConferenceItem
+            key={i}
+            children={childrenDiv}
+            clientValue={[commonConferenceArr[i].contactValueName, commonConferenceArr[i].contactValueNumber]}
+            inComingLineArr={inComingLineArr}
+        />
+    })
     return (
-        <div className="conference-common-wrapper d-flex flex-column w-100">
+        <div className={`conference-common-wrapper d-flex flex-column w-100 ${activeClassName()}`}>
             <div className="conference-block-title d-flex flex-column align-items-start position-relative">
                 Конференция
-                <p className="conference-subscriber-quantity m-0">Участников{conference.length} </p>
-                <UpArrow/>
+                <p className="conference-subscriber-quantity m-0">Участников{commonConferenceArr.length} </p>
+                <UpArrow
+                    className={activeClassName()}
+                    onClick={openOreCloseConferenceBlock}
+                />
             </div>
-            <ConferenceItem
-                clientValue={firsSubscriber}
-                inComingLineArr={inComingLineArr}
-            />
-            <ConferenceItem
-                clientValue={secondSubscriber}
-                inComingLineArr={inComingLineArr}
-            />
+            {conferencePersonItem}
         </div>
     );
 };

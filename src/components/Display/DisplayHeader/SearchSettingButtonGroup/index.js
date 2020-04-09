@@ -7,7 +7,7 @@ const SearchSettingButtonGroup = () => {
     return (
         <>
             <Link className="navigation-call-info-link " to='/SearchPage'> <Search/></Link>
-            <Menu />
+            <Link className="navigation-call-info-link " to='/Settings'> <Menu /></Link>
         </>
     );
 };

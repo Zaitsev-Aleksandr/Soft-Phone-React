@@ -13,11 +13,12 @@
   color: black;
   text-decoration: none !important;
 }
-.info-link-arrow-icon{
+
+.info-link-arrow-icon {
   position: absolute;
   left: 25px;
   top: 6px;
- }
+}
 
 .logo-info {
   position: absolute;
@@ -29,13 +30,118 @@
   display: flex;
   justify-content: center;
   align-self: center;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #FFFFFF;
+ }
 
-  a {
-    font-family: Roboto, sans-serif;
+
+.navigation-call-info-link {
+  .enter-phone-book-item {
+    .phone-book-avatar {
+    }
+
+    .phone-book-item-name {
+    }
+
+    .phone-book-item-number {
+    }
+  }
+}
+
+
+.phone-book-section {
+  width: 100%;
+  padding: 0 12px;
+
+}
+.phone-book-item {
+  background: rgb(245, 246, 250);
+  border-radius: 5px;
+  height: 42px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  .fa-star{
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    color: #C9CFE3;
+    font-size: 12px;
+    cursor: pointer;
+    &.active{
+      color:orangered;
+    }
+
+  }
+  &:hover {
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.1);
+
+  }
+
+  .call-time-date{
+    font-family: Roboto,sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
     line-height: 12px;
-    color: #FFFFFF;
+    color: #7D7D7D;
+  }
+
+
+}
+.phone-book-item-name {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #7D7D7D;
+  text-overflow: ellipsis;
+  max-width: 115px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+.phone-book-item-number {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+
+}
+.call-time-duration{
+  font-family: Roboto,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  &.incoming{
+    color:  #6DD453;
+  }
+  &.out{
+    color: #213991;
   }
 }
+.phone-image-status {
+  min-width: 22px;
+  min-height: 22px;
+  background-position: center;
+  background-size: 74%;
+  background-repeat: no-repeat;
+  &.missed{
+    background-image: url("./../resources/img/missed.png");
+  }
+  &.incoming{
+    background-image: url("./../resources/img/incoming.png");
+  }
+  &.out{
+    background-image: url("./../resources/img/out.png");
+  }
+}
+

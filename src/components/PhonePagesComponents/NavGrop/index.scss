@@ -14,7 +14,7 @@
     border: none;
     cursor: pointer;
 
-    .navigation-call-info-link {
+    .navigation-item-link {
       height: 40px;
       width: 70px;
       display: flex;
@@ -48,7 +48,7 @@
   &.disabled {
     pointer-events: none;
 
-    .navigation-call-info-link {
+   .navigation-item-link {
       color: #7D7D7D !important;
     }
   }

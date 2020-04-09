@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 import NavigationContact from "./NavigationContactPages";
 
-
 import {componentActive} from "./statics";
 
-const PhoneBookSection = ({searchArr,toggleStart, updateContactValue, setActiveElem, changeNavActiveElem, navActiveElem}) => {
+const PhoneBookSection = ({searchArr,toggleStart, updateContactValue, changeNavActiveElem, navActiveElem}) => {
 
     const [favoriteItem, toggleFavorite] = useState([0,1,5,16]);
 
@@ -14,8 +13,7 @@ const PhoneBookSection = ({searchArr,toggleStart, updateContactValue, setActiveE
         favoriteItem,
         toggleFavorite,
         searchArr,
-        setActiveElem,
-        updateContactValue,
+           updateContactValue,
            };
 
      return (

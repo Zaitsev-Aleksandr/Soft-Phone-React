@@ -1,11 +1,9 @@
 @keyframes inLine-call {
   from{
-    background-color: #ffffff;
-    color: #f52c0b;
+   opacity: 1;
   }
   to{
-    background-color:#f52c0b;
-    color: #ffffff;
+    opacity:0;
   }
 
 }
