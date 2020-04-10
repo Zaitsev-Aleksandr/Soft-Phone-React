@@ -10,12 +10,14 @@
     max-height: 100%;
     transition: 0.2s;
   }
-
+.conference-person-block{
+  max-height: 80px;
+}
   .conference-block-title {
     padding-left: 20px;
     font-size: 12px;
     font-weight: 600;
-    height: 38px;
+    min-height: 42px;
 
     .conference-subscriber-quantity {
       font-size: 9px;
@@ -52,7 +54,7 @@
   width: 100%;
   background: #F0F1F8;
   border-radius: 5px;
-  height: 42px;
+  height: 38px;
   padding: 5px 10px;
 .conference-title{
   font-size: 10px;

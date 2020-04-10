@@ -31,6 +31,7 @@ const EnterNumberPage = ({
     return (
         <>
             <DisplayGroup
+                endCallSession={endCallSession}
                 setConference={setConference}
                 commonConferenceArr={commonConferenceArr}
                 toggleHoldLine={toggleHoldLine}

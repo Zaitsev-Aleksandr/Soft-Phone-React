@@ -2,7 +2,7 @@
   width: 17px;
  position: absolute;
   bottom: 15px;
-  left: 15px;
+  left: 12px;
 
 
   .fa-microphone-alt, .fa-microphone-alt-slash {
@@ -19,6 +19,10 @@
     color: #f52c0b;
     animation: mic-off 0.7s linear infinite;
   }
+}
+.display-microphone-block.conference{
+  top: -50px;
+  left: 12px;
 }
 
 @keyframes mic-off {

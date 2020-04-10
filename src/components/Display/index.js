@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./index.scss"
 import DisplayHeader from "./DisplayHeader";
 import CommonContact from "./CommonContactInfo";
@@ -9,16 +9,24 @@ import Combine from "../common/icon/arrow/Combine";
 import ConferenceBlock from "./ConferensInfo/ConferenceDisplayBlock";
 
 
-const ScreenGroup = ({updateContactValue,  setConference,commonConferenceArr, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
+const ScreenGroup = ({updateContactValue,endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
 
+const  [CONFERENCE_PERSON, toggleConferencePerson ] = useState(false)
+    useEffect(() => {
+        if (commonConferenceArr.length === 0 && inComingLineArr.find(e => e.conferenceActive)) {
+            setConference([inComingLineArr.find(e => e.conferenceActive)])
+        }
+    })
+    useEffect(() => {
+                if (conferenceStatus) {
+                    toggleConferencePerson(true)
+        }
+    },[conferenceStatus])
 
-    if (commonConferenceArr.length === 0 && inComingLineArr.find(e => e.conferenceActive)) {
-              setConference ([ inComingLineArr.find(e => e.conferenceActive)])
-            }
-
-
+    console.log(CONFERENCE_PERSON);
     const combineConference = () => {
-          setConference([...commonConferenceArr,initiatorValue()]);
+        toggleConferencePerson(false)
+        setConference([...commonConferenceArr, initiatorValue()]);
     };
 
 
@@ -37,19 +45,20 @@ const ScreenGroup = ({updateContactValue,  setConference,commonConferenceArr, up
     };
 
     const renderIfComponent = () => {
-        if (commonConferenceArr.length > 1) {
+        if (commonConferenceArr.length > 1 && !conferenceStatus && !CONFERENCE_PERSON) {
+
             return (
                 <ConferenceBlock
+                    endCallSession={endCallSession}
                     commonConferenceArr={commonConferenceArr}
                     inComingLineArr={inComingLineArr}
                     unCombineConference={unCombineConference}
                 />
             )
         } else if (inComingLineArr.find(elem => elem.displayValue && elem.callStatus && !conferenceStatus)) {
-
             return (
                 <>
-                    {inComingLineArr.find(elem => elem.conferenceActive) ?
+                    {inComingLineArr.filter(elem => elem.callStatus).length > 1 && CONFERENCE_PERSON  ?
                         <ConferenceItem
                             clientValue={slaveClientValue()}
                             className="hold"
@@ -60,14 +69,13 @@ const ScreenGroup = ({updateContactValue,  setConference,commonConferenceArr, up
                     />
                 </>
             )
-        } else if (conferenceStatus === true) {
+        } else if (conferenceStatus && commonConferenceArr.length > 0) {
             const clientIndex = inComingLineArr.find(elem => elem.displayValue);
             const clientValue = [clientIndex.contactValueName, clientIndex.contactValueNumber]
 
             return <>
 
                 <ConferenceItem
-
                     clientValue={clientValue}
                     inComingLineArr={inComingLineArr}
                     children={(<span className="conference-title">Ожидание . . .</span>)}
@@ -105,7 +113,8 @@ const ScreenGroup = ({updateContactValue,  setConference,commonConferenceArr, up
             </div>
             {inComingLineArr.find(elem => elem.callStatus) ?
                 <DisplayMicrophone
-                    inComingLineArr={inComingLineArr}
+                    commonConferenceArr={commonConferenceArr}
+                    conferenceStatus={conferenceStatus}
                     microphoneStatus={microphoneStatus}
                 /> :
                 null}

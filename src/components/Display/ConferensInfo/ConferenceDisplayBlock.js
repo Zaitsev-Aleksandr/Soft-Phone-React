@@ -4,11 +4,11 @@ import UpArrow from "../../common/icon/arrow/UpArrow";
 import HangUpPhone from "../../common/icon/HangUpPhone";
 import UnCombine from "../../common/icon/arrow/UnCombine";
 
-const ConferenceBlock = ({commonConferenceArr, inComingLineArr, unCombineConference}) => {
+const ConferenceBlock = ({commonConferenceArr,endCallSession, inComingLineArr, unCombineConference}) => {
     const [activeStatus, toggleStatus] = useState(false)
      const childrenDiv = (
         <div className="d-flex flex-nowrap">
-            <HangUpPhone/>
+            <HangUpPhone onClick={endCallSession}/>
             <UnCombine onClick={unCombineConference}/>
         </div>)
     const openOreCloseConferenceBlock = () => {
@@ -33,13 +33,16 @@ const ConferenceBlock = ({commonConferenceArr, inComingLineArr, unCombineConfere
         <div className={`conference-common-wrapper d-flex flex-column w-100 ${activeClassName()}`}>
             <div className="conference-block-title d-flex flex-column align-items-start position-relative">
                 Конференция
-                <p className="conference-subscriber-quantity m-0">Участников{commonConferenceArr.length} </p>
+                <p className="conference-subscriber-quantity m-0">Участников {commonConferenceArr.length} </p>
                 <UpArrow
                     className={activeClassName()}
                     onClick={openOreCloseConferenceBlock}
                 />
             </div>
-            {conferencePersonItem}
+            <div className="conference-person-block d-flex flex-column align-items-start overflow-auto">
+                {conferencePersonItem}
+            </div>
+
         </div>
     );
 };
