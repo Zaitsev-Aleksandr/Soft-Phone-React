@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 import "./index.scss"
 
 const textNodeArr = [
-    {value: "Набор", link: "/softPhone"},
+    {value: "Набор", link: ""},
     {value: "Последние", link: "/LastCall"},
     {value: "Контакты", link: "/ContactPage"}
 ];

@@ -37,22 +37,6 @@
   line-height: 12px;
   color: #FFFFFF;
  }
-
-
-.navigation-call-info-link {
-  .enter-phone-book-item {
-    .phone-book-avatar {
-    }
-
-    .phone-book-item-name {
-    }
-
-    .phone-book-item-number {
-    }
-  }
-}
-
-
 .phone-book-section {
   width: 100%;
   padding: 0 12px;
@@ -96,8 +80,8 @@
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
+  font-size: 12px;
+  line-height: 14px;
   color: #7D7D7D;
   text-overflow: ellipsis;
   max-width: 115px;
@@ -107,11 +91,12 @@
 }
 
 .phone-book-item-number {
+
   font-family: Roboto, sans-serif;
   font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 18px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
   color: #000000;
 
 }

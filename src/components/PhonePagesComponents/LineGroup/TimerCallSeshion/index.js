@@ -15,9 +15,7 @@ const Timer = ({inComingLineArr, i}) => {
 
     useEffect(() => {
         const timerID = setTimeout(runCallTimer, 1000);
-        return function cleanup() {
-            clearTimeout(timerID)
-        }
+        return () => clearTimeout(timerID);
     },[time]);
 
     return (

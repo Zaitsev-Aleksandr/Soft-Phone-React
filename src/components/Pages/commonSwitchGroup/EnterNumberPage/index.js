@@ -7,6 +7,7 @@ import ActionButtonGroup from "../../../PhonePagesComponents/ActionButton";
 
 
 const EnterNumberPage = ({
+                             removeConference,
                              runCallTimer,
                              setConference,
                              toggleKeyboard,
@@ -31,6 +32,7 @@ const EnterNumberPage = ({
     return (
         <>
             <DisplayGroup
+                removeConference={removeConference}
                 endCallSession={endCallSession}
                 setConference={setConference}
                 commonConferenceArr={commonConferenceArr}

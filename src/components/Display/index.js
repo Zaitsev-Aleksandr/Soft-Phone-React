@@ -7,24 +7,23 @@ import ConferenceItem from "./ConferensInfo/ConferenceCallItem";
 import SubscriberValue from "./ActivCallDisplay/SubscriberValue";
 import Combine from "../common/icon/arrow/Combine";
 import ConferenceBlock from "./ConferensInfo/ConferenceDisplayBlock";
+import LeftArrow from "../common/icon/arrow/LeftArrow";
 
+const ScreenGroup = ({updateContactValue,removeConference,  endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
 
-const ScreenGroup = ({updateContactValue,endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
-
-const  [CONFERENCE_PERSON, toggleConferencePerson ] = useState(false)
+    const [CONFERENCE_PERSON, toggleConferencePerson] = useState(false)
     useEffect(() => {
         if (commonConferenceArr.length === 0 && inComingLineArr.find(e => e.conferenceActive)) {
             setConference([inComingLineArr.find(e => e.conferenceActive)])
         }
     })
     useEffect(() => {
-                if (conferenceStatus) {
-                    toggleConferencePerson(true)
+        if (conferenceStatus) {
+            toggleConferencePerson(true)
         }
-    },[conferenceStatus])
+    }, [conferenceStatus])
 
-    console.log(CONFERENCE_PERSON);
-    const combineConference = () => {
+      const combineConference = () => {
         toggleConferencePerson(false)
         setConference([...commonConferenceArr, initiatorValue()]);
     };
@@ -58,7 +57,7 @@ const  [CONFERENCE_PERSON, toggleConferencePerson ] = useState(false)
         } else if (inComingLineArr.find(elem => elem.displayValue && elem.callStatus && !conferenceStatus)) {
             return (
                 <>
-                    {inComingLineArr.filter(elem => elem.callStatus).length > 1 && CONFERENCE_PERSON  ?
+                    {inComingLineArr.filter(elem => elem.callStatus).length > 1 && CONFERENCE_PERSON ?
                         <ConferenceItem
                             clientValue={slaveClientValue()}
                             className="hold"
@@ -76,9 +75,16 @@ const  [CONFERENCE_PERSON, toggleConferencePerson ] = useState(false)
             return <>
 
                 <ConferenceItem
+                    className="pl-4"
                     clientValue={clientValue}
                     inComingLineArr={inComingLineArr}
-                    children={(<span className="conference-title">Ожидание . . .</span>)}
+                    children={
+                        (
+                            <div className="d-flex flex-nowrap">
+                                <LeftArrow onclick={removeConference} />
+                                <span className="conference-title">Ожидание...</span>
+                            </div>
+                        )}
                 />
 
                 < CommonContact

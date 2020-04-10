@@ -199,12 +199,20 @@ class Main extends Component {
         })
     };
 //__________ Conference Function________
-    setConference=(arr)=>{
+    setConference = (arr) => {
         this.setState({
-            commonConferenceArr:arr
+            commonConferenceArr: arr
         })
     }
-
+    removeConference = () => {
+        const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
+        cloneArr.find(elem => elem.displayValue).conferenceActive = false;
+        this.setState({
+            inComingLineArr: cloneArr,
+            commonConferenceArr: [],
+            conferenceStatus: !this.state.conferenceStatus
+        })
+    }
     toggleConferenceStatus = () => {
         const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
         cloneArr.find(elem => elem.displayValue).conferenceActive = true;
@@ -255,6 +263,8 @@ class Main extends Component {
     }
 
     render() {
+        console.log("2a",this.state.commonConferenceArr.length > 0);
+        console.log("2b",this.state.conferenceStatus);
         return (
             <div className="main d-flex flex-column">
                 <Header
@@ -264,6 +274,7 @@ class Main extends Component {
                 />
                 <Router>
                     <PhoneContent
+                        removeConference={this.removeConference}
                         changeSipStatus={this.changeSipStatus}
                         addSearch={this.addSearch}
                         toggleStyleSoftPhone={this.toggleStyleSoftPhone}
