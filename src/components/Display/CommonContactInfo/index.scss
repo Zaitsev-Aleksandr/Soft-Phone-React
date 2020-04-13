@@ -1,12 +1,16 @@
+.common-input-group{
+  flex: 1 1 40px;
+}
+
 .contact-input-output-group {
-  flex: 1 1 65px;
-  height: 65px;
+  flex: 1 1 auto;
+
 
   &.start{
     background-image: url("../../../resources/img/bgLodo.png");
     background-size: 160px;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center -8px;
   }
 }
 .enter-phone-name{

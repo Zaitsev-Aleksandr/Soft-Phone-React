@@ -81,7 +81,7 @@ class CommonContact extends Component {
 
         return (
             <div
-                className={`contact-input-output-group d-flex flex-column  align-items-center justify-content-end ${this.props.enterValue || this.props.conferenceStatus ? "" : "start"}`}>
+                className={`contact-input-output-group d-flex flex-column  align-items-center justify-content-end ${this.props.enterValue || this.props.conferenceStatus || this.props.inComingCallArr.length>0 ? "" : "start"}`}>
                 {!this.props.callStatus && this.state.lookingFor && this.state.searchValue ?
                     <PhoneBookSection
                         reloadState={this.reloadState}

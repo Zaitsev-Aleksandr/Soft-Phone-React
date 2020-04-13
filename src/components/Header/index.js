@@ -3,13 +3,13 @@ import Sip from "./sip/Sip";
 import CloseIcon from "../common/icon/CloseIcon";
 
 import "./index.scss"
-import UpArrow from "../common/icon/arrow/UpArrow";
+import DownArrow from "../common/icon/arrow/DownArrow";
 
-const Header = ( {openKeyboard, sipStatus}) => (
+const Header = ( {openKeyboard, sipStatus,keyboardStatus}) => (
     <div className="soft-phone-header d-flex justify-content-between align-items-center">
         <Sip sipStatus={sipStatus} />
 
-        <UpArrow  onClick={(e)=>{openKeyboard(); e.currentTarget.classList.toggle("active")}}/>
+        <DownArrow  onClick={ openKeyboard }  keyboardStatus={ keyboardStatus }/>
         <CloseIcon  />
     </div>
 );

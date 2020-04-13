@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/css/main.6ae81e06.chunk.css",
-    "main.js": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/main.b5cfcc57.chunk.js",
-    "main.js.map": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/main.b5cfcc57.chunk.js.map",
+    "main.css": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/css/main.033e1fbf.chunk.css",
+    "main.js": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/main.4ae1efed.chunk.js",
+    "main.js.map": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/main.4ae1efed.chunk.js.map",
     "runtime-main.js": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/runtime-main.9113df57.js",
     "runtime-main.js.map": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/runtime-main.9113df57.js.map",
     "static/css/2.82fe4c68.chunk.css": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/css/2.82fe4c68.chunk.css",
-    "static/js/2.00e91c90.chunk.js": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/2.00e91c90.chunk.js",
-    "static/js/2.00e91c90.chunk.js.map": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/2.00e91c90.chunk.js.map",
+    "static/js/2.46397ee0.chunk.js": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/2.46397ee0.chunk.js",
+    "static/js/2.46397ee0.chunk.js.map": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/2.46397ee0.chunk.js.map",
     "index.html": "/Zaitsev-Aleksandr/Sofn-Phone-React/index.html",
-    "precache-manifest.d03a0c01f4483fa783e8b8988e16db9b.js": "/Zaitsev-Aleksandr/Sofn-Phone-React/precache-manifest.d03a0c01f4483fa783e8b8988e16db9b.js",
+    "precache-manifest.39e57a27dc08a64639c54271fd27c197.js": "/Zaitsev-Aleksandr/Sofn-Phone-React/precache-manifest.39e57a27dc08a64639c54271fd27c197.js",
     "service-worker.js": "/Zaitsev-Aleksandr/Sofn-Phone-React/service-worker.js",
     "static/css/2.82fe4c68.chunk.css.map": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/css/2.82fe4c68.chunk.css.map",
-    "static/css/main.6ae81e06.chunk.css.map": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/css/main.6ae81e06.chunk.css.map",
-    "static/js/2.00e91c90.chunk.js.LICENSE": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/2.00e91c90.chunk.js.LICENSE",
-    "static/media/all.min.css": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/media/fa-solid-900.f6121be5.woff2"
+    "static/css/main.033e1fbf.chunk.css.map": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/css/main.033e1fbf.chunk.css.map",
+    "static/js/2.46397ee0.chunk.js.LICENSE": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/js/2.46397ee0.chunk.js.LICENSE",
+    "static/media/all.min.css": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/media/fa-solid-900.f6121be5.woff2",
+    "static/media/inComingCall.mp3": "/Zaitsev-Aleksandr/Sofn-Phone-React/static/media/inComingCall.c394074e.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.9113df57.js",
     "static/css/2.82fe4c68.chunk.css",
-    "static/js/2.00e91c90.chunk.js",
-    "static/css/main.6ae81e06.chunk.css",
-    "static/js/main.b5cfcc57.chunk.js"
+    "static/js/2.46397ee0.chunk.js",
+    "static/css/main.033e1fbf.chunk.css",
+    "static/js/main.4ae1efed.chunk.js"
   ]
 }

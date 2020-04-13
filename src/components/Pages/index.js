@@ -10,6 +10,7 @@ import CommonSettings from "./commonSwitchGroup/Settings";
 
 
 const PhoneContent = ({
+                          inComingCallArr,
                           removeConference,
                           changeSipStatus,
                           setConference,
@@ -40,9 +41,10 @@ const PhoneContent = ({
         <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
 
             <Switch>
-                <Route exact path="" render={() =>
+                <Route exact path="/softPhone" render={() =>
                     (
                         <EnterNumberPage
+                            inComingCallArr={inComingCallArr}
                             removeConference={removeConference}
                             setConference={setConference}
                             toggleStyleSoftPhone={toggleStyleSoftPhone}

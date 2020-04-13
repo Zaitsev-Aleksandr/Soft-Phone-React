@@ -49,7 +49,6 @@ const phoneBook = [
     },
 
     {
-
         name: "Салтыков Юрий",
         number: "+38 097 567 43 55",
         date: "23.04.2019",
@@ -80,7 +79,6 @@ const phoneBook = [
         time: "00:12",
         duration: "",
         status: "missed"
-
     },
     {
         name: "Иванов",
@@ -97,8 +95,6 @@ const phoneBook = [
         time: "14:22",
         duration: "",
         status: "missed"
-
-
     },
     {
         name: "Petrov",

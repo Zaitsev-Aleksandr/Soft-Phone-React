@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Zaitsev-Aleksandr/Sofn-Phone-React/precache-manifest.d03a0c01f4483fa783e8b8988e16db9b.js"
+  "/Zaitsev-Aleksandr/Sofn-Phone-React/precache-manifest.39e57a27dc08a64639c54271fd27c197.js"
 );
 
 self.addEventListener('message', (event) => {

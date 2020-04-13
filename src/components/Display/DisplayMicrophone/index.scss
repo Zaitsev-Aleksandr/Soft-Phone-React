@@ -1,7 +1,8 @@
 .display-microphone-block {
   width: 17px;
+  height: min-content;
  position: absolute;
-  bottom: 15px;
+  bottom: 10px;
   left: 12px;
 
 
@@ -21,7 +22,7 @@
   }
 }
 .display-microphone-block.conference{
-  top: -50px;
+  top: 50px;
   left: 12px;
 }
 

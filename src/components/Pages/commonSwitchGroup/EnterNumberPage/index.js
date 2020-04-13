@@ -27,11 +27,13 @@ const EnterNumberPage = ({
                              contactValueName,
                              contactValueNumber,
                              commonConferenceArr,
+                             inComingCallArr,
 
                          }) => {
     return (
         <>
             <DisplayGroup
+                inComingCallArr={inComingCallArr}
                 removeConference={removeConference}
                 endCallSession={endCallSession}
                 setConference={setConference}

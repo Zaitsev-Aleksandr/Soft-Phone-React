@@ -5,5 +5,12 @@
   to{
     opacity:0;
   }
-
+}
+@keyframes incoming-call {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity:0.5;
+  }
 }

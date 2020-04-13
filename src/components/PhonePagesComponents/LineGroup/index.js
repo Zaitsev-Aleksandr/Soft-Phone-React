@@ -17,13 +17,16 @@ const LineGroup = ({inComingLineArr, changeCallLine,}) => {
     });
     const takeLineButtonValue = (value, i) => {
         if (inComingLineArr[i].callStatus) return <Timer inComingLineArr={inComingLineArr} i={i}/>;
-        else return value + "Линия"
+        else return `${value}  Линия`
     };
 
     const buttonGroup = () => (
         lineValueArr.map((value, i) => (
             <Button
-                className={`incoming-line-button-item ${inComingLineArr[i].callStatus && !inComingLineArr[i].holdLine ? "active" : ""} ${inComingLineArr[i].holdLine ? "on-hold" : ""} `}
+                className={`incoming-line-button-item 
+                ${inComingLineArr[i].callStatus && !inComingLineArr[i].holdLine ? "active" : ""}
+                ${inComingLineArr[i].holdLine && !inComingLineArr[i].inComingCall? "on-hold" : ""} 
+                ${inComingLineArr[i].holdLine && inComingLineArr[i].inComingCall? "in-come" : ""} `}
                 value={takeLineButtonValue(value, i)}
                 key={value}
                 onClick={() => changeCallLine(i)}

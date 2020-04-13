@@ -54,12 +54,11 @@
     font-size: 10px;
    }
 
-  .fa-chevron-up {
+  .fa-chevron-down {
     font-size: 10px;
     color: #C9CFE3;
+    &.active {
+      transform: rotate(180deg);
+    }
      }
-
-  .fa-chevron-up.active {
-    transform: rotate(180deg);
-  }
 }

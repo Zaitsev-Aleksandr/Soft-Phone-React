@@ -8,8 +8,9 @@ import SubscriberValue from "./ActivCallDisplay/SubscriberValue";
 import Combine from "../common/icon/arrow/Combine";
 import ConferenceBlock from "./ConferensInfo/ConferenceDisplayBlock";
 import LeftArrow from "../common/icon/arrow/LeftArrow";
+import InComingCall from "../InComingCall";
 
-const ScreenGroup = ({updateContactValue,removeConference,  endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
+const ScreenGroup = ({updateContactValue, inComingCallArr, removeConference,  endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
 
     const [CONFERENCE_PERSON, toggleConferencePerson] = useState(false)
     useEffect(() => {
@@ -99,6 +100,7 @@ const ScreenGroup = ({updateContactValue,removeConference,  endCallSession, setC
             </>
         } else {
             return <CommonContact
+                inComingCallArr={inComingCallArr}
                 conferenceStatus={conferenceStatus}
                 enterValue={enterValue}
                 contactValueName={contactValueName}
@@ -114,7 +116,8 @@ const ScreenGroup = ({updateContactValue,removeConference,  endCallSession, setC
     return (
         <div className="phone-screen-block d-flex flex-column">
             <DisplayHeader inComingLineArr={inComingLineArr}/>
-            <div className="d-flex flex-column justify-content-between h-100">
+            {inComingCallArr.length>0? <InComingCall inComingCallArr={inComingCallArr} /> : null}
+            <div className="common-input-group d-flex flex-column justify-content-between h-100">
                 {renderIfComponent()}
             </div>
             {inComingLineArr.find(elem => elem.callStatus) ?

@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router} from "react-router-dom"
+
 import Header from "./Header";
-import "./Main.scss"
 import PhoneContent from "./Pages";
 import NavGroup from "./PhonePagesComponents/NavGrop";
+import ActionCreateInCommCallButton from "./InComingCall/inComingCallComponents/ActionCreateInCommCallButton";
 
+import phoneBook from "./commonStatic"
+import "./Main.scss"
 
 class Main extends Component {
 
@@ -22,6 +25,7 @@ class Main extends Component {
                 holdLine: false,
                 conferenceActive: false,
                 startCallTime: "",
+                inComingCall: false
             })
         }
         return arr
@@ -48,10 +52,31 @@ class Main extends Component {
         contactValueNumber: "",
         inComingLineArr: Main.createLineObj(),  //array of call line status
         conferenceStatus: false,
-        commonConferenceArr: []
+        commonConferenceArr: [],
+        inComingCallArr: []
+
     };
 
     /*_________________________________________________________________________*/
+
+    addInComingCall = () => {
+        const randomItem = Math.floor(Math.random() * phoneBook.length)
+        const clientValue = phoneBook[randomItem].name ? phoneBook[randomItem].name : phoneBook[randomItem].number;
+        if (this.state.inComingLineArr.find(elem => !elem.callStatus)) {
+            const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
+            const index = cloneArr.findIndex(elem => !elem.callStatus);
+
+            cloneArr[index].callStatus = true;
+            cloneArr[index].holdLine = true;
+            cloneArr[index].inComingCall = true;
+            cloneArr[index].startCallTime=  Date.now();;
+
+            this.setState({
+                inComingLineArr: cloneArr,
+                inComingCallArr: [...this.state.inComingCallArr, clientValue]
+            })
+        }
+    }
 
 
     changeSipStatus = (status) => {
@@ -72,7 +97,6 @@ class Main extends Component {
             conferenceActive: false,
             holdLine: false,
             startCallTime: "",
-
         };
         if (activeID >= 0) {
             cloneArr[activeID].displayValue = true;
@@ -223,7 +247,7 @@ class Main extends Component {
         });
     };
 
-    //  ___________  On Off Microphone Function____
+//  ___________  On Off Microphone Function____
 
     toggleMicrophoneStatus = () => {
         this.setState({
@@ -232,7 +256,7 @@ class Main extends Component {
     };
 
 
-    //________________ function for change keyboard pass active
+//________________ function for change keyboard pass active
     toggleKeyboard = () => {
         const cloneKeyboardStatus = {...this.state.keyboardStatus};
         cloneKeyboardStatus.active = !cloneKeyboardStatus.active;
@@ -263,17 +287,19 @@ class Main extends Component {
     }
 
     render() {
-        console.log("2a",this.state.commonConferenceArr.length > 0);
-        console.log("2b",this.state.conferenceStatus);
+        console.log(this.state.inComingCallArr)
         return (
-            <div className="main d-flex flex-column">
+            <div className="main d-flex flex-column position-relative">
+                <ActionCreateInCommCallButton addInComingCall={this.addInComingCall}/>
                 <Header
+                    keyboardStatus={this.state.keyboardStatus}
                     sipStatus={this.state.sipStatus}
                     openKeyboard={this.openKeyboard}
 
                 />
                 <Router>
                     <PhoneContent
+                        inComingCallArr={this.state.inComingCallArr}
                         removeConference={this.removeConference}
                         changeSipStatus={this.changeSipStatus}
                         addSearch={this.addSearch}
