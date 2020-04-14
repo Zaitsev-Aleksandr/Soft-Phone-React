@@ -1,0 +1,23 @@
+.main.closes {
+  height: 200px;
+  transition: 0.2s;
+
+  .phone-screen-block {
+    min-height: 95px;
+
+    .contact-input-output-group {
+      background: none;
+    }
+  }
+
+  .keyboard-wrapper {
+    display: none;
+  }
+  .navigation{
+    min-height: 35px;
+    padding: 0 10px;
+    .navigation-item-link{
+      height: 35px;
+    }
+  }
+}

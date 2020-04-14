@@ -1,5 +1,5 @@
 import React from 'react';
 
-const LeftArrow = ({onclick}) => <i className="fas fa-chevron-left" onClick={onclick}/>
+const LeftArrow = ({onClick}) => <i className="fas fa-chevron-left" onClick={onClick}/>
 
 export default LeftArrow;

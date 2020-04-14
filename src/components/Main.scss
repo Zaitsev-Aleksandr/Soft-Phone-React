@@ -1,11 +1,12 @@
 .main {
   position: relative;
   width: 250px;
-  max-height: 450px;
+  height: 450px;
   background: #FFFFFF;
   border-radius: 12px;
   box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.2);
   z-index: 2000;
+  transition: 0.2s;
 }
 
 .navigation-call-info-link {
@@ -17,7 +18,14 @@
 .info-link-arrow-icon {
   position: absolute;
   left: 25px;
-  top: 6px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  .fa-chevron-left {
+    color: #213991;
+    font-size: 10px;
+  }
 }
 
 .logo-info {
@@ -36,37 +44,42 @@
   font-size: 10px;
   line-height: 12px;
   color: #FFFFFF;
- }
+}
+
 .phone-book-section {
   width: 100%;
   padding: 0 12px;
 
 }
+
 .phone-book-item {
   background: rgb(245, 246, 250);
   border-radius: 5px;
   height: 42px;
   margin-bottom: 5px;
   padding: 5px 10px;
-  .fa-star{
+
+  .fa-star {
     position: absolute;
     right: 7px;
     top: 7px;
     color: #C9CFE3;
     font-size: 12px;
     cursor: pointer;
-    &.active{
-      color:orangered;
+
+    &.active {
+      color: orangered;
     }
 
   }
+
   &:hover {
-    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
 
   }
 
-  .call-time-date{
-    font-family: Roboto,sans-serif;
+  .call-time-date {
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
@@ -76,6 +89,7 @@
 
 
 }
+
 .phone-book-item-name {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -99,32 +113,39 @@
   color: #000000;
 
 }
-.call-time-duration{
-  font-family: Roboto,sans-serif;
+
+.call-time-duration {
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
   line-height: 12px;
-  &.incoming{
-    color:  #6DD453;
+
+  &.incoming {
+    color: #6DD453;
   }
-  &.out{
+
+  &.out {
     color: #213991;
   }
 }
+
 .phone-image-status {
   min-width: 22px;
   min-height: 22px;
   background-position: center;
   background-size: 74%;
   background-repeat: no-repeat;
-  &.missed{
+
+  &.missed {
     background-image: url("./../resources/img/missed.png");
   }
-  &.incoming{
+
+  &.incoming {
     background-image: url("./../resources/img/incoming.png");
   }
-  &.out{
+
+  &.out {
     background-image: url("./../resources/img/out.png");
   }
 }

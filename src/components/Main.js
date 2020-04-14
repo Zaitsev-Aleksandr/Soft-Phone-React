@@ -8,6 +8,7 @@ import ActionCreateInCommCallButton from "./InComingCall/inComingCallComponents/
 
 import phoneBook from "./commonStatic"
 import "./Main.scss"
+import "./MainCloses.scss"
 
 class Main extends Component {
 
@@ -65,17 +66,31 @@ class Main extends Component {
         if (this.state.inComingLineArr.find(elem => !elem.callStatus)) {
             const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
             const index = cloneArr.findIndex(elem => !elem.callStatus);
-
+            const commonInfo = [clientValue, index]
             cloneArr[index].callStatus = true;
             cloneArr[index].holdLine = true;
             cloneArr[index].inComingCall = true;
-            cloneArr[index].startCallTime=  Date.now();;
+            cloneArr[index].startCallTime = Date.now();
 
             this.setState({
                 inComingLineArr: cloneArr,
-                inComingCallArr: [...this.state.inComingCallArr, clientValue]
+                inComingCallArr: [...this.state.inComingCallArr, commonInfo]
             })
         }
+    }
+    endComingCall = (item) => {
+        let cloneCallArr = this.cloneStateArr(this.state.inComingCallArr);
+        const cloneLineArr = this.cloneStateArr(this.state.inComingLineArr);
+        cloneCallArr = cloneCallArr.filter(e => e[1] !== item)
+        cloneLineArr[item].callStatus = false;
+        cloneLineArr[item].holdLine = false;
+        cloneLineArr[item].inComingCall = false;
+        cloneLineArr[item].startCallTime = "";
+
+        this.setState({
+            inComingLineArr: cloneLineArr,
+            inComingCallArr: cloneCallArr
+        })
     }
 
 
@@ -287,9 +302,9 @@ class Main extends Component {
     }
 
     render() {
-        console.log(this.state.inComingCallArr)
+        const heightSoftPhoneStatus = !this.state.keyboardStatus.open || !this.state.keyboardStatus.active
         return (
-            <div className="main d-flex flex-column position-relative">
+            <div className={`main d-flex flex-column position-relative ${heightSoftPhoneStatus ? "closes" : ""}`}>
                 <ActionCreateInCommCallButton addInComingCall={this.addInComingCall}/>
                 <Header
                     keyboardStatus={this.state.keyboardStatus}
@@ -299,6 +314,7 @@ class Main extends Component {
                 />
                 <Router>
                     <PhoneContent
+                        endComingCall={this.endComingCall}
                         inComingCallArr={this.state.inComingCallArr}
                         removeConference={this.removeConference}
                         changeSipStatus={this.changeSipStatus}
@@ -332,7 +348,8 @@ class Main extends Component {
 
 
                 </Router>
-                <div className="logo-info">www.red-point.com.ua</div>
+                {this.state.keyboardStatus.open ? <div className="logo-info">www.red-point.com.ua</div> : ""}
+
             </div>
         );
     }

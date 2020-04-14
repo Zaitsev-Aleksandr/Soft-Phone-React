@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 
 import sound from "./../../../resources/audio/inComingCall.mp3"
 
-const IncomingCallItem = ({value}) => {
-    useEffect(() => {
+const IncomingCallItem = ({value, endComingCall, i}) => {
+       useEffect(() => {
         const audio = new Audio();
         audio.src = sound;
         try {
@@ -18,10 +18,10 @@ const IncomingCallItem = ({value}) => {
 
              <div className="d-flex flex-column">
                 <span className="incoming-call-item__label">Incoming Call...</span>
-                <span className="incoming-call-item__value text-nowrap"> {value}</span>
+                <span className="incoming-call-item__value text-nowrap"> {value[0]}</span>
             </div>
             <div className="d-flex flex-nowrap">
-                <i className="fas fa-phone-slash"/>
+                <i className="fas fa-phone-slash" onClick={()=>endComingCall(value[1])}/>
                 <i className="fas fa-phone"/>
                 <i className="fas fa-volume-mute" />
             </div>

@@ -1,7 +1,7 @@
 .keyboard-button-group {
   flex: 1 1 121px;
-  margin-top: 12px;
-  transition: 0.3s;
+  margin-top: 5px;
+  transition: 0.2s;
   overflow: hidden;
   padding: 0 20px;
 
@@ -34,9 +34,9 @@
 }
 
 .keyboard-button-group.close {
-  height: 0;
+  flex: 0 0 1px;
   margin-top: 0;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .common-call-keyboard-button {

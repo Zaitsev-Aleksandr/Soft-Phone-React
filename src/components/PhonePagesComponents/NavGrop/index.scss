@@ -7,7 +7,6 @@
 
   .navigation-item {
     position: relative;
-    height: 40px;
     width: 75px;
     box-sizing: border-box;
     border-radius: 35px;
@@ -16,7 +15,7 @@
 
     .navigation-item-link {
       height: 40px;
-      width: 70px;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;

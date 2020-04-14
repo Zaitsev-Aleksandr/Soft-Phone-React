@@ -51,6 +51,8 @@
     transition: 0.1s;
   }
 }
+
+.remove-conference{
 .fa-chevron-left {
   width: 22px;
   height: 22px;
@@ -62,9 +64,11 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 18px;
-  top: 48px;
+  right: -2px;
+  top: -5px;
   cursor: pointer;
+}
+
 }
 
 .conference-item {
@@ -75,7 +79,7 @@
   padding: 5px 10px;
 
   .conference-title {
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 700;
     color: #6DD453;
     margin-right: 25px;

@@ -1,7 +1,9 @@
 .phone-screen-block {
-  min-height: 165px;
+  max-height: 165px;
+  height: 165px;
   padding: 0 12px;
   position: relative;
+  overflow: hidden;
 
   .screen-header-group {
     min-height: 33px;

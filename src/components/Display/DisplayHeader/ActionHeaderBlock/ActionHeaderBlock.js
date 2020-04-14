@@ -1,15 +1,24 @@
 import React from 'react';
 import CallStatusInfo from "../CallStatusInfo";
 import SearchSettingButtonGroup from "../SearchSettingButtonGroup";
-const ActionHeaderBlock = ({inComingLineArr, }) => {
+
+const ActionHeaderBlock = ({inComingLineArr, inComingCallArr}) => {
+
+       const value = () => {
+        if (inComingLineArr.find(elem => elem.callStatus && elem.displayValue) && !inComingCallArr.length) {
+            return "Вызов..."
+        } else if (inComingCallArr.length > 0) {
+            return `Входящий... ${inComingCallArr.length}`
+        }
+    }
 
     const actionElem = () => {
-        if (inComingLineArr.find(elem => elem.callStatus&& elem.displayValue)) {
+        if (elem => (elem.callStatus && elem.displayValue) || inComingCallArr.length) {
             return (
                 <>
                     <CallStatusInfo
                         className="incoming-call"
-                        value="Разговор..."
+                        value={value()}
                     />
 
                 </>
@@ -22,7 +31,7 @@ const ActionHeaderBlock = ({inComingLineArr, }) => {
     return (
         <div className="action-screen-header-block d-flex justify-content-end align-items-center flex-nowrap">
             {actionElem()}
-             <SearchSettingButtonGroup />
+            <SearchSettingButtonGroup/>
         </div>
     );
 };

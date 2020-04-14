@@ -10,7 +10,7 @@ import ConferenceBlock from "./ConferensInfo/ConferenceDisplayBlock";
 import LeftArrow from "../common/icon/arrow/LeftArrow";
 import InComingCall from "../InComingCall";
 
-const ScreenGroup = ({updateContactValue, inComingCallArr, removeConference,  endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
+const ScreenGroup = ({updateContactValue, inComingCallArr, endComingCall, removeConference,  endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
 
     const [CONFERENCE_PERSON, toggleConferencePerson] = useState(false)
     useEffect(() => {
@@ -79,14 +79,12 @@ const ScreenGroup = ({updateContactValue, inComingCallArr, removeConference,  en
                     className="pl-4"
                     clientValue={clientValue}
                     inComingLineArr={inComingLineArr}
-                    children={
-                        (
-                            <div className="d-flex flex-nowrap">
-                                <LeftArrow onclick={removeConference} />
-                                <span className="conference-title">Ожидание...</span>
-                            </div>
-                        )}
-                />
+                >
+                    <div className=" remove-conference position-relative d-flex flex-nowrap">
+                        <LeftArrow onClick={removeConference} />
+                        <span className="conference-title">Ожидание...</span>
+                    </div>
+                </ConferenceItem>
 
                 < CommonContact
                     conferenceStatus={conferenceStatus}
@@ -115,8 +113,8 @@ const ScreenGroup = ({updateContactValue, inComingCallArr, removeConference,  en
 
     return (
         <div className="phone-screen-block d-flex flex-column">
-            <DisplayHeader inComingLineArr={inComingLineArr}/>
-            {inComingCallArr.length>0? <InComingCall inComingCallArr={inComingCallArr} /> : null}
+            <DisplayHeader inComingLineArr={inComingLineArr} inComingCallArr={inComingCallArr}/>
+            {inComingCallArr.length>0? <InComingCall inComingCallArr={inComingCallArr} endComingCall={endComingCall} /> : null}
             <div className="common-input-group d-flex flex-column justify-content-between h-100">
                 {renderIfComponent()}
             </div>

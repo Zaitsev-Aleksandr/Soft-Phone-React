@@ -27,33 +27,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e18bdb0-060f-41d4-87c6-d7060d72e85d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/InComingCall/inComingCallComponents/IncomingCallItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/InComingCall/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/InComingCall/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/icon/arrow/DownArrow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/audio/inComingCall.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainCloses.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/2.82fe4c68.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/2.82fe4c68.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/runtime-main.9113df57.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/runtime-main.9113df57.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Display/ConferensInfo/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/ConferensInfo/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayHeader/ActionHeaderBlock/ActionHeaderBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/ActionHeaderBlock/ActionHeaderBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayHeader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayMicrophone/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayMicrophone/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayMicrophone/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayMicrophone/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Display/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Display/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InComingCall/inComingCallComponents/IncomingCallItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InComingCall/inComingCallComponents/IncomingCallItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InComingCall/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InComingCall/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InComingCall/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InComingCall/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/SearhPages/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/Settings/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/Settings/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/TimerCallSeshion/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/TimerCallSeshion/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/commonStatic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/commonStatic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/script/handlerButtonClick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InComingCall/inComingCallComponents/ActionCreateInCommCallButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/scss/animation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/scss/animation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/NavGrop/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/icon/arrow/LeftArrow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/arrow/LeftArrow.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +69,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -187,7 +193,8 @@
       <workItem from="1586435951155" duration="14781000" />
       <workItem from="1586498867478" duration="19157000" />
       <workItem from="1586767977698" duration="3000" />
-      <workItem from="1586768011815" duration="18344000" />
+      <workItem from="1586768011815" duration="24127000" />
+      <workItem from="1586842936486" duration="10695000" />
     </task>
     <servers />
   </component>
@@ -240,10 +247,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="83" width="585" height="873" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586531121192" />
-    <state x="265" y="75" width="672" height="676" key="search.everywhere.popup" timestamp="1586787973883">
+    <state x="265" y="75" width="672" height="676" key="search.everywhere.popup" timestamp="1586854778754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="265" y="75" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586787973883" />
+    <state x="265" y="75" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586854778754" />
     <state x="265" y="75" width="670" height="676" key="search.everywhere.popup/0.23.1280.728@0.23.1280.728" timestamp="1586427570897" />
   </component>
 </project>

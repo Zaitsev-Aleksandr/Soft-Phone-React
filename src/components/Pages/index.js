@@ -33,7 +33,8 @@ const PhoneContent = ({
                           contactValueNumber,
                           changeCallLine,
                           toggleKeyboard,
-                          addSearch
+                          addSearch,
+                          endComingCall
                       }) => {
 
 
@@ -44,6 +45,7 @@ const PhoneContent = ({
                 <Route exact path="/softPhone" render={() =>
                     (
                         <EnterNumberPage
+                            endComingCall={endComingCall}
                             inComingCallArr={inComingCallArr}
                             removeConference={removeConference}
                             setConference={setConference}
