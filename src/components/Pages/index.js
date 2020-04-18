@@ -19,7 +19,6 @@ const PhoneContent = ({
                           runCallTimer,
                           toggleConferenceStatus,
                           conferenceStatus,
-                          toggleMicrophoneStatus,
                           toggleHoldLine,
                           endCallSession,
                           startCallSession,
@@ -27,7 +26,6 @@ const PhoneContent = ({
                           updateContactValue,
                           inComingLineArr,
                           updateEnterValue,
-                          microphoneStatus,
                           enterValue,
                           contactValueName,
                           contactValueNumber,
@@ -54,9 +52,7 @@ const PhoneContent = ({
                             toggleKeyboard={toggleKeyboard}
                             runCallTimer={runCallTimer}
                             toggleConferenceStatus={toggleConferenceStatus}
-                            toggleMicrophoneStatus={toggleMicrophoneStatus}
-                            microphoneStatus={microphoneStatus}
-                            toggleHoldLine={toggleHoldLine}
+                           toggleHoldLine={toggleHoldLine}
                             endCallSession={endCallSession}
                             startCallSession={startCallSession}
                             updateEnterValue={updateEnterValue}
@@ -68,7 +64,6 @@ const PhoneContent = ({
                             contactValueName={contactValueName}
                             contactValueNumber={contactValueNumber}
                             changeCallLine={changeCallLine}
-
                         />
                     )
                 }

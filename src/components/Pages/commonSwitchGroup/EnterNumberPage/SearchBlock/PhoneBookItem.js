@@ -2,7 +2,7 @@ import React from 'react';
 import useRandomColor from "../../../../../hooks/useRandomColor";
 
 
-const PhoneBookItem = ({name, number, updateContactValue, toggleLookingFor,reloadState, style}) => {
+const PhoneBookItem = ({name, number, updateContactValue, toggleLookingFor,reloadState}) => {
     const color = useRandomColor();
     return (
         <div

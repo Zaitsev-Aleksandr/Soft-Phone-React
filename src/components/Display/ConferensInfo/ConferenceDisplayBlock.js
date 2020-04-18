@@ -30,7 +30,7 @@ const ConferenceBlock = ({commonConferenceArr,endCallSession, inComingLineArr, u
         />
     })
     return (
-        <div className={`conference-common-wrapper d-flex flex-column w-100 ${activeClassName()}`}>
+        <div className={`conference-common-wrapper d-flex flex-column  ${activeClassName()}`}>
             <div className="conference-block-title d-flex flex-column align-items-start position-relative">
                 Конференция
                 <p className="conference-subscriber-quantity m-0">Участников {commonConferenceArr.length} </p>

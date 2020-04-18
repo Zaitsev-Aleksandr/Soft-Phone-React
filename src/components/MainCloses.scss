@@ -1,22 +1,92 @@
 .main.closes {
-  height: 200px;
+  height: 230px;
   transition: 0.2s;
-
+.contact-nav-bar{
+  margin-bottom: 0;
+  min-height: 26px;
+}
+  .search-input-section{
+    height: 35px;
+  }
+  .screen-header-group {
+    min-height: 25px;
+  }
+  .last-contact-wrapper{
+    max-height: 156px;
+  }
+.incoming-call-block, .conference-item, .conference-common-wrapper{
+  position: absolute;
+  bottom: 120px;
+  width: 225px;
+ }
+  .head-line-phone-book{
+    font-size: 11px;
+    line-height: 11px;
+    padding: 6px 12px;
+  }
+  .conference-common-wrapper.active{
+    max-height: max-content;
+    .conference-item{
+      position: static;
+          }
+  }
   .phone-screen-block {
-    min-height: 95px;
+    max-height: 75px;
+    height: 75px;
+    overflow: visible;
+    position: relative;
 
     .contact-input-output-group {
       background: none;
     }
   }
 
-  .keyboard-wrapper {
-    display: none;
+  .content-wrapper {
+    overflow: visible;
   }
-  .navigation{
+
+  .close-keyboard-active-call {
+    .common-call-keyboard-button {
+      min-width: 45px;
+      width: 45px;
+      height: 24px;
+      border-radius: 5px;
+      margin: 0;
+      color: #7D7D7D;
+    }
+
+    .keyboard-button-group {
+      flex: 0 0 auto;
+      padding: 0;
+
+    }
+
+    .keyboard-wrapper {
+      overflow: auto;
+      width: 100%;
+
+      .keyboard-action-button {
+        max-width: 45px;
+        width: 45px;
+        height: 24px;
+        border-radius: 5px;
+        margin: 0;
+        font-size: 15px;
+        order: 2;
+      }
+    }
+  }
+
+  .incoming-button-block {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .navigation {
     min-height: 35px;
     padding: 0 10px;
-    .navigation-item-link{
+
+    .navigation-item-link {
       height: 35px;
     }
   }

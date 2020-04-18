@@ -4,6 +4,7 @@
   transition: 0.2s;
   overflow: hidden;
   padding: 0 20px;
+  flex-wrap: wrap;
 
   .common-keyboard-button {
     border: none;
@@ -33,10 +34,10 @@
   }
 }
 
-.keyboard-button-group.close {
-  flex: 0 0 1px;
+.keyboard-button-group.closes {
   margin-top: 0;
   transition: 0.2s;
+  flex-wrap: nowrap;
 }
 
 .common-call-keyboard-button {

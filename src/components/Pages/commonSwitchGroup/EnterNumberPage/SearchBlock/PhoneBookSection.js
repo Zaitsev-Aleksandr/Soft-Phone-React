@@ -5,10 +5,11 @@ import {Link} from "react-router-dom";
 
 import "./index.scss"
 
-const PhoneBookSection = ({searchArr, updateContactValue, toggleLookingFor, reloadState}) => {
+const PhoneBookSection = ({searchArr, updateContactValue, toggleLookingFor,keyboardStatus, reloadState}) => {
     const items = searchArr.map((elem, i) =>
         <Link className="navigation-call-info-link " to='/softPhone' key={i}>
             <PhoneBookItem
+                keyboardStatus={keyboardStatus}
                 reloadState={reloadState}
                 updateContactValue={updateContactValue}
                 toggleLookingFor={toggleLookingFor}

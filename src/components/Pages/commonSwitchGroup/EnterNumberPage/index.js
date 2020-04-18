@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import DisplayGroup from "../../../Display";
 import LineGroup from "../../../PhonePagesComponents/LineGroup";
 import Keyboard from "../../../PhonePagesComponents/KeyBoard";
 import ActionButtonGroup from "../../../PhonePagesComponents/ActionButton";
-
+import { MicrophoneContext } from "./../../../../Context/Context"
 
 const EnterNumberPage = ({
                              removeConference,
@@ -15,8 +15,6 @@ const EnterNumberPage = ({
                              endCallSession,
                              toggleConferenceStatus,
                              conferenceStatus,
-                             toggleMicrophoneStatus,
-                             microphoneStatus,
                              toggleHoldLine,
                              startCallSession,
                              keyboardStatus,
@@ -31,53 +29,90 @@ const EnterNumberPage = ({
                              endComingCall
 
                          }) => {
+    const [microphoneStatus, toggleMicrophoneStatus] = useState(true)
+
+
+    const ifOpenPhoneComponent = () => {
+
+        if (keyboardStatus.open) {
+            return (
+                <>
+                    <Keyboard
+                        toggleConferenceStatus={toggleConferenceStatus}
+                        conferenceStatus={conferenceStatus}
+                        toggleHoldLine={toggleHoldLine}
+                        endCallSession={endCallSession}
+                        startCallSession={startCallSession}
+                        keyboardStatus={keyboardStatus}
+                        updateEnterValue={updateEnterValue}
+                        inComingLineArr={inComingLineArr}
+                    />
+
+                    <ActionButtonGroup
+                        toggleKeyboard={toggleKeyboard}
+                        conferenceStatus={conferenceStatus}
+                        endCallSession={endCallSession}
+                        startCallSession={startCallSession}
+                        keyboardStatus={keyboardStatus}
+                        inComingLineArr={inComingLineArr}
+                    />
+                </>)
+        } else {
+            return (
+                <div className=" close-keyboard-active-call d-flex flex-nowrap">
+                    <Keyboard
+                        toggleConferenceStatus={toggleConferenceStatus}
+                        conferenceStatus={conferenceStatus}
+                        toggleHoldLine={toggleHoldLine}
+                        endCallSession={endCallSession}
+                        startCallSession={startCallSession}
+                        keyboardStatus={keyboardStatus}
+                        updateEnterValue={updateEnterValue}
+                        inComingLineArr={inComingLineArr}
+                    />
+
+                    <ActionButtonGroup
+                        toggleKeyboard={toggleKeyboard}
+                        conferenceStatus={conferenceStatus}
+                        endCallSession={endCallSession}
+                        startCallSession={startCallSession}
+                        keyboardStatus={keyboardStatus}
+                        inComingLineArr={inComingLineArr}
+                    />
+                </div>
+            )
+        }
+
+    }
     return (
-        <>
-            <DisplayGroup
-                endComingCall={endComingCall}
-                inComingCallArr={inComingCallArr}
-                removeConference={removeConference}
-                endCallSession={endCallSession}
-                setConference={setConference}
-                commonConferenceArr={commonConferenceArr}
-                toggleHoldLine={toggleHoldLine}
-                conferenceStatus={conferenceStatus}
-                enterValue={enterValue}
-                contactValueName={contactValueName}
-                contactValueNumber={contactValueNumber}
-                microphoneStatus={microphoneStatus}
-                inComingLineArr={inComingLineArr}
-                updateContactValue={updateContactValue}
-                updateEnterValue={updateEnterValue}
-            />
-            <LineGroup
-                runCallTimer={runCallTimer}
-                inComingLineArr={inComingLineArr}
-                changeCallLine={changeCallLine}
-            />
-
-            <Keyboard
-                toggleConferenceStatus={toggleConferenceStatus}
-                conferenceStatus={conferenceStatus}
-                toggleHoldLine={toggleHoldLine}
-                endCallSession={endCallSession}
-                startCallSession={startCallSession}
-                keyboardStatus={keyboardStatus}
-                updateEnterValue={updateEnterValue}
-                inComingLineArr={inComingLineArr}
-            />
-
-            <ActionButtonGroup
-                toggleKeyboard={toggleKeyboard}
-                conferenceStatus={conferenceStatus}
-                toggleMicrophoneStatus={toggleMicrophoneStatus}
-                endCallSession={endCallSession}
-                startCallSession={startCallSession}
-                keyboardStatus={keyboardStatus}
-                inComingLineArr={inComingLineArr}
-            />
-
-        </>
+        < MicrophoneContext.Provider value={{microphoneStatus, toggleMicrophoneStatus  }}>
+            <>
+                <DisplayGroup
+                    keyboardStatus={keyboardStatus}
+                    startCallSession={startCallSession}
+                    endComingCall={endComingCall}
+                    inComingCallArr={inComingCallArr}
+                    removeConference={removeConference}
+                    endCallSession={endCallSession}
+                    setConference={setConference}
+                    commonConferenceArr={commonConferenceArr}
+                    toggleHoldLine={toggleHoldLine}
+                    conferenceStatus={conferenceStatus}
+                    enterValue={enterValue}
+                    contactValueName={contactValueName}
+                    contactValueNumber={contactValueNumber}
+                    inComingLineArr={inComingLineArr}
+                    updateContactValue={updateContactValue}
+                    updateEnterValue={updateEnterValue}
+                />
+                <LineGroup
+                    runCallTimer={runCallTimer}
+                    inComingLineArr={inComingLineArr}
+                    changeCallLine={changeCallLine}
+                />
+                {ifOpenPhoneComponent()}
+            </>
+        </MicrophoneContext.Provider>
     );
 };
 

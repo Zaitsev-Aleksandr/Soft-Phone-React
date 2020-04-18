@@ -4,7 +4,7 @@ import "./index.scss"
 import PassCallButtonGroup from "./PassCallButtonGroup";
 import ActiveCallButtonGroup from "./ActiveСallButtonGroup";
 
-const ActionButtonGroup = ({startCallSession, conferenceStatus, toggleKeyboard,  toggleMicrophoneStatus, endCallSession, keyboardStatus, inComingLineArr}) => {
+const ActionButtonGroup = ({startCallSession, conferenceStatus, toggleKeyboard, endCallSession, keyboardStatus, inComingLineArr}) => {
 
     return (
 
@@ -17,7 +17,6 @@ const ActionButtonGroup = ({startCallSession, conferenceStatus, toggleKeyboard, 
                 <ActiveCallButtonGroup
                     inComingLineArr={inComingLineArr}
                     toggleKeyboard={toggleKeyboard}
-                    toggleMicrophoneStatus={toggleMicrophoneStatus}
                     keyboardStatus={keyboardStatus}
                     endCallSession={endCallSession}
                 />}

@@ -4,13 +4,13 @@ import DisplayHeader from "./DisplayHeader";
 import CommonContact from "./CommonContactInfo";
 import DisplayMicrophone from "./DisplayMicrophone";
 import ConferenceItem from "./ConferensInfo/ConferenceCallItem";
-import SubscriberValue from "./ActivCallDisplay/SubscriberValue";
 import Combine from "../common/icon/arrow/Combine";
 import ConferenceBlock from "./ConferensInfo/ConferenceDisplayBlock";
 import LeftArrow from "../common/icon/arrow/LeftArrow";
 import InComingCall from "../InComingCall";
+import ActiveCallDisplay from "./ActivCallDisplay";
 
-const ScreenGroup = ({updateContactValue, inComingCallArr, endComingCall, removeConference,  endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, microphoneStatus, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
+const ScreenGroup = ({updateContactValue, keyboardStatus, startCallSession, inComingCallArr, endComingCall, removeConference, endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
 
     const [CONFERENCE_PERSON, toggleConferencePerson] = useState(false)
     useEffect(() => {
@@ -24,7 +24,7 @@ const ScreenGroup = ({updateContactValue, inComingCallArr, endComingCall, remove
         }
     }, [conferenceStatus])
 
-      const combineConference = () => {
+    const combineConference = () => {
         toggleConferencePerson(false)
         setConference([...commonConferenceArr, initiatorValue()]);
     };
@@ -33,6 +33,7 @@ const ScreenGroup = ({updateContactValue, inComingCallArr, endComingCall, remove
     const initiatorValue = () => inComingLineArr.find(e => e.displayValue && !e.conferenceActive) ? inComingLineArr.find(e => e.displayValue && e.callStatus) : inComingLineArr.find(e => !e.displayValue && e.callStatus);
 
     const slaveClientValue = () => {
+
         const element = inComingLineArr.find(elem => !elem.displayValue);
         return [element.contactValueName, element.contactValueNumber]
     };
@@ -46,7 +47,6 @@ const ScreenGroup = ({updateContactValue, inComingCallArr, endComingCall, remove
 
     const renderIfComponent = () => {
         if (commonConferenceArr.length > 1 && !conferenceStatus && !CONFERENCE_PERSON) {
-
             return (
                 <ConferenceBlock
                     endCallSession={endCallSession}
@@ -64,7 +64,8 @@ const ScreenGroup = ({updateContactValue, inComingCallArr, endComingCall, remove
                             className="hold"
                             children={<Combine combineConference={combineConference}/>}
                         /> : null}
-                    <SubscriberValue
+                    <ActiveCallDisplay
+                        keyboardStatus={keyboardStatus}
                         inComingLineArr={inComingLineArr}
                     />
                 </>
@@ -81,12 +82,13 @@ const ScreenGroup = ({updateContactValue, inComingCallArr, endComingCall, remove
                     inComingLineArr={inComingLineArr}
                 >
                     <div className=" remove-conference position-relative d-flex flex-nowrap">
-                        <LeftArrow onClick={removeConference} />
+                        <LeftArrow onClick={removeConference}/>
                         <span className="conference-title">Ожидание...</span>
                     </div>
                 </ConferenceItem>
 
                 < CommonContact
+                    keyboardStatus={keyboardStatus}
                     conferenceStatus={conferenceStatus}
                     enterValue={enterValue}
                     contactValueName={contactValueName}
@@ -98,6 +100,7 @@ const ScreenGroup = ({updateContactValue, inComingCallArr, endComingCall, remove
             </>
         } else {
             return <CommonContact
+                keyboardStatus={keyboardStatus}
                 inComingCallArr={inComingCallArr}
                 conferenceStatus={conferenceStatus}
                 enterValue={enterValue}
@@ -114,7 +117,8 @@ const ScreenGroup = ({updateContactValue, inComingCallArr, endComingCall, remove
     return (
         <div className="phone-screen-block d-flex flex-column">
             <DisplayHeader inComingLineArr={inComingLineArr} inComingCallArr={inComingCallArr}/>
-            {inComingCallArr.length>0? <InComingCall inComingCallArr={inComingCallArr} endComingCall={endComingCall} /> : null}
+            {inComingCallArr.length > 0 ? <InComingCall inComingCallArr={inComingCallArr} endComingCall={endComingCall}
+                                                        startCallSession={startCallSession}/> : null}
             <div className="common-input-group d-flex flex-column justify-content-between h-100">
                 {renderIfComponent()}
             </div>
@@ -122,7 +126,6 @@ const ScreenGroup = ({updateContactValue, inComingCallArr, endComingCall, remove
                 <DisplayMicrophone
                     commonConferenceArr={commonConferenceArr}
                     conferenceStatus={conferenceStatus}
-                    microphoneStatus={microphoneStatus}
                 /> :
                 null}
         </div>

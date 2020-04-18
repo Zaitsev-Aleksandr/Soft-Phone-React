@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router} from "react-router-dom"
 
+
 import Header from "./Header";
 import PhoneContent from "./Pages";
 import NavGroup from "./PhonePagesComponents/NavGrop";
@@ -47,7 +48,6 @@ class Main extends Component {
                 active: true       //keyboard variant during a call when you need a enter number in soft phone
             },
         transferCall: false,
-        microphoneStatus: true,   // microphone status on or off
         enterValue: "",
         contactValueName: "",
         contactValueNumber: "",
@@ -67,7 +67,7 @@ class Main extends Component {
             const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
             const index = cloneArr.findIndex(elem => !elem.callStatus);
             const commonInfo = [clientValue, index]
-            cloneArr[index].callStatus = true;
+            cloneArr[index].callStatus = false;
             cloneArr[index].holdLine = true;
             cloneArr[index].inComingCall = true;
             cloneArr[index].startCallTime = Date.now();
@@ -121,7 +121,6 @@ class Main extends Component {
         }
 
         this.setState({
-            microphoneStatus: true,
             enterValue: "",
             contactValueName: "",
             contactValueNumber: "",
@@ -225,12 +224,6 @@ class Main extends Component {
 
     reloadCallState = () => {
         this.setState({
-            keyboardStatus:
-                {
-                    open: true,
-                    active: true
-                },
-            microphoneStatus: true,
             enterValue: "",
             contactValueName: "",
             contactValueNumber: "",
@@ -262,30 +255,22 @@ class Main extends Component {
         });
     };
 
-//  ___________  On Off Microphone Function____
-
-    toggleMicrophoneStatus = () => {
-        this.setState({
-            microphoneStatus: !this.state.microphoneStatus
-        });
-    };
+    ;
 
 
 //________________ function for change keyboard pass active
     toggleKeyboard = () => {
         const cloneKeyboardStatus = {...this.state.keyboardStatus};
         cloneKeyboardStatus.active = !cloneKeyboardStatus.active;
+
         this.setState({
             keyboardStatus: cloneKeyboardStatus
         });
-        if (!this.state.keyboardStatus.open) {
-            this.openKeyboard()
-        }
-
     };
     openKeyboard = () => {
         const cloneKeyboardStatus = {...this.state.keyboardStatus};
         cloneKeyboardStatus.open = !cloneKeyboardStatus.open;
+        if (!cloneKeyboardStatus.active) cloneKeyboardStatus.active= !cloneKeyboardStatus.active;
         this.setState({
             keyboardStatus: cloneKeyboardStatus
         });
@@ -302,15 +287,14 @@ class Main extends Component {
     }
 
     render() {
-        const heightSoftPhoneStatus = !this.state.keyboardStatus.open || !this.state.keyboardStatus.active
+        const heightSoftPhoneStatus = !this.state.keyboardStatus.open
         return (
             <div className={`main d-flex flex-column position-relative ${heightSoftPhoneStatus ? "closes" : ""}`}>
                 <ActionCreateInCommCallButton addInComingCall={this.addInComingCall}/>
                 <Header
-                    keyboardStatus={this.state.keyboardStatus}
-                    sipStatus={this.state.sipStatus}
                     openKeyboard={this.openKeyboard}
-
+                     keyboardStatus={this.state.keyboardStatus}
+                    sipStatus={this.state.sipStatus}
                 />
                 <Router>
                     <PhoneContent
@@ -325,7 +309,6 @@ class Main extends Component {
                         runCallTimer={this.runCallTimer}
                         toggleConferenceStatus={this.toggleConferenceStatus}
                         conferenceStatus={this.state.conferenceStatus}
-                        toggleMicrophoneStatus={this.toggleMicrophoneStatus}
                         toggleHoldLine={this.toggleHoldLine}
                         endCallSession={this.endCallSession}
                         startCallSession={this.startCallSession}
@@ -333,7 +316,6 @@ class Main extends Component {
                         updateContactValue={this.updateContactValue}
                         inComingLineArr={this.state.inComingLineArr}
                         updateEnterValue={this.updateEnterValue}
-                        microphoneStatus={this.state.microphoneStatus}
                         enterValue={this.state.enterValue}
                         contactValueName={this.state.contactValueName}
                         contactValueNumber={this.state.contactValueNumber}
