@@ -4,12 +4,11 @@ import MicrophoneOff from "../../common/icon/microphone/MicOff";
 import "./index.scss"
 import {MicrophoneContext} from "./../../../Context/Context";
 
-const DisplayMicrophone = ({commonConferenceArr, conferenceStatus}) => {
+const DisplayMicrophone = () => {
     const { microphoneStatus } = useContext(MicrophoneContext)
-    const conferenceClassName = commonConferenceArr.length > 0 || conferenceStatus ? "conference" : ""
     return (
         <div
-            className={`display-microphone-block d-flex flex-nowrap justify-content-center align-items-center ${conferenceClassName}`}>
+            className="display-microphone-block d-flex flex-nowrap justify-content-center align-items-center">
             {microphoneStatus ? <MicrophoneOn/> : <MicrophoneOff/>}
         </div>)
 }

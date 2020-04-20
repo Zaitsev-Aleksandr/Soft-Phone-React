@@ -10,7 +10,7 @@ import LeftArrow from "../common/icon/arrow/LeftArrow";
 import InComingCall from "../InComingCall";
 import ActiveCallDisplay from "./ActivCallDisplay";
 
-const ScreenGroup = ({updateContactValue, keyboardStatus, startCallSession, inComingCallArr, endComingCall, removeConference, endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
+const ScreenGroup = ({updateContactValue, keyboardStatus, takeInComingCall, inComingCallArr, removeConference, endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
 
     const [CONFERENCE_PERSON, toggleConferencePerson] = useState(false)
     useEffect(() => {
@@ -113,21 +113,20 @@ const ScreenGroup = ({updateContactValue, keyboardStatus, startCallSession, inCo
         }
     };
 
-
     return (
         <div className="phone-screen-block d-flex flex-column">
-            <DisplayHeader inComingLineArr={inComingLineArr} inComingCallArr={inComingCallArr}/>
-            {inComingCallArr.length > 0 ? <InComingCall inComingCallArr={inComingCallArr} endComingCall={endComingCall}
-                                                        startCallSession={startCallSession}/> : null}
+            <DisplayHeader inComingLineArr={inComingLineArr}
+                           inComingCallArr={inComingCallArr}/>
+            {inComingCallArr.length > 0 ?
+                <InComingCall
+                    takeInComingCall={takeInComingCall}
+                    inComingLineArr={inComingLineArr}
+                    inComingCallArr={inComingCallArr}
+                /> : null}
             <div className="common-input-group d-flex flex-column justify-content-between h-100">
                 {renderIfComponent()}
             </div>
-            {inComingLineArr.find(elem => elem.callStatus) ?
-                <DisplayMicrophone
-                    commonConferenceArr={commonConferenceArr}
-                    conferenceStatus={conferenceStatus}
-                /> :
-                null}
+            {inComingLineArr.find(elem => elem.callStatus) ? <DisplayMicrophone/> : null}
         </div>
     );
 };

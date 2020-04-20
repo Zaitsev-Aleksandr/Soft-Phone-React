@@ -8,6 +8,7 @@ import { MicrophoneContext } from "./../../../../Context/Context"
 
 const EnterNumberPage = ({
                              removeConference,
+                             takeInComingCall,
                              runCallTimer,
                              setConference,
                              toggleKeyboard,
@@ -26,9 +27,7 @@ const EnterNumberPage = ({
                              contactValueNumber,
                              commonConferenceArr,
                              inComingCallArr,
-                             endComingCall
-
-                         }) => {
+                              }) => {
     const [microphoneStatus, toggleMicrophoneStatus] = useState(true)
 
 
@@ -85,12 +84,12 @@ const EnterNumberPage = ({
 
     }
     return (
-        < MicrophoneContext.Provider value={{microphoneStatus, toggleMicrophoneStatus  }}>
+        < MicrophoneContext.Provider value={{microphoneStatus, toggleMicrophoneStatus} }>
             <>
                 <DisplayGroup
+                    takeInComingCall={takeInComingCall}
                     keyboardStatus={keyboardStatus}
                     startCallSession={startCallSession}
-                    endComingCall={endComingCall}
                     inComingCallArr={inComingCallArr}
                     removeConference={removeConference}
                     endCallSession={endCallSession}
