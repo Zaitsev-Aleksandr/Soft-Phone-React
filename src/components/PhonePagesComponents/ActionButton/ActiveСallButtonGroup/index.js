@@ -11,11 +11,11 @@ const ActiveCallButtonGroup = ({endCallSession, toggleKeyboard, keyboardStatus})
     return (
         <>
             {keyboardStatus.open ? <Button
-                className="common-call-keyboard-button d-flex flex-column align-items-center justify-content-center"
+                className={`common-call-keyboard-button d-flex flex-column align-items-center justify-content-center ${!keyboardStatus.active?"active":""}`}
                 onClick={toggleKeyboard}
                 value={
                     <>
-                        <KeyboardIcon/>
+                        <KeyboardIcon />
                         <Subvalue
                             className="sub-value-call-board-item d-flex flex-nowrap"
                             subValue={!keyboardStatus.active ? "Скрыть" : "Клавиатура"}
@@ -30,14 +30,14 @@ const ActiveCallButtonGroup = ({endCallSession, toggleKeyboard, keyboardStatus})
                 value={<HangUpPhone/>}
             />
             <Button
-                className={"common-call-keyboard-button d-flex flex-column align-items-center justify-content-center "}
+                className={`common-call-keyboard-button d-flex flex-column align-items-center justify-content-center ${!microphoneStatus?"active":""} `}
                 onClick={() => toggleMicrophoneStatus(!microphoneStatus)}
                 value={
                     <>
                         <OffMicro/>
                         {keyboardStatus.open ? <Subvalue
                             className="sub-value-call-board-item d-flex flex-nowrap"
-                            subValue="Выкл. мик"
+                            subValue={!microphoneStatus?"Вкл. мик":"Выкл. мик"}
                         /> : ""}
                     </>
                 }

@@ -50,13 +50,21 @@
 
   .fa-times {
     margin-left: 10px;
-    color: #C9CFE3;
-    font-size: 10px;
+    color: #213991;
+    font-size: 12px;
+    cursor: pointer;
+    &:hover{
+      color: black;
+    }
    }
 
   .fa-chevron-down {
-    font-size: 10px;
-    color: #C9CFE3;
+    font-size: 12px;
+    color: #213991;
+    cursor: pointer;
+    &:hover{
+      color: black;
+    }
     &.active {
       transform: rotate(180deg);
     }

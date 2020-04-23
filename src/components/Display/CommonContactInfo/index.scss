@@ -1,25 +1,29 @@
-.common-input-group{
-  flex: 1 1 40px;
+.common-input-group {
+  flex: 1 0;
+  margin-top: auto;
 }
 
 .contact-input-output-group {
-  flex: 1 1 20px;
+flex: auto;
   overflow: hidden;
 
 
-  &.start{
+  &.start {
     background-image: url("../../../resources/img/bgLodo.png");
-    background-size: 160px;
+    background-size: 150px;
     background-repeat: no-repeat;
     background-position: center -8px;
+    height: 100%;
   }
 }
-.enter-phone-name{
+
+.enter-phone-name {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 5px;
   color: #7D7D7D;
   border: none;
   background: #FFFFFF;
@@ -29,17 +33,28 @@
   text-overflow: ellipsis;
   overflow: hidden;
   border: none;
-  background-color: transparent;
+  background-color: white;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
-  min-height: 30px;
+  font-size: 16px;
+  line-height: 36px;
+  min-height: 36px;
   color: #000000;
   width: 100%;
 
   &::placeholder {
     font-size: 12px;
+    font-weight: 400;
+    color: #BDBDBD;
+  }
+}
+
+.initial-input {
+  font-size: 18px;
+
+  &::placeholder {
+    font-size: 13px;
     font-weight: 400;
     color: #7D7D7D;
   }

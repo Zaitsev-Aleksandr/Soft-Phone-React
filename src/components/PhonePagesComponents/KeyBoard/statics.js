@@ -1,70 +1,72 @@
-import  React from "react"
+import React from "react"
 import Addvalue from "../../common/icon/AddValue";
 import Transfer from "../../common/icon/Transfer";
 import HoldCall from "../../common/icon/HoldCall";
+
 export const passKeyValues = [
     {
         defaultValue: "1",
-        dropDownItems:[ ]
+        dropDownItems: []
     },
     {
         defaultValue: "2",
-        dropDownItems:[]
+        dropDownItems: []
     },
     {
         defaultValue: "3",
-        dropDownItems:[]
+        dropDownItems: []
     },
     {
         defaultValue: "4",
-        dropDownItems:[]
+        dropDownItems: []
     },
     {
         defaultValue: "5",
-        dropDownItems:[]
+        dropDownItems: []
     },
     {
         defaultValue: "6",
-        dropDownItems:[]
+        dropDownItems: []
     },
     {
         defaultValue: "7",
-        dropDownItems:[]
+        dropDownItems: []
     },
     {
         defaultValue: "8",
-        dropDownItems:[]
+        dropDownItems: []
     },
     {
         defaultValue: "9",
-        dropDownItems:[]
+        dropDownItems: []
     },
     {
         defaultValue: "*",
-        dropDownItems:[]
+        dropDownItems: []
     },
     {
         defaultValue: "0",
-        dropDownItems:["+"]
+        dropDownItems: ["+"]
     },
     {
         defaultValue: "#",
-        dropDownItems:[]
+        dropDownItems: []
     }
 ];
+
 export const callKeyValues = [
     {
         defaultValue: <Addvalue/>,
-        dropDownItems:["Конференция"]
+        dropDownItems: ["Конференция"]
 
     },
     {
         defaultValue: <Transfer/>,
-        dropDownItems:["Трансфер"]
+        dropDownItems: ["Трансфер"]
 
     },
     {
-        defaultValue: <HoldCall />,
-        dropDownItems:["Удержантие"]
+        defaultValue: <HoldCall/>,
+        dropDownItems: ["Удержантие"]
     }
- ];
+];

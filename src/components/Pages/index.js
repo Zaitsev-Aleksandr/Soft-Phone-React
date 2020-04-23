@@ -10,6 +10,7 @@ import CommonSettings from "./commonSwitchGroup/Settings";
 
 
 const PhoneContent = ({
+                          deleteEnterValue,
                           inComingCallArr,
                           removeConference,
                           changeSipStatus,
@@ -33,9 +34,7 @@ const PhoneContent = ({
                           toggleKeyboard,
                           addSearch,
                           takeInComingCall
-                              }) => {
-
-
+                      }) => {
     return (
         <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
 
@@ -43,6 +42,7 @@ const PhoneContent = ({
                 <Route exact path="/softPhone" render={() =>
                     (
                         <EnterNumberPage
+                            deleteEnterValue={deleteEnterValue}
                             takeInComingCall={takeInComingCall}
                             inComingCallArr={inComingCallArr}
                             removeConference={removeConference}
@@ -52,7 +52,7 @@ const PhoneContent = ({
                             toggleKeyboard={toggleKeyboard}
                             runCallTimer={runCallTimer}
                             toggleConferenceStatus={toggleConferenceStatus}
-                           toggleHoldLine={toggleHoldLine}
+                            toggleHoldLine={toggleHoldLine}
                             endCallSession={endCallSession}
                             startCallSession={startCallSession}
                             updateEnterValue={updateEnterValue}

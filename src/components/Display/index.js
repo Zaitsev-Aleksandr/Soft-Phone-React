@@ -10,7 +10,7 @@ import LeftArrow from "../common/icon/arrow/LeftArrow";
 import InComingCall from "../InComingCall";
 import ActiveCallDisplay from "./ActivCallDisplay";
 
-const ScreenGroup = ({updateContactValue, keyboardStatus, takeInComingCall, inComingCallArr, removeConference, endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
+const ScreenGroup = ({updateContactValue, deleteEnterValue,  keyboardStatus, takeInComingCall, inComingCallArr, removeConference, endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
 
     const [CONFERENCE_PERSON, toggleConferencePerson] = useState(false)
     useEffect(() => {
@@ -28,7 +28,6 @@ const ScreenGroup = ({updateContactValue, keyboardStatus, takeInComingCall, inCo
         toggleConferencePerson(false)
         setConference([...commonConferenceArr, initiatorValue()]);
     };
-
 
     const initiatorValue = () => inComingLineArr.find(e => e.displayValue && !e.conferenceActive) ? inComingLineArr.find(e => e.displayValue && e.callStatus) : inComingLineArr.find(e => !e.displayValue && e.callStatus);
 
@@ -65,6 +64,8 @@ const ScreenGroup = ({updateContactValue, keyboardStatus, takeInComingCall, inCo
                             children={<Combine combineConference={combineConference}/>}
                         /> : null}
                     <ActiveCallDisplay
+                        updateEnterValue={updateEnterValue}
+                        enterValue={enterValue}
                         keyboardStatus={keyboardStatus}
                         inComingLineArr={inComingLineArr}
                     />
@@ -75,19 +76,19 @@ const ScreenGroup = ({updateContactValue, keyboardStatus, takeInComingCall, inCo
             const clientValue = [clientIndex.contactValueName, clientIndex.contactValueNumber]
 
             return <>
-
                 <ConferenceItem
                     className="pl-4"
                     clientValue={clientValue}
                     inComingLineArr={inComingLineArr}
                 >
-                    <div className=" remove-conference position-relative d-flex flex-nowrap">
+                    <div className="remove-conference position-relative d-flex flex-nowrap">
                         <LeftArrow onClick={removeConference}/>
                         <span className="conference-title">Ожидание...</span>
                     </div>
                 </ConferenceItem>
 
                 < CommonContact
+                    commonConferenceArr={commonConferenceArr}
                     keyboardStatus={keyboardStatus}
                     conferenceStatus={conferenceStatus}
                     enterValue={enterValue}
@@ -96,10 +97,14 @@ const ScreenGroup = ({updateContactValue, keyboardStatus, takeInComingCall, inCo
                     inComingLineArr={inComingLineArr}
                     updateContactValue={updateContactValue}
                     updateEnterValue={updateEnterValue}
+                    deleteEnterValue={deleteEnterValue}
+
                 />
             </>
         } else {
             return <CommonContact
+                deleteEnterValue={deleteEnterValue}
+                commonConferenceArr={commonConferenceArr}
                 keyboardStatus={keyboardStatus}
                 inComingCallArr={inComingCallArr}
                 conferenceStatus={conferenceStatus}

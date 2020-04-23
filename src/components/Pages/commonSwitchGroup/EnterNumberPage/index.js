@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState} from 'react';
 
 import DisplayGroup from "../../../Display";
 import LineGroup from "../../../PhonePagesComponents/LineGroup";
@@ -27,9 +27,9 @@ const EnterNumberPage = ({
                              contactValueNumber,
                              commonConferenceArr,
                              inComingCallArr,
+                             deleteEnterValue
                               }) => {
     const [microphoneStatus, toggleMicrophoneStatus] = useState(true)
-
 
     const ifOpenPhoneComponent = () => {
 
@@ -37,6 +37,7 @@ const EnterNumberPage = ({
             return (
                 <>
                     <Keyboard
+                        contactValueNumber={ contactValueNumber }
                         toggleConferenceStatus={toggleConferenceStatus}
                         conferenceStatus={conferenceStatus}
                         toggleHoldLine={toggleHoldLine}
@@ -48,6 +49,8 @@ const EnterNumberPage = ({
                     />
 
                     <ActionButtonGroup
+                        deleteEnterValue={deleteEnterValue}
+                        updateEnterValue={updateEnterValue}
                         toggleKeyboard={toggleKeyboard}
                         conferenceStatus={conferenceStatus}
                         endCallSession={endCallSession}
@@ -87,6 +90,7 @@ const EnterNumberPage = ({
         < MicrophoneContext.Provider value={{microphoneStatus, toggleMicrophoneStatus} }>
             <>
                 <DisplayGroup
+                     deleteEnterValue={deleteEnterValue}
                     takeInComingCall={takeInComingCall}
                     keyboardStatus={keyboardStatus}
                     startCallSession={startCallSession}

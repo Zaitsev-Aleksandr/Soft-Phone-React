@@ -5,6 +5,13 @@ import PhoneContent from "./Pages";
 import NavGroup from "./PhonePagesComponents/NavGrop";
 import ActionCreateInCommCallButton from "./InComingCall/inComingCallComponents/ActionCreateInCommCallButton";
 import phoneBook from "./commonStatic"
+import {
+    FREE_LINE,
+    ACTIVE_LINE,
+    HOLD_LINE,
+    CALL_WAITING_LINE,
+    CHANGE_LINE
+} from "./../directionFunctional/lineControlModule"
 import {EndComingCallContext} from "./../Context/Context";
 import "./Main.scss";
 import "./MainCloses.scss"
@@ -32,47 +39,6 @@ class Main extends Component {
         return arr
     };
 
-    LINE_CONTROL_MODULE = {
-        freeLine: (arr, i) => {
-            arr[i].displayValue = false;
-            arr[i].contactValueName = ""
-            arr[i].contactValueNumber = "";
-            arr[i].callStatus = false;
-            arr[i].holdLine = false;
-            arr[i].conferenceActive = false;
-            arr[i].startCallTime = "";
-            arr[i].inComingCall = false
-        },
-        activeLine: (arr, Name, Number, i) => {
-            arr[i].displayValue = true;
-            arr[i].contactValueName = Name;
-            arr[i].contactValueNumber = Number;
-            arr[i].callStatus = true;
-            arr[i].holdLine = false;
-            arr[i].conferenceActive = false;
-            arr[i].startCallTime = Date.now();
-            arr[i].inComingCall = false
-        },
-        holdCallLine: (arr, i) => {
-            arr[i].displayValue = false;
-            arr[i].holdLine = true;
-            arr[i].conferenceActive = false;
-        },
-        callWaitingLine: (arr, i) => {
-            arr[i].displayValue = false;
-            arr[i].contactValueName = ""
-            arr[i].contactValueNumber = "";
-            arr[i].callStatus = false;
-            arr[i].holdLine = true;
-            arr[i].conferenceActive = false;
-            arr[i].startCallTime = Date.now();
-            arr[i].inComingCall = true
-        },
-        changeCallLine: (arr, i) => {
-            arr[i].displayValue = true;
-            arr[i].holdLine = false;
-        }
-    }
     cloneStateArr = (arr) => {
         return JSON.parse(JSON.stringify(arr));
     };
@@ -85,7 +51,7 @@ class Main extends Component {
         keyboardStatus:
             {
                 open: true,        //keyboard status open or close by button in header soft phone
-                active: true       //keyboard variant during a call when you need a enter number in soft phone
+                active: true     //keyboard variant during a call when you need a enter number in soft phone
             },
         transferCall: false,
         enterValue: "",
@@ -106,7 +72,7 @@ class Main extends Component {
         const commonInfo = clientValue
         if (this.state.inComingLineArr.find(elem => !elem.callStatus)) {
             const index = cloneArr.findIndex(elem => !elem.callStatus);
-            this.LINE_CONTROL_MODULE.callWaitingLine(cloneArr, index)
+            CALL_WAITING_LINE(cloneArr, index)
 
         }
         this.setState({
@@ -120,7 +86,7 @@ class Main extends Component {
         const cloneLineArr = this.cloneStateArr(this.state.inComingLineArr);
         const newCloneCallArr = cloneCallArr.filter((elem, index) => index !== item)
         if (!newCloneCallArr.length) {
-            this.LINE_CONTROL_MODULE.freeLine(cloneLineArr, cloneLineArr.findIndex(e => e.inComingCall))
+            FREE_LINE(cloneLineArr, cloneLineArr.findIndex(e => e.inComingCall))
         }
         this.setState({
             inComingLineArr: cloneLineArr,
@@ -138,19 +104,25 @@ class Main extends Component {
         const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
         const index = cloneArr.findIndex(elem => elem.callStatus && elem.displayValue);
         const activeID = cloneArr.findIndex(elem => elem.callStatus && !elem.displayValue);
-        this.LINE_CONTROL_MODULE.freeLine(cloneArr, index)
+        FREE_LINE(cloneArr, index)
 
         if (cloneArr.find(elem => elem.callStatus && !elem.displayValue)) {
-            this.LINE_CONTROL_MODULE.changeCallLine(cloneArr, activeID)
+            CHANGE_LINE(cloneArr, activeID)
             this.setState({commonConferenceArr: []})
         }
-        if (this.state.inComingCallArr.length !== 0 && cloneArr.filter(elem => elem.inComingCall).length ===0) {
+        if (this.state.inComingCallArr.length !== 0 && cloneArr.filter(elem => elem.inComingCall).length === 0) {
             const i = cloneArr.findIndex(elem => !elem.callStatus);
-            this.LINE_CONTROL_MODULE.callWaitingLine(cloneArr, i);
-
+            CALL_WAITING_LINE(cloneArr, i);
         }
+        if (this.state.inComingCallArr.length === 0 && cloneArr.filter(elem => elem.inComingCall).length !== 0) {
+            const i = cloneArr.findIndex(elem => elem.inComingCall);
+            FREE_LINE(cloneArr, i)
+        }
+        const newKeyboardStatus = this.state.keyboardStatus
+        newKeyboardStatus.active = true;
 
         this.setState({
+            keyboardStatus: newKeyboardStatus,
             enterValue: "",
             contactValueName: "",
             contactValueNumber: "",
@@ -165,14 +137,15 @@ class Main extends Component {
             return i !== item
         })
         if (cloneLineArr.find(e => e.displayValue)) {
-            this.LINE_CONTROL_MODULE.holdCallLine(cloneLineArr, cloneLineArr.findIndex(e => e.displayValue))
+            HOLD_LINE(cloneLineArr, cloneLineArr.findIndex(e => e.displayValue))
         }
-        if (cloneLineArr.filter(e => e.callStatus).length <= 4) {
+        if (cloneLineArr.filter(e => e.callStatus).length < 4) {
             const line = cloneLineArr.findIndex(e => e.inComingCall)
-            if(!!~line) this.LINE_CONTROL_MODULE.activeLine(cloneLineArr, cloneCallArr[item][0], cloneCallArr[item][1], line)
+            if (!!~line) ACTIVE_LINE(cloneLineArr, cloneCallArr[item][0], cloneCallArr[item][1], line)
             const index = cloneLineArr.findIndex(elem => !elem.callStatus);
-            if (cloneLineArr.find(elem => !elem.callStatus)) this.LINE_CONTROL_MODULE.callWaitingLine(cloneLineArr, index);
+            if (cloneLineArr.find(elem => !elem.callStatus) && newCloneCallArr.length) CALL_WAITING_LINE(cloneLineArr, index);
         }
+
         this.setState({
             inComingLineArr: cloneLineArr,
             inComingCallArr: newCloneCallArr
@@ -184,14 +157,19 @@ class Main extends Component {
         const enterPhoneNumber = !this.state.contactValueNumber ? this.state.enterValue : this.state.contactValueNumber;
         cloneArr.forEach((elem, i) => {
             if (index >= 0 && index === i) {
-                this.LINE_CONTROL_MODULE.activeLine(cloneArr, this.state.contactValueName, enterPhoneNumber, i)
+                ACTIVE_LINE(cloneArr, this.state.contactValueName, enterPhoneNumber, i)
             } else if (elem.callStatus && index !== i) {
-                this.LINE_CONTROL_MODULE.holdCallLine(cloneArr, i)
+                HOLD_LINE(cloneArr, i)
             }
         });
 
         this.setState({
             inComingLineArr: cloneArr,
+            keyboardStatus:
+                {
+                    open: true,        //keyboard status open or close by button in header soft phone
+                    active: true     //keyboard variant during a call when you need a enter number in soft phone
+                },
         });
 
         this.reloadCallState();
@@ -206,12 +184,12 @@ class Main extends Component {
             }
             cloneArr.map((elem, i) => {
                 if (elem.displayValue && elem.callStatus) {
-                    this.LINE_CONTROL_MODULE.holdCallLine(cloneArr, i)
+                    HOLD_LINE(cloneArr, i)
                 }
                 return elem;
             });
             if (cloneArr[index].callStatus) {
-                this.LINE_CONTROL_MODULE.changeCallLine(cloneArr, index)
+                CHANGE_LINE(cloneArr, index)
             } else if (!cloneArr[index].callStatus && !cloneArr[index].displayValue) {
                 cloneArr[index].callStatus = false;
                 cloneArr[index].holdLine = false;
@@ -241,20 +219,63 @@ class Main extends Component {
 
     };
 
-    updateEnterValue = (e) => {
+    updateEnterValue = (e, subValue) => {
+        console.log(e);
         if (e.currentTarget.tagName.toLowerCase() === "input") {
-            this.setState({enterValue: e.currentTarget.value})
-        } else if (e.currentTarget.classList.contains("backspace-button")) {
-            this.setState({enterValue: this.state.enterValue.slice(0, -1)})
+            this.setState({
+                enterValue: e.currentTarget.value,
+                contactValueName: "",
+                contactValueNumber: "",
+                keyboardStatus:
+                    {
+                        open: true,        //keyboard status open or close by button in header soft phone
+                        active: true     //keyboard variant during a call when you need a enter number in soft phone
+                    }
+            })
+        } else if (!subValue) {
+            this.setState({
+                enterValue: this.state.enterValue + e.currentTarget.innerText.slice(0, 1),
+                contactValueName: "",
+                contactValueNumber: "",
+                keyboardStatus:
+                    {
+                        open: true,        //keyboard status open or close by button in header soft phone
+                        active: true     //keyboard variant during a call when you need a enter number in soft phone
+                    }
+            })
         } else {
-            this.setState({enterValue: this.state.enterValue + e.currentTarget.innerText.slice(0, 1)})
+            this.setState({
+                enterValue: this.state.enterValue + subValue.slice(0, 1),
+                contactValueName: "",
+                contactValueNumber: "",
+                keyboardStatus:
+                    {
+                        open: true,        //keyboard status open or close by button in header soft phone
+                        active: true     //keyboard variant during a call when you need a enter number in soft phone
+                    }
+            })
         }
+    };
+    deleteEnterValue = () => {
+        this.setState({
+            enterValue: this.state.enterValue.slice(0, -1),
+            contactValueName: "",
+            contactValueNumber: "",
+        })
     };
 
     updateContactValue = (e) => {
+        const numberValue = e.currentTarget.querySelector(".phone-book-item-number").innerHTML;
         this.setState({
             contactValueName: e.currentTarget.querySelector(".phone-book-item-name").innerHTML,
-            contactValueNumber: e.currentTarget.querySelector(".phone-book-item-number").innerHTML,
+            contactValueNumber: numberValue,
+            enterValue: numberValue,
+            keyboardStatus:
+                {
+                    open: true,        //keyboard status open or close by button in header soft phone
+                    active: false     //keyboard variant during a call when you need a enter number in soft phone
+                },
+
         });
 
     };
@@ -296,7 +317,6 @@ class Main extends Component {
     toggleKeyboard = () => {
         const cloneKeyboardStatus = {...this.state.keyboardStatus};
         cloneKeyboardStatus.active = !cloneKeyboardStatus.active;
-
         this.setState({
             keyboardStatus: cloneKeyboardStatus
         });
@@ -317,7 +337,13 @@ class Main extends Component {
         })
     };
 
-    componentWillUnmount() {
+
+    componentWillReceiveProps(nextProps, nextContext) {
+        if (document.querySelector(".initial-input")) {
+            document.querySelector(".initial-input").onblur = function () {
+                document.querySelector(".initial-input").focus();
+            }
+        }
     }
 
     render() {
@@ -333,6 +359,7 @@ class Main extends Component {
                     />
                     <Router>
                         <PhoneContent
+                            deleteEnterValue={this.deleteEnterValue}
                             takeInComingCall={this.takeInComingCall}
                             inComingCallArr={this.state.inComingCallArr}
                             removeConference={this.removeConference}
@@ -363,10 +390,10 @@ class Main extends Component {
                             inComingLineArr={this.state.inComingLineArr}
                         />
 
-
+                        {this.state.keyboardStatus.open ?
+                            <a className="logo-info" target="_blank"  rel="noopener noreferrer"
+                               href="http://red-point.com.ua">www.red-point.com.ua</a> : ""}
                     </Router>
-                    {this.state.keyboardStatus.open ? <div className="logo-info">www.red-point.com.ua</div> : ""}
-
                 </div>
             </EndComingCallContext.Provider>
         );

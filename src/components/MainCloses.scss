@@ -1,35 +1,44 @@
 .main.closes {
   height: 230px;
   transition: 0.2s;
-.contact-nav-bar{
-  margin-bottom: 0;
-  min-height: 26px;
-}
-  .search-input-section{
+
+  .contact-nav-bar {
+    margin-bottom: 0;
+    min-height: 26px;
+  }
+
+  .search-input-section {
     height: 35px;
   }
+
   .screen-header-group {
     min-height: 25px;
   }
-  .last-contact-wrapper{
+
+  .last-contact-wrapper {
     max-height: 156px;
   }
-.incoming-call-block, .conference-item, .conference-common-wrapper{
-  position: absolute;
-  bottom: 120px;
-  width: 225px;
- }
-  .head-line-phone-book{
+
+  .incoming-call-block, .conference-item, .conference-common-wrapper {
+    position: absolute;
+    bottom: 120px;
+    width: 225px;
+  }
+
+  .head-line-phone-book {
     font-size: 11px;
     line-height: 11px;
     padding: 6px 12px;
   }
-  .conference-common-wrapper.active{
+
+  .conference-common-wrapper.active {
     max-height: max-content;
-    .conference-item{
+
+    .conference-item {
       position: static;
-          }
+    }
   }
+
   .phone-screen-block {
     max-height: 75px;
     height: 75px;
@@ -38,6 +47,14 @@
 
     .contact-input-output-group {
       background: none;
+      flex: auto;
+
+      .phone-book-section {
+        position: absolute;
+        max-height: 187px;
+        bottom: 125px;
+        width: 241px;
+      }
     }
   }
 
@@ -46,6 +63,8 @@
   }
 
   .close-keyboard-active-call {
+    height: 40px;
+
     .common-call-keyboard-button {
       min-width: 45px;
       width: 45px;
@@ -53,6 +72,16 @@
       border-radius: 5px;
       margin: 0;
       color: #7D7D7D;
+    }
+
+    .common-call-volume-button {
+      order: 3;
+      border: 1px solid #7D7D7D;
+
+      &:hover {
+        color: #213991;
+        border-color: #213991;
+      }
     }
 
     .keyboard-button-group {

@@ -8,8 +8,8 @@ import phoneBook from "./../../commonStatic";
 
 
 class CommonContact extends Component {
+
     state = {
-        searchValue: "",
         lookingFor: false,
         searchArr: phoneBook.sort(function (a, b) {
             let nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase();
@@ -20,9 +20,9 @@ class CommonContact extends Component {
             return 0
         })
     };
+
     reloadState = () => {
         this.setState({
-            searchValue: "",
             lookingFor: false,
             searchArr: phoneBook.sort(function (a, b) {
                 let nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase();
@@ -32,7 +32,6 @@ class CommonContact extends Component {
                     return 1;
                 return 0
             })
-
         })
     };
 
@@ -41,61 +40,69 @@ class CommonContact extends Component {
             lookingFor: true
         })
     };
-    startSearch = (e) => {
+    startSearch = () => {
         this.toggleLookingFor();
         this.setState({
-            searchValue: e.currentTarget.value,
-            searchArr: phoneBook.filter(elem => elem.name ? elem.name.toLowerCase().replace(/\s+/g, "").includes(e.currentTarget.value.toLowerCase().replace(/\s+/g, "")) || elem.number.replace(/\s+/g, "").includes(e.currentTarget.value.replace(/\s+/g, "")) : "")
+            searchArr: phoneBook.filter(elem => elem.name ? elem.name.toLowerCase().replace(/\s+/g, "").includes(this.props.enterValue.toLowerCase().replace(/\s+/g, "")) || elem.number.replace(/\s+/g, "").includes(this.props.enterValue.replace(/\s+/g, "")) : "")
         });
     };
 
-    render() {
 
-        const nameElemValue = !this.props.contactValueName ? null : (
-            <Input
-                disabled={this.props.inComingLineArr.find(elem => elem.callStatus) ? true : false}
-                className="enter-phone-name text-center"
-                onChange={this.props.updateEnterValue}
-                value={this.props.contactValueName}
-            />
-        );
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if(prevProps.enterValue!==this.props.enterValue ) {
+          if  (!this.props.contactValueNumber) {
+                   this.startSearch()
+          } else {this.setState({lookingFor: false})}
+        }
+    }
 
-        const phoneElemValue = () => {
-            if (this.props.keyboardStatus.open) {
-                return <Input
-                    disabled={this.props.inComingLineArr.find(elem => elem.callStatus) && !this.props.conferenceStatus ? true : false}
-                    className="enter-phone-number text-center"
-                    onChange={(e) => {
-                        this.startSearch(e);
-                        this.props.updateEnterValue(e)
-                    }}
-                    placeholder="Введите контактные данные"
-                    autofocus="autoFocus"
-                    value={!this.props.contactValueNumber ? this.props.enterValue : this.props.contactValueNumber}/>
+    componentDidMount() {
+        if (document.querySelector(".initial-input")) {
+            document.querySelector(".initial-input").onblur = function () {
+                document.querySelector(".initial-input").focus();
             }
         }
+    }
+
+    componentWillUnmount() {
+        document.querySelector(".initial-input").onblur=null
+    }
+
+
+    render() {
+
+        const nameElemValue = this.props.contactValueName ?
+            <span className="enter-phone-name text-center ">{this.props.contactValueName}</span> : null
+        const phoneElemValue = () => {
+
+            return <Input
+                disabled={!!this.props.inComingLineArr.find(elem => elem.callStatus) && !this.props.conferenceStatus }
+                className="enter-phone-number initial-input text-center test"
+                onChange={(e) => {
+                    this.startSearch();
+                    this.props.updateEnterValue(e)
+                }}
+                placeholder="Введите контактные данные"
+                value={!this.props.contactValueNumber ? this.props.enterValue : this.props.contactValueNumber}
+            />
+        }
+
         const getDisplayValue = () => {
-            if (!this.props.contactValueName && this.props.enterValue && !this.props.callStatus && this.state.searchArr.length === 0) {
+            console.log();
+            if (!this.props.contactValueName && this.props.keyboardStatus.open && this.props.enterValue && !this.props.callStatus && this.state.searchArr.length === 0) {
                 return <AddContact/>
-            } else {
-                if (this.props.keyboardStatus.open) {
-                    return nameElemValue
-                } else {
-                    return (<Input
-                        disabled={this.props.inComingLineArr.find(elem => elem.callStatus) ? true : false}
-                        className="enter-phone-number text-center"
-                        onChange={this.props.updateEnterValue}
-                        value={!this.props.contactValueName ? this.props.contactValueNumber : this.props.contactValueName }
-                    />)
-                }
-            }
+            } else return nameElemValue
         };
 
+
+        const
+            showLogoCondition = (!this.props.commonConferenceArr.length && !this.props.contactValueName && !this.props.contactValueNumber && !this.props.conferenceStatus && !this.props.enterValue && !this.props.inComingCallArr.length)
         return (
             <div
-                className={`contact-input-output-group d-flex flex-column  align-items-center justify-content-end ${this.props.enterValue || this.props.conferenceStatus || this.props.inComingCallArr.length > 0 ? "" : "start"}`}>
-                {!this.props.callStatus && this.state.lookingFor && this.state.searchValue ?
+                className={`contact-input-output-group d-flex flex-column  align-items-center justify-content-end ${showLogoCondition ? "start" : ""}`}>
+                {!this.props.callStatus && this.state.lookingFor && this.props.enterValue ?
                     <PhoneBookSection
+                        className="p-0"
                         keyboardStatus={this.props.keyboardStatus}
                         reloadState={this.reloadState}
                         toggleLookingFor={this.toggleLookingFor}
@@ -106,7 +113,7 @@ class CommonContact extends Component {
                 {getDisplayValue()}
                 {phoneElemValue()}
             </div>
-        );
+        )
     }
 }
 

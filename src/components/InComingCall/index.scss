@@ -10,13 +10,14 @@
 }
 .incoming-call-block{
   overflow: auto;
+  flex: 5 0 65px;
 }
 .incoming-call-item {
   width: 100%;
   background: #F0F1F8;
   border-radius: 5px;
   min-height: 38px;
-  padding: 0 9px;
+  padding: 0 15px;
   margin-bottom: 3px;
   animation: incoming-call 0.8s linear infinite;
 
@@ -44,12 +45,12 @@
 
   .fa-phone-slash, .fa-phone, .fa-volume-mute {
     cursor: pointer;
-    margin-right: 8px;
-    width: 26px;
-    height: 26px;
+    margin-left:10px;
+    width: 25px;
+    height: 25px;
     background: #FFFFFF;
     border-radius: 6px;
-    font-size: 11px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
