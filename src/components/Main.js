@@ -118,7 +118,7 @@ class Main extends Component {
             const i = cloneArr.findIndex(elem => elem.inComingCall);
             FREE_LINE(cloneArr, i)
         }
-        const newKeyboardStatus = this.state.keyboardStatus
+        const newKeyboardStatus = {...this.state.keyboardStatus}
         newKeyboardStatus.active = true;
 
         this.setState({
@@ -155,6 +155,8 @@ class Main extends Component {
         const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
         const index = cloneArr.findIndex(elem => !elem.callStatus);
         const enterPhoneNumber = !this.state.contactValueNumber ? this.state.enterValue : this.state.contactValueNumber;
+        const newKeyboardStatus = {...this.state.keyboardStatus}
+        if (newKeyboardStatus.open) newKeyboardStatus.active = true;
         cloneArr.forEach((elem, i) => {
             if (index >= 0 && index === i) {
                 ACTIVE_LINE(cloneArr, this.state.contactValueName, enterPhoneNumber, i)
@@ -165,11 +167,7 @@ class Main extends Component {
 
         this.setState({
             inComingLineArr: cloneArr,
-            keyboardStatus:
-                {
-                    open: true,        //keyboard status open or close by button in header soft phone
-                    active: true     //keyboard variant during a call when you need a enter number in soft phone
-                },
+            keyboardStatus: newKeyboardStatus
         });
 
         this.reloadCallState();
@@ -220,39 +218,29 @@ class Main extends Component {
     };
 
     updateEnterValue = (e, subValue) => {
+        const newKeyboardStatus = {...this.state.keyboardStatus}
+        if (newKeyboardStatus.open) newKeyboardStatus.active = true;
         console.log(e);
         if (e.currentTarget.tagName.toLowerCase() === "input") {
             this.setState({
                 enterValue: e.currentTarget.value,
                 contactValueName: "",
                 contactValueNumber: "",
-                keyboardStatus:
-                    {
-                        open: true,        //keyboard status open or close by button in header soft phone
-                        active: true     //keyboard variant during a call when you need a enter number in soft phone
-                    }
+                keyboardStatus: newKeyboardStatus
             })
         } else if (!subValue) {
             this.setState({
                 enterValue: this.state.enterValue + e.currentTarget.innerText.slice(0, 1),
                 contactValueName: "",
                 contactValueNumber: "",
-                keyboardStatus:
-                    {
-                        open: true,        //keyboard status open or close by button in header soft phone
-                        active: true     //keyboard variant during a call when you need a enter number in soft phone
-                    }
+                keyboardStatus: newKeyboardStatus
             })
         } else {
             this.setState({
                 enterValue: this.state.enterValue + subValue.slice(0, 1),
                 contactValueName: "",
                 contactValueNumber: "",
-                keyboardStatus:
-                    {
-                        open: true,        //keyboard status open or close by button in header soft phone
-                        active: true     //keyboard variant during a call when you need a enter number in soft phone
-                    }
+
             })
         }
     };
@@ -265,16 +253,14 @@ class Main extends Component {
     };
 
     updateContactValue = (e) => {
+        const newKeyboardStatus = {...this.state.keyboardStatus}
+        if (newKeyboardStatus.open) newKeyboardStatus.active = false;
         const numberValue = e.currentTarget.querySelector(".phone-book-item-number").innerHTML;
         this.setState({
             contactValueName: e.currentTarget.querySelector(".phone-book-item-name").innerHTML,
             contactValueNumber: numberValue,
             enterValue: numberValue,
-            keyboardStatus:
-                {
-                    open: true,        //keyboard status open or close by button in header soft phone
-                    active: false     //keyboard variant during a call when you need a enter number in soft phone
-                },
+            keyboardStatus: newKeyboardStatus
 
         });
 
@@ -391,7 +377,7 @@ class Main extends Component {
                         />
 
                         {this.state.keyboardStatus.open ?
-                            <a className="logo-info" target="_blank"  rel="noopener noreferrer"
+                            <a className="logo-info" target="_blank" rel="noopener noreferrer"
                                href="http://red-point.com.ua">www.red-point.com.ua</a> : ""}
                     </Router>
                 </div>

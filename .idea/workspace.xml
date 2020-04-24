@@ -27,36 +27,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e18bdb0-060f-41d4-87c6-d7060d72e85d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/directionFunctional/lineControlModule.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotKeyCommon/hotKeyConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotKeyCommon/hotKeyConstant/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Display/ActivCallDisplay/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/ActivCallDisplay/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/CommonContactInfo/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Display/DisplayMicrophone/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/DisplayMicrophone/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Display/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Display/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Display/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InComingCall/inComingCallComponents/IncomingCallItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InComingCall/inComingCallComponents/IncomingCallItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InComingCall/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InComingCall/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InComingCall/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InComingCall/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainCloses.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainCloses.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/commonSwitchGroup/EnterNumberPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/ActiveСallButtonGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/PassCallkeyboardGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/PassCallkeyboardGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/statics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/KeyBoard/statics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/LineGroup/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/inputs/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/inputs/Input.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +193,10 @@
       <workItem from="1587665480845" duration="355000" />
       <workItem from="1587666229366" duration="4000" />
       <workItem from="1587666259072" duration="307000" />
-      <workItem from="1587666652105" duration="2608000" />
+      <workItem from="1587666652105" duration="2655000" />
+      <workItem from="1587699079505" duration="298000" />
+      <workItem from="1587699401537" duration="978000" />
+      <workItem from="1587700411714" duration="7574000" />
     </task>
     <servers />
   </component>
@@ -279,10 +260,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587444801322" />
-    <state x="265" y="75" width="672" height="676" key="search.everywhere.popup" timestamp="1587649607485">
+    <state x="265" y="75" width="672" height="676" key="search.everywhere.popup" timestamp="1587709526517">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="265" y="75" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587649607485" />
+    <state x="265" y="75" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587709526517" />
     <state x="265" y="75" width="670" height="676" key="search.everywhere.popup/0.23.1280.728@0.23.1280.728" timestamp="1586427570897" />
   </component>
 </project>

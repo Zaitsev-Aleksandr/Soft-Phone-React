@@ -1,11 +1,11 @@
 .keyboard-button-group {
-   margin-top: 5px;
+   margin-top: auto;
   transition: 0.1s;
   overflow: hidden;
   padding: 0 10px;
   display: flex;
   flex-wrap: wrap;
-  max-height: 125px;
+  max-height: min-content;
   height: 100%;
      &.hide{
        .common-keyboard-button {
@@ -58,8 +58,6 @@
   color: #7D7D7D;
   background:transparent;
   border-radius: 5px;
-  margin-top: auto;
-
   &:hover {
      color: #213991;
     .sub-value-call-board-item{

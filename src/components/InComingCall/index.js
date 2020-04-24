@@ -16,7 +16,7 @@ const InComingCall = ({inComingCallArr, inComingLineArr, takeInComingCall}) => {
                           startCallSession={takeInComingCall}
         />)
     return (
-        <div className="incoming-call-block d-flex flex-column">
+        <div className="incoming-call-block d-flex flex-column ">
             {children}
         </div>
     )

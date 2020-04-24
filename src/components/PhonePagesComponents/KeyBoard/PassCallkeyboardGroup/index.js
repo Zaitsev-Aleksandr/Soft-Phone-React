@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {passKeyValues} from "../statics";
 import Button from "../../../common/Button";
 import Subvalue from "../Subvalue";
 
 const PassCallkeyboardGroup = ({updateEnterValue, keyboardStatus}) => {
 
+    const [subValue, setSubValue] = useState(null)
     const subValueComponent = (elem) => {
         if (keyboardStatus.open) return (
             <Subvalue
@@ -13,15 +14,15 @@ const PassCallkeyboardGroup = ({updateEnterValue, keyboardStatus}) => {
             />
         )
     }
-
-    let timerID1 = null;
-
-    const enterButtonValue = (elem, e) => {
+    let timerID
+    const enterButtonValueDown = (elem, e) => {
 
         function cloneEvent(e) {
             if (e === undefined || e === null) return undefined;
+
             function ClonedEvent() {
             }
+
             let clone = new ClonedEvent();
             for (let p in e) {
                 let d = Object.getOwnPropertyDescriptor(e, p);
@@ -34,24 +35,28 @@ const PassCallkeyboardGroup = ({updateEnterValue, keyboardStatus}) => {
         const eventValue = cloneEvent(e)
 
         if (e.type === "mousedown") {
-            timerID1 = setTimeout(() => {
+            timerID = setTimeout(() => {
+                setSubValue(true)
                 return updateEnterValue(eventValue, elem.dropDownItems[0])
-            }, 2000)
-        } else {
-            clearTimeout(timerID1);
-            updateEnterValue(e)
-
+            }, 1000)
         }
+    }
+    const enterButtonValueUp = (e) => {
+        clearTimeout(timerID)
+        if (e.type === "mouseup" && !subValue) {
+            updateEnterValue(e)
+                   }
+        setSubValue(null)
     }
 
     const item = passKeyValues.map((elem, i) =>
         <Button
             className={"flex-column align-items-center common-keyboard-button"}
             onMouseDown={(e) => {
-                enterButtonValue(elem, e)
+                enterButtonValueDown(elem, e)
             }}
             onMouseUp={(e) => {
-                updateEnterValue(e)
+                enterButtonValueUp(e)
             }}
             value={(
                 <>
