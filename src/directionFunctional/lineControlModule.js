@@ -37,3 +37,10 @@ export const CHANGE_LINE = (arr, i) => {
     arr[i].displayValue = true;
     arr[i].holdLine = false;
 }
+export const TRANSFER_LINE = (arr, i) => {
+    arr[i].displayValue = false;
+    arr[i].callStatus = false;
+    arr[i].holdLine = false;
+    arr[i].startCallTime = "";
+    arr[i].inComingCall = false
+   }

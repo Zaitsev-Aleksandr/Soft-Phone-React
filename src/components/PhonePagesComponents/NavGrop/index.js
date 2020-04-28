@@ -8,7 +8,7 @@ const textNodeArr = [
     {value: "Контакты", link: "/ContactPage"}
 ];
 
-const NavGroup = ({conferenceStatus, inComingLineArr}) => {
+const NavGroup = ({conferenceStatus, inComingLineArr, transferCall}) => {
 
     const navigationButton = () => (
         textNodeArr.map((elem, i) => (
@@ -25,7 +25,7 @@ const NavGroup = ({conferenceStatus, inComingLineArr}) => {
 
 
     return (
-        <ul className={`navigation d-flex flex-nowrap justify-content-between align-items-center ${!inComingLineArr.find(elem => elem.callStatus && elem.displayValue && !conferenceStatus) ? "" : "disabled"}`}>
+        <ul className={`navigation d-flex flex-nowrap justify-content-between align-items-center ${!inComingLineArr.find(elem => elem.callStatus && elem.displayValue && !conferenceStatus &&  !transferCall) ? "" : "disabled"}`}>
             {navigationButton()}
         </ul>
     );

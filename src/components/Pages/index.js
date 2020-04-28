@@ -2,14 +2,15 @@ import React from 'react';
 import {Route, Switch} from "react-router-dom"
 
 import "./index.scss"
-import EnterNumberPage from "./commonSwitchGroup/EnterNumberPage";
-import LastCall from "./commonSwitchGroup/lastСall";
-import ContactPage from "./commonSwitchGroup/ContactsPage";
-import SearchPage from "./commonSwitchGroup/SearhPages";
-import CommonSettings from "./commonSwitchGroup/Settings";
+import EnterNumberPage from "./EnterNumberPage";
+import LastCall from "./lastСall";
+import ContactPage from "./ContactsPage";
+import SearchPage from "./SearhPages";
+import CommonSettings from "./Settings";
 
 
-const PhoneContent = ({
+const PhoneContent = ({transferCall,
+                          toggleTransfer,
                           deleteEnterValue,
                           inComingCallArr,
                           removeConference,
@@ -42,6 +43,8 @@ const PhoneContent = ({
                 <Route exact path="/softPhone" render={() =>
                     (
                         <EnterNumberPage
+                            transferCall={transferCall}
+                            toggleTransfer={toggleTransfer}
                             deleteEnterValue={deleteEnterValue}
                             takeInComingCall={takeInComingCall}
                             inComingCallArr={inComingCallArr}

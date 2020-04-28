@@ -6,8 +6,9 @@ import "./statics"
 import PassCallkeyboardGroup from "./PassCallkeyboardGroup";
 import ActiveCallKeyboardGroup from "./ActiveCallKeyboardGroup";
 
-const Keyboard = ({updateEnterValue, toggleConferenceStatus, endCallSession, conferenceStatus, inComingLineArr, keyboardStatus, toggleHoldLine}) => {
-    const ifCondition = !inComingLineArr.find(elem => elem.callStatus) || conferenceStatus || (keyboardStatus.open && !keyboardStatus.active );
+
+const Keyboard = ({updateEnterValue,toggleTransfer, toggleConferenceStatus, endCallSession, transferCall, conferenceStatus, inComingLineArr, keyboardStatus, toggleHoldLine}) => {
+    const ifCondition = !inComingLineArr.find(elem => elem.callStatus) || conferenceStatus ||  transferCall || (keyboardStatus.open && !keyboardStatus.active );
     const renderIfComponent = () => {
         if(ifCondition){
             return (
@@ -21,6 +22,7 @@ const Keyboard = ({updateEnterValue, toggleConferenceStatus, endCallSession, con
         else  if (inComingLineArr.find(elem => elem.callStatus && elem.displayValue) && keyboardStatus.active){
             return (
                 <ActiveCallKeyboardGroup
+                    toggleTransfer={toggleTransfer}
                     keyboardStatus={keyboardStatus}
                     inComingLineArr={inComingLineArr}
                     toggleConferenceStatus={toggleConferenceStatus}

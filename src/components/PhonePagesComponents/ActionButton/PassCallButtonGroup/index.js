@@ -19,7 +19,7 @@ const PassCallButtonGroup = ({keyboardStatus,deleteEnterValue, toggleKeyboard, s
                                 <KeyboardIcon />
                                 <Subvalue
                                     className="sub-value-call-board-item d-flex flex-nowrap"
-                                    subValue={!keyboardStatus.active ? "Скрыть" : "Клавиатура"}
+                                    subValue={keyboardStatus.active ? "Скрыть" : "Клавиатура"}
                                 />
                             </>
                         }

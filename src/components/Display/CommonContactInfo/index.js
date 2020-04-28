@@ -3,7 +3,7 @@ import Input from "../../common/inputs/Input";
 
 import "./index.scss"
 import AddContact from "./commonInfoInput/AddContactButton";
-import PhoneBookSection from "../../Pages/commonSwitchGroup/EnterNumberPage/SearchBlock/PhoneBookSection";
+import PhoneBookSection from "../../Pages/EnterNumberPage/SearchBlock/PhoneBookSection";
 import phoneBook from "./../../commonStatic";
 
 
@@ -94,13 +94,12 @@ class CommonContact extends Component {
             } else return nameElemValue
         };
 
-
         const
-            showLogoCondition = (!this.props.commonConferenceArr.length && !this.props.contactValueName && !this.props.contactValueNumber && !this.props.conferenceStatus && !this.props.enterValue && !this.props.inComingCallArr.length)
+            showLogoCondition = (!this.props.transferCall && !this.props.commonConferenceArr.length && !this.props.contactValueName && !this.props.contactValueNumber && !this.props.conferenceStatus && !this.props.enterValue && !this.props.inComingCallArr.length )
         return (
             <div
                 className={`contact-input-output-group d-flex flex-column  align-items-center justify-content-end ${showLogoCondition ? "start" : ""}`}>
-                {!this.props.callStatus && this.state.lookingFor && this.props.enterValue ?
+                {!this.props.callStatus && this.state.lookingFor && this.props.enterValue && this.state.searchArr.length>0 ?
                     <PhoneBookSection
                         className="p-0"
                         keyboardStatus={this.props.keyboardStatus}

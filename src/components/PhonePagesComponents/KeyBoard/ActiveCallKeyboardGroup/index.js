@@ -3,7 +3,7 @@ import {callKeyValues} from "../statics";
 import Subvalue from "../Subvalue";
 import Button from "../../../common/Button";
 
-const ActiveCallKeyboardGroup = ({toggleConferenceStatus, toggleHoldLine, inComingLineArr, keyboardStatus}) => {
+const ActiveCallKeyboardGroup = ({toggleConferenceStatus,toggleTransfer, toggleHoldLine, inComingLineArr, keyboardStatus}) => {
 
     const changeButtonActive = (e) => {
         e.currentTarget.classList.toggle("active")
@@ -19,9 +19,12 @@ const ActiveCallKeyboardGroup = ({toggleConferenceStatus, toggleHoldLine, inComi
 
     const onClickFunction = (i, e) => {
         if (i === 0) {
-            toggleConferenceStatus();
+            toggleConferenceStatus(e);
             changeButtonActive(e);
 
+        } else if (i === 1) {
+            toggleTransfer()
+             changeButtonActive(e);
         } else if (i === 2) {
             changeButtonActive(e);
             toggleHoldLine()

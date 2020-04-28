@@ -3,14 +3,15 @@ import "./index.scss"
 import DisplayHeader from "./DisplayHeader";
 import CommonContact from "./CommonContactInfo";
 import DisplayMicrophone from "./DisplayMicrophone";
-import ConferenceItem from "./ConferensInfo/ConferenceCallItem";
+import ConferenceItem from "../ActionCall/ConferensInfo/ConferenceCallItem";
 import Combine from "../common/icon/arrow/Combine";
-import ConferenceBlock from "./ConferensInfo/ConferenceDisplayBlock";
-import LeftArrow from "../common/icon/arrow/LeftArrow";
-import InComingCall from "../InComingCall";
+import ConferenceBlock from "../ActionCall/ConferensInfo/ConferenceDisplayBlock";
+import InComingCall from "../ActionCall/InComingCall";
 import ActiveCallDisplay from "./ActivCallDisplay";
+import TransferItem from "../ActionCall/Transfer/TransferCallItem";
+import Cancel from "../common/icon/c";
 
-const ScreenGroup = ({updateContactValue, deleteEnterValue,  keyboardStatus, takeInComingCall, inComingCallArr, removeConference, endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
+const ScreenGroup = ({transferCall,toggleTransfer,  updateContactValue, deleteEnterValue,  keyboardStatus, takeInComingCall, inComingCallArr, removeConference, endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
 
     const [CONFERENCE_PERSON, toggleConferencePerson] = useState(false)
     useEffect(() => {
@@ -54,7 +55,7 @@ const ScreenGroup = ({updateContactValue, deleteEnterValue,  keyboardStatus, tak
                     unCombineConference={unCombineConference}
                 />
             )
-        } else if (inComingLineArr.find(elem => elem.displayValue && elem.callStatus && !conferenceStatus)) {
+        } else if (inComingLineArr.find(elem => elem.displayValue && elem.callStatus && !conferenceStatus && !transferCall)) {
             return (
                 <>
                     {inComingLineArr.filter(elem => elem.callStatus).length > 1 && CONFERENCE_PERSON ?
@@ -71,7 +72,39 @@ const ScreenGroup = ({updateContactValue, deleteEnterValue,  keyboardStatus, tak
                     />
                 </>
             )
-        } else if (conferenceStatus && commonConferenceArr.length > 0) {
+        } else if (transferCall){
+            const clientIndex = inComingLineArr.find(elem => elem.transferActive);
+            const clientValue = [clientIndex.contactValueName, clientIndex.contactValueNumber]
+            return <>
+                <TransferItem
+                    clientIndex={clientIndex}
+                    className="pl-4"
+                    clientValue={clientValue}
+                    inComingLineArr={inComingLineArr}
+                >
+                    <div className="remove-conference position-relative d-flex flex-nowrap ">
+                        {clientIndex.callStatus? <Cancel onClick={toggleTransfer}/>:""}
+                        <span className="transfer-title">
+                            {clientIndex.callStatus?"Ожидание...":"Трарсер"}</span>
+                    </div>
+                </TransferItem>
+                < CommonContact
+                    transferCall={transferCall}
+                    commonConferenceArr={commonConferenceArr}
+                    keyboardStatus={keyboardStatus}
+                    conferenceStatus={conferenceStatus}
+                    enterValue={enterValue}
+                    contactValueName={contactValueName}
+                    contactValueNumber={contactValueNumber}
+                    inComingLineArr={inComingLineArr}
+                    updateContactValue={updateContactValue}
+                    updateEnterValue={updateEnterValue}
+                    deleteEnterValue={deleteEnterValue}
+                />
+            </>
+        }
+
+        else if (conferenceStatus && commonConferenceArr.length > 0 && !transferCall) {
             const clientIndex = inComingLineArr.find(elem => elem.displayValue);
             const clientValue = [clientIndex.contactValueName, clientIndex.contactValueNumber]
 
@@ -82,7 +115,7 @@ const ScreenGroup = ({updateContactValue, deleteEnterValue,  keyboardStatus, tak
                     inComingLineArr={inComingLineArr}
                 >
                     <div className="remove-conference position-relative d-flex flex-nowrap">
-                        <LeftArrow onClick={removeConference}/>
+                        <Cancel onClick={removeConference}/>
                         <span className="conference-title">Ожидание...</span>
                     </div>
                 </ConferenceItem>

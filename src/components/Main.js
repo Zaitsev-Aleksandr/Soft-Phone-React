@@ -3,14 +3,15 @@ import {BrowserRouter as Router} from "react-router-dom"
 import Header from "./Header";
 import PhoneContent from "./Pages";
 import NavGroup from "./PhonePagesComponents/NavGrop";
-import ActionCreateInCommCallButton from "./InComingCall/inComingCallComponents/ActionCreateInCommCallButton";
+import ActionCreateInCommCallButton
+    from "./ActionCall/InComingCall/inComingCallComponents/ActionCreateInCommCallButton";
 import phoneBook from "./commonStatic"
 import {
     FREE_LINE,
     ACTIVE_LINE,
     HOLD_LINE,
     CALL_WAITING_LINE,
-    CHANGE_LINE
+    CHANGE_LINE, TRANSFER_LINE
 } from "./../directionFunctional/lineControlModule"
 import {EndComingCallContext} from "./../Context/Context";
 import "./Main.scss";
@@ -32,6 +33,7 @@ class Main extends Component {
                 callStatus: false,
                 holdLine: false,
                 conferenceActive: false,
+                transferActive: false,
                 startCallTime: "",
                 inComingCall: false
             })
@@ -157,13 +159,17 @@ class Main extends Component {
         const enterPhoneNumber = !this.state.contactValueNumber ? this.state.enterValue : this.state.contactValueNumber;
         const newKeyboardStatus = {...this.state.keyboardStatus}
         if (newKeyboardStatus.open) newKeyboardStatus.active = true;
-        cloneArr.forEach((elem, i) => {
-            if (index >= 0 && index === i) {
-                ACTIVE_LINE(cloneArr, this.state.contactValueName, enterPhoneNumber, i)
-            } else if (elem.callStatus && index !== i) {
-                HOLD_LINE(cloneArr, i)
-            }
-        });
+        if (!this.state.transferCall) {
+            cloneArr.forEach((elem, i) => {
+                if (index >= 0 && index === i) {
+                    ACTIVE_LINE(cloneArr, this.state.contactValueName, enterPhoneNumber, i)
+                } else if (elem.callStatus && index !== i) {
+                    HOLD_LINE(cloneArr, i)
+                }
+            });
+        } else if (this.state.transferCall) {
+            this.startTransferSession(cloneArr)
+        }
 
         this.setState({
             inComingLineArr: cloneArr,
@@ -171,6 +177,31 @@ class Main extends Component {
         });
 
         this.reloadCallState();
+    };
+
+    startTransferSession = (cloneArr) => {
+        const index = cloneArr.findIndex(e => e.transferActive)
+        TRANSFER_LINE(cloneArr, index)
+        setTimeout(() => {
+            cloneArr[index].transferActive = false
+            this.setState({
+                inComingLineArr: cloneArr,
+                transferCall: false
+            });
+        }, 5000)
+    }
+    toggleTransfer = () => {
+        this.toggleHoldLine()
+        const cloneArr = this.cloneStateArr(this.state.inComingLineArr);
+        const index = cloneArr.findIndex(e => e.displayValue);
+        cloneArr[index].transferActive = true;
+        cloneArr[index].holdLine = true;
+        cloneArr[index].displayValue = false
+        console.log(cloneArr[index]);
+        this.setState({
+            inComingLineArr: cloneArr,
+            transferCall: true
+        });
     };
 
 
@@ -220,10 +251,11 @@ class Main extends Component {
     updateEnterValue = (e, subValue) => {
         const newKeyboardStatus = {...this.state.keyboardStatus}
         if (newKeyboardStatus.open) newKeyboardStatus.active = true;
-        console.log(e);
+        const regEx= /[^\+ || 0-9]/g;
+        const enterNumber = e.currentTarget.value.replace(regEx,"")
         if (e.currentTarget.tagName.toLowerCase() === "input") {
             this.setState({
-                enterValue: e.currentTarget.value,
+                enterValue: enterNumber,
                 contactValueName: "",
                 contactValueNumber: "",
                 keyboardStatus: newKeyboardStatus
@@ -317,14 +349,8 @@ class Main extends Component {
 
     };
 
-    toggleTransfer = () => {
-        this.setState({
-            transferCall: !this.state.transferCall
-        })
-    };
 
-
-    componentWillReceiveProps(nextProps, nextContext) {
+    UNSAFE_componentWillReceiveProps(nextProps, nextContext) {
         if (document.querySelector(".initial-input")) {
             document.querySelector(".initial-input").onblur = function () {
                 document.querySelector(".initial-input").focus();
@@ -345,6 +371,8 @@ class Main extends Component {
                     />
                     <Router>
                         <PhoneContent
+                            transferCall={this.state.transferCall}
+                            toggleTransfer={this.toggleTransfer}
                             deleteEnterValue={this.deleteEnterValue}
                             takeInComingCall={this.takeInComingCall}
                             inComingCallArr={this.state.inComingCallArr}
@@ -372,6 +400,7 @@ class Main extends Component {
                         />
 
                         <NavGroup
+                            transferCall={this.state.transferCall}
                             conferenceStatus={this.state.conferenceStatus}
                             inComingLineArr={this.state.inComingLineArr}
                         />
