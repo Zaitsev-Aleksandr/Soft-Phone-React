@@ -1,0 +1,27 @@
+.dark-color-scheme {
+  .incoming-button-block {
+
+    .incoming-line-button-item {
+      background: #828282;
+      color: #E0E0E0;
+
+      &:hover {
+        color: white;
+        background:#2D9CDB;
+      }
+    }
+
+    .incoming-line-button-item.active {
+      background-color: #6DD453;
+      color: #ffffff;
+    }
+
+    .on-hold {
+           border-bottom-color: #FFCA27;
+    }
+
+    .in-come {
+      border-bottom-color:#2D9CDB;
+    }
+  }
+}

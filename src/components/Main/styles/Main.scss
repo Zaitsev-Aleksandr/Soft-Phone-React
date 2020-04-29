@@ -74,7 +74,7 @@
     cursor: pointer;
 
     &.active {
-      color: orangered;
+      color: #FD8181;
     }
 
   }
@@ -101,7 +101,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 13px;
   color: #7D7D7D;
   text-overflow: ellipsis;
   max-width: 115px;
@@ -144,15 +144,15 @@
   background-repeat: no-repeat;
 
   &.missed {
-    background-image: url("./../resources/img/missed.png");
+    background-image: url("../../../resources/img/missed.png");
   }
 
   &.incoming {
-    background-image: url("./../resources/img/incoming.png");
+    background-image: url("../../../resources/img/incoming.png");
   }
 
   &.out {
-    background-image: url("./../resources/img/out.png");
+    background-image: url("../../../resources/img/out.png");
   }
 }
 

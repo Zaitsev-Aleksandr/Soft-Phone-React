@@ -1,0 +1,72 @@
+.dark-color-scheme {
+ background: #333334;
+
+
+.navigation-call-info-link {
+ color:#BDBDBD;
+}
+
+.info-link-arrow-icon {
+  .fa-chevron-left {
+    color: #BDBDBD;
+     }
+}
+
+.logo-info {
+   background: #3f3f40;
+   color:  #828282;
+   &:hover{
+    background: black;
+    color:white;
+    text-decoration: none;
+  }
+}
+
+.phone-book-section {
+  width: 100%;
+  padding: 0 12px;
+  flex: 1 0 50px;
+}
+
+.phone-book-item {
+  background:#4F4F4F;
+   .fa-star {
+    color:#C9CFE3;
+
+    &.active {
+      color: #FD8181;
+    }
+
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.4);
+
+  }
+
+  .call-time-date {
+    color: #BDBDBD;
+  }
+
+
+}
+
+.phone-book-item-name {
+   color: #BDBDBD;
+  line-height: 17px;
+  }
+
+.phone-book-item-number {
+    color: white;
+  font-weight: 500;
+
+}
+
+  .common-block-title {
+
+  .common-subscriber-quantity {
+    color: #BDBDBD;
+  }
+}
+
+}

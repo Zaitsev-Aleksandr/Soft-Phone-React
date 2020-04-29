@@ -1,0 +1,63 @@
+.dark-color-scheme {
+  .conference-common-wrapper {
+    background: #4F4F4F;
+    }
+
+  .fa-window-close {
+        background: black;
+        color: red;
+     }
+
+  .remove-conference {
+    .fa-chevron-left {
+          background: black;
+           color: #2D9CDB;
+    }
+  }
+
+  .transfer-item {
+      background: #4F4F4F;
+       .transfer-title {
+      font-size: 8px;
+      font-weight: 700;
+      color: #6DD453;
+      margin-right: 25px;
+    }
+
+    .fa-phone-slash {
+      background: black;
+      color: #FD8181;
+         }
+
+    &-number__value {
+     color: #FFFFFF;
+    }
+
+     &.active {
+      .transfer-title {
+        color: #2D9CDB
+      }
+    }
+  }
+
+  .subscriber-value-conference {
+    width: 100%;
+    height: 45px;
+    border-radius: 6px;
+    margin: 0;
+  }
+
+  .subscriber-value {
+    margin-top: auto;
+  }
+
+  .conference-item__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 12px;
+    color: #BDBDBD;
+  }
+
+
+}

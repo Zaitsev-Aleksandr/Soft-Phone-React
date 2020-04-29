@@ -1,11 +1,12 @@
 import React from 'react';
 import "./index.scss"
+import "./darkScheme.scss"
 import {Link} from "react-router-dom";
 import SipStatusBlock from "./srttingsElem/SipStatusBlock";
-import UiTheme from "./srttingsElem/UiTheme";
+import ColorScheme from "./srttingsElem/UiTheme";
 import Profile from "./srttingsElem/Profile";
 
-const CommonSettings = ({changeSipStatus}) => {
+const CommonSettings = ({changeSipStatus,  changeColorScheme}) => {
     return (
         <div className="common-settings-wrapper d-flex flex-column">
             <div
@@ -16,7 +17,7 @@ const CommonSettings = ({changeSipStatus}) => {
                 <span className="head-line-settings">Настройки</span>
             </div>
             <SipStatusBlock changeSipStatus={changeSipStatus}/>
-            <UiTheme />
+            <ColorScheme  changeColorScheme={changeColorScheme} />
             <Profile />
         </div>
     );

@@ -5,8 +5,19 @@ import BackSpace from "../../../common/icon/BackSpase";
 import KeyboardIcon from "../../../common/icon/Keyboard";
 import Subvalue from "../../KeyBoard/Subvalue";
 import HangUpPhone from "../../../common/icon/HangUpPhone";
+import useKeyboard, {KEYBOARD} from "@alexkush/react-use-keyboard";
 
 const PassCallButtonGroup = ({keyboardStatus,deleteEnterValue, toggleKeyboard, startCallSession, endCallSession}) => {
+
+    useKeyboard([
+        {
+            keys: [[KEYBOARD.ENTER]],
+            handler: e => {
+                startCallSession()
+            }
+        }
+
+    ]);
     const ifClosePhoneComponent = () => {
         if (keyboardStatus.open) {
             return (

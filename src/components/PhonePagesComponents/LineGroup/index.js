@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from "../../common/Button";
 import "./index.scss"
+import "./darkScheme.scss"
 import Timer from "./TimerCallSeshion";
 
 const lineValueArr = [1, 2, 3, 4];

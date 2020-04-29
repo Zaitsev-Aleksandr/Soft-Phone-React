@@ -3,6 +3,7 @@ import Sip from "./sip/Sip";
 import CloseIcon from "../common/icon/CloseIcon";
 
 import "./index.scss"
+import "./darkScheme.scss"
 import DownArrow from "../common/icon/arrow/DownArrow";
 
 const Header = ({ openKeyboard, sipStatus, keyboardStatus}) => {

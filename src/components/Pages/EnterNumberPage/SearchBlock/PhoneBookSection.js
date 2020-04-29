@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 
 
 import "./index.scss"
+import "./darkScheme.scss"
 
 const PhoneBookSection = ({searchArr, updateContactValue, toggleLookingFor,keyboardStatus, reloadState, className}) => {
     const items = searchArr.map((elem, i) =>

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import "./index.scss"
+import "./darkScheme.scss"
 import DisplayHeader from "./DisplayHeader";
 import CommonContact from "./CommonContactInfo";
 import DisplayMicrophone from "./DisplayMicrophone";
@@ -11,7 +12,7 @@ import ActiveCallDisplay from "./ActivCallDisplay";
 import TransferItem from "../ActionCall/Transfer/TransferCallItem";
 import Cancel from "../common/icon/c";
 
-const ScreenGroup = ({transferCall,toggleTransfer,  updateContactValue, deleteEnterValue,  keyboardStatus, takeInComingCall, inComingCallArr, removeConference, endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
+const ScreenGroup = ({transferCall, toggleTransfer, updateContactValue, deleteEnterValue, keyboardStatus, takeInComingCall, inComingCallArr, removeConference, endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
 
     const [CONFERENCE_PERSON, toggleConferencePerson] = useState(false)
     useEffect(() => {
@@ -72,7 +73,7 @@ const ScreenGroup = ({transferCall,toggleTransfer,  updateContactValue, deleteEn
                     />
                 </>
             )
-        } else if (transferCall){
+        } else if (transferCall) {
             const clientIndex = inComingLineArr.find(elem => elem.transferActive);
             const clientValue = [clientIndex.contactValueName, clientIndex.contactValueNumber]
             return <>
@@ -83,9 +84,9 @@ const ScreenGroup = ({transferCall,toggleTransfer,  updateContactValue, deleteEn
                     inComingLineArr={inComingLineArr}
                 >
                     <div className="remove-conference position-relative d-flex flex-nowrap ">
-                        {clientIndex.callStatus? <Cancel onClick={toggleTransfer}/>:""}
+                        {clientIndex.callStatus ? <Cancel onClick={toggleTransfer}/> : ""}
                         <span className="transfer-title">
-                            {clientIndex.callStatus?"Ожидание...":"Трарсер"}</span>
+                            {clientIndex.callStatus ? "Ожидание..." : "Трарсер"}</span>
                     </div>
                 </TransferItem>
                 < CommonContact
@@ -102,9 +103,7 @@ const ScreenGroup = ({transferCall,toggleTransfer,  updateContactValue, deleteEn
                     deleteEnterValue={deleteEnterValue}
                 />
             </>
-        }
-
-        else if (conferenceStatus && commonConferenceArr.length > 0 && !transferCall) {
+        } else if (conferenceStatus && commonConferenceArr.length > 0 && !transferCall) {
             const clientIndex = inComingLineArr.find(elem => elem.displayValue);
             const clientValue = [clientIndex.contactValueName, clientIndex.contactValueNumber]
 
@@ -153,8 +152,9 @@ const ScreenGroup = ({transferCall,toggleTransfer,  updateContactValue, deleteEn
 
     return (
         <div className="phone-screen-block d-flex flex-column">
-            <DisplayHeader inComingLineArr={inComingLineArr}
-                           inComingCallArr={inComingCallArr}/>
+            <DisplayHeader
+                                inComingLineArr={inComingLineArr}
+                inComingCallArr={inComingCallArr}/>
             {inComingCallArr.length > 0 ?
                 <InComingCall
                     takeInComingCall={takeInComingCall}

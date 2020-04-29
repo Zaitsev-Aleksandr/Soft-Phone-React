@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom'
 import "./index.scss"
+import "./darkScheme.scss"
 
 const textNodeArr = [
     {value: "Набор", link: "/softPhone"},

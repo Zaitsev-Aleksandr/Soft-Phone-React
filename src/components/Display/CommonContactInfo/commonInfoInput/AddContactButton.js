@@ -2,6 +2,7 @@ import React from 'react';
 import Button from "../../../common/Button";
 import AddValue from "../../../common/icon/AddValue";
 import "./index.scss"
+import "./darkScheme.scss"
 
 const AddContact = () => {
     return (

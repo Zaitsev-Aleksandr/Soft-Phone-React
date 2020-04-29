@@ -1,14 +1,16 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import PhoneBookItem from "../PhoneBookItem";
 
 
-const CommonPhoneBook = ({favoriteItem, toggleFavorite, searchArr, setActiveElem, navActiveElem, updateContactValue}) => {
-    useEffect(()=>{
+const CommonPhoneBook = ({favoriteItem,toolTip, toggleToolTip,toggleFavorite, searchArr, setActiveElem, navActiveElem, updateContactValue}) => {
+      useEffect(()=>{
         childrenElem()
     }, [searchArr])
   const childrenElem = ()=>searchArr.map((elem, i) => {
         return (
             <PhoneBookItem
+                className={`${ toolTip===i? "active":""}`}
+                toggleToolTip={toggleToolTip}
                 navActiveElem={navActiveElem}
                 key={i}
                 i={i}

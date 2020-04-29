@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import Input from "../../common/inputs/Input";
 
 import "./index.scss"
+import "./darkScheme.scss"
 import AddContact from "./commonInfoInput/AddContactButton";
 import PhoneBookSection from "../../Pages/EnterNumberPage/SearchBlock/PhoneBookSection";
-import phoneBook from "./../../commonStatic";
+import phoneBook from "../../Main/commonStatic";
 
 
 class CommonContact extends Component {

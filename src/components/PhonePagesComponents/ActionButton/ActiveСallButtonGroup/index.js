@@ -5,8 +5,18 @@ import OffMicro from "../../../common/icon/OffMic";
 import Subvalue from "../../KeyBoard/Subvalue";
 import KeyboardIcon from "../../../common/icon/Keyboard";
 import {MicrophoneContext} from "../../../../Context/Context";
+import useKeyboard, {KEYBOARD} from "@alexkush/react-use-keyboard";
 
 const ActiveCallButtonGroup = ({endCallSession, toggleKeyboard, keyboardStatus}) => {
+    useKeyboard([
+        {
+            keys: [[KEYBOARD.ENTER]],
+            handler: e => {
+                endCallSession()
+            }
+        }
+
+    ]);
     const {microphoneStatus, toggleMicrophoneStatus} = useContext(MicrophoneContext)
     return (
         <>

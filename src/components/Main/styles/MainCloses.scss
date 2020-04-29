@@ -1,7 +1,9 @@
 .main.closes {
   height: 230px;
   transition: 0.2s;
-
+.search-common-wrapper{
+  max-height: 159px;
+}
   .contact-nav-bar {
     margin-bottom: 0;
     min-height: 26px;
@@ -10,7 +12,9 @@
   .search-input-section {
     height: 35px;
   }
-
+.common-settings-wrapper{
+  max-height: 159px;
+}
   .screen-header-group {
     min-height: 25px;
   }

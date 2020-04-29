@@ -1,15 +1,20 @@
 import React from 'react';
-import {Route, Switch} from "react-router-dom"
+
+import { Switch, Route, useHistory } from 'react-router-dom'
 
 import "./index.scss"
+import "./darkScheme.scss"
 import EnterNumberPage from "./EnterNumberPage";
 import LastCall from "./lastСall";
 import ContactPage from "./ContactsPage";
 import SearchPage from "./SearhPages";
 import CommonSettings from "./Settings";
+import useKeyboard, {KEYBOARD} from "@alexkush/react-use-keyboard";
 
 
-const PhoneContent = ({transferCall,
+const PhoneContent = ({
+                          changeColorScheme,
+                          transferCall,
                           toggleTransfer,
                           deleteEnterValue,
                           inComingCallArr,
@@ -36,6 +41,29 @@ const PhoneContent = ({transferCall,
                           addSearch,
                           takeInComingCall
                       }) => {
+    let history = useHistory();
+
+    useKeyboard([
+        {
+            keys: [[KEYBOARD.ALT, KEYBOARD.ONE]],
+            handler: e => {
+                history.push("/softPhone");
+                            }
+        },
+        {
+            keys: [[KEYBOARD.ALT, KEYBOARD.TWO]],
+            handler: e => {
+                history.push("/LastCall");
+            }
+        },
+        {
+            keys: [[KEYBOARD.ALT, KEYBOARD.THREE]],
+            handler: e => {
+                history.push("/ContactPage")
+            }
+        },
+
+    ]);
     return (
         <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
 
@@ -113,11 +141,12 @@ const PhoneContent = ({transferCall,
                 <Route
                     exact
                     path="/Settings"
-                    render={() => <CommonSettings changeSipStatus={changeSipStatus}/>}
+                    render={() => <CommonSettings
+                        changeColorScheme={changeColorScheme}
+                        changeSipStatus={changeSipStatus}/>}
                 />
             </Switch>
         </div>
     )
 };
-
-export default PhoneContent;
+export default PhoneContent

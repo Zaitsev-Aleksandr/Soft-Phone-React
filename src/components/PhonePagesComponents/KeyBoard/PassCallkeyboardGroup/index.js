@@ -15,29 +15,12 @@ const PassCallkeyboardGroup = ({updateEnterValue, keyboardStatus}) => {
         )
     }
     let timerID
-    const enterButtonValueDown = (elem, e) => {
-
-        function cloneEvent(e) {
-            if (e === undefined || e === null) return undefined;
-
-            function ClonedEvent() {
-            }
-
-            let clone = new ClonedEvent();
-            for (let p in e) {
-                let d = Object.getOwnPropertyDescriptor(e, p);
-                if (d && (d.get || d.set)) Object.defineProperty(clone, p, d); else clone[p] = e[p];
-            }
-            Object.setPrototypeOf(clone, e);
-            return clone;
-        }
-
-        const eventValue = cloneEvent(e)
-
-        if (e.type === "mousedown") {
+    const enterButtonValueDown = (elem, event) => {
+         event.persist();
+               if (event.type === "mousedown") {
             timerID = setTimeout(() => {
-                setSubValue(true)
-                return updateEnterValue(eventValue, elem.dropDownItems[0])
+                      setSubValue(true)
+                updateEnterValue(event, elem.dropDownItems[0])
             }, 1000)
         }
     }
@@ -45,11 +28,11 @@ const PassCallkeyboardGroup = ({updateEnterValue, keyboardStatus}) => {
         clearTimeout(timerID)
         if (e.type === "mouseup" && !subValue) {
             updateEnterValue(e)
-                   }
+        }
         setSubValue(null)
     }
 
-    const item = passKeyValues.map((elem, i) =>
+       const item = passKeyValues.map((elem, i) =>
         <Button
             className={"flex-column align-items-center common-keyboard-button"}
             onMouseDown={(e) => {

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import InputSection from "../InputSection/InputSection";
 import PhoneBookSection from "./PhoneBookSection/PhoneBookSection";
 
-import phoneBook from "../../commonStatic";
+import phoneBook from "../../Main/commonStatic";
 import searchFunction from "../../../directionFunctional/searchFunction";
 
 

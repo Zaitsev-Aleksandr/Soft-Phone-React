@@ -3,10 +3,10 @@ import useRandomColor from "../../../../hooks/useRandomColor";
 import UpArrow from "../../../common/icon/arrow/UpArrow";
 import PhoneBookItem from "../PhoneBookItem";
 import searchFunction from "../../../../directionFunctional/searchFunction";
-import phoneBook from "../../../commonStatic";
+import phoneBook from "../../../Main/commonStatic";
 
 
-const PhoneGroupBlock = ({navActiveElem, searchValue, clientArr, setActiveElem, updateContactValue, favoriteItem, toggleFavorite}) => {
+const PhoneGroupBlock = ({navActiveElem, searchValue, toolTip, toggleToolTip, clientArr, setActiveElem, updateContactValue, favoriteItem, toggleFavorite}) => {
     const groupName = clientArr[0];
     const [groupBlockIsOpen, openGroupBlock] = useState(false);
     const [clientValue, searchClient] = useState(clientArr[1].map((elem) => phoneBook[elem]))
@@ -14,10 +14,10 @@ const PhoneGroupBlock = ({navActiveElem, searchValue, clientArr, setActiveElem, 
     useEffect(() => {
         searchClient(searchFunction(clientArr[1].map((elem) => phoneBook[elem]), /\s+/g, searchValue));
     }, [searchValue])
-    console.log(clientValue);
-    const childrenElem = clientValue.map((elem, i) => {
-        console.log(i);
-        return (<PhoneBookItem
+      const childrenElem = clientValue.map((elem, i) => {
+         return (<PhoneBookItem
+            className={`${toolTip === i ? "active" : ""}`}
+            toggleToolTip={toggleToolTip}
             navActiveElem={navActiveElem}
             key={i}
             i={i}
@@ -41,7 +41,7 @@ const PhoneGroupBlock = ({navActiveElem, searchValue, clientArr, setActiveElem, 
                 </div>
                 <div className="common-block-title d-flex flex-column">
                     <span>{groupName}</span>
-                  <p>{clientValue.length} <span className="common-subscriber-quantity ">  контактов</span></p>
+                    <p>{clientValue.length} <span className="common-subscriber-quantity ">  контактов</span></p>
 
                 </div>
                 <UpArrow
@@ -55,12 +55,14 @@ const PhoneGroupBlock = ({navActiveElem, searchValue, clientArr, setActiveElem, 
 };
 
 
-const PhoneBookPage = ({favoriteItem, searchValue, toggleFavorite, setActiveElem, navActiveElem, updateContactValue}) => {
+const PhoneBookPage = ({favoriteItem, toolTip, toggleToolTip, searchValue, toggleFavorite, setActiveElem, navActiveElem, updateContactValue}) => {
     const group = [["Слоны", [4, 7, 9, 12, 13, 16, 18]], ["Олени", [6, 17, 21]], ["Егорки", [8, 1, 14, 20]]];
 
     const childrenGroup = group.map((elem, index) => {
 
         return (<PhoneGroupBlock
+            toolTip={toolTip}
+            toggleToolTip={toggleToolTip}
             clientArr={group[index]}
             searchValue={searchValue}
             key={index}

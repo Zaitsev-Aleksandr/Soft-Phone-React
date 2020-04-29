@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import PhoneBookSection from "./PhoneBookSection/PhoneBookSection";
 import InputSection from "../InputSection/InputSection";
 import "./index.scss"
-import phoneBook from "./../../commonStatic";
+import "./darkScheme.scss"
+import phoneBook from "../../Main/commonStatic";
 import searchFunction from "../../../directionFunctional/searchFunction";
 
 

@@ -2,12 +2,14 @@ import React from 'react';
 
 import "./index.scss"
 import "./statics"
+import "./darkScheme.scss"
 
 import PassCallkeyboardGroup from "./PassCallkeyboardGroup";
 import ActiveCallKeyboardGroup from "./ActiveCallKeyboardGroup";
 
 
 const Keyboard = ({updateEnterValue,toggleTransfer, toggleConferenceStatus, endCallSession, transferCall, conferenceStatus, inComingLineArr, keyboardStatus, toggleHoldLine}) => {
+
     const ifCondition = !inComingLineArr.find(elem => elem.callStatus) || conferenceStatus ||  transferCall || (keyboardStatus.open && !keyboardStatus.active );
     const renderIfComponent = () => {
         if(ifCondition){

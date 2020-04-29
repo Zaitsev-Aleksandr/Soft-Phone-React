@@ -35,7 +35,10 @@ class DisplayHeader
                     updateTime={this.updateTime}
                 />
 
-                <ActionHeaderBlock inComingLineArr={this.props.inComingLineArr} inComingCallArr={this.props.inComingCallArr}/>
+                <ActionHeaderBlock
+                    inComingLineArr={this.props.inComingLineArr}
+                    inComingCallArr={this.props.inComingCallArr}
+                                   />
 
             </div>
         )

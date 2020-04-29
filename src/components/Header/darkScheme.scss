@@ -1,0 +1,63 @@
+.main.dark-color-scheme{
+  .soft-phone-header {
+    padding: 0 16px 0 12px;
+    height: 36px;
+    min-height: 36px;
+    width: 100%;
+
+
+    .fa-circle {
+      font-size: 8px;
+      &.active {
+        color: #6DD453;
+      }
+
+      &.out {
+        color: #FFCA27;
+      }
+
+      &.invisibility {
+        color: #7D7D7D;
+      }
+
+      &.relaxation {
+        color: #FD8181;
+      }
+    }
+
+
+
+    .employee-common-info {
+    color:white;
+    }
+
+    .employee-full-name {
+      color:white;
+    }
+
+    .employee-sip {
+      font-size: 12px;
+      line-height: 12px;
+      margin-right: 3px;
+    }
+
+    .fa-times {
+      margin-left: 10px;
+      color:#BDBDBD;
+      font-size: 12px;
+      cursor: pointer;
+      &:hover{
+        color: white;
+      }
+    }
+
+    .fa-chevron-down {
+      font-size: 12px;
+      color: #BDBDBD;
+      cursor: pointer;
+      &:hover{
+        color: white;
+      }
+         }
+  }
+}

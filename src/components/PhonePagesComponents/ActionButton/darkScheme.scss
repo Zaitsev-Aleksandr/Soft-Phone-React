@@ -1,0 +1,36 @@
+.dark-color-scheme {
+  .keyboard-wrapper {
+    .common-call-keyboard-button {
+      color: #BDBDBD;
+      background: transparent;
+
+      &:hover {
+        background: black;
+        color: white;
+
+        .sub-value-call-board-item {
+          color:white;
+        }
+      }
+
+      &.active {
+        background: black;
+        color: white;
+
+        .sub-value-call-board-item {
+          color: white;
+        }
+      }
+    }
+
+    .hangUp-phone-button {
+      color: #ffffff;
+      background-color: #FD8181;
+    }
+
+    .make-call-button {
+      color: #ffffff;
+      background-color: #6DD453;
+    }
+  }
+}

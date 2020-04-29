@@ -1,0 +1,29 @@
+.dark-color-scheme {
+  .contact-input-output-group {
+    &.start {
+      background-image: url("../../../resources/img/logo/darkBgLogo.png");
+    }
+  }
+
+  .enter-phone-name {
+    color: white;
+    background-color: #333334;
+  }
+
+  .enter-phone-number {
+    background-color: #333334;
+    color: white;
+
+    &::placeholder {
+      color: #BDBDBD;
+    }
+  }
+
+  .initial-input {
+letter-spacing: 1.2px;
+    &::placeholder {
+      color:  #BDBDBD;
+    }
+  }
+
+}

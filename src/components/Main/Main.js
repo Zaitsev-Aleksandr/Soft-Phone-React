@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router} from "react-router-dom"
-import Header from "./Header";
-import PhoneContent from "./Pages";
-import NavGroup from "./PhonePagesComponents/NavGrop";
+import Header from "../Header";
+import PhoneContent from "../Pages";
+import NavGroup from "../PhonePagesComponents/NavGrop";
 import ActionCreateInCommCallButton
-    from "./ActionCall/InComingCall/inComingCallComponents/ActionCreateInCommCallButton";
+    from "../ActionCall/InComingCall/inComingCallComponents/ActionCreateInCommCallButton";
 import phoneBook from "./commonStatic"
 import {
     FREE_LINE,
@@ -12,10 +12,11 @@ import {
     HOLD_LINE,
     CALL_WAITING_LINE,
     CHANGE_LINE, TRANSFER_LINE
-} from "./../directionFunctional/lineControlModule"
-import {EndComingCallContext} from "./../Context/Context";
-import "./Main.scss";
-import "./MainCloses.scss"
+} from "../../directionFunctional/lineControlModule"
+import {EndComingCallContext} from "../../Context/Context";
+import "./styles/Main.scss";
+import "./styles/MainCloses.scss"
+import "./styles/darkScheme.scss"
 
 
 class Main extends Component {
@@ -49,6 +50,7 @@ class Main extends Component {
     /*______________________this State____________________________________*/
 
     state = {
+        colorScheme: "light-color-scheme",
         sipStatus: "active",
         keyboardStatus:
             {
@@ -66,7 +68,11 @@ class Main extends Component {
     };
 
     /*_________________________________________________________________________*/
-
+    changeColorScheme = (value) => {
+        this.setState({
+            colorScheme: value
+        })
+    }
     addInComingCall = () => {
         const randomItem = Math.floor(Math.random() * phoneBook.length)
         const clientValue = [phoneBook[randomItem].name, phoneBook[randomItem].number]
@@ -197,8 +203,7 @@ class Main extends Component {
         cloneArr[index].transferActive = true;
         cloneArr[index].holdLine = true;
         cloneArr[index].displayValue = false
-        console.log(cloneArr[index]);
-        this.setState({
+              this.setState({
             inComingLineArr: cloneArr,
             transferCall: true
         });
@@ -249,11 +254,11 @@ class Main extends Component {
     };
 
     updateEnterValue = (e, subValue) => {
-        const newKeyboardStatus = {...this.state.keyboardStatus}
+         const newKeyboardStatus = {...this.state.keyboardStatus}
         if (newKeyboardStatus.open) newKeyboardStatus.active = true;
-        const regEx= /[^\+ || 0-9]/g;
-        const enterNumber = e.currentTarget.value.replace(regEx,"")
-        if (e.currentTarget.tagName.toLowerCase() === "input") {
+        const regEx = /[^\+ || 0-9]/g;
+        if (e.target.tagName.toLowerCase() === "input") {
+            const enterNumber = e.target.value.replace(regEx, "")
             this.setState({
                 enterValue: enterNumber,
                 contactValueName: "",
@@ -362,7 +367,7 @@ class Main extends Component {
         return (
             <EndComingCallContext.Provider value={{endComingCall: this.endComingCall}}>
                 <div
-                    className={`main d-flex flex-column position-relative ${!this.state.keyboardStatus.open ? "closes" : ""}`}>
+                    className={`main d-flex flex-column position-relative ${!this.state.keyboardStatus.open ? "closes" : ""} ${this.state.colorScheme}`}>
                     <ActionCreateInCommCallButton addInComingCall={this.addInComingCall}/>
                     <Header
                         openKeyboard={this.openKeyboard}
@@ -371,6 +376,7 @@ class Main extends Component {
                     />
                     <Router>
                         <PhoneContent
+                            changeColorScheme={this.changeColorScheme}
                             transferCall={this.state.transferCall}
                             toggleTransfer={this.toggleTransfer}
                             deleteEnterValue={this.deleteEnterValue}

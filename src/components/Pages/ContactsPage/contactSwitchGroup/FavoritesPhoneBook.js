@@ -1,11 +1,13 @@
 import React from 'react';
 import PhoneBookItem from "../PhoneBookItem";
 
-const FavoritesPhoneBook = ({favoriteItem, toggleFavorite, searchArr, setActiveElem, navActiveElem, updateContactValue}) => {
+const FavoritesPhoneBook = ({favoriteItem, toggleToolTip, toolTip, toggleFavorite, searchArr, setActiveElem, navActiveElem, updateContactValue}) => {
 
     const items = searchArr.map((elem, i) =>
         favoriteItem.includes(i) ? (
             <PhoneBookItem
+                className={`${ toolTip===i? "active":""}`}
+                toggleToolTip={toggleToolTip}
                 navActiveElem={navActiveElem}
                 key={i}
                 i={i}

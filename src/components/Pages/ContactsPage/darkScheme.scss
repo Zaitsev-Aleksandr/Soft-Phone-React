@@ -1,0 +1,42 @@
+.dark-color-scheme {
+  .contact-nav-bar {
+    border-bottom: 1px solid #4F4F4F;
+
+    .navigation-contact-info-item {
+      color: #BDBDBD;
+
+
+      &:hover, &.active {
+        color: white;
+
+        &:after {
+          background: white;
+        }
+      }
+    }
+  }
+
+  .phone-group-block {
+    background:#4F4F4F;;
+
+    .fa-star {
+      color: #C9CFE3;
+
+      &.active {
+        color: orangered;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    &.open {
+      background: #FFFFFF;
+
+      .phone-group-block__header {
+        background: rgb(245, 246, 250);
+      }
+    }
+  }
+}

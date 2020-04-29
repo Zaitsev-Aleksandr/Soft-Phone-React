@@ -1,0 +1,30 @@
+.dark-color-scheme {
+  .navigation {
+    background: black;
+
+    .navigation-item {
+
+      .navigation-item-link {
+        color: rgba(255, 255, 255, 0.5);
+
+        &.active, &:hover {
+          color: #FFFFFF;
+
+          &:after {
+            background-color: white;
+          }
+        }
+      }
+    }
+
+    &.disabled {
+      pointer-events: none;
+
+      .navigation-item-link {
+        color: #7D7D7D !important;
+      }
+    }
+  }
+
+
+}

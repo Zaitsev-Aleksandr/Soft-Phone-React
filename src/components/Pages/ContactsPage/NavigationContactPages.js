@@ -1,5 +1,6 @@
 import React from 'react';
 import "./index.scss"
+import "./darkScheme.scss"
 
 const navBarTitle = ["Контакты", "Группы", " Избранные"];
 

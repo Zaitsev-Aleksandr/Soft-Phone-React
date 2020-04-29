@@ -4,10 +4,12 @@ import NavigationContact from "./NavigationContactPages";
 import {componentActive} from "./statics";
 
 const PhoneBookSection = ({searchArr,searchValue, toggleStart, updateContactValue, changeNavActiveElem, navActiveElem}) => {
-
+    const [toolTip, toggleToolTip] = useState()
     const [favoriteItem, toggleFavorite] = useState([0, 1, 5, 16]);
 
     const valueProps = {
+        toggleToolTip,
+        toolTip,
         searchValue,
         toggleStart,
         navActiveElem,

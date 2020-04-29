@@ -1,0 +1,70 @@
+.dark-color-scheme{
+  .common-settings-wrapper {
+      .settings-page-header {
+           .head-line-settings {
+        color: white;
+      }
+
+    }
+
+    .sip-status-block {
+        background: black;;
+
+
+      .sip-status-list {
+        min-height:40px;
+        cursor: pointer;
+
+        span {
+          color:  #BDBDBD;
+          cursor: pointer;
+        }
+
+        &:hover {
+          span {
+            color: white;
+          }
+        }
+
+        &.active {
+          color: #6DD453;
+        }
+
+        &.out {
+          color: #FFCA27;
+        }
+
+        &.invisibility {
+          color: #7D7D7D;
+        }
+
+        &.relaxation {
+          color: #FD8181;
+        }
+
+        &.selected {
+          order: -1;
+          span{
+            color: white;
+          }
+        }
+      }
+
+      &.open {
+        max-height: 225px;
+        transition: 0.3s;
+        .fa-chevron-up{
+          transform: rotate(0deg);
+          transition: 0.2s;
+        }
+      }
+    }
+
+    .fa-chevron-up{
+      color: #4F4F4F;
+          &:hover {
+        color:white;
+      }
+    }
+  }
+}

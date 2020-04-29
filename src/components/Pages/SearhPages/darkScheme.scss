@@ -1,0 +1,30 @@
+.dark-color-scheme {
+
+  ::-webkit-scrollbar-thumb {
+    background: #828181;
+  }
+
+  .head-line-phone-book {
+    color: white;
+  }
+
+  .search-common-wrapper, .last-contact-wrapper {
+
+    .search-input-section {
+      background: black;
+      .fa-times {
+        color:#BDBDBD;
+      }
+
+      input {
+        background: #4F4F4F;
+        color: white;
+
+        &::placeholder {
+          font-size: 12px;
+          color: #BDBDBD;
+        }
+      }
+    }
+  }
+}

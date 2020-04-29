@@ -1,5 +1,6 @@
 import React from 'react';
 import "./index.scss"
+import "./darkScheme.scss"
 
 import PassCallButtonGroup from "./PassCallButtonGroup";
 import ActiveCallButtonGroup from "./ActiveСallButtonGroup";

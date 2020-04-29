@@ -1,0 +1,17 @@
+.dark-color-scheme {
+  .add-contact-button {
+    color: white;
+
+    &:hover {
+      background-color: #4F4F4F;
+    }
+
+    .fa-plus {
+      color: white;
+    }
+
+    span {
+      color: white;
+    }
+  }
+}

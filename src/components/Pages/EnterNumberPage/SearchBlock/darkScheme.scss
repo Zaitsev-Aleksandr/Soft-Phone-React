@@ -1,0 +1,8 @@
+.dark-color-scheme{
+  .enter-phone-book-item {
+     border-bottom: 1px solid #c5c6cd;
+    &:hover {
+     background-color: #d4dbf2;
+    }
+  }
+}

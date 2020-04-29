@@ -1,0 +1,47 @@
+.dark-color-scheme {
+  .keyboard-button-group {
+
+    &.hide {
+      .common-keyboard-button {
+        display: none;
+      }
+    }
+
+    .common-keyboard-button {
+      background: #4F4F4F;
+      color: #BDBDBD;
+
+      &:hover {
+        color: white;
+        background-color: black;
+
+        .sub-value-call-board-item {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .common-call-keyboard-button {
+    color: #BDBDBD;
+    background: transparent;
+
+    &:hover {
+      background: black;
+      color: white;
+
+      .sub-value-call-board-item {
+        color: white;
+      }
+    }
+
+    &.active {
+      background: black;
+      color: white;
+
+      .sub-value-call-board-item {
+        color: white;
+      }
+    }
+  }
+}

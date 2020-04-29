@@ -1,0 +1,36 @@
+.dark-color-scheme{
+  .action-call-button {
+     background: #005cbf;
+    color: #FFFFFF;
+     }
+
+  .incoming-call-item {
+      background: #4F4F4F;
+
+    &__label {
+       color:#BDBDBD;
+    }
+
+    &__value {
+      color: white;
+          }
+
+    .fa-phone-slash, .fa-phone, .fa-volume-mute {
+          background: black;
+        }
+
+    .fa-phone-slash {
+      color: #fd8181;
+    }
+
+    .fa-phone {
+      color: #6cd253;
+    }
+
+    .fa-volume-mute {
+      color: #005cbf;
+
+    }
+
+  }
+}

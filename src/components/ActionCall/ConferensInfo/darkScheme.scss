@@ -1,0 +1,47 @@
+.dark-color-scheme {
+  .conference-common-wrapper {
+    background: #4F4F4F;
+  }
+
+  .fa-chevron-up {
+    background: black;
+    color:  #2D9CDB;
+
+  }
+
+  .remove-conference {
+    .fa-chevron-left {
+      background: black;
+      color: #2D9CDB;
+    }
+  }
+
+  .conference-item {
+    background: #4F4F4F;
+
+    .conference-title {
+           color: #6DD453;
+         }
+
+    .fa-phone-slash {
+      background: black;
+    }
+
+    &.hold {
+      background: #4F4F4F;
+
+      .conference-item__title {
+        color:white;
+      }
+    }
+  }
+
+  .conference-item__title {
+    color: white;
+  }
+
+  .combine-conference-button {
+     background: black;
+    color:#2D9CDB;
+  }
+}

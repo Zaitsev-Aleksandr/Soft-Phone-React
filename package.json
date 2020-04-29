@@ -3,16 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.0",
+    "@alexkush/react-use-keyboard": "^1.0.0",
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
+    "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
-    "node-sass": "^4.13.1",
-    "popper.js": "^1.16.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "jquery": "^3.5.0",
+    "node-sass": "^4.14.0",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0"
   },
@@ -44,9 +45,7 @@
     "type": "git",
     "url": "git+https://github.com/Zaitsev-Aleksandr/Sofn-Phone-React.git"
   },
-  "keywords": [
-
-  ],
+  "keywords": [],
   "author": "Aleksandr_Zaitsev",
   "license": "ISC",
   "bugs": {

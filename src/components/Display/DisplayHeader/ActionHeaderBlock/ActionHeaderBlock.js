@@ -2,7 +2,7 @@ import React from 'react';
 import CallStatusInfo from "../CallStatusInfo";
 import SearchSettingButtonGroup from "../SearchSettingButtonGroup";
 
-const ActionHeaderBlock = ({inComingLineArr, inComingCallArr}) => {
+const ActionHeaderBlock = ({inComingLineArr,inComingCallArr}) => {
 
        const value = () => {
         if (inComingLineArr.find(elem => elem.callStatus && elem.displayValue) && !inComingCallArr.length) {
@@ -31,7 +31,7 @@ const ActionHeaderBlock = ({inComingLineArr, inComingCallArr}) => {
     return (
         <div className="action-screen-header-block d-flex justify-content-end align-items-center flex-nowrap">
             {actionElem()}
-            <SearchSettingButtonGroup/>
+            <SearchSettingButtonGroup />
         </div>
     );
 };

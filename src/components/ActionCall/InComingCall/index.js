@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import "./index.scss"
+import "./darkScheme.scss"
 import IncomingCallItem from "./inComingCallComponents/IncomingCallItem";
 import {EndComingCallContext} from "../../../Context/Context";
 

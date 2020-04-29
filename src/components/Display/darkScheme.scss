@@ -1,0 +1,27 @@
+.dark-color-scheme {
+  .phone-screen-block {
+    .screen-header-group {
+      .current-time-phone-screen {
+        color: #BDBDBD;
+
+        .fa-clock {
+          color: #7D7D7D;
+        }
+      }
+
+      .action-screen-header-block {
+        width: 100%;
+        font-size: 12px;
+        line-height: 16px;
+
+        .fa-search, .fa-ellipsis-v {
+          color: #BDBDBD;
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
