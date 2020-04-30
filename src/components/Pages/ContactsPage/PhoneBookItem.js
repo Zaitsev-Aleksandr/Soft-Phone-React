@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import StarActive from "../../common/icon/stars/StarActive";
 import useRandomColor from "../../../hooks/useRandomColor";
 import Button from "../../common/Button";
+import Info from "../../common/icon/info";
 
 
 const PhoneBookItem = ({client, className, updateContactValue, toggleToolTip, toggleFavorite, favoriteItem, i}) => {
@@ -23,7 +24,7 @@ const PhoneBookItem = ({client, className, updateContactValue, toggleToolTip, to
                 {Object.keys(client).map((elem, i) =>
                     <span key={i} className="tool-tip-client-row d-flex flex-nowrap">{elem}: <span
                         className="tool-tip-second-value text-nowrap"> {client[elem]}</span></span>)}
-                        <Button value="Информфция" className="client-card-info"/>
+                <Button value="Информфция" className="client-card-info" onClick={()=>document.querySelector(".client-list-modal").classList.add("active")}/>
             </div>)
     }
 
@@ -34,13 +35,13 @@ const PhoneBookItem = ({client, className, updateContactValue, toggleToolTip, to
 
         timerID = setTimeout(() => {
             setPosition({
-                top: e.pageY - 20,
+                top: e.pageY - 30,
                 left: e.pageX
             })
             toggleToolTip(i)
         }, 800)
     }
-    const closeToolTip=()=>{
+    const closeToolTip = () => {
         clearTimeout(timerID)
         toggleToolTip("");
         setPosition(null)
@@ -55,20 +56,15 @@ const PhoneBookItem = ({client, className, updateContactValue, toggleToolTip, to
             className="phone-book-item d-flex flex-nowrap justify-content-start align-items-center position-relative">
             <StarActive status={favoriteItem.includes(i)} onClick={toggleStart}/>
             <div
-                onMouseEnter={(e) => {
-                    openToolTip(e)
-                }}
-                onMouseLeave={closeToolTip}
-
                 className="phone-book-avatar d-flex justify-content-center align-items-center  position-relative mr-2"
                 style={{backgroundColor: color[0], color: color[1]}}
             >
                 {name.charAt(0).toUpperCase()}
-                {className ? toolTipComponent() : ""}
+
             </div>
             <div className="d-flex flex-column">
                 <Link className="navigation-call-info-link "
-                      to='/softPhone'
+                      to="/pages/common/call/calls.html/SoftPhone"
                       key={i}
                 >
                     <span
@@ -77,6 +73,14 @@ const PhoneBookItem = ({client, className, updateContactValue, toggleToolTip, to
                     <span className="phone-book-item-number text-nowrap overflow-hidden">{number}</span>
                 </Link>
             </div>
+            <div className="position-relative tool-tip-client-block"
+                 onMouseEnter={(e) => { openToolTip(e)}}
+                 onMouseLeave={closeToolTip}
+            >
+                 <Info />
+                {className ? toolTipComponent() : ""}
+            </div>
+
         </div>
     );
 };

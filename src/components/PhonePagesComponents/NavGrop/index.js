@@ -4,9 +4,9 @@ import "./index.scss"
 import "./darkScheme.scss"
 
 const textNodeArr = [
-    {value: "Набор", link: "/softPhone"},
-    {value: "Последние", link: "/LastCall"},
-    {value: "Контакты", link: "/ContactPage"}
+    {value: "Набор", link: "/pages/common/call/calls.html/SoftPhone"},
+    {value: "Последние", link: "/pages/common/call/calls.html/LastCall"},
+    {value: "Контакты", link: "/pages/common/call/calls.html/ContactPage"}
 ];
 
 const NavGroup = ({conferenceStatus, inComingLineArr, transferCall}) => {
@@ -26,7 +26,7 @@ const NavGroup = ({conferenceStatus, inComingLineArr, transferCall}) => {
 
 
     return (
-        <ul className={`navigation d-flex flex-nowrap justify-content-between align-items-center ${!inComingLineArr.find(elem => elem.callStatus && elem.displayValue && !conferenceStatus &&  !transferCall) ? "" : "disabled"}`}>
+        <ul className={`navigation-board position-relative d-flex flex-nowrap justify-content-between align-items-center w-100 ${!inComingLineArr.find(elem => elem.callStatus && elem.displayValue && !conferenceStatus &&  !transferCall) ? "" : "disabled"}`}>
             {navigationButton()}
         </ul>
     );

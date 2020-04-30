@@ -11,7 +11,7 @@ const CommonSettings = ({changeSipStatus,  changeColorScheme}) => {
         <div className="common-settings-wrapper d-flex flex-column">
             <div
                 className="settings-page-header  d-flex flex-nowrap position-relative justify-content-center align-items-center">
-                <Link className="info-link-arrow-icon d-flex align-items-center " to='/softPhone'>
+                <Link className="info-link-arrow-icon d-flex align-items-center " to='/pages/common/call/calls.html/SoftPhone'>
                     <i className="fas fa-chevron-left"/>
                 </Link>
                 <span className="head-line-settings">Настройки</span>

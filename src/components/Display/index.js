@@ -10,7 +10,7 @@ import ConferenceBlock from "../ActionCall/ConferensInfo/ConferenceDisplayBlock"
 import InComingCall from "../ActionCall/InComingCall";
 import ActiveCallDisplay from "./ActivCallDisplay";
 import TransferItem from "../ActionCall/Transfer/TransferCallItem";
-import Cancel from "../common/icon/c";
+import Cancel from "../common/icon/WindowCloce";
 
 const ScreenGroup = ({transferCall, toggleTransfer, updateContactValue, deleteEnterValue, keyboardStatus, takeInComingCall, inComingCallArr, removeConference, endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
 

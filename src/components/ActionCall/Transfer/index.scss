@@ -1,3 +1,4 @@
+.main{
 .conference-common-wrapper {
   background: #F0F1F8;
   border-radius: 5px;
@@ -91,6 +92,7 @@
     text-overflow: ellipsis;
     margin-right: auto;
   }
+
   &.active {
     .transfer-title {
       color: #213991;
@@ -126,3 +128,4 @@
   cursor: pointer;
 }
 
+}

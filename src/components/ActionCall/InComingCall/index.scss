@@ -1,3 +1,4 @@
+.main{
 .action-call-button {
   position: absolute;
   background: #005cbf;
@@ -8,9 +9,11 @@
   border-radius: 5px;
   padding: 3px 8px;
 }
-.incoming-call-block{
+
+.incoming-call-block {
   overflow: auto;
-  }
+}
+
 .incoming-call-item {
   width: 100%;
   background: #F0F1F8;
@@ -44,7 +47,7 @@
 
   .fa-phone-slash, .fa-phone, .fa-volume-mute {
     cursor: pointer;
-    margin-left:10px;
+    margin-left: 10px;
     width: 25px;
     height: 25px;
     background: #FFFFFF;
@@ -67,5 +70,7 @@
     color: #005cbf;
 
   }
+
+}
 
 }

@@ -367,7 +367,7 @@ class Main extends Component {
         return (
             <EndComingCallContext.Provider value={{endComingCall: this.endComingCall}}>
                 <div
-                    className={`main d-flex flex-column position-relative ${!this.state.keyboardStatus.open ? "closes" : ""} ${this.state.colorScheme}`}>
+                    className={`main on-status d-flex flex-column position-relative ${!this.state.keyboardStatus.open ? "closes" : ""} ${this.state.colorScheme}`}>
                     <ActionCreateInCommCallButton addInComingCall={this.addInComingCall}/>
                     <Header
                         openKeyboard={this.openKeyboard}

@@ -1,6 +1,7 @@
-import React from  "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import App from  "./App";
+import {BrowserRouter} from "react-router-dom";
+import App from "./App";
 
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import "./resources/scss/all.scss"
@@ -10,10 +11,10 @@ import "bootstrap/dist/js/bootstrap.js";
 import "bootstrap/dist/css/bootstrap.css";
 
 
-
 ReactDOM.render(
-   <App/>,
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>,
     document.getElementById("root")
-
 );
 

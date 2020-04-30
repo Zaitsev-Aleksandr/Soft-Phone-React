@@ -83,45 +83,51 @@
   }
 }
 
-.tool-tip-client-info {
-  background: #F0F1F8;
-  width: 190px;
-  z-index: 2000;
-  border-radius: 12px;
-  left: 30px;
-  bottom: 0;
-  padding: 10px 15px;
-  height: min-content;
-  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
+.tool-tip-client-block {
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  .tool-tip-client-info {
+    background: #F0F1F8;
+    width: 190px;
+    z-index: 2000;
+    border-radius: 12px;
+    left: 30px;
+    bottom: 0;
+    padding: 10px 15px;
+    height: min-content;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
 
-  .tool-tip-client-row {
-    font-size: 12px;
-    color: black;
-
-    .tool-tip-second-value {
+    .tool-tip-client-row {
       font-size: 12px;
-      color: #7D7D7D;
+      color: black;
 
+      .tool-tip-second-value {
+        font-size: 12px;
+        color: #7D7D7D;
+
+      }
+    }
+
+    .client-card-info {
+      font-size: 10px;
+      line-height: 12px;
+      padding: 5px 10px;
+      width: min-content;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      background: #213991;
+      color: white;
+      display: flex;
+      justify-content: center;
+      margin: 5px auto 0;
+
+      &:hover {
+        background: white;
+        color: #213991;
+        border-color: #213991;
+      }
     }
   }
 
-  .client-card-info {
-    font-size: 10px;
-    line-height: 12px;
-    padding: 5px 10px;
-    width: min-content;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    background: #213991;
-    color: white;
-    display: flex;
-    justify-content: center;
-    margin: 5px auto 0;
-
-    &:hover {
-      background: white;
-      color: #213991;
-      border-color: #213991;
-    }
-  }
 }

@@ -7,7 +7,7 @@ const InputSection = ({value, startSearch, clearSearchInput}) => {
     return (
         <div className="search-input-section d-flex flex-nowrap align-items-center">
             <Link
-                className="navigation-call-info-link info-link-arrow-icon " to='/softPhone'
+                className="navigation-call-info-link info-link-arrow-icon " to='/pages/common/call/calls.html/SoftPhone'
                          >
                 <i className="fas fa-chevron-left"/>
             </Link>
