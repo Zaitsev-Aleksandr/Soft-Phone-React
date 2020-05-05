@@ -1,60 +1,60 @@
-.main{
-.navigation-board {
-  padding: 0 10px 10px;
-  margin: 0;
-  min-height: 50px;
-  background: #213991;
-  border-radius: 0 0 10px 10px;
+.main {
+  .navigation-board {
+    padding: 0 10px 10px;
+    margin: 0;
+    min-height: 50px;
+    background: #213991;
+    border-radius: 0 0 10px 10px;
 
-  .navigation-item {
-    position: relative;
-    width: 75px;
-    box-sizing: border-box;
-    border-radius: 35px;
-    border: none;
-    cursor: pointer;
-
-    .navigation-item-link {
-      height: 40px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .navigation-item {
       position: relative;
-      text-decoration: none;
-      background-color: transparent;
-      font-family: Roboto, sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 14px;
-      color: #909cc8;
+      width: 75px;
+      box-sizing: border-box;
+      border-radius: 35px;
+      border: none;
+      cursor: pointer;
 
-      &.active, &:hover {
+      .navigation-item-link {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
         text-decoration: none;
-        color: #FFFFFF;
+        background-color: transparent;
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #909cc8;
 
-        &:after {
-          position: absolute;
-          content: "";
-          width: 100%;
-          height: 3px;
-          background-color: #6DD453;
-          top: 0;
-          left: 0;
+        &.active, &:hover {
+          text-decoration: none;
+          color: #FFFFFF;
+
+          &:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: #6DD453;
+            top: 0;
+            left: 0;
+          }
         }
       }
     }
-  }
 
-  &.disabled {
-    pointer-events: none;
+    &.disabled {
+      pointer-events: none;
 
-    .navigation-item-link {
-      color: #7D7D7D !important;
+      .navigation-item-link {
+        color: #7D7D7D !important;
+      }
     }
   }
-}
 
 }
 

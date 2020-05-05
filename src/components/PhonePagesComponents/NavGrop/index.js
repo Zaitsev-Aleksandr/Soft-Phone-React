@@ -4,9 +4,9 @@ import "./index.scss"
 import "./darkScheme.scss"
 
 const textNodeArr = [
-    {value: "Набор", link: "/pages/common/call/calls.html/SoftPhone"},
-    {value: "Последние", link: "/pages/common/call/calls.html/LastCall"},
-    {value: "Контакты", link: "/pages/common/call/calls.html/ContactPage"}
+    {value: "Набор", link: "/SoftPhone"},
+    {value: "Последние", link: "/LastCall"},
+    {value: "Контакты", link: "/ContactPage"}
 ];
 
 const NavGroup = ({conferenceStatus, inComingLineArr, transferCall}) => {

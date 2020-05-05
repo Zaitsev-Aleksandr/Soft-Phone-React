@@ -1,51 +1,58 @@
-.keyboard-wrapper {
-  padding: 5px 10px;
-  display: flex;
+.main {
+  .keyboard-wrapper {
+    padding: 5px 10px;
+    display: flex;
 
-  .common-call-keyboard-button {
-    border: none;
-    width: 74px;
-    height: 30px;
-    color: #7D7D7D;
-    background:transparent;
-    border-radius: 5px;
-    &:hover {
-      color: #213991;
-      .sub-value-call-board-item{
+    .common-call-keyboard-button {
+      border: none;
+      width: 74px;
+      height: 30px;
+      color: #7D7D7D;
+      background: transparent;
+      border-radius: 5px;
+
+      &:hover {
         color: #213991;
+
+        .sub-value-call-board-item {
+          color: #213991;
+        }
+      }
+
+      &.active {
+        color: #213991;
+
+        .sub-value-call-board-item {
+          color: #213991;
+        }
+      }
+
+      .fas, .far {
+        font-size: 15px;
       }
     }
 
-    &.active {
-      color: #213991;
-      .sub-value-call-board-item{
-        color: #213991;
-      }
+    .keyboard-action-button {
+      border: none;
+      background-color: #ffffff;
+      width: 75px;
+      height: 30px;
+      font-size: 21px;
+      border-radius: 5px;
+      margin-top: auto;
     }
 
-    .fas, .far {
-      font-size: 15px;
+    .hangUp-phone-button {
+      color: #ffffff;
+      background-color: #FD8181;
+
+    }
+
+    .make-call-button {
+      color: #ffffff;
+      background-color: #6DD453;
+
     }
   }
-  .keyboard-action-button {
-    border: none;
-    background-color: #ffffff;
-    width: 75px;
-    height: 30px;
-    font-size:21px;
-    border-radius: 5px;
-    margin-top: auto;
-  }
 
-  .hangUp-phone-button {
-    color: #ffffff;
-    background-color: #FD8181;
-
-  }
-
-  .make-call-button {
-    color: #ffffff;
-    background-color: #6DD453;
-
-  }
 }

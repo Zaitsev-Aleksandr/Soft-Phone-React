@@ -1,61 +1,64 @@
-.common-input-group {
-  flex: 1 0;
-  margin-top: auto;
-}
-
-.contact-input-output-group {
-flex: auto;
-  overflow: hidden;
-
-
-  &.start {
-    background-image: url("../../../resources/img/logo/bgLodo.png");
-    background-size: 150px;
-    background-repeat: no-repeat;
-    background-position: center -8px;
-    height: 100%;
+.main {
+  .common-input-group {
+    flex: 1 0;
+    margin-top: auto;
   }
-}
 
-.enter-phone-name {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  margin-top: 5px;
-  color: #7D7D7D;
-  border: none;
-  background: #FFFFFF;
-}
+  .contact-input-output-group {
+    flex: auto;
+    overflow: hidden;
 
-.enter-phone-number {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  border: none;
-  background-color: white;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 30px;
-  min-height: 30px;
-  color: #000000;
-  width: 100%;
 
-  &::placeholder {
-    font-size: 12px;
-    font-weight: 400;
-    color: #BDBDBD;
+    &.start {
+      background-image: url("../../../resources/img/logo/bgLodo.png");
+      background-size: 150px;
+      background-repeat: no-repeat;
+      background-position: center -8px;
+      height: 100%;
+    }
   }
-}
 
-.initial-input {
-  font-size: 18px;
-
-  &::placeholder {
-    font-size: 13px;
-    font-weight: 400;
+  .enter-phone-name {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 5px;
     color: #7D7D7D;
+    border: none;
+    background: #FFFFFF;
   }
+
+  .enter-phone-number {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: none;
+    background-color: white;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    min-height: 30px;
+    color: #000000;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 12px;
+      font-weight: 400;
+      color: #BDBDBD;
+    }
+  }
+
+  .initial-input {
+    font-size: 18px;
+
+    &::placeholder {
+      font-size: 13px;
+      font-weight: 400;
+      color: #7D7D7D;
+    }
+  }
+
 }

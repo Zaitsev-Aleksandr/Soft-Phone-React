@@ -1,12 +1,15 @@
-button{
-  outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.main {
+  button {
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 
-button:focus, button:active, button:active {
-  outline: none !important;
-  box-shadow: none;
+  button:focus, button:active, button:active {
+    outline: none !important;
+    box-shadow: none;
+  }
+
 }

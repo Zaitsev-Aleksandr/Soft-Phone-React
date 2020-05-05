@@ -1,35 +1,38 @@
-.content-wrapper {
-  border-top: 1px solid #C9CFE3;
-  border-bottom: 1px solid #C9CFE3;
-  overflow: hidden;
-}
-
-.phone-book-avatar {
-  min-width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  font-size: 16px;
-  line-height: 19px;
-  cursor: pointer
-}
-
-
-.dark-time {
-
+.main {
   .content-wrapper {
-    border: none;
-    border-radius: 12px;
-    background-color: white;
-
+    border-top: 1px solid #C9CFE3;
+    border-bottom: 1px solid #C9CFE3;
+    overflow: hidden;
   }
 
   .phone-book-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 18px;
-    font-weight: 600;
-    color: #7D7D7D;
-
+    min-width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer
   }
+
+
+  .dark-time {
+
+    .content-wrapper {
+      border: none;
+      border-radius: 12px;
+      background-color: white;
+
+    }
+
+    .phone-book-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 18px;
+      font-weight: 600;
+      color: #7D7D7D;
+
+    }
+  }
+
 }

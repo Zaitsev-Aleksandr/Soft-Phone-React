@@ -1,14 +1,25 @@
+#root{
+  width: 100%;
+}
 .main {
-  position: relative;
+  position: fixed;
   width: 250px;
   height: 0;
+  left: calc(50% - 125px);
+  top:calc(50% - 225px);
   opacity: 0;
   background: #FFFFFF;
   border-radius: 12px;
   box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.2);
   z-index: 2000;
   transition: 0.2s;
-
+  cursor: grab;
+&.cursor-grabbing{
+  cursor:grabbing;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+  filter: contrast(0.9);
+  transition: 0.5s;
+}
   &.on-status {
     opacity: 1;
     height: 450px;

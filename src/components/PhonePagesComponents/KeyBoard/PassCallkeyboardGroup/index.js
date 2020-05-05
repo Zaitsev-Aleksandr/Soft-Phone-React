@@ -5,6 +5,7 @@ import Subvalue from "../Subvalue";
 
 const PassCallkeyboardGroup = ({updateEnterValue, keyboardStatus}) => {
 
+    const [timerID, setTimerId]=useState()
     const [subValue, setSubValue] = useState(null)
     const subValueComponent = (elem) => {
         if (keyboardStatus.open) return (
@@ -14,18 +15,20 @@ const PassCallkeyboardGroup = ({updateEnterValue, keyboardStatus}) => {
             />
         )
     }
-    let timerID
-    const enterButtonValueDown = (elem, event) => {
+       const enterButtonValueDown = (elem, event) => {
+         
          event.persist();
+         
                if (event.type === "mousedown") {
-            timerID = setTimeout(() => {
+                setTimerId ( setTimeout(() => {
                       setSubValue(true)
                 updateEnterValue(event, elem.dropDownItems[0])
-            }, 1000)
+            }, 1000))
         }
     }
     const enterButtonValueUp = (e) => {
         clearTimeout(timerID)
+        setTimerId()
         if (e.type === "mouseup" && !subValue) {
             updateEnterValue(e)
         }

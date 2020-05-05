@@ -47,19 +47,19 @@ const PhoneContent = ({
         {
             keys: [[KEYBOARD.ALT, KEYBOARD.ONE]],
             handler: e => {
-                history.push("/pages/common/call/calls.html/SoftPhone");
+                history.push("/SoftPhone");
                             }
         },
         {
             keys: [[KEYBOARD.ALT, KEYBOARD.TWO]],
             handler: e => {
-                history.push("/pages/common/call/calls.html/LastCall");
+                history.push("/LastCall");
             }
         },
         {
             keys: [[KEYBOARD.ALT, KEYBOARD.THREE]],
             handler: e => {
-                history.push("/pages/common/call/calls.html/ContactPage")
+                history.push("/ContactPage")
             }
         },
 
@@ -68,7 +68,7 @@ const PhoneContent = ({
         <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
 
             <Switch>
-                <Route  path="/pages/common/call/calls.html/SoftPhone" render={() =>
+                <Route  path="/SoftPhone" render={() =>
                     (
                         <EnterNumberPage
                             transferCall={transferCall}
@@ -99,7 +99,7 @@ const PhoneContent = ({
                     )
                 }
                 />
-                <Route exact path="/pages/common/call/calls.html/LastCall" render={() =>
+                <Route exact path="/LastCall" render={() =>
                     (
                         <LastCall
                             contactValueName={contactValueName}
@@ -113,7 +113,7 @@ const PhoneContent = ({
                     )
                 }
                 />
-                <Route exact path="/pages/common/call/calls.html/ContactPage" render={() =>
+                <Route exact path="/ContactPage" render={() =>
                     (
                         <ContactPage
                             contactValueName={contactValueName}
@@ -126,7 +126,7 @@ const PhoneContent = ({
                     )
                 }
                 />
-                <Route exact path="/pages/common/call/calls.html/SearchPage" render={() =>
+                <Route exact path="/SearchPage" render={() =>
                     (<SearchPage
                             contactValueName={contactValueName}
                             contactValueNumber={contactValueNumber}
@@ -140,7 +140,7 @@ const PhoneContent = ({
                 />
                 <Route
                     exact
-                    path="/pages/common/call/calls.html/Settings"
+                    path="/Settings"
                     render={() => <CommonSettings
                         changeColorScheme={changeColorScheme}
                         changeSipStatus={changeSipStatus}/>}

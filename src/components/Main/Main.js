@@ -50,6 +50,7 @@ class Main extends Component {
     /*______________________this State____________________________________*/
 
     state = {
+       dragAndDropStatus:false,
         colorScheme: "light-color-scheme",
         sipStatus: "active",
         keyboardStatus:
@@ -66,9 +67,35 @@ class Main extends Component {
         commonConferenceArr: [],
         inComingCallArr: []
     };
+    // mainPositionRef = React.createRef()
+    mainCurrent = React.createRef()
 
-    /*_________________________________________________________________________*/
-    changeColorScheme = (value) => {
+    /*______________________Drag And Drop  ______________________________________*/
+
+    initialDargAnDrop=()=>{
+    this.setState({
+        dragAndDropStatus:!this.state.dragAndDropStatus
+    })
+}
+      
+dragAndDropSoftPhone=()=>{
+    const root= document.querySelector("body")
+    document.querySelector("body").onmousedown=(e)=>{ 
+              e.preventDefault();
+        console.log(e.target)
+        const main = this.mainCurrent.current
+          const differentLeft =  e.clientX - main.getBoundingClientRect().left
+        const differentTop = e.clientY - main.getBoundingClientRect().top
+        document.querySelector("body").onmousemove=(e)=>{
+           e.preventDefault();
+          if(e.clientX > differentLeft && e.clientX < root.clientWidth-main.clientWidth +differentLeft)  this.mainCurrent.current.style.left= e.clientX - differentLeft +"px"
+          if(e.clientY > differentTop && e.clientY < root.clientHeight-main.clientHeight +differentTop-50) this.mainCurrent.current.style.top=e.clientY - differentTop +"px" }
+        }
+        document.querySelector("body").onmouseup=(e)=>{ 
+            document.querySelector("body").onmousemove=null}
+     }
+
+      changeColorScheme = (value) => {
         this.setState({
             colorScheme: value
         })
@@ -203,7 +230,7 @@ class Main extends Component {
         cloneArr[index].transferActive = true;
         cloneArr[index].holdLine = true;
         cloneArr[index].displayValue = false
-              this.setState({
+        this.setState({
             inComingLineArr: cloneArr,
             transferCall: true
         });
@@ -254,9 +281,9 @@ class Main extends Component {
     };
 
     updateEnterValue = (e, subValue) => {
-         const newKeyboardStatus = {...this.state.keyboardStatus}
+        const newKeyboardStatus = {...this.state.keyboardStatus}
         if (newKeyboardStatus.open) newKeyboardStatus.active = true;
-        const regEx = /[^\+ || 0-9]/g;
+        const regEx = /[^ + || 0-9]/g;
         if (e.target.tagName.toLowerCase() === "input") {
             const enterNumber = e.target.value.replace(regEx, "")
             this.setState({
@@ -267,7 +294,7 @@ class Main extends Component {
             })
         } else if (!subValue) {
             this.setState({
-                enterValue: this.state.enterValue + e.currentTarget.innerText.slice(0, 1),
+                enterValue: this.state.enterValue + e.target.innerText.slice(0, 1),
                 contactValueName: "",
                 contactValueNumber: "",
                 keyboardStatus: newKeyboardStatus
@@ -354,8 +381,13 @@ class Main extends Component {
 
     };
 
+componentDidMount(){
+    this.dragAndDropSoftPhone()
+}
 
+ 
     UNSAFE_componentWillReceiveProps(nextProps, nextContext) {
+        
         if (document.querySelector(".initial-input")) {
             document.querySelector(".initial-input").onblur = function () {
                 document.querySelector(".initial-input").focus();
@@ -363,11 +395,21 @@ class Main extends Component {
         }
     }
 
+ 
+
     render() {
-        return (
+             
+           return (
             <EndComingCallContext.Provider value={{endComingCall: this.endComingCall}}>
                 <div
-                    className={`main on-status d-flex flex-column position-relative ${!this.state.keyboardStatus.open ? "closes" : ""} ${this.state.colorScheme}`}>
+                     ref={this.mainCurrent}
+                    className={`main on-status d-flex flex-column position-absolute
+                     ${!this.state.keyboardStatus.open ? "closes" : ""} 
+                    ${this.state.colorScheme} 
+                    ${this.state.dragAndDropStatus?"cursor-grabbing":""}`}
+                  onMouseDown={this.initialDargAnDrop}
+                  onMouseUp={this.initialDargAnDrop}
+                >
                     <ActionCreateInCommCallButton addInComingCall={this.addInComingCall}/>
                     <Header
                         openKeyboard={this.openKeyboard}

@@ -1,11 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import PhoneBookItem from "../PhoneBookItem";
 
 
 const CommonPhoneBook = ({favoriteItem,toolTip, toggleToolTip,toggleFavorite, searchArr, setActiveElem, navActiveElem, updateContactValue}) => {
-      useEffect(()=>{
-        childrenElem()
-    }, [searchArr])
+   
   const childrenElem = ()=>searchArr.map((elem, i) => {
         return (
             <PhoneBookItem

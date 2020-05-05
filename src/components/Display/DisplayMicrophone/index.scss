@@ -1,37 +1,41 @@
-.display-microphone-block {
-  width: 17px;
-  height: min-content;
- position: absolute;
-  bottom: 10px;
-  left: 12px;
+.main {
+  .display-microphone-block {
+    width: 17px;
+    height: min-content;
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
 
 
-  .fa-microphone-alt, .fa-microphone-alt-slash {
-    font-size: 14px;
-    line-height: 18px;
+    .fa-microphone-alt, .fa-microphone-alt-slash {
+      font-size: 14px;
+      line-height: 18px;
 
+    }
+
+    .fa-microphone-alt {
+      color: #008000;
+    }
+
+    .fa-microphone-alt-slash {
+      color: #f52c0b;
+      animation: mic-off 0.7s linear infinite;
+    }
   }
 
-  .fa-microphone-alt {
-    color: #008000;
+  .display-microphone-block.conference {
+    top: 44px;
+    left: 12px;
   }
 
-  .fa-microphone-alt-slash {
-    color: #f52c0b;
-    animation: mic-off 0.7s linear infinite;
-  }
-}
-.display-microphone-block.conference{
-  top: 44px;
-  left: 12px;
-}
+  @keyframes mic-off {
+    from {
+      color: #f52c0b;
+    }
+    to {
+      color: #ffb1ac;
+    }
 
-@keyframes mic-off {
-  from{
-    color: #f52c0b;
-  }
-  to{
-    color: #ffb1ac;
   }
 
 }

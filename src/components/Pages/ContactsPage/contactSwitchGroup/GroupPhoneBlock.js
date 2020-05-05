@@ -13,7 +13,7 @@ const PhoneGroupBlock = ({navActiveElem, searchValue, toolTip, toggleToolTip, cl
     const color = useRandomColor();
     useEffect(() => {
         searchClient(searchFunction(clientArr[1].map((elem) => phoneBook[elem]), /\s+/g, searchValue));
-    }, [searchValue])
+    }, [clientArr ,searchValue])
       const childrenElem = clientValue.map((elem, i) => {
          return (<PhoneBookItem
             className={`${toolTip === i ? "active" : ""}`}

@@ -1,5 +1,6 @@
+.main{
 .keyboard-button-group {
-   margin-top: auto;
+  margin-top: auto;
   transition: 0.1s;
   overflow: hidden;
   padding: 0 10px;
@@ -7,16 +8,17 @@
   flex-wrap: wrap;
   max-height: min-content;
   height: 100%;
-     &.hide{
-       .common-keyboard-button {
-       display: none;
-     }
+
+  &.hide {
+    .common-keyboard-button {
+      display: none;
+    }
   }
 
   .common-keyboard-button {
     border: none;
     width: 60px;
-    height:24px;
+    height: 24px;
     font-family: Robotoб, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -29,22 +31,27 @@
     border-radius: 5px;
     color: #7D7D7D;
     margin-bottom: 8px;
+
     &:hover {
       color: #213991;
       background-color: #e9eaf1;
-      .sub-value-call-board-item{
+
+      .sub-value-call-board-item {
         color: #213991;
       }
     }
   }
-  &.active{
+
+  &.active {
     padding: 0 10px;
     min-height: 30px;
   }
 }
-.pass-keyboard-button-group{
+
+.pass-keyboard-button-group {
   padding: 0 20px;
 }
+
 .keyboard-button-group.closes {
   margin-top: 0;
   transition: 0.1s;
@@ -56,18 +63,21 @@
   width: 74px;
   height: 30px;
   color: #7D7D7D;
-  background:transparent;
+  background: transparent;
   border-radius: 5px;
+
   &:hover {
-     color: #213991;
-    .sub-value-call-board-item{
+    color: #213991;
+
+    .sub-value-call-board-item {
       color: #213991;
     }
   }
 
   &.active {
     color: #213991;
-    .sub-value-call-board-item{
+
+    .sub-value-call-board-item {
       color: #213991;
     }
   }
@@ -75,4 +85,6 @@
   .fas, .far {
     font-size: 15px;
   }
+}
+
 }
