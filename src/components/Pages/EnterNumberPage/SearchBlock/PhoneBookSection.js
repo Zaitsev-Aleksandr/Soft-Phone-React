@@ -6,9 +6,9 @@ import {Link} from "react-router-dom";
 import "./index.scss"
 import "./darkScheme.scss"
 
-const PhoneBookSection = ({searchArr, updateContactValue, toggleLookingFor,keyboardStatus, reloadState, className}) => {
+const PhoneBookSection = ({searchArr, updateContactValue, toggleLookingFor,keyboardStatus, reloadState, className,absolutePath}) => {
     const items = searchArr.map((elem, i) =>
-        <Link className="navigation-call-info-link " to='/SoftPhone' key={i}>
+        <Link className="navigation-call-info-link " to={`${absolutePath}/SoftPhone`} key={i}>
             <PhoneBookItem
                  keyboardStatus={keyboardStatus}
                 reloadState={reloadState}

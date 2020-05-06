@@ -1,5 +1,5 @@
 import React from 'react';
 
-const StarActive = ({status}) =>  <i className={`fas fa-star ${status ? "active" : ""}`} />;
+const StarActive = ({status, onClick}) =>  <i className={`fas fa-star ${status ? "active" : ""}`} onClick={onClick} />;
 
 export default StarActive;

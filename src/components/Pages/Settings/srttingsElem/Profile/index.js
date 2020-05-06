@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import UpArrow from "../../../../common/icon/arrow/UpArrow";
+
 import User from "../../../../common/icon/User";
 import "./index.scss"
+import RightArrom from '../../../../common/icon/arrow/RightArrow';
 
 const statusValueArr = ["Логин", "Пароль", "Дата рождения", "Адрес"]
 
@@ -23,7 +24,7 @@ const Profile = () => {
 
             <ul className={`sip-status-block d-flex flex-column position-relative ${sipBlockIsOpen ? "open" : ""}`}>
                 <div className="profile-settings  d-flex flex-nowrap align-items-center"><User/> Профиль</div>
-                <UpArrow onClick={() => {
+                <RightArrom onClick={() => {
                     openSipBlock(!sipBlockIsOpen);
                 }}/>
                 {childrenElem}

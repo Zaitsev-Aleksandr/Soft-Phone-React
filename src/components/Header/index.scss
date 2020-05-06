@@ -37,6 +37,7 @@
       overflow: hidden;
       margin: 0 5px;
       padding-bottom: 2px;
+      cursor: grab;
     }
 
     .employee-full-name {
@@ -49,7 +50,7 @@
       margin-right: 3px;
     }
 
-    .fa-times {
+    .fa-times, .fa-chevron-down {
       margin-left: 10px;
       color: #213991;
       font-size: 12px;
@@ -60,19 +61,15 @@
       }
     }
 
-    .fa-chevron-down {
-      font-size: 12px;
-      color: #213991;
-      cursor: pointer;
-
-      &:hover {
-        color: black;
-      }
-
-      &.active {
+    .fa-chevron-down .active {
         transform: rotate(180deg);
       }
-    }
+    
   }
 
+}
+.cursor-grabbing{
+  .employee-common-info {
+    cursor:grabbing !important;
+  }
 }

@@ -36,6 +36,7 @@ class DisplayHeader
                 />
 
                 <ActionHeaderBlock
+                absolutePath={this.props.absolutePath}
                     inComingLineArr={this.props.inComingLineArr}
                     inComingCallArr={this.props.inComingCallArr}
                                    />

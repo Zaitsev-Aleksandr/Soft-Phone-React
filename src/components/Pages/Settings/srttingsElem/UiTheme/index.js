@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import UpArrow from "../../../../common/icon/arrow/UpArrow";
+import RightArrom from '../../../../common/icon/arrow/RightArrow';
 
 const statusValueArr = [["Стандартная тема","light-color-scheme"], ["Ночная тема","dark-color-scheme"], ["Оттенок Неба","sky-color-scheme"], ["Спокойная тема","minor-color-scheme"]]
 
@@ -21,7 +21,7 @@ const ColorScheme = ({ changeColorScheme}) => {
     return (
         <div className=" position-relative">
             <ul className={`sip-status-block d-flex flex-column position-relative ${schemeBlockIsOpen ? "open" : ""}`}>
-                <UpArrow onClick={() => {
+                <RightArrom onClick={() => {
                     openSchemeBlock(!schemeBlockIsOpen);
                 }}/>
                 {childrenElem}

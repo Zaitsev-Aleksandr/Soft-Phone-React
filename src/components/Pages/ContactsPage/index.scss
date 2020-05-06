@@ -40,44 +40,54 @@
     min-height: 42px;
     height: 42px;
     margin-bottom: 5px;
-    padding: 5px 10px;
-
-    .fa-star {
-      position: absolute;
-      right: 7px;
-      top: 7px;
-      color: #C9CFE3;
-      font-size: 12px;
-      cursor: pointer;
-
-      &.active {
-        color: orangered;
-      }
-
+    padding: 5px 0px;
+    .phone-book-item{
+     display: none !important;
     }
-
+        .fa-chevron-down {
+          width: 20px;
+          height: 20px;
+          display: flex;
+          font-size: 12px;
+          justify-content: center;
+          align-items: center;
+          background: transparent;
+          color: #BDBDBD;
+          transform: rotate(-90deg);
+          margin: 0 10px 0 auto;
+        }
     &:hover {
-      box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
-
+      background: #E6EBFB;
+      .fa-chevron-down {
+       color: #213991;
+      }
     }
+    .phone-group-block__header {
+      background: rgb(245, 246, 250);
+      padding: 5px;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      height: 45px;
+      margin-top: -5px;
+      cursor: pointer;
+      &:hover{
+        background: #E6EBFB;
+      }
+      }
 
     &.open {
       min-height: min-content;
       height: min-content;
       background: #FFFFFF;
-
-      .phone-group-block__header {
-        background: rgb(245, 246, 250);
-        padding: 5px;
-        border-radius: 6px;
-        margin-bottom: 5px;
-        height: 45px;
-
-        .fa-chevron-up {
-          top: 8px;
-        }
+      .phone-book-item{
+        display: flex !important;
       }
 
+    .fa-chevron-down{
+    transform: rotate(0deg);
+    color: #213991;
+    }
+     
       .phone-group-block-wrapper {
         overflow: auto;
       }
@@ -150,5 +160,4 @@
     }
 
   }
-
 }

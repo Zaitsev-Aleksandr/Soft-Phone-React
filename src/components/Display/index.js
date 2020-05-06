@@ -12,7 +12,26 @@ import ActiveCallDisplay from "./ActivCallDisplay";
 import TransferItem from "../ActionCall/Transfer/TransferCallItem";
 import Cancel from "../common/icon/WindowCloce";
 
-const ScreenGroup = ({transferCall, toggleTransfer, updateContactValue, deleteEnterValue, keyboardStatus, takeInComingCall, inComingCallArr, removeConference, endCallSession, setConference, commonConferenceArr, updateEnterValue, inComingLineArr, enterValue, contactValueName, contactValueNumber, conferenceStatus}) => {
+const ScreenGroup = ({
+    transferCall,
+    absolutePath,
+     toggleTransfer, 
+     updateContactValue,
+      deleteEnterValue,
+       keyboardStatus,
+       takeInComingCall, 
+       inComingCallArr, 
+       removeConference, 
+       endCallSession,
+        setConference, 
+        commonConferenceArr, 
+        updateEnterValue, 
+        inComingLineArr,
+         enterValue,
+          contactValueName,
+           contactValueNumber, 
+           conferenceStatus
+        }) => {
 
     const [CONFERENCE_PERSON, toggleConferencePerson] = useState(false)
     useEffect(() => {
@@ -90,6 +109,7 @@ const ScreenGroup = ({transferCall, toggleTransfer, updateContactValue, deleteEn
                     </div>
                 </TransferItem>
                 < CommonContact
+                absolutePath={absolutePath}
                     transferCall={transferCall}
                     commonConferenceArr={commonConferenceArr}
                     keyboardStatus={keyboardStatus}
@@ -120,6 +140,7 @@ const ScreenGroup = ({transferCall, toggleTransfer, updateContactValue, deleteEn
                 </ConferenceItem>
 
                 < CommonContact
+                absolutePath={absolutePath}
                     commonConferenceArr={commonConferenceArr}
                     keyboardStatus={keyboardStatus}
                     conferenceStatus={conferenceStatus}
@@ -135,6 +156,7 @@ const ScreenGroup = ({transferCall, toggleTransfer, updateContactValue, deleteEn
             </>
         } else {
             return <CommonContact
+            absolutePath={absolutePath}
                 deleteEnterValue={deleteEnterValue}
                 commonConferenceArr={commonConferenceArr}
                 keyboardStatus={keyboardStatus}
@@ -153,6 +175,7 @@ const ScreenGroup = ({transferCall, toggleTransfer, updateContactValue, deleteEn
     return (
         <div className="phone-screen-block d-flex flex-column">
             <DisplayHeader
+            absolutePath={absolutePath}
                                 inComingLineArr={inComingLineArr}
                 inComingCallArr={inComingCallArr}/>
             {inComingCallArr.length > 0 ?

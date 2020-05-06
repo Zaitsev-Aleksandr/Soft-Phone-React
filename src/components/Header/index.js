@@ -12,7 +12,7 @@ const Header = ({ openKeyboard, sipStatus, keyboardStatus}) => {
             <Sip sipStatus={sipStatus}/>
 
             <DownArrow onClick={openKeyboard} keyboardStatus={keyboardStatus}/>
-            <CloseIcon onClick={()=>document.querySelector('.main').classList.toggle('on-status')}/>
+            <CloseIcon onClick={()=>document.querySelector('.main').classList.toggle('on-close')}/>
         </div>)
 };
 

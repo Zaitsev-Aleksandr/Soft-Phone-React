@@ -2,11 +2,12 @@ import React from 'react';
 import PhoneBookItem from "../PhoneBookItem";
 
 
-const CommonPhoneBook = ({favoriteItem,toolTip, toggleToolTip,toggleFavorite, searchArr, setActiveElem, navActiveElem, updateContactValue}) => {
+const CommonPhoneBook = ({favoriteItem,toolTip, toggleToolTip,toggleFavorite, searchArr, setActiveElem, navActiveElem, updateContactValue, absolutePath}) => {
    
   const childrenElem = ()=>searchArr.map((elem, i) => {
         return (
             <PhoneBookItem
+            absolutePath={absolutePath}
                 className={`${ toolTip===i? "active":""}`}
                 toggleToolTip={toggleToolTip}
                 navActiveElem={navActiveElem}

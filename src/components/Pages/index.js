@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import { Switch, Route, useHistory } from 'react-router-dom'
 
@@ -42,24 +42,25 @@ const PhoneContent = ({
                           takeInComingCall
                       }) => {
     let history = useHistory();
+const absolutePath=useCallback( window.location.pathname , [])
 
     useKeyboard([
         {
             keys: [[KEYBOARD.ALT, KEYBOARD.ONE]],
             handler: e => {
-                history.push("/SoftPhone");
+                history.push(`${absolutePath}/`);
                             }
         },
         {
             keys: [[KEYBOARD.ALT, KEYBOARD.TWO]],
             handler: e => {
-                history.push("/LastCall");
+                history.push(`${absolutePath}/LastCall`);
             }
         },
         {
             keys: [[KEYBOARD.ALT, KEYBOARD.THREE]],
             handler: e => {
-                history.push("/ContactPage")
+                history.push(`${absolutePath}/ContactPage`)
             }
         },
 
@@ -68,9 +69,10 @@ const PhoneContent = ({
         <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
 
             <Switch>
-                <Route  path="/SoftPhone" render={() =>
+                <Route  exact path={`${absolutePath}/`} render={() =>
                     (
                         <EnterNumberPage
+                        absolutePath={absolutePath}
                             transferCall={transferCall}
                             toggleTransfer={toggleTransfer}
                             deleteEnterValue={deleteEnterValue}
@@ -99,9 +101,10 @@ const PhoneContent = ({
                     )
                 }
                 />
-                <Route exact path="/LastCall" render={() =>
+                <Route exact path={`${absolutePath}/LastCall`} render={() =>
                     (
                         <LastCall
+                        absolutePath={absolutePath}
                             contactValueName={contactValueName}
                             contactValueNumber={contactValueNumber}
                             enterValue={enterValue}
@@ -113,9 +116,10 @@ const PhoneContent = ({
                     )
                 }
                 />
-                <Route exact path="/ContactPage" render={() =>
+                <Route exact path={`${absolutePath}/ContactPage`} render={() =>
                     (
                         <ContactPage
+                        absolutePath={absolutePath}
                             contactValueName={contactValueName}
                             contactValueNumber={contactValueNumber}
                             enterValue={enterValue}
@@ -126,8 +130,9 @@ const PhoneContent = ({
                     )
                 }
                 />
-                <Route exact path="/SearchPage" render={() =>
+                <Route exact path={`${absolutePath}/SearchPage`} render={() =>
                     (<SearchPage
+                        absolutePath={absolutePath}
                             contactValueName={contactValueName}
                             contactValueNumber={contactValueNumber}
                             enterValue={enterValue}
@@ -140,7 +145,7 @@ const PhoneContent = ({
                 />
                 <Route
                     exact
-                    path="/Settings"
+                    path={`${absolutePath}/Settings`}
                     render={() => <CommonSettings
                         changeColorScheme={changeColorScheme}
                         changeSipStatus={changeSipStatus}/>}

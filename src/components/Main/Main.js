@@ -50,7 +50,6 @@ class Main extends Component {
     /*______________________this State____________________________________*/
 
     state = {
-       dragAndDropStatus:false,
         colorScheme: "light-color-scheme",
         sipStatus: "active",
         keyboardStatus:
@@ -72,27 +71,24 @@ class Main extends Component {
 
     /*______________________Drag And Drop  ______________________________________*/
 
-    initialDargAnDrop=()=>{
-    this.setState({
-        dragAndDropStatus:!this.state.dragAndDropStatus
-    })
-}
-      
+ 
 dragAndDropSoftPhone=()=>{
-    const root= document.querySelector("body")
-    document.querySelector("body").onmousedown=(e)=>{ 
-              e.preventDefault();
-        console.log(e.target)
-        const main = this.mainCurrent.current
-          const differentLeft =  e.clientX - main.getBoundingClientRect().left
+    const root= document.querySelector("body");
+    const main = this.mainCurrent.current
+   
+    document.querySelector(".employee-common-info").onmousedown=(e)=>{ 
+        main.classList.add("cursor-grabbing")
+                 const differentLeft =  e.clientX - main.getBoundingClientRect().left
         const differentTop = e.clientY - main.getBoundingClientRect().top
         document.querySelector("body").onmousemove=(e)=>{
-           e.preventDefault();
-          if(e.clientX > differentLeft && e.clientX < root.clientWidth-main.clientWidth +differentLeft)  this.mainCurrent.current.style.left= e.clientX - differentLeft +"px"
+                    if(e.clientX > differentLeft && e.clientX < root.clientWidth-main.clientWidth +differentLeft)  this.mainCurrent.current.style.left= e.clientX - differentLeft +"px"
           if(e.clientY > differentTop && e.clientY < root.clientHeight-main.clientHeight +differentTop-50) this.mainCurrent.current.style.top=e.clientY - differentTop +"px" }
-        }
-        document.querySelector("body").onmouseup=(e)=>{ 
+          
+          document.onmouseup=(e)=>{ 
+            main.classList.remove("cursor-grabbing")
             document.querySelector("body").onmousemove=null}
+        }
+      
      }
 
       changeColorScheme = (value) => {
@@ -158,8 +154,7 @@ dragAndDropSoftPhone=()=>{
 
         this.setState({
             keyboardStatus: newKeyboardStatus,
-            enterValue: "",
-            contactValueName: "",
+                      contactValueName: "",
             contactValueNumber: "",
             inComingLineArr: cloneArr
         });
@@ -283,9 +278,8 @@ dragAndDropSoftPhone=()=>{
     updateEnterValue = (e, subValue) => {
         const newKeyboardStatus = {...this.state.keyboardStatus}
         if (newKeyboardStatus.open) newKeyboardStatus.active = true;
-        const regEx = /[^ + || 0-9]/g;
-        if (e.target.tagName.toLowerCase() === "input") {
-            const enterNumber = e.target.value.replace(regEx, "")
+             if (e.target.tagName.toLowerCase() === "input") {
+            const enterNumber = e.target.value
             this.setState({
                 enterValue: enterNumber,
                 contactValueName: "",
@@ -383,6 +377,7 @@ dragAndDropSoftPhone=()=>{
 
 componentDidMount(){
     this.dragAndDropSoftPhone()
+     //this.mainCurrent.current.classList.add("on-close")
 }
 
  
@@ -403,13 +398,11 @@ componentDidMount(){
             <EndComingCallContext.Provider value={{endComingCall: this.endComingCall}}>
                 <div
                      ref={this.mainCurrent}
-                    className={`main on-status d-flex flex-column position-absolute
+                    className={`main d-flex flex-column 
                      ${!this.state.keyboardStatus.open ? "closes" : ""} 
-                    ${this.state.colorScheme} 
-                    ${this.state.dragAndDropStatus?"cursor-grabbing":""}`}
-                  onMouseDown={this.initialDargAnDrop}
-                  onMouseUp={this.initialDargAnDrop}
-                >
+                    ${this.state.colorScheme}`}
+                  
+                                >
                     <ActionCreateInCommCallButton addInComingCall={this.addInComingCall}/>
                     <Header
                         openKeyboard={this.openKeyboard}

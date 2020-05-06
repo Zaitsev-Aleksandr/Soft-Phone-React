@@ -1,29 +1,35 @@
 #root{
-  width: 100%;
+  position: absolute;
+  left: calc(50% - 125px);
+    top: calc(50% - 225px);
 }
 .main {
   position: fixed;
   width: 250px;
-  height: 0;
-  left: calc(50% - 125px);
-  top:calc(50% - 225px);
-  opacity: 0;
+  opacity: 1;
+  height: 450px;
   background: #FFFFFF;
   border-radius: 12px;
   box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.2);
   z-index: 2000;
   transition: 0.2s;
-  cursor: grab;
-&.cursor-grabbing{
+    left: calc(50% - 125px);
+  top: calc(50% - 225px);
+   transition: 0.5s;
+  
+  &.cursor-grabbing{
   cursor:grabbing;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
   filter: contrast(0.9);
-  transition: 0.5s;
+  transition: 0s !important;
+  *{user-select: none;}
 }
-  &.on-status {
-    opacity: 1;
-    height: 450px;
-    transition: 0.2s;
+  &.on-close {
+    left: 100% !important;
+    top: 100% !important;
+    height: 0;
+    opacity: 0;
+    transition: 0.5s;
   }
 
   .navigation-call-info-link {
@@ -83,39 +89,47 @@
     margin-bottom: 5px;
     padding: 5px 10px;
 
-    .fa-info {
+    .fa-info-circle {
       position: absolute;
       font-size: 12px;
       color: #4156a0;
-      right: -4px;
-      top: 7px;
-      z-index: 1;
+       z-index: 1;
       transition: 0.2s;
       cursor: pointer;
       width: 20px;
       height: 20px;
       display: flex;
-      align-items: center;
+       align-items: center;
       justify-content: center;
-      background: white;
-    }
+      background: transparent;
+      opacity: 0;
+      top: 4px;
+        right: 20px;
+        }
 
     .fa-star {
-      position: absolute;
-      right: 30px;
-      top: 16px;
-      color: #C9CFE3;
+        color: #C9CFE3;
       font-size: 12px;
       cursor: pointer;
+      top: -8px;
+      left: 5px;
+      position: relative;
+      z-index: 1000;
 
       &.active {
-        color: #FD8181;
+        color:  #213991;
       }
 
     }
 
     &:hover {
-      box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+      background: #E6EBFB;
+      .fa-star{
+        color:  #213991;
+      }
+      .fa-info-circle {
+       opacity: 1;
+      }
     }
 
     .call-time-date {

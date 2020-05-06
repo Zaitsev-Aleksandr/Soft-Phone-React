@@ -102,6 +102,7 @@ class CommonContact extends Component {
                 className={`contact-input-output-group d-flex flex-column  align-items-center justify-content-end ${showLogoCondition ? "start" : ""}`}>
                 {!this.props.callStatus && this.state.lookingFor && this.props.enterValue && this.state.searchArr.length>0 ?
                     <PhoneBookSection
+                    absolutePath={this.props.absolutePath}
                         className="p-0"
                         keyboardStatus={this.props.keyboardStatus}
                         reloadState={this.reloadState}

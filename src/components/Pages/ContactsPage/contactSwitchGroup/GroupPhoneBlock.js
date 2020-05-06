@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import useRandomColor from "../../../../hooks/useRandomColor";
-import UpArrow from "../../../common/icon/arrow/UpArrow";
 import PhoneBookItem from "../PhoneBookItem";
 import searchFunction from "../../../../directionFunctional/searchFunction";
 import phoneBook from "../../../Main/commonStatic";
+import DownArrow from '../../../common/icon/arrow/DownArrow';
 
 
 const PhoneGroupBlock = ({navActiveElem, searchValue, toolTip, toggleToolTip, clientArr, setActiveElem, updateContactValue, favoriteItem, toggleFavorite}) => {
@@ -32,20 +32,20 @@ const PhoneGroupBlock = ({navActiveElem, searchValue, toolTip, toggleToolTip, cl
     return (
         <div
             className={`phone-group-block d-flex flex-column position-relative overflow-hidden ${groupBlockIsOpen || searchValue.length ? "open" : ""}`}>
-            <div className="phone-group-block__header d-flex flex-nowrap position-relative">
+            <div className="phone-group-block__header d-flex flex-nowrap position-relative align-items-center">
                 <div
                     className="phone-book-avatar d-flex justify-content-center align-items-center mr-2"
                     style={{backgroundColor: color[0], color: color[1]}}
                 >
                     {groupName.charAt(0).toUpperCase()}
                 </div>
-                <div className="common-block-title d-flex flex-column">
+                <div className="common-block-title d-flex flex-column align-items-center;">
                     <span>{groupName}</span>
-                    <p>{clientValue.length} <span className="common-subscriber-quantity ">  контактов</span></p>
+                    <span>{clientValue.length} <span className="common-subscriber-quantity ">  контактов</span></span>
 
                 </div>
-                <UpArrow
-                    className={`${groupBlockIsOpen ? "active" : ""}`}
+                <DownArrow
+                    keyboardStatus={groupBlockIsOpen }
                     onClick={() => {
                         openGroupBlock(!groupBlockIsOpen);
                     }}/></div>
@@ -60,7 +60,8 @@ const PhoneBookPage = ({favoriteItem, toolTip, toggleToolTip, searchValue, toggl
 
     const childrenGroup = group.map((elem, index) => {
 
-        return (<PhoneGroupBlock
+        return (
+        <PhoneGroupBlock
             toolTip={toolTip}
             toggleToolTip={toggleToolTip}
             clientArr={group[index]}

@@ -10,7 +10,5 @@ import "bootstrap/dist/js/bootstrap.js";
 import "bootstrap/dist/css/bootstrap.css";
 
 
-ReactDOM.render(
-    <App/>, document.querySelector("body")
-);
+ReactDOM.render(<App/>, document.getElementById("root"));
 

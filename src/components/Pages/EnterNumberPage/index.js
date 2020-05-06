@@ -8,7 +8,8 @@ import {MicrophoneContext} from "../../../Context/Context"
 
 
 const EnterNumberPage = ({
-                              transferCall,
+    absolutePath,                          
+                            transferCall,
                              toggleTransfer,
                              removeConference,
                              takeInComingCall,
@@ -96,7 +97,8 @@ const EnterNumberPage = ({
         < MicrophoneContext.Provider value={{microphoneStatus, toggleMicrophoneStatus}}>
             <>
                 <DisplayGroup
-                                       toggleTransfer ={toggleTransfer}
+                     absolutePath={absolutePath}
+                    toggleTransfer ={toggleTransfer}
                     transferCall={transferCall}
                     deleteEnterValue={deleteEnterValue}
                     takeInComingCall={takeInComingCall}
@@ -117,7 +119,7 @@ const EnterNumberPage = ({
                     updateEnterValue={updateEnterValue}
                 />
                 <LineGroup
-                    runCallTimer={runCallTimer}
+                                    runCallTimer={runCallTimer}
                     inComingLineArr={inComingLineArr}
                     changeCallLine={changeCallLine}
                 />

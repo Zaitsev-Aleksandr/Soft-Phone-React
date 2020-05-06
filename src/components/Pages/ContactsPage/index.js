@@ -53,12 +53,14 @@ class LastCall extends Component {
         return (
             <div className="last-contact-wrapper d-flex flex-column">
                 <InputSection
+                absolutePath={this.props.absolutePath}
                     value={this.state.searchValue}
                     addSearch={this.props.addSearch}
                     startSearch={this.startSearch}
                     clearSearchInput={this.clearSearchInput}
                 />
                 <PhoneBookSection
+                absolutePath={this.props.absolutePath}
                     searchValue={this.state.searchValue}
                     navActiveElem={this.state.navActiveElem}
                     changeNavActiveElem={this.changeNavActiveElem}

@@ -40,6 +40,7 @@ class SearchPage extends Component {
         return (
             <div className="search-common-wrapper d-flex flex-column">
                 <InputSection
+                 absolutePath={this.props.absolutePath}
                     setActiveElem={this.props.setActiveElem}
                     value={this.state.searchValue}
                     addSearch={this.props.addSearch}
@@ -47,6 +48,7 @@ class SearchPage extends Component {
                     clearSearchInput={this.clearSearchInput}
                 />
                 <PhoneBookSection
+                 absolutePath={this.props.absolutePath}
                     setActiveElem={this.props.setActiveElem}
                     updateContactValue={this.props.updateContactValue}
                     searchArr={this.state.searchArr}

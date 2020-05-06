@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import UpArrow from "../../../../common/icon/arrow/UpArrow";
+import RightArrom from '../../../../common/icon/arrow/RightArrow';
 
 const statusValueArr = [
     {
@@ -37,7 +37,7 @@ const clickSipList=(i, status)=>{
     return (
         <div className=" position-relative">
             <ul className={`sip-status-block d-flex flex-column position-relative ${ sipBlockIsOpen?"open":""}`}>
-                <UpArrow onClick={() => {
+                 <RightArrom onClick={() => {
                     openSipBlock(!sipBlockIsOpen);
                 }}/>
                 {childrenElem}
