@@ -13,22 +13,23 @@ const Profile = () => {
 
     const clickSipList = (i) => {
         openSipBlock(false);
+        openSipBlock(!sipBlockIsOpen)
                    };
     const childrenElem = statusValueArr.map((elem, i) =>
-        <li className="sip-status-list"  key={i}
-            onClick={() => clickSipList(i)}><span> {elem}</span></li>
+        <div className="sip-status-list"  key={i}
+            onClick={() => clickSipList(i)}><span> {elem}</span></div>
     );
 
     return (
         <div className=" position-relative">
 
-            <ul className={`sip-status-block d-flex flex-column position-relative ${sipBlockIsOpen ? "open" : ""}`}>
+            <div className={`sip-status-block d-flex flex-column position-relative ${sipBlockIsOpen ? "open" : ""}`}>
                 <div className="profile-settings  d-flex flex-nowrap align-items-center"><User/> Профиль</div>
                 <RightArrom onClick={() => {
                     openSipBlock(!sipBlockIsOpen);
                 }}/>
                 {childrenElem}
-            </ul>
+            </div>
         </div>
     );
 };

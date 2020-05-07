@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import RightArrom from '../../../../common/icon/arrow/RightArrow';
+import SipStatus from '../../../../common/icon/SipStatus';
 
 const statusValueArr = [["Стандартная тема","light-color-scheme"], ["Ночная тема","dark-color-scheme"], ["Оттенок Неба","sky-color-scheme"], ["Спокойная тема","minor-color-scheme"]]
 
@@ -12,20 +13,21 @@ const ColorScheme = ({ changeColorScheme}) => {
         changeColorScheme(elem[1])
         openSchemeBlock(false);
         changeScheme(i)
+        openSchemeBlock(!schemeBlockIsOpen)
             };
     const childrenElem = statusValueArr.map((elem, i) =>
-        <li className={`sip-status-list  ${selectedScheme === i ? "selected" : ""}`} key={i}
-            onClick={() => clickSipList(elem, i)}><span> {elem[0]}</span></li>
+        <div className={`sip-status-list  ${selectedScheme === i ? "selected" : ""}`} key={i}
+            onClick={() => clickSipList(elem, i)}><SipStatus/><span> {elem[0]}</span></div>
     );
 
     return (
         <div className=" position-relative">
-            <ul className={`sip-status-block d-flex flex-column position-relative ${schemeBlockIsOpen ? "open" : ""}`}>
+            <div className={`sip-status-block d-flex flex-column position-relative ${schemeBlockIsOpen ? "open" : ""}`}>
                 <RightArrom onClick={() => {
                     openSchemeBlock(!schemeBlockIsOpen);
                 }}/>
                 {childrenElem}
-            </ul>
+            </div>
         </div>
     );
 };

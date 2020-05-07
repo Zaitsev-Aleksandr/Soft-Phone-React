@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import RightArrom from '../../../../common/icon/arrow/RightArrow';
+import SipStatus from '../../../../common/icon/SipStatus';
 
 const statusValueArr = [
     {
@@ -29,19 +30,20 @@ const clickSipList=(i, status)=>{
     openSipBlock(false);
     changeSip(i);
     changeSipStatus(status)
+    openSipBlock(!sipBlockIsOpen);
 };
     const childrenElem = statusValueArr.map((elem , i)=>
-        <li className={`sip-status-list ${elem.status} ${selectedSip===i ? "selected":""}`} key={elem.status} onClick={()=>clickSipList(i, elem.status)}><span> {elem.innerText}</span></li>
+        <div className={`d-flex flex-nowrap sip-status-list ${elem.status} ${selectedSip===i ? "selected":""}`} key={elem.status} onClick={()=>clickSipList(i, elem.status)}><SipStatus/><span> {elem.innerText}</span></div>
     );
 
     return (
         <div className=" position-relative">
-            <ul className={`sip-status-block d-flex flex-column position-relative ${ sipBlockIsOpen?"open":""}`}>
+            <div className={`sip-status-block d-flex flex-column position-relative ${ sipBlockIsOpen?"open":""}`}>
                  <RightArrom onClick={() => {
                     openSipBlock(!sipBlockIsOpen);
                 }}/>
                 {childrenElem}
-            </ul>
+            </div>
         </div>
     );
 };

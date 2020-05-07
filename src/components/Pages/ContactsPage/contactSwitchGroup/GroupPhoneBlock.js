@@ -31,7 +31,10 @@ const PhoneGroupBlock = ({navActiveElem, searchValue, toolTip, toggleToolTip, cl
 
     return (
         <div
-            className={`phone-group-block d-flex flex-column position-relative overflow-hidden ${groupBlockIsOpen || searchValue.length ? "open" : ""}`}>
+            className={`phone-group-block d-flex flex-column position-relative overflow-hidden ${groupBlockIsOpen || searchValue.length ? "open" : ""}`}
+            onClick={() => {
+                openGroupBlock(!groupBlockIsOpen);}}
+            >
             <div className="phone-group-block__header d-flex flex-nowrap position-relative align-items-center">
                 <div
                     className="phone-book-avatar d-flex justify-content-center align-items-center mr-2"

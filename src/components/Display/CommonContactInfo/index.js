@@ -89,8 +89,7 @@ class CommonContact extends Component {
         }
 
         const getDisplayValue = () => {
-            console.log();
-            if (!this.props.contactValueName && this.props.keyboardStatus.open && this.props.enterValue && !this.props.callStatus && this.state.searchArr.length === 0) {
+                   if (!this.props.contactValueName && this.props.keyboardStatus.open && this.props.enterValue && !this.props.callStatus && this.state.searchArr.length === 0) {
                 return <AddContact/>
             } else return nameElemValue
         };

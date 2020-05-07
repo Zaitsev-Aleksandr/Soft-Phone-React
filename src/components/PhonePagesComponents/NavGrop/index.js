@@ -11,7 +11,6 @@ const textNodeArr = [
 
 const NavGroup = ({conferenceStatus, inComingLineArr, transferCall}) => {
     const absolutePath=useCallback( window.location.pathname , [])
-    console.log(absolutePath)
     const navigationButton = () => (
         textNodeArr.map((elem, i) => (
             <li className="navigation-item d-flex flex-nowrap justify-content-center align-items-center" key={i}>

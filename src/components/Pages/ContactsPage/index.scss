@@ -98,32 +98,41 @@
     width: 100%;
     height: 100%;
     cursor: default;
-
+   
     .tool-tip-client-info {
       position: absolute;
       right: 0;
       top:0;
-      background: #F0F1F8;
+      background: #FFFFFF;
       max-width: 240px;
       width: max-content;
       z-index: 2000;
-      border-radius: 12px;
+      border-radius: 8px;
       left: 30px;
       bottom: 0;
       padding: 10px 15px;
       height: min-content;
-      box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.3);
 
       .tool-tip-client-row {
+        justify-content: space-between;
+        padding: 3px 5px;
+        border-radius: 6px;
         .tool-tip-client-info__key{
           font-size: 12px;
-        color: black;
+        color: #213991;
         }
         
         .tool-tip-second-value {
-          font-size: 12px;
+          font-size: 14px;
           color: #7D7D7D;
-
+          text-align: right;
+        }
+        &:hover{
+          background: #E6EBFB;  
+          .tool-tip-second-value{
+            color:black
+          }
         }
       }
 
@@ -150,12 +159,12 @@
         content: "";
         width: 12px;
         height: 12px;
-        background-color: #F0F1F8;
+        background-color: #FFFFFF;
         top: 22px;
         left: -6px;
         position: absolute;
         transform: rotate(45deg);
-        box-shadow: -1px 1px 1px 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
       }
     }
 

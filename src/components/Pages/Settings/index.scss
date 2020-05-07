@@ -5,7 +5,12 @@
 
   .settings-page-header {
     min-height: 36px;
-
+.settings-link-arrow-icon{
+color: #213991;
+font-size:12px;
+margin-right: auto;
+margin-left: 5px;
+}
        .head-line-settings {
       font-family: Roboto, sans-serif;
       font-style: normal;
@@ -13,6 +18,7 @@
       font-size: 12px;
       line-height: 14px;
       color: #213991;
+      margin-right: auto;
     }
 
   }
@@ -22,16 +28,32 @@
     background: rgba(240, 241, 248, 0.7);
     border-radius: 5px;
     overflow: hidden;
-    padding-left: 30px;
-    font-size: 21px;
     transition: 0.3s;
     margin-bottom: 5px;
     &:hover{
-      background: #E6EBFB;
+      .fa-chevron-right, .fa-user{
+                color: #213991
+    }}
+    .fa-user{
+      font-size: 12px;
+      margin:0  12px;
+
     }
     .sip-status-list {
       min-height:40px;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 5px 12px;
+      &:hover{
+        background: #E6EBFB;
+      }
+     .fa-circle{
+       height: 100%;
+       font-size: 10px;
+       margin-right: 12px;
+
+      }
 
       span {
         font-family: Roboto, sans-serif;
@@ -39,13 +61,13 @@
         font-weight: normal;
         font-size: 12px;
         line-height: 40px;
-        color: #7D7D7D;
+        color:#7D7D7D;
         cursor: pointer;
       }
 
       &:hover {
         span {
-          color: #213991;
+          color: black;
         }
       }
 

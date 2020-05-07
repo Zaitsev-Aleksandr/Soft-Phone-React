@@ -7,7 +7,7 @@ const InputSection = ({value, startSearch, clearSearchInput,absolutePath}) => {
     return (
         <div className="search-input-section d-flex flex-nowrap align-items-center">
             <Link
-                className="navigation-call-info-link info-link-arrow-icon " to={`${absolutePath}/SoftPhone`}
+                className="navigation-call-info-link info-link-arrow-icon " to={`${absolutePath}/`}
                          >
                 <i className="fas fa-chevron-left"/>
             </Link>

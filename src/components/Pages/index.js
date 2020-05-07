@@ -9,6 +9,7 @@ import LastCall from "./lastСall";
 import ContactPage from "./ContactsPage";
 import SearchPage from "./SearhPages";
 import CommonSettings from "./Settings";
+import {AbsolutePatht} from "../../Context/Context";
 import useKeyboard, {KEYBOARD} from "@alexkush/react-use-keyboard";
 
 
@@ -66,6 +67,7 @@ const absolutePath=useCallback( window.location.pathname , [])
 
     ]);
     return (
+        <AbsolutePatht.Provider value={ absolutePath }>
         <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
 
             <Switch>
@@ -152,6 +154,7 @@ const absolutePath=useCallback( window.location.pathname , [])
                 />
             </Switch>
         </div>
+        </AbsolutePatht.Provider>
     )
 };
 export default PhoneContent

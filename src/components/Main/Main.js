@@ -372,18 +372,15 @@ dragAndDropSoftPhone=()=>{
         this.setState({
             keyboardStatus: cloneKeyboardStatus
         });
-
     };
 
 componentDidMount(){
     this.dragAndDropSoftPhone()
-     //this.mainCurrent.current.classList.add("on-close")
+    this.mainCurrent.current.classList.add("on-close")
 }
 
- 
-    UNSAFE_componentWillReceiveProps(nextProps, nextContext) {
-        
-        if (document.querySelector(".initial-input")) {
+     UNSAFE_componentWillReceiveProps(nextProps, nextContext) {
+                if (document.querySelector(".initial-input")) {
             document.querySelector(".initial-input").onblur = function () {
                 document.querySelector(".initial-input").focus();
             }

@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const PhoneBookSection = ({searchArr, updateContactValue,absolutePath}) => {
       const items = searchArr.map((elem, i) =>
           <Link className="navigation-call-info-link "
-                to={`${absolutePath}/SoftPhone`}
+                to={`${absolutePath}/`}
                 key={i}
                           >
             <PhoneBookItem

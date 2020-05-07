@@ -8,7 +8,7 @@ import "./darkScheme.scss"
 
 const PhoneBookSection = ({searchArr, updateContactValue, toggleLookingFor,keyboardStatus, reloadState, className,absolutePath}) => {
     const items = searchArr.map((elem, i) =>
-        <Link className="navigation-call-info-link " to={`${absolutePath}/SoftPhone`} key={i}>
+        <Link className="navigation-call-info-link " to={`${absolutePath}/`} key={i}>
             <PhoneBookItem
                  keyboardStatus={keyboardStatus}
                 reloadState={reloadState}

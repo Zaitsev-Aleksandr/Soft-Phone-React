@@ -1,15 +1,17 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useState, useContext} from 'react';
 import {Link} from "react-router-dom";
 import StarActive from "../../common/icon/stars/StarActive";
 import StarPass from  "../../common/icon/stars/StarPass";
 import useRandomColor from "../../../hooks/useRandomColor";
 import Button from "../../common/Button";
 import Info from "../../common/icon/info";
+import {AbsolutePatht} from "../../../Context/Context"
 
 
-const PhoneBookItem = ({client, className, updateContactValue, toggleToolTip, toggleFavorite, favoriteItem, i, absolutePath}) => {
+const PhoneBookItem = ({client, className, updateContactValue, toggleToolTip, toggleFavorite, favoriteItem, i}) => {
     const [toolTipPosition, setPosition] = useState()
     const [timerID, startTimer]=useState()
+    const absolutePath = useContext(AbsolutePatht)
     const openInfoModalFunc= useCallback( ()=>{ 
         document.querySelector(".client-list-modal").classList.add("active");
         document.querySelector(".main").classList.add("on-close");
@@ -72,7 +74,7 @@ const PhoneBookItem = ({client, className, updateContactValue, toggleToolTip, to
             </div>
             <div className="d-flex flex-column">
                 <Link className="navigation-call-info-link "
-                      to={`${absolutePath}/SoftPhone`}
+                      to={`${absolutePath}/`}
                       key={i}
                 >
                     <span
@@ -86,7 +88,7 @@ const PhoneBookItem = ({client, className, updateContactValue, toggleToolTip, to
                  onMouseLeave={closeToolTip}
             >
                  <Info />
-                {className ? toolTipComponent() : ""}
+                {className? toolTipComponent() : ""}
                
             </div>
             {favoriteItem.find( e => e===i) ? <StarActive status={favoriteItem.includes(i)} onClick={toggleStart} />:<StarPass status={favoriteItem.includes(i)} onClick={toggleStart}/>}
