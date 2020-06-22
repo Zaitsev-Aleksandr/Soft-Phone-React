@@ -37,8 +37,8 @@
   .phone-group-block {
     background: rgb(245, 246, 250);
     border-radius: 5px;
-    min-height: 42px;
-    height: 42px;
+    min-height: 48px;
+    height: 48px;
     margin-bottom: 5px;
     padding: 5px 0px;
     .phone-book-item{
@@ -127,6 +127,12 @@
           font-size: 14px;
           color: #7D7D7D;
           text-align: right;
+          .alt-phone-book-number{
+            cursor: pointer;
+            &:hover{
+              color: #213991;
+            }
+          }
         }
         &:hover{
           background: #E6EBFB;  

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import InputSection from "../InputSection/InputSection";
 import PhoneBookSection from "./PhoneBookSection";
-
+import InComingCall from "../../ActionCall/InComingCall/"
 import phoneBook from "../../Main/commonStatic";
 import searchFunction from "../../../directionFunctional/searchFunction";
 
@@ -59,6 +59,13 @@ class LastCall extends Component {
                     startSearch={this.startSearch}
                     clearSearchInput={this.clearSearchInput}
                 />
+                
+                {this.props.inComingCallArr.length > 0 ?
+                <InComingCall
+                    takeInComingCall={this.props.takeInComingCall}
+                    inComingLineArr={this.props.inComingLineArr}
+                    inComingCallArr={this.props.inComingCallArr}
+                /> : null}
                 <PhoneBookSection
                 absolutePath={this.props.absolutePath}
                     searchValue={this.state.searchValue}

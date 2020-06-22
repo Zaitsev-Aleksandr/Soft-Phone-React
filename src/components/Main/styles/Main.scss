@@ -16,7 +16,9 @@
     left: calc(50% - 125px);
   top: calc(50% - 225px);
    transition: 0.5s;
-  
+  &.in-coming-status{
+    z-index: 2050;
+  }
   &.cursor-grabbing{
   cursor:grabbing;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
@@ -28,8 +30,10 @@
     left: 100% !important;
     top: 100% !important;
     height: 0;
-    opacity: 0;
-    transition: 0.5s;
+     transition: 0.5s;
+    .action-call-button{
+      opacity: 1;
+    }
   }
 
   .navigation-call-info-link {
@@ -85,35 +89,35 @@
   .phone-book-item {
     background: rgb(245, 246, 250);
     border-radius: 5px;
-    height: 42px;
+    min-height: 48px;
     margin-bottom: 5px;
     padding: 5px 10px;
 
     .fa-info-circle {
       position: absolute;
-      font-size: 12px;
       color: #4156a0;
-       z-index: 1;
+      z-index: 1;
+      font-size: 12px;
       transition: 0.2s;
       cursor: pointer;
-      width: 20px;
-      height: 20px;
       display: flex;
+      height: 18px;
+      width: 20px;
        align-items: center;
       justify-content: center;
       background: transparent;
       opacity: 0;
-      top: 4px;
-        right: 20px;
-        }
+      top: 3px;
+       right: 23px;
+           }
 
     .fa-star {
         color: #C9CFE3;
       font-size: 12px;
       cursor: pointer;
-      top: -8px;
-      left: 5px;
-      position: relative;
+      top: 6px;
+      right: 7px;
+      position: absolute;
       z-index: 1000;
 
       &.active {
@@ -183,10 +187,10 @@
   }
 
   .phone-image-status {
-    min-width: 22px;
-    min-height: 22px;
+    min-width: 17px;
+    min-height: 17px;
     background-position: center;
-    background-size: 74%;
+    background-size: 100%;
     background-repeat: no-repeat;
 
     &.missed {

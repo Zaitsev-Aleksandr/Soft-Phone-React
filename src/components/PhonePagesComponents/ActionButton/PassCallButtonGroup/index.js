@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from "../../../common/Button";
 import MakeCall from "../../../common/icon/MakeCall";
 import BackSpace from "../../../common/icon/BackSpase";
@@ -8,15 +8,15 @@ import HangUpPhone from "../../../common/icon/HangUpPhone";
 import useKeyboard, {KEYBOARD} from "@alexkush/react-use-keyboard";
 
 const PassCallButtonGroup = ({keyboardStatus,deleteEnterValue, toggleKeyboard, startCallSession, endCallSession}) => {
-
-    useKeyboard([
+const[timerID, clierTimerId]=useState(null);
+   
+useKeyboard([
         {
             keys: [[KEYBOARD.ENTER]],
             handler: e => {
                 startCallSession()
             }
         }
-
     ]);
     const ifClosePhoneComponent = () => {
         if (keyboardStatus.open) {
@@ -45,7 +45,12 @@ const PassCallButtonGroup = ({keyboardStatus,deleteEnterValue, toggleKeyboard, s
                     <Button
                         className={"common-call-keyboard-button d-flex flex-column align-items-center justify-content-center"}
                         value={<BackSpace/>}
-                        onClick={deleteEnterValue}
+                        onMouseDown = {()=>
+                            {clierTimerId(setTimeout(()=>deleteEnterValue(true),1000))}
+                        }
+                        onMouseUp = {()=> {deleteEnterValue(false);clearTimeout(timerID)}
+
+                        }
                     />
                 </>
             )

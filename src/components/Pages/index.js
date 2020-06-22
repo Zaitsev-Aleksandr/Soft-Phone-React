@@ -1,6 +1,6 @@
-import React, { useCallback } from 'react';
+import React, {useCallback} from 'react';
 
-import { Switch, Route, useHistory } from 'react-router-dom'
+import {Switch, Route, useHistory} from 'react-router-dom'
 
 import "./index.scss"
 import "./darkScheme.scss"
@@ -11,6 +11,8 @@ import SearchPage from "./SearhPages";
 import CommonSettings from "./Settings";
 import {AbsolutePatht} from "../../Context/Context";
 import useKeyboard, {KEYBOARD} from "@alexkush/react-use-keyboard";
+import ClientCard from "./ContactsPage/contactSwitchGroup/groupPhoneComponent/ClientCard/ClientCard";
+
 
 
 const PhoneContent = ({
@@ -43,14 +45,14 @@ const PhoneContent = ({
                           takeInComingCall
                       }) => {
     let history = useHistory();
-const absolutePath=useCallback( window.location.pathname , [])
+    const absolutePath = useCallback(window.location.pathname, [])
 
     useKeyboard([
         {
             keys: [[KEYBOARD.ALT, KEYBOARD.ONE]],
             handler: e => {
                 history.push(`${absolutePath}/`);
-                            }
+            }
         },
         {
             keys: [[KEYBOARD.ALT, KEYBOARD.TWO]],
@@ -67,93 +69,104 @@ const absolutePath=useCallback( window.location.pathname , [])
 
     ]);
     return (
-        <AbsolutePatht.Provider value={ absolutePath }>
-        <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
+        <AbsolutePatht.Provider value={absolutePath}>
+            <div className="content-wrapper d-flex flex-column justify-content-around w-100 h-100">
 
-            <Switch>
-                <Route  exact path={`${absolutePath}/`} render={() =>
-                    (
-                        <EnterNumberPage
-                        absolutePath={absolutePath}
-                            transferCall={transferCall}
-                            toggleTransfer={toggleTransfer}
-                            deleteEnterValue={deleteEnterValue}
-                            takeInComingCall={takeInComingCall}
-                            inComingCallArr={inComingCallArr}
-                            removeConference={removeConference}
-                            setConference={setConference}
-                            toggleStyleSoftPhone={toggleStyleSoftPhone}
-                            commonConferenceArr={commonConferenceArr}
-                            toggleKeyboard={toggleKeyboard}
-                            runCallTimer={runCallTimer}
-                            toggleConferenceStatus={toggleConferenceStatus}
-                            toggleHoldLine={toggleHoldLine}
-                            endCallSession={endCallSession}
-                            startCallSession={startCallSession}
-                            updateEnterValue={updateEnterValue}
-                            updateContactValue={updateContactValue}
-                            conferenceStatus={conferenceStatus}
-                            inComingLineArr={inComingLineArr}
-                            keyboardStatus={keyboardStatus}
-                            enterValue={enterValue}
-                            contactValueName={contactValueName}
-                            contactValueNumber={contactValueNumber}
-                            changeCallLine={changeCallLine}
-                        />
-                    )
-                }
-                />
-                <Route exact path={`${absolutePath}/LastCall`} render={() =>
-                    (
-                        <LastCall
-                        absolutePath={absolutePath}
-                            contactValueName={contactValueName}
-                            contactValueNumber={contactValueNumber}
-                            enterValue={enterValue}
-                            updateEnterValue={updateEnterValue}
-                            updateContactValue={updateContactValue}
-                            addSearch={addSearch}
+                <Switch>
 
-                        />
-                    )
-                }
-                />
-                <Route exact path={`${absolutePath}/ContactPage`} render={() =>
-                    (
-                        <ContactPage
-                        absolutePath={absolutePath}
-                            contactValueName={contactValueName}
-                            contactValueNumber={contactValueNumber}
-                            enterValue={enterValue}
-                            updateEnterValue={updateEnterValue}
-                            updateContactValue={updateContactValue}
-                            addSearch={addSearch}
-                        />
-                    )
-                }
-                />
-                <Route exact path={`${absolutePath}/SearchPage`} render={() =>
-                    (<SearchPage
-                        absolutePath={absolutePath}
-                            contactValueName={contactValueName}
-                            contactValueNumber={contactValueNumber}
-                            enterValue={enterValue}
-                            updateEnterValue={updateEnterValue}
-                            updateContactValue={updateContactValue}
-                            addSearch={addSearch}
-                        />
-                    )
-                }
-                />
-                <Route
-                    exact
-                    path={`${absolutePath}/Settings`}
-                    render={() => <CommonSettings
-                        changeColorScheme={changeColorScheme}
-                        changeSipStatus={changeSipStatus}/>}
-                />
-            </Switch>
-        </div>
+                   <Route exact path={`${absolutePath}/`} render={() =>
+                        (
+                            <EnterNumberPage
+                                absolutePath={absolutePath}
+                                transferCall={transferCall}
+                                toggleTransfer={toggleTransfer}
+                                deleteEnterValue={deleteEnterValue}
+                                takeInComingCall={takeInComingCall}
+                                inComingCallArr={inComingCallArr}
+                                removeConference={removeConference}
+                                setConference={setConference}
+                                toggleStyleSoftPhone={toggleStyleSoftPhone}
+                                commonConferenceArr={commonConferenceArr}
+                                toggleKeyboard={toggleKeyboard}
+                                runCallTimer={runCallTimer}
+                                toggleConferenceStatus={toggleConferenceStatus}
+                                toggleHoldLine={toggleHoldLine}
+                                endCallSession={endCallSession}
+                                startCallSession={startCallSession}
+                                updateEnterValue={updateEnterValue}
+                                updateContactValue={updateContactValue}
+                                conferenceStatus={conferenceStatus}
+                                inComingLineArr={inComingLineArr}
+                                keyboardStatus={keyboardStatus}
+                                enterValue={enterValue}
+                                contactValueName={contactValueName}
+                                contactValueNumber={contactValueNumber}
+                                changeCallLine={changeCallLine}
+                            />
+                        )
+                    }
+                    />
+                    <Route exact path={`${absolutePath}/LastCall`} render={() =>
+                        (
+                            <LastCall
+                                takeInComingCall={takeInComingCall}
+                                inComingLineArr={inComingLineArr}
+                                inComingCallArr={inComingCallArr}
+                                absolutePath={absolutePath}
+                                contactValueName={contactValueName}
+                                contactValueNumber={contactValueNumber}
+                                enterValue={enterValue}
+                                updateEnterValue={updateEnterValue}
+                                updateContactValue={updateContactValue}
+                                addSearch={addSearch}
+
+                            />
+                        )
+                    }
+                    />
+                    <Route exact path={`${absolutePath}/ContactPage`} render={() =>
+                        (
+                            <ContactPage
+                                inComingLineArr={inComingLineArr}
+                                inComingCallArr={inComingCallArr}
+                                takeInComingCall={takeInComingCall}
+                                absolutePath={absolutePath}
+                                contactValueName={contactValueName}
+                                contactValueNumber={contactValueNumber}
+                                enterValue={enterValue}
+                                updateEnterValue={updateEnterValue}
+                                updateContactValue={updateContactValue}
+                                addSearch={addSearch}
+                            />
+                        )
+                    }
+                    />
+                    <Route exact path={`${absolutePath}/SearchPage`} render={() =>
+                        (<SearchPage
+                                inComingLineArr={inComingLineArr}
+                                inComingCallArr={inComingCallArr}
+                                takeInComingCall={takeInComingCall}
+                                absolutePath={absolutePath}
+                                contactValueName={contactValueName}
+                                contactValueNumber={contactValueNumber}
+                                enterValue={enterValue}
+                                updateEnterValue={updateEnterValue}
+                                updateContactValue={updateContactValue}
+                                addSearch={addSearch}
+                            />
+                        )
+                    }
+                    />
+                    <Route
+                        exact
+                        path={`${absolutePath}/Settings`}
+                        render={() => <CommonSettings
+                            changeColorScheme={changeColorScheme}
+                            changeSipStatus={changeSipStatus}/>}
+                    />
+                    <Route exact path={`${absolutePath}/clientCard/:id`} component={ClientCard}/>
+                </Switch>
+            </div>
         </AbsolutePatht.Provider>
     )
 };

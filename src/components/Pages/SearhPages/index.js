@@ -5,6 +5,7 @@ import "./index.scss"
 import "./darkScheme.scss"
 import phoneBook from "../../Main/commonStatic";
 import searchFunction from "../../../directionFunctional/searchFunction";
+import InComingCall from "../../ActionCall/InComingCall"
 
 
 class SearchPage extends Component {
@@ -47,6 +48,13 @@ class SearchPage extends Component {
                     startSearch={this.startSearch}
                     clearSearchInput={this.clearSearchInput}
                 />
+                
+              {this.props.inComingCallArr.length > 0 ?
+                <InComingCall
+                    takeInComingCall={this.props.takeInComingCall}
+                    inComingLineArr={this.props.inComingLineArr}
+                    inComingCallArr={this.props.inComingCallArr}
+                /> : null}
                 <PhoneBookSection
                  absolutePath={this.props.absolutePath}
                     setActiveElem={this.props.setActiveElem}

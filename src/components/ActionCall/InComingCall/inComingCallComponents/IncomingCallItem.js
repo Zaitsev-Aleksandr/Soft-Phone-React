@@ -1,8 +1,11 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useContext} from 'react';
 
 import sound from "../../../../resources/audio/inComingCall.mp3"
+import { Link } from 'react-router-dom';
+import { AbsolutePatht } from '../../../../Context/Context';
 
 const IncomingCallItem = ({value, endComingCall, startCallSession, arrLength, i}) => {
+    const absolutePath =useContext(AbsolutePatht)
     useEffect(() => {
         const audio = new Audio();
         audio.src = sound;
@@ -14,11 +17,15 @@ const IncomingCallItem = ({value, endComingCall, startCallSession, arrLength, i}
             audio.pause();
         }, 2000)
     }, []);
+
+
     const clientValue = value[0] ? value[0] : value[1]
     const renderIfComponent = () => {
         if (arrLength < 4) {
             return (<div className="d-flex flex-nowrap">
+                <Link to={`${absolutePath}/`} >
                 <i className="fas fa-phone" onClick={() => startCallSession(i)}/>
+                </Link>
                 <i className="fas fa-phone-slash" onClick={() => endComingCall(i)}/>
             </div>)
         } else return <span className="call-status-value incoming-call">Линии заняты</span>

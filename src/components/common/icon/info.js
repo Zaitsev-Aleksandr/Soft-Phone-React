@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Info = ({ onMouseEnter,onMouseLeave }) => <i className="fas fa-info-circle"
-                                                   onMouseLeave={onMouseLeave}
-                                                   onMouseEnter={onMouseEnter}/>
+const Info = () => <i className="fas fa-info-circle"  />
 
 export default Info;

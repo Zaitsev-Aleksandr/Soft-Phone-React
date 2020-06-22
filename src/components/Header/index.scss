@@ -52,24 +52,26 @@
 
     .fa-times, .fa-chevron-down {
       margin-left: 10px;
-      color: #213991;
+      color: #BDBDBD;
       font-size: 12px;
       cursor: pointer;
 
       &:hover {
-        color: black;
+        color: #213991;
+
       }
     }
 
     .fa-chevron-down .active {
-        transform: rotate(180deg);
-      }
-    
+      transform: rotate(180deg);
+    }
+
   }
 
 }
-.cursor-grabbing{
+
+.cursor-grabbing {
   .employee-common-info {
-    cursor:grabbing !important;
+    cursor: grabbing !important;
   }
 }
