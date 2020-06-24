@@ -43,8 +43,8 @@ const PhoneGroupBlock = ({navActiveElem, searchValue, toolTip, toggleToolTip, cl
                     {groupName.charAt(0).toUpperCase()}
                 </div>
                 <div className="common-block-title d-flex flex-column align-items-center;">
-                    <span>{groupName}</span>
-                    <span>{clientValue.length} <span className="common-subscriber-quantity ">  контактов</span></span>
+                    <span className="phone-book-item-number text-nowrap">{groupName}</span>
+                    <span  className="phone-book-item-name">{clientValue.length} <span >  контактов</span></span>
 
                 </div>
                 <DownArrow

@@ -34,65 +34,7 @@
     }
   }
 
-  .phone-group-block {
-    background: rgb(245, 246, 250);
-    border-radius: 5px;
-    min-height: 48px;
-    height: 48px;
-    margin-bottom: 5px;
-    padding: 5px 0px;
-    .phone-book-item{
-     display: none !important;
-    }
-        .fa-chevron-down {
-          width: 20px;
-          height: 20px;
-          display: flex;
-          font-size: 12px;
-          justify-content: center;
-          align-items: center;
-          background: transparent;
-          color: #BDBDBD;
-          transform: rotate(-90deg);
-          margin: 0 10px 0 auto;
-        }
-    &:hover {
-      background: #E6EBFB;
-      .fa-chevron-down {
-       color: #213991;
-      }
-    }
-    .phone-group-block__header {
-      background: rgb(245, 246, 250);
-      padding: 5px;
-      border-radius: 6px;
-      margin-bottom: 5px;
-      height: 45px;
-      margin-top: -5px;
-      cursor: pointer;
-      &:hover{
-        background: #E6EBFB;
-      }
-      }
 
-    &.open {
-      min-height: min-content;
-      height: min-content;
-      background: #FFFFFF;
-      .phone-book-item{
-        display: flex !important;
-      }
-
-    .fa-chevron-down{
-    transform: rotate(0deg);
-    color: #213991;
-    }
-     
-      .phone-group-block-wrapper {
-        overflow: auto;
-      }
-    }
-  }
 
   .tool-tip-client-block {
     width: 100%;

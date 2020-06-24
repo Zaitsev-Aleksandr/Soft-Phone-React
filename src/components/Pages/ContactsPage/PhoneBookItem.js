@@ -7,7 +7,6 @@ import Info from "../../common/icon/info";
 import {AbsolutePatht} from "../../../Context/Context"
 
 
-
 const PhoneBookItem = ({client, updateContactValue, toggleFavorite, favoriteItem, to, i}) => {
     const absolutePath = useContext(AbsolutePatht);
     const color = useRandomColor();
@@ -15,7 +14,7 @@ const PhoneBookItem = ({client, updateContactValue, toggleFavorite, favoriteItem
     const toggleStart = useCallback(() => toggleFavorite(toggleItem(favoriteItem, i)), [toggleItem, toggleFavorite, i, favoriteItem]);
     const name = client.name
     const number = client.number;
-    const avatar =  client.avatar;
+    const avatar = client.avatar;
 
 
     return (
@@ -28,19 +27,17 @@ const PhoneBookItem = ({client, updateContactValue, toggleFavorite, favoriteItem
                 {avatar ? "" : name.charAt(0).toUpperCase()}
 
             </div>
-            <div className="d-flex flex-column"
-                 onClick={updateContactValue}>
-
-                <Link className="navigation-call-info-link "
-                      to={`${absolutePath}/`}
-                      key={i}
-                >
+            <Link className="navigation-call-info-link "
+                  to={`${absolutePath}/`}
+                  key={i}
+                  onClick={updateContactValue}
+            >
                     <span
                         className="phone-book-item-name justify-content-between text-nowrap overflow-hidden">{name}</span>
 
-                    <span className="phone-book-item-number text-nowrap overflow-hidden">{number}</span>
-                </Link>
-            </div>
+                <span className="phone-book-item-number text-nowrap overflow-hidden">{number}</span>
+            </Link>
+
             <Link to={to}>
                 <Info/>
             </Link>

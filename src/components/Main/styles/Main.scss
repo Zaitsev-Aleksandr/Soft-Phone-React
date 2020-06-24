@@ -40,15 +40,13 @@
     position: relative;
     color: black;
     text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
   }
 
   .info-link-arrow-icon {
     position: absolute;
     left: 25px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
     .fa-chevron-left {
       color: #213991;
       font-size: 10px;
@@ -89,9 +87,9 @@
   .phone-book-item {
     background: rgb(245, 246, 250);
     border-radius: 5px;
-    min-height: 48px;
+    min-height: 42px;
     margin-bottom: 5px;
-    padding: 5px 10px;
+    padding: 0px 10px;
 
     .fa-info-circle {
       position: absolute;
@@ -150,8 +148,8 @@
     font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 13px;
+    font-size: 11px;
+    line-height: 16px;
     color: #7D7D7D;
     text-overflow: ellipsis;
     max-width: 115px;
@@ -162,14 +160,71 @@
 
   .phone-book-item-number {
     font-family: Roboto, sans-serif;
+    display: inline-block;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 13px;
+    line-height: 18px;
     color: #000000;
 
   }
+  .phone-group-block {
+    background: rgb(245, 246, 250);
+    border-radius: 5px;
+    min-height: 42px;
+    height: 42px;
+    margin-bottom: 5px;
+    padding: 5px 0;
 
+    .fa-chevron-down {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      font-size: 12px;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      color: #BDBDBD;
+      transform: rotate(-90deg);
+      margin: 0 10px 0 auto;
+    }
+    &:hover {
+      background: #E6EBFB;
+      .fa-chevron-down {
+        color: #213991;
+      }
+    }
+    .phone-group-block__header {
+      background: rgb(245, 246, 250);
+      padding: 5px;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      height: 45px;
+      margin-top: -5px;
+      cursor: pointer;
+      &:hover{
+        background: #E6EBFB;
+      }
+    }
+
+    &.open {
+      min-height: min-content;
+      height: min-content;
+      background: #FFFFFF;
+      .phone-book-item{
+        display: flex !important;
+      }
+
+      .fa-chevron-down{
+        transform: rotate(0deg);
+        color: #213991;
+      }
+
+      .phone-group-block-wrapper {
+        overflow: auto;
+      }
+    }
+  }
   .call-time-duration {
     font-family: Roboto, sans-serif;
     font-style: normal;
@@ -207,7 +262,6 @@
   }
 
   .common-block-title {
-    padding-left: 20px;
     font-size: 12px;
     line-height: 16px;
     font-weight: 600;

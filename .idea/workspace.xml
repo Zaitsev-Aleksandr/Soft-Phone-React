@@ -27,55 +27,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e18bdb0-060f-41d4-87c6-d7060d72e85d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/jslint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/rcc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/reactTemplatesPlugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/ContactsPage/contactSwitchGroup/groupPhoneComponent/ClientCard/ClientCaed.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/ContactsPage/contactSwitchGroup/groupPhoneComponent/ClientCard/ClientCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/ContactsPage/contactSwitchGroup/groupPhoneComponent/ClientCard/RenderOfConditionContact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/icon/EmailIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/g.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/i.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/j.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/l.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/m.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/p.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/q.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/img/avatar/r.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Context/Context.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Context/Context.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ActionCall/InComingCall/inComingCallComponents/IncomingCallItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActionCall/InComingCall/inComingCallComponents/IncomingCallItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ActionCall/InComingCall/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActionCall/InComingCall/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ActionCall/InComingCall/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActionCall/InComingCall/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/commonStatic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/commonStatic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ActionCall/ConferensInfo/ConferenceDisplayBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActionCall/ConferensInfo/ConferenceDisplayBlock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/styles/Main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/styles/Main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/styles/darkScheme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/styles/darkScheme.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/ContactsPage/PhoneBookItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/ContactsPage/PhoneBookItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/ContactsPage/contactSwitchGroup/CommonPhoneBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/ContactsPage/contactSwitchGroup/CommonPhoneBook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/ContactsPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/ContactsPage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/ContactsPage/contactSwitchGroup/GroupPhoneBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/ContactsPage/contactSwitchGroup/GroupPhoneBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/ContactsPage/contactSwitchGroup/groupPhoneComponent/ClientCard/ClientCaed.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/ContactsPage/contactSwitchGroup/groupPhoneComponent/ClientCard/ClientCaed.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/ContactsPage/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/ContactsPage/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/SearhPages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/SearhPages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/SearhPages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/SearhPages/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/lastСall/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/lastСall/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PhonePagesComponents/ActionButton/PassCallButtonGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/icon/info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/SearhPages/PhoneBookSection/phoneBookItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/SearhPages/PhoneBookSection/phoneBookItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/lastСall/PhoneBookSection/PhoneBookItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/lastСall/PhoneBookSection/PhoneBookItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/icon/stars/StarActive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/icon/stars/StarActive.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +78,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mobitell/mobiltell/html_css" />
+    <property name="last_opened_file_path" value="D:/Mobitell/mobiltell/html_css" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -335,7 +297,9 @@
       <workItem from="1592483457854" duration="159000" />
       <workItem from="1592483632185" duration="9370000" />
       <workItem from="1592550579981" duration="18871000" />
-      <workItem from="1592808376469" duration="8791000" />
+      <workItem from="1592808376469" duration="14859000" />
+      <workItem from="1592893442013" duration="2115000" />
+      <workItem from="1592979552320" duration="3319000" />
     </task>
     <servers />
   </component>
